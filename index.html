@@ -2069,6 +2069,7 @@
             <p>Advanced Sass</p>
           </section>
 
+          <!-- Advanced Sass : Advanced Features -->
           <section>
             <h3>Advanced Sass</h3>
             <ol class="broken">
@@ -2081,7 +2082,334 @@
           <!-- Advanced Sass : Mixins -->
           <section>
             <h3>Mixins</h3>
+            <p class="box"><span class="green">Variables</span> let you reuse <span class="green">single values</span>.</p>
+            <p><span class="yellow">Mixins</span> let you reuse <span class="yellow">blocks of styles</span>.</p>
+            <aside class="notes">
+              <p>So let's look at some code...</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Use -->
+          <section>
+            <h3><span class="blue">Mixins</span> Use</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">CSS</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <div class="box fragment right" style="width: 49%">
+              <h4 class="green">Sass <span class="yellow">Mixins</span></h4>
+              <pre><code class="scss">
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .header {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .footer {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .feature a {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .content {
+                  @include rounded-box;
+                  // ...
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Earlier we saw this CSS example where we're repeating the same border-radius and padding over and over</p>
+              <p>They're sort of default settings, if you will</p>
+              <p>We can make this more maintainable, by pulling these out into one location</p>
+              <p>let's dig into this code a bit more...</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Setup -->
+          <section>
+            <h3><span class="blue">Mixins</span> Setup</h3>
+            <div class="box left" style="width: 49%">
+              <pre><code class="scss">
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .header {
+                  @include rounded-box;
+                  color: $header-color;
+                  // ...
+                }
+
+                .footer {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .feature a {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .content {
+                  @include rounded-box;
+                  // ...
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small" style="width: 49%">
+              <ul class="box">
+                <li>We <span class="green">define</span> a mixin with the <code>@mixin</code> directive</li>
+                <li>We <span class="green">reference</span> a mixin with the <code>@include</code> directive</li>
+              </ul>
+              <ul>
+                <li><em>Mixins must be defined before they're referenced</em></li>
+                <li>Mixins accept optional <span class="green">arguments</span></li>
+                <li>Mixins can be used with any other style rules</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>Now, let's look at what's actually happening here before we move on</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Output -->
+          <section>
+            <h3><span class="blue">Mixins</span> Output</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .header {
+                  @include rounded-box;
+                  color: $header-color;
+                  // ...
+                }
+
+                .footer {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .feature a {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .content {
+                  @include rounded-box;
+                  // ...
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 49%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  color: $header-color;
+                  /* ... */
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>We're still just repeating properties here....</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Efficiency -->
+          <section>
+            <h3><span class="blue">Mixins</span> Efficiency</h3>
+            <div class="box left" style="width: 49%">
+              <h4>Mixin Output</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  color: $header-color;
+                  /* ... */
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 49%">
+              <h4 class="yellow">Chaining Output</h4>
+              <pre><code class="scss">
+                .header, 
+                .footer,
+                .feature a,
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;              
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>It'd actually be more efficient just to chain the classes together.</p>
+              <p>So what's a good use case for mixins then...</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : CSS3 -->
+          <section>
+            <h3><span class="blue">Mixins</span> CSS3</h3>
+            <p class="box"><strong>Vendor Prefixes?!</strong></p>
+            <div class="left" style="width: 50%">
+              <pre><code>
+                @mixin border-box {
+                  -webkit-box-sizing: border-box;
+                     -moz-box-sizing: border-box;
+                          box-sizing: border-box;
+                }
+
+                .header {
+                  @include border-box;
+                  // ...
+                }
+              
+                .footer {
+                  @include border-box;
+                  // ...
+                }
+              </code></pre>
+            </div>
+            <div class="right left-align" style="width: 45%">
+              <p class="box">But... we're still really just <span class="red">copying</span> the same properties all over the place.</p>
+            </div>
+            <aside class="notes">
+              <p>How about anything with vendor prefixes?</p>
+              <p>Those things get repetitive, it'd be nice to have a one liner right?</p>
+              <p>But..</p>
+              <p>So alright, let's get to it already - what do I actually use mixins for?!?!</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Arguments -->
+          <section>
+            <h3><span class="blue">Mixins</span> Arguments</h3>
+            <p>Repeated blocks of properties where the values differ from case to case.</p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Argument Defaults -->
+          <section>
+            <h3><span class="blue">Mixins</span> Argument Defaults</h3>
             <p></p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Multiple Arguments -->
+          <section>
+            <h3><span class="blue">Mixins</span> Multiple Arguments</h3>
+            <p></p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Optional Arguments -->
+          <section>
+            <h3><span class="blue">Mixins</span> Optional Arguments</h3>
+            <p></p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Keyword Arguments -->
+          <section>
+            <h3><span class="blue">Mixins</span> Keyword Arguments</h3>
+            <p></p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Variable Arguments -->
+          <section>
+            <h3><span class="blue">Mixins</span> Variable Arguments</h3>
+            <p>...</p>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Interpolation -->
+          <section>
+            <h3><span class="blue">Mixins</span> Interpolation</h3>
+            <p>...</p>
+            <aside class="notes">
+            </aside>
           </section>
 
           <!-- Advanced Sass : Mixins : Develop It! -->
