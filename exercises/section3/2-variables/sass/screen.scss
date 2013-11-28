@@ -1,0 +1,111 @@
+// Font Stacks
+$base-font-family:   Tahoma, Verdana, Arial, sans-serif;
+$header-font-family: "Fauna One", Palatino, Georgia, Times;
+$logo-font-family:   "Lily Script One", $header-font-family;
+
+
+// Descriptive Colors
+$white: #f1f1f1;
+$cherry: #6D0839;
+$plum: #9D6673;
+$pink: #FBEFF4;
+$mustard: #D8C358;
+$green-pale: #D0E799;
+$green-dark: #25271E;
+
+
+// Functional Colors
+$body-background: $white;
+$body-color: $green-dark;
+
+$header-background: $cherry;
+$header-color: $pink;
+
+$footer-background: $mustard;
+$footer-color: $green-pale;
+
+$nav-background: $plum;
+$nav-background-footer: $cherry;
+$nav-background-hover: $green-dark;
+$nav-color: $pink;
+
+
+// Misc Defaults
+$padding-default: 20px;
+
+
+
+html {
+  background: $footer-background;
+  font-family: $base-font-family;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+}
+
+.header {
+  background: $header-background;
+  color: $header-color;
+  padding: $padding-default;
+
+  h1 {
+    display: inline-block;
+    font-family: $logo-font-family;
+  }
+}
+
+.content {
+  background: $body-background;
+  color: $body-color;
+  padding: $padding-default;
+}
+
+.footer {
+  background: $footer-background;
+  color: $footer-color;
+  padding: $padding-default;
+}
+
+.navigation {
+  display: inline-block;
+
+  ul { padding: 0; }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 1em;
+  }
+
+  a {
+    background: $nav-background;
+    color: $nav-color;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover {
+      background: $nav-background-hover;
+    }
+  }
+
+  .header & {
+    float: right;
+
+    li {
+      margin-left: 1em;
+      margin-right: 0;
+    }
+  }
+
+  .footer & {
+    a {
+      background: $nav-background-footer;
+    }
+  }
+}

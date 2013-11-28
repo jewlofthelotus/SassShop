@@ -1,0 +1,27 @@
+html {
+  background: #decade;
+  color: #a11e6e; }
+
+body {
+  margin: 0 auto;
+  width: 800px; }
+
+.header h1 {
+  float: left; }
+
+.navigation li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1.5em 0 0; }
+.navigation a {
+  display: block;
+  text-decoration: none; }
+  .navigation a:hover {
+    background: #bedded; }
+.header .navigation {
+  float: right; }
+  .header .navigation li {
+    margin: 0 0 0 1.5em; }
+
+.footer {
+  clear: both; }

@@ -1,0 +1,2337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Getting Sassy with CSS ~ Girl Develop It</title>
+
+    <meta name="description" content="This is a Girl Develop It Sass Shop curriculum. Designed originally by Julie Cameron for GDI Detroit. The course is intended to be one overview session, lasting 4 hours. I hope that you will build on this curriculum and turn it into an even more awesome class. Oh, and Sass is awesome! Go Girl Developers!">
+
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdi-sass.css" id="theme">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+
+        <!-- TODO Add image slides boom mindblown etc -->
+
+        <!-- TODO Clean out .sass-cache, css dirs -->
+        <!-- TODO Open a chrome tab for each exercise -->
+        <!-- TODO Open a terminal tab for each exercise -->
+        <!-- TODO Open the exercise code in sublime text -->
+
+
+        <!-- INTRO -->
+        <section>
+          <!-- INTRO : Setup -->
+          <section>
+            <h3>Get Connected!</h3>
+
+            <div class="box">
+              <p><strong>Wifi Network:</strong> atomic-detroit-public</p>
+              <p><strong>Password:</strong> atomicpublic </p>
+            </div>
+
+            <div class="box"><strong>Slides</strong>: <a target="_blank" href="http://gdidetroit.com/sass">gdidetroit.com/sass</a></div>
+
+            <div class="box">
+              <p><small>We recommend that you install <a target="_blank" href="http://google.com/chrome">Google Chrome</a>,<br />as well as the <a target="_blank" href="https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=en">LivePage</a> plugin.</small></p>
+              <img src="images/chrome_logo.jpg" style="border: none;" />
+            </div>
+          </section>
+
+          <!-- INTRO : GDI Welcome -->
+          <section>
+            <h3>Welcome!</h3>
+
+            <p class="box box--top">Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+
+            <div class="box horz--auto">
+              <h4 class="green">Some "rules"</h4>
+              <ul>
+                <li>We are here for you!</li>
+                <li><strong>Every</strong> question is important</li>
+                <li>Help each other</li>
+                <li>Have fun!</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- INTRO : About Me -->
+          <section>
+            <h2>Julie Cameron</h2>
+
+            <p class="box"><small><a href="http://juliecameron.com" target="_blank">JulieCameron.com</a> | <a href="http://twitter.com/jewlofthelotus" target="_blank">@JewlOfTheLotus</a> | <a href="mailto:jewlofthelotus@gmail.com" target="_blank">jewlofthelotus@gmail.com</a></small></p>
+
+            <img src="images/julie.jpg" class="right" />
+
+            <ul class="left">
+              <li class="fragment"><strong>Frontender</strong> for <a href="http://articlate.com" target="_blank">Articulate</a></li>
+              <li class="fragment"><strong><a href="https://github.com/jewlofthelotus/SlickQuiz" target="_blank">Open</a> <a href="http://wordpress.org/plugins/slickquiz" target="_blank">Source</a></strong> Developer</li>
+              <li class="fragment"><strong>Sassy CSS</strong> Fan</li>
+              <li class="fragment"><strong>Responsive WD</strong> Advocate</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Working Remote</li>
+                <li>SlickQuiz</li>
+                <li>Full Time Sass for 1 year</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- INTRO : About You -->
+          <section>
+            <h3>Let's meet the class!</h3>
+            <p class="box box--top">What is your <span class="yellow">name</span>?</p>
+            <p class="box">What type of <span class="yellow">development experience</span> do you have?</p>
+            <p class="box">What is your <span class="yellow">favorite kind of cookie</span>?</p>
+          </section>
+
+          <!-- INTRO : Course -->
+          <section>
+            <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
+            <div class="box">
+              <h3>Getting Sassy with CSS</h3>
+              <p><small>#SassShopDetroit</small></p>
+            </div>
+          </section>
+
+          <!-- INTRO : Course : Outline -->
+          <section>
+            <h2>Getting Sassy with CSS</h2>
+            <ol class="box broken">
+              <li>What is Sass</li>
+              <li>The Sass Workflow</li>
+              <li>Sass Basics</li>
+              <li class="break">Advanced Sass</li>
+              <li class="break">Media Queries</li>
+              <li>Libraries &amp; Tools</li>
+              <li>Modular Architecture</li>
+              <li>Wrap-Up</li>
+            </ol>
+          </section>
+
+          <!-- INTRO : Course : Goal -->
+          <!-- TODO: screenie of thing to build -->
+          <section>
+            <h2>Getting Sassy with CSS</h2>
+            <div class="box--top left left-align" style="width: 60%;">
+              <h4 class="green">Today we'll be building...</h4>
+              <p>A simple, yet stylishly <em class="yellow">sassy</em>, home page for ourselves.</p>
+            </div>
+            <div class="box--top right" style="width: 35%;">
+              <img src="images/making-this-today.png" />
+            </div>
+
+            <aside class="notes">
+              <p>I HIGHLY recommend that you download these slides and refer back to them as we're going through exercises</p>
+              <p>You can follow the examples exactly, or you can customize things as we go.</p>
+              <p>Feel free to try things out as I'm presenting, I don't want you to feel like you need to wait for the exercise to experiment.</p>
+              <p>I hope that this can be at least the start of something you can take away to shine up.</p>
+            </aside>
+          </section>
+        </section>
+        <!-- COMPLETE : PENDING final screenshot -->
+
+
+        <!-- SECTION 1 : WHAT IS SASS -->
+        <section>
+          <section>
+            <h2>Section I</h2>
+            <p>What is <strong class="blue">Sass</strong>?</p>
+          </section>
+
+          <!-- WHAT IS SASS : The Trouble with CSS -->
+          <section>
+            <h3><span class="blue">WHY</span> The Trouble with CSS</h3>
+            <ul class="box">
+              <li>Websites are becoming increasingly <strong class="red">complex</strong>.</li>
+              <li>CSS is getting <strong class="red">harder</strong> to maintain.</li>
+              <li>Writing styles is often <strong class="red">tedious</strong> and <strong class="red">repetitive</strong>.</li>
+              <li><strong class="red">CSS can only do so much for us...</strong></li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>bigger and more modular</li>
+                <li>our needs for organization are increasing</li>
+                <li>repetition - think vendor prefixes, think linear gradients</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Enter Sass -->
+          <section>
+            <h3>Enter Sass</h3>
+            <p class="box green"><strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>S</strong>heets</p>
+
+            <p>Like CSS but <span class="yellow">BETTER</span><br /><small>It addresses the previously mentioned shortcomings</small></p>
+
+            <p class="box"><span class="blue">PRO TIP</span> It's <span class="yellow">Sass</span>, not <span class="red">SASS</span></p>
+
+            <aside class="notes">
+              move it
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Origins -->
+          <section>
+            <h3>Sass Origins</h3>
+            <ul class="box">
+              <li><strong>2007:</strong> Designed by <a href="http://www.hamptoncatlin.com/" target="_blank">Hampton Catlin</a> (Haml)
+              </li>
+              <li>Developed by <a href="http://nex-3.com/" target="_blank">Nathan Weizenbaum</a> and <a href="http://chriseppstein.github.io/" target="_blank">Chris Eppstein</a> (Compass)</li>
+              <li><strong>October 2013:</strong> <span class="yellow">3.3.0.rc.1</span> became available </li>
+              <li>Pushing CSS ahead!</li>
+            </ul>
+            <aside class="notes">
+              <p>Tools like Sass, Less and Stylus have live-tested features and impelemnations that will likely inspire features in future CSS specifications.</p>
+              <p>So let's get a taste of what Sass can do for us by digging into one of CSSs pain-points: repetition.</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Repetition -->
+          <section>
+            <h3>Repetition</h3>
+            <div class="left" style="width: 50%">
+              <pre><code class="css">
+                .header {
+                  background-color: #531946;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .header a {
+                  color: #fff;
+                }
+                .header a:hover {
+                  color: #095169;
+                }
+
+                .footer {
+                  background-color: #30162B;
+                  color: #fff;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .footer a {
+                  color: #095169;
+                }
+                .footer a:hover {
+                  color: #fff;
+                }
+
+                .feature a {
+                  background-color: #30162B;
+                  color: #fff;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .feature a:hover {
+                  color: #531946;
+                }
+
+                .content {
+                  background-color: #fff;
+                  color: #222;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+            <div class="box right left-align" style="width: 47%">
+              <h4 class="green">DRY</h4>
+              <p class="green">Don't Repeat Yourself</p>
+              <div class="box">
+                <p class="red fragment">HEX Colors</p>
+                <p class="red fragment">Border Radius + Padding</p>
+                <p class="red fragment">Selectors</p>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>If you've been developing for some time now, you've probably heard the term DRY once or twice before</li>
+                <li>development principle aimed at reducing repetition</li>
+                <li>HINT: the syntax highlighting might give you a few ideas</li>
+                <li>Colors, Padding Selectors</li>
+                <li>Let's dive a little deeper, starting with colors...</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Repetition : Colors -->
+          <section>
+            <h3><span class="blue">Repetition</span> Colors</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">CSS</h4>
+              <pre><code class="css">
+                .header {
+                  background-color: #531946;
+                }
+                .header a {
+                  color: #fff;
+                }
+                .header a:hover {
+                  color: #095169;
+                }
+
+                .footer {
+                  background-color: #30162B;
+                  color: #fff;
+                }
+                .footer a {
+                  color: #095169;
+                }
+                .footer a:hover {
+                  color: #fff;
+                }
+
+                .feature a {
+                  background-color: #30162B;
+                  color: #fff;
+                }
+
+                .feature a:hover {
+                  color: #531946;
+                }
+
+                .content {
+                  background-color: #fff;
+                  color: #222;
+                }
+              </code></pre>
+            </div>
+            <div class="fragment box right" style="width: 49%">
+              <h4 class="green">Sass <span class="yellow">Variables</span></h4>
+              <pre><code class="scss">
+                $white: #ffffff;
+                $black: #222222;
+                $eggplant: #531946;
+                $eggplantDark: #30162B;
+                $teal: #095169;
+
+                .header {
+                  background-color: $eggplant;
+                }
+                .header a {
+                  color: $white;
+                }
+                .header a:hover {
+                  color: $teal;
+                }
+
+                .footer {
+                  background-color: $eggplantDark;
+                  color: $white;
+                }
+                .footer a {
+                  color: $teal;
+                }
+                .footer a:hover {
+                  color: $white;
+                }
+
+                .feature a {
+                  background-color: $eggplantDark;
+                  color: $white;
+                }
+
+                .feature a:hover {
+                  color: $eggplant;
+                }
+
+                .content {
+                  background-color: $white;
+                  color: $black;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>No one wants to remember #531946</p>
+              <p>Wouldn't it be nice if we had a way to store and reference our colors?</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Repetition : Border Radius + Padding -->
+          <section>
+            <h3><span class="blue">Repetition</span> Border<br />Radius + Padding</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">CSS</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <div class="box fragment right" style="width: 49%">
+              <h4 class="green">Sass <span class="yellow">Mixins</span></h4>
+              <pre><code class="scss">
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .header {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .footer {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .feature a {
+                  @include rounded-box;
+                  // ...
+                }
+
+                .content {
+                  @include rounded-box;
+                  // ...
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>It looks like we've got a default box style</p>
+              <p>What if we could set those defaults in one place and reference it elsewhere?</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Repetition : Selectors -->
+          <section>
+            <h3><span class="blue">Repetition</span> Selectors</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">CSS</h4>
+              <pre><code class="css">
+                .header {
+                  /* ... */
+                }
+                .header a {
+                  /* ... */
+                }
+                .header a:hover {
+                  /* ... */
+                }
+
+                .footer {
+                  /* ... */
+                }
+                .footer a {
+                  /* ... */
+                }
+                .footer a:hover {
+                  /* ... */
+                }
+
+                .feature a {
+                  /* ... */
+                }
+                .feature a:hover {
+                  /* ... */
+                }
+
+                .content {
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <div class="box fragment right" style="width: 49%">
+              <h4 class="green">Sass <span class="yellow">Nesting</span></h4>
+              <pre><code class="scss">
+                .header {
+                  // ...
+
+                  a {
+                    // ...
+
+                    &:hover {
+                      // ...
+                    }
+                  }
+                }
+
+                .footer {
+                  // ...
+
+                  a {
+                    // ...
+
+                    &:hover {
+                      // ...
+                    }
+                  }
+                }
+
+                .feature a {
+                  // ...
+
+                  &:hover {
+                    // ...
+                  }
+                }
+
+                .content {
+                  // ...
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>What if we could nest our selectors just like we can in our HTML?</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Repetition : Recap -->
+          <section>
+            <h3><span class="blue">RECAP</span> Repetition</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">CSS</h4>
+              <pre><code class="css">
+                .header {
+                  background-color: #531946;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .header a {
+                  color: #fff;
+                }
+                .header a:hover {
+                  color: #095169;
+                }
+
+                .footer {
+                  background-color: #30162B;
+                  color: #fff;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .footer a {
+                  color: #095169;
+                }
+                .footer a:hover {
+                  color: #fff;
+                }
+
+                .feature a {
+                  background-color: #30162B;
+                  color: #fff;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+                .feature a:hover {
+                  color: #531946;
+                }
+
+                .content {
+                  background-color: #fff;
+                  color: #222;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 49%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $white:        #ffffff;
+                $grey:         #222222;
+                $eggplant:     #531946;
+                $eggplantDark: #30162B;
+                $teal:         #095169;
+
+                // Mixins
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                // Site Stylez
+                .header {
+                  @include rounded-box;
+                  background-color: $eggplant;
+
+                  a {
+                    color: $white;
+                    &:hover { color: $teal; }
+                  }
+                }
+
+                .footer {
+                  @include rounded-box;
+                  background-color: $eggplantDark;
+                  color: $white;
+
+                  a {
+                    color: $teal;
+                    &:hover { color: $white; }
+                  }
+                }
+
+                .feature a {
+                  @include rounded-box;
+                  background-color: $eggplantDark;
+                  color: $white;
+
+                  &:hover { color: $eggplant; }
+                }
+
+                .content {
+                  @include rounded-box;
+                  background-color: $white;
+                  color: $grey;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Colors (vars), Border Radius + Padding (mixin), Selectors (nesting)</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : Recap -->
+          <section>
+            <h3><span class="blue">RECAP</span> Why Sass?</h3>
+            <ul class="box">
+              <li>Reduced <span class="green">complexity</span>.</li>
+              <li>Increased <span class="green">maintainability</span>.</li>
+              <li>Minimized <span class="green">repetition</span>.</li>
+              <li><span class="yellow">Supercharged CSS!</span></li>
+            </ul>
+            <aside class="notes">
+              <p>Alright, so now that we've gotten a taste of it in action, let's get an official definition</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : What is Sass? -->
+          <section>
+            <h3>What is Sass?</h3>
+            <p class="box">Sass is an <span class="yellow">extension of CSS</span> that adds power and elegance to the basic language. It allows you to use <span class="green">variables</span>, <span class="green">nested rules</span>, <span class="green">mixins</span>, <span class="green">inline imports</span>, and <span class="green">more</span>, all with a <span class="yellow">fully CSS-compatible syntax</span>. Sass helps keep large stylesheets well-<span class="green">organized</span>, and get small stylesheets up and running quickly...</p>
+            <cite>~ <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank">Sass Documentation</a></cite>
+            <aside class="notes">
+              <p>Any valid CSS file is a valid Sass file</p>
+            </aside>
+          </section>
+
+          <!-- WHAT IS SASS : What is Sass? 3 -->
+          <section>
+            <h3>What is Sass?</h3>
+            <div class="left box" style="width: 49%;">
+              <p>CSS <span class="green">Extension</span></p>
+              <p class="fragment" data-fragment-index="2"><span class="yellow">SassScript</span> Language</p>
+            </div>
+            <div class="box right fragment" style="width: 49%;" data-fragment-index="1">
+              <p>CSS <span class="green">Preprocessor</span></p>
+              <p class="fragment" data-fragment-index="3">SassScript <span class="yellow">Interpreter</span></p>
+            </div>
+            <p class="fragment" style="font-size: 72px;" data-fragment-index="4">Sass <i class="fa fa-arrow-right blue"></i> CSS</p>
+
+            <aside class="notes">
+              <p>Sass is an extension of CSS, but we can't load Sass in the browser like we can CSS</p>
+
+              <p>May seem like 2 separate tools, but they're really just one, and more often then not, you'll hear them referred to as a singluar tool.</p>
+            </aside>
+          </section>
+
+          <!-- What is Sass : Syntax -->
+          <section>
+            <h3>Two Syntaxes</h3>
+            <div class="left" style="width: 49%">
+              <p><span class="yellow">.scss (Sassy CSS)</span><br /><small>Default syntax; Valid CSS == Valid SCSS</small></p>
+              <pre><code class="scss">
+                $black: #000;
+                $white: #fff;
+
+                .this {
+                  color: $black;
+                  background: $white;
+                }
+
+                .that {
+                  color: $white;
+                  background: $black;
+                }
+
+                .this, .that {
+                  display: block;
+
+                  &:hover {
+                    border: 1px solid;
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="right" style="width: 49%">
+              <p><span class="green">.sass (Indented)</span><br /><small>Original syntax, still supported; Haml-esque</small></p>
+              <pre><code class="sass">
+                $black: #000
+                $white: #fff
+
+                .this
+                  color: $black
+                  background: $white
+
+                .that
+                  color: $white
+                  background: $black
+
+                .this, .that
+                  display: block
+                  &:hover
+                    border: 1px solid
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>Because valid CSS is also valid SCSS, getting started with Sass is as easy as changing the file extension.</p>
+              <p>Start slow, add in features as you learn / get more comfortable.</p>
+            </aside>
+          </section>
+        </section>
+        <!-- COMPLETE -->
+
+
+        <!-- SECTION 2 : SASS WORKFLOW -->
+        <section>
+          <section>
+            <h2>Section II</h2>
+            <p>The Sass <span class="blue">Workflow</span></p>
+          </section>
+
+          <!-- SASS WORKFLOW : Installation -->
+          <section>
+            <h3>Sass Installation</h3>
+            <div class="box">
+              <h4 class="green">Ruby</h4>
+              <p>OS X? Lucky you, it's preinstalled!</p>
+              <p>Windows? Try <a href="http://rubyinstaller.org/">RubyInstaller</a>.</p>
+            </div>
+            <div class="box">
+              <h4 class="green">Sass</h4>
+              <p><code>gem install sass</code></p>
+            </div>
+            <div class="box">
+              <h4 class="green"><span class="blue">PRO</span> Sass 3.3</h4>
+              <p><code>gem install sass --pre</code></p>
+            </div>
+          </section>
+
+          <!-- SASS WORKFLOW : Running -->
+          <section>
+            <h3>Running Sass</h3>
+            <p class="box" style="font-size: 72px;">Sass <i class="fa fa-arrow-right blue"></i> CSS</p>
+            <p><code>sass source.scss output.css</code></p>
+            <p class="box fragment"><code>sass source_dir output_dir</code></p>
+            <aside class="notes">
+              <p>So let's get a more visual representation...</p>
+            </aside>
+          </section>
+
+          <!-- SASS WORKFLOW : Running -->
+          <section>
+            <h3>Running Sass</h3>
+            <div class="box--top">
+              <ul>
+                <li><strong class="blue">project_awesome</strong>
+                  <ul class="box">
+                    <li>index.html</li>
+                    <li>sass
+                      <ul>
+                        <li class="green">screen.scss</li>
+                      </ul>
+                    </li>
+                    <li>css
+                      <ul class="fragment">
+                        <li class="yellow">screen.css</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <p class=""><code>sass sass/screen.scss css/screen.css</code></p>
+
+            <aside class="notes">
+              <p>At this point you might be thinking</p>
+              <p>Well gosh, do I need to run this command EVERY single time I make a change?</p>
+              <p>And the answer is of course not! That's what watching is for!</p>
+            </aside>
+          </section>
+
+          <!-- SASS WORKFLOW : Watching -->
+          <section>
+            <h3>Sass Is Watching You...</h3>
+            <div class="box"><code>sass <span class="green">--watch</span> source.scss:output.css</code></div>
+            <div class="fragment blue">This is the best thing EVER.</div>
+            <div class="fragment box"><span class="red">Gotchya:</span> Colon vs. Space</div>
+            <aside class="notes copy--small">
+              <ul>
+                <li>sass will watch the source for changes to the code, recompile when it seems them</li>
+                <li>works with single files and entire directories</li>
+                <li>BEST THING EVER</li>
+                <li>Gotchya</li>
+                <li>...let's look at some more commands</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- SASS WORKFLOW : Other Commands -->
+          <section>
+            <h3>More Sassy Options</h3>
+            <div class="box">
+              <code>sass source.scss output.css</code>
+              <div><small>Compile <code>source.scss</code> to <code>output.css</code>. <span class="red">Gotchya:</span> will fail if output directory doesn't exist.</small></div>
+            </div>
+            <div>
+              <code>sass <span class="green">--update</span> source.scss<span class="yellow">:</span>output.css</code></code>
+              <div><small>Compile <code>source.scss</code> to <code>output.css</code>. Will create new directories if they don't exist.</small></div>
+            </div>
+            <div class="box">
+              <code>sass <span class="green">--watch</span> source.scss<span class="yellow">:</span>output.css</code>
+              <div><small>Watch <code>source.scss</code> for changes. Same syntax as <code>--update</code>.</small></div>
+            </div>
+            <div>
+              <code>sass <span class="green">--style expanded</span> source.scss<span class="yellow">:</span>output.css</code></code>
+              <div><small>Adjusts output format. Options: nested, expanded, compact, compressed</small></div>
+            </div>
+
+            <aside class="notes">
+              <p>I'm going to get into some code to explain the style option more...</p>
+            </aside>
+          </section>
+
+          <!-- SASS WORKFLOW : Demo -->
+          <section>
+            <h3><span class="blue">Demo</span> Sass Workflow</h3>
+            <aside class="notes">
+              <p>Exercise - Section 2</p>
+              <ul>
+                <li>sass sass/screen.scss css/screen.css</li>
+                <li>sass --update sass/screen.scss:css/screen.css</li>
+                <li>sass --watch sass/screen.scss:css/screen.css</li>
+                <li>sass --style expanded sass/screen.scss:css/screen.css</li>
+                <li>sass --style compact sass/screen.scss:css/screen.css</li>
+                <li>sass --style compressed sass/screen.scss:css/screen.css</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- Sass Workflow : Develop It! -->
+          <section>
+            <h3 class="blue"><span class="pink">Section II</span> Let's develop it!</h3>
+
+            <ul class="box left copy--small list--tall" style="width: 55%;">
+              <li>Duplicate this project structure.</li>
+              <li>In the <code>head</code> of <code>index.html</code>, include a link to your CSS output</li>
+              <li>Open <code>index.html</code> in the broswer, optionally enable <strong>LivePage</strong>**</li>
+              <li>Open <code>screen.scss</code>, add a few basic styles and <strong>save</strong> the file.</li>
+              <li>Run <code>sass --watch sass/screen.scss:css/screen.css</code></li>
+              <li>Checkout your page in the browser to see your <em class="yellow">sassy new stylez</em>.</li>
+              <li><span class="blue">PRO</span> MOAR stylez!!</li>
+            </ul>
+
+            <ul class="box right green" style="width: 35%;">
+              <li><strong>project_awesome</strong>
+                <ul>
+                  <li>index.html</li>
+                  <li><strong>sass</strong>
+                    <ul>
+                      <li>screen.scss</li>
+                    </ul>
+                  </li>
+                  <li><strong>css</strong></li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="right" style="width: 35%;">
+              <small>** You will need to enable "Allow access to file URLs" for LivePage in <a target="_blank" href="chrome://extensions/">chrome://extensions</a></small>
+            </div>
+          </section>
+        </section>
+        <!-- COMPLETE -->
+
+
+        <!-- SECTION 3 : SASS BASICS -->
+        <section>
+          <section>
+            <h3>Section III</h3>
+            <p>Sass <span class="blue">Basics</span></p>
+            <aside class="notes">
+              <p>Alright, so now that we know generally what Sass is and how it works</p>
+              <p>let's get into the basics</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Core Features -->
+          <section>
+            <h3>Sass Basics</h3>
+            <ol class="box broken">
+              <li>Nesting</li>
+              <li class="break">Variables</li>
+              <li class="break">Imports &amp; Organization</li>
+            </ol>
+            <aside class="notes">
+              <p>Imports are critical for a modular and organized architecture</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting -->
+          <section>
+            <h3><span class="blue">3.1</span> Nesting</h3>
+            <ul class="box">
+              <li><span class="green">HTML has a clear hierarchy</span> - elements are <span class="yellow">nested</span></li>
+              <li>We can do the same thing with Sass</li>
+            </ul>
+
+            <div class="left" style="width: 49%">
+              <h4>HTML</h4>
+              <pre class="html"><code class="html">
+                &lt;nav class="navigation">
+                  &lt;ul>
+                    &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+                  &lt;/ul>
+                &lt;/nav>
+              </code></pre>
+            </div>
+
+            <div class="right" style="width: 49%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                .navigation {
+                  float: right;
+
+                  li {
+                    display: inline-block;
+                    list-style-type: none;
+                    margin-left: 1.5em;
+                  }
+
+                  a {
+                    display: block;
+                    text-decoration: none;
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>THIS IS MY FAVORITE THING.</p>
+              <p>It's the one thing that I instantly miss when writing vanila CSS.</p>
+              <p>I do it by habit and intuition now.</p>
+              <p>Let's look at the output of that...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting : Output -->
+          <section>
+            <h3><span class="blue">Nesting</span> Output</h3>
+
+            <div class="box left" style="width: 49%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                .navigation {
+                  float: right;
+
+                  li {
+                    display: inline-block;
+                    list-style-type: none;
+                    margin-left: 1.5em;
+                  }
+
+                  a {
+                    display: block;
+                    text-decoration: none;
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class="box right" style="width: 49%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                .navigation {
+                  float: right;
+                }
+
+                .navigation li {
+                  display: inline-block;
+                  list-style-type: none;
+                  margin-left: 1.5em;
+                }
+
+                .navigation a {
+                  display: block;
+                  text-decoration: none;
+                }
+              </code></pre>
+            </div>
+
+            <ul>
+              <li>Sass gives us <span class="green">organization</span></li>
+              <li>Sass reduces <span class="green">repetition</span></li>
+            </ul>
+
+            <aside class="notes">
+              <p>So, there's kid of a gotchya with nesting though...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting : Gotchya -->
+          <section>
+            <h3><span class="blue">Nesting</span> Gotchya</h3>
+            <ul class="box  copy--small">
+              <li>Mirroring HTML nesting is SUPER easy</li>
+              <li class="fragment red" data-fragment-index="1">Overly verbose and overly specific</li>
+              <li class="fragment" data-fragment-index="2">Work WITH the cascade, not against it</li>
+              <li class="fragment green" data-fragment-index="3">Rule of thumb: no more than 3 levels deep</li>
+            </ul>
+
+            <div class="left" style="width: 49%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                body {
+                  .header {
+                    .navigation {
+                      ul {
+                        li {
+                          a {
+                            // ...
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class="fragment right" data-fragment-index="0" style="width: 49%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                body .header .navigation ul li a {
+                  // ...
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>You don't want to go too far with it</p>
+              <p>Nesting too deeply results in specificity nightmares and fragile, unmaintainable code</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting : Develop It! -->
+          <section>
+            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
+            <ul class="box left copy--small list--tall" style="width: 50%;">
+              <li>Add the header on the right to your <code>index.html</code>.</li>
+              <li>In <code>screen.scss</code>, <span class="yellow">nest</span> styles that:
+                <ul>
+                  <li>Display <code>header h1</code> and <code>header nav</code> as <code>inline-block</code></li>
+                  <li>Float <code>header nav</code> to the right</li>
+                  <li>Display <code>nav li</code> as <code>inline-block</code>, with no bullets, and a <code>1em</code> left margin</li>
+                  <li>Display <code>nav a</code> as <code>block</code> with no <code>text-decoration</code>, <code>10px</code> padding, and your choice of <code>background</code> and <code>color</code> colors</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="box right" style="width: 45%">
+              <pre><code class="html">
+                &lt;header class="header">
+                  &lt;h1>My Site Title&lt;/h1>
+                  &lt;nav class="navigation">
+                    &lt;ul>
+                      &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/nav>
+                &lt;/header>
+              </code></pre>
+
+              <p class="box green copy--small"><strong>Remember</strong><br/>Don't nest too deeply!</p>
+              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
+            </div>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting 2 : Parent Selectors -->
+          <section>
+            <h3><span class="blue">Nesting</span> Parent Selectors</h3>
+            <p class="box copy--small">Sass allows us to reference the <strong>current <span class="green">parent</span> selector(s)</strong> via the <span class="yellow">ampersand</span> character:</p>
+
+            <div class="left" style="width: 45%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                a {
+                  color: #beedee;
+
+                  &:hover {
+                    color: #cbbebb;
+                  }
+
+                  &.btn {
+                    background: #deede6;
+                  }
+
+                  .btn {
+                    display: block;
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class="right" style="width: 45%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                a {
+                  color: #beedee;
+                }
+
+                a:hover {
+                  color: #cbbebb;
+                }
+
+                a.btn {
+                  background: #deede6;
+                }
+
+                a .btn {
+                  display: block;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>The ampersand will reference the entire chain of parent selectors</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting 2 : Parent Selectors -->
+          <section>
+            <h3><span class="blue">Nesting</span> Parent Selectors</h3>
+            <ul class="box copy--small">
+              <li>You can also place selectors <em>before</em> the <code>&</code> selector - thereby <span class="green">overriding</span> the parent element's styles when it exists within the preceding selector.</li>
+              <li>Below: when <code>.footer</code> contains the parent selector (<code>a</code>), remove <code>text-decoration</code> from <code>a</code> and adjust the opacity of nested <code>span</code>s</li>
+            </ul>
+
+            <div class=" left" style="width: 45%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                a {
+                  .footer & {
+                    text-decoration: none;
+
+                    span {
+                      opacity: .5;
+                    }
+                  }
+
+                  span {
+                    .navigation & {
+                      display: block;
+                    }
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class=" right" style="width: 45%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                .footer a {
+                  text-decoration: none;
+                }
+
+                .footer a span {
+                  opacity: .5;
+                }
+
+                .navigation a span {
+                  display: block;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>So this can be really really helpful, especially if you're familiar with the concept of modifiers as they relate to the concepts of OOCSS and BEM.</p>
+
+              <p>What you're essentially doing is <em>modifying</em> the parent selector</p>
+
+              <p>We'll jump quickly into OOCSS and BEM later, but you'll see hints of it throughout the shop</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting 2 : Develop It! -->
+          <section>
+            <h3>&amp; Selector <span class="blue">Let's develop it!</span></h3>
+            <ul class="box left copy--small list--tall" style="width: 50%;">
+              <li>Add the <code>.footer</code> on the right to <code>index.html</code>.</li>
+              <li>Move <code>nav</code> styles out of the <code>header</code> so they'll apply to <code>nav</code> anywhere**</li>
+              <li>Use <span class="yellow">parent selector nesting</span> to:
+                <ul>
+                  <li>Float <code>nav</code> to the right <em>only</em> if it's within the <code>.header</code></li>
+                  <li>Change the background color of <code>nav a</code> on <code>:hover</code></li>
+                  <li>Set the <code>.navigation li</code> to have <code>1em</code> right margin, by default; and <code>1em</code> left margin if it exists within <code>.header</code></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="box right" style="width: 45%">
+              <pre><code class="html">
+                &lt;footer class="footer">
+                  &lt;nav class="navigation">
+                    &lt;ul>
+                      &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/nav>
+                &lt;/footer>
+              </code></pre>
+            </div>
+            <div class="right" style="width: 45%;">
+              <p><small>** You may need to readjust your nesting</small></p>
+            </div>
+
+            <aside class="notes">
+              <p>Alright, so before we move on from nesting there is one more thing I'd like to cover</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting Properties  -->
+          <section>
+            <h3><span class="blue">Nesting</span> Properties</h3>
+
+            <ul class="box copy--small">
+              <li>You can also nest <span class="green">namespaced properties</span></li>
+            </ul>
+
+            <div class=" left" style="width: 45%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                a {
+                  border: {
+                    color: #deedee;
+                    style: solid;
+                    width: 2px;
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class=" right" style="width: 45%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                a {
+                  border-color: #deedee;
+                  border-style: solid;
+                  border-width: 2px;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>Not only can you nest selectors</p>
+
+              <p>ALRIGHT, so that was nesting, let's move on to the next basic...</p>
+            </aside>
+          </section>
+
+
+          <!-- Sass Basics : Variables -->
+          <section>
+            <h3>Sass Basics</h3>
+            <p>Variables</p>
+            <aside class="notes">
+              <p>We already saw a sampling of variables when we talked about repetition, so we know that they help to</p>
+              <ul>
+                <li>Reduce repetition</li>
+                <li>Improve maintainability</li>
+                <li>Make Find &amp; Replace! unecessary or at least easier</li>
+              </ul>
+              <p>So let's see what ELSE we can use variables for</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Uses -->
+          <section>
+            <h3><span class="blue">3.2</span> Variables</h3>
+            <div class="box left left-align" style="width: 48%">
+              <h4 class="green">Some Uses</h4>
+              <ul>
+                <li>colors</li>
+                <li>font sizes</li>
+                <li>font families</li>
+                <li>font paths</li>
+                <li>padding</li>
+                <li>margins</li>
+                <li>breakpoints</li>
+              </ul>
+            </div>
+            <div class="box right" style="width: 48%">
+              <h4 class="green">Some More Uses</h4>
+              <ul>
+                <li>border-radius</li>
+                <li>content</li>
+                <li>gradients</li>
+                <li>shadows</li>
+                <li>SELECTORS!</li>
+                <li>LOGIC!</li>
+                <li>ALL THE THINGS!!!1!</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>you can put just about anything in a variable and so for that reason, it's a very very valuable tool for dealing with the repetition and tediousness of CSS</p>
+              <li>so how do we use em...</li>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Assignment & Use -->
+          <section>
+            <h3><span class="blue">Variables</span> Assignment &amp; Reference</h3>
+
+            <p class="box copy--small">Variables are defined like normal CSS rules<br />(<code>property: value;</code>), only prefixed with a <code>$</code></p>
+
+            <p class="copy--small">Variables are then referenced by their <code>$</code>-prefixed names.</p>
+
+            <div class="box left" style="width: 45%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $grey: rgba(0,0,0,.5);
+                $teal: #095169;
+                $default-padding: 1em;
+
+                a {
+                  color: $teal;
+                  padding: $default-padding;
+                  &:hover {
+                    color: $grey;
+                    background: $teal;
+                  }
+                }
+
+                p {
+                  padding-bottom: $default-padding
+                }
+              </code></pre>
+            </div>
+
+            <div class="box right" style="width: 45%">
+              <h4>CSS Output</h4>
+              <pre><code class="scss">
+                a {
+                  color: #095169;
+                  padding: 1em;
+                }
+                a:hover {
+                  color: rgba(0,0,0,.5);
+                  background: #095169;
+                }
+                p {
+                  padding-bottom: 1em;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>as you can see, we've set a few different types of data - there a total of 6 data types that Sass accepts</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Types -->
+          <section>
+            <h3><span class="blue">Variable</span> Types</h3>
+            <div class="box left" style="width:35%;">
+              <h4 class="green">Types</h4>
+              <ul>
+                <li>Numbers</li>
+                <li>Strings</li>
+                <li>Colors</li>
+                <li>Lists</li>
+                <li>Booleans</li>
+                <li>Null</li>
+              </ul>
+            </div>
+
+            <div class="box right" style="width:55%;">
+              <h4 class="green">Uses</h4>
+              <pre><code class="scss">
+                $base-padding: 10px;
+                $line-height: 1.5;
+
+                $base-font: Verdana;
+                $content: "Loading..."
+
+                $feature-color: purple;
+                $feature-background: rgba(0, 255, 0, 0.5);
+
+                $base-margin: 20px 0 30px 10px;
+                $base-font: "Trebuchet MS", "Verdana", "Arial";
+
+                $bordered: true;
+                $shadowed: false;
+
+                $secondary: null;
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>NUMBERS can be set with or without units</p>
+              <p>STRINGS can be set with or without quotes</p>
+              <p>we'll get into things like lists, booleans, and null later, but they can be super helpful</p>
+              <p>now, there are two ways to define variables, the first is Simple Assignment</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Simple Assignment -->
+          <section>
+            <h3><span class="blue">Variable</span> Simple Assignment</h3>
+            <p class="box">You can redeclare variables to <span class="green">override</span> previous values</p>
+            <div class=" left" style="width:48%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code>
+                $border-width: 2px;
+                $border-width: 4px;
+
+                a {
+                  border: $border-width solid $teal;
+                }
+              </code></pre>
+            </div>
+            <div class=" right" style="width:48%;">
+              <h4>CSS Output</h4>
+              <pre><code>
+                a {
+                  border: 4px solid #095169;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>simple assignment: create a variable, assign it a value</p>
+              <p>you can also override these values</p>
+              <p>This is especially helpful when theming or working with third party tools</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Guarded Assignment -->
+          <section>
+            <h3><span class="blue">Variable</span> Guarded Assignment</h3>
+            <p class="box">The <span class="green">!default</span> flag<br />
+              <small>Means: set if it does not already have a value</small>
+            </p>
+            <div class=" left" style="width:48%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code>
+                $border-width: 2px;
+                $border-width: 4px !default;
+
+                a {
+                  border: $border-width solid $teal;
+                }
+              </code></pre>
+            </div>
+            <div class=" right" style="width:48%;">
+              <h4>CSS Output</h4>
+              <pre><code>
+                a {
+                  border: 2px solid #095169;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>a lot of 3rd party libraries use guarded assignment so that you can override their values before including the code</p>
+              <p>so this leads us nicely into scope</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Scope -->
+          <section>
+            <h3><span class="blue">Variable</span> Scope</h3>
+
+            <div class="left box left-align" style="width: 48%;">
+              <p class="box copy--small">Variables are only available within the level of nested selectors where they're defined.</p>
+              <p class="copy--small">If they're defined outside of any nested selectors, they're available everywhere.</p>
+              <p class="box"><cite><small>~ <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">Sass Documentation</a></small></cite></p>
+            </div>
+
+            <div class="right box" style="width: 48%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $border-width: 4px; // Global
+
+                a {
+                  $color: orange;   // Local
+                  border: $border-width solid green;
+                }
+
+                p {
+                  border: $border-width solid red;
+                  color: $color; // ERROR!!
+                  // Undefined variable "$color"
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>This is sort of a global / local setup</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Scope -->
+          <section>
+            <h3><span class="blue">Variable</span> Globals</h3>
+
+            <div class="left box left-align" style="width: 40%;">
+              <p class="box"><span class="green">Setting new values</span> to "global" variables within a selector <span class="green">changes future instances</span> of that variable</p>
+            </div>
+
+            <div class="right box" style="width: 56%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $border-width: 4px;
+
+                a {
+                  $border-width: 2px;
+                  border: $border-width solid green;
+                }
+
+                p {
+                  border: $border-width solid red; //=> 2px
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>We can change global variables anywhere</p>
+              <p>We can only create or change local variables within that nesting level</p>
+              <p>So this brings us to the last aspect of variables - interpolation</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Interpolation -->
+          <section>
+            <h3><span class="blue">Variable</span> Interpolation</h3>
+              <p class='box'>Variables can be injected into <span class="green">selectors, property names, and strings</span> with <code>#{$variable}</code></p>
+            <div class=" left align-left" style="width: 52%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $side: left;
+
+                .box-#{$side} {
+                  border-#{$side}: 1px solid #ccc;
+
+                  &:before {
+                    content: "It's on the #{$side} side";
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class=" right" style="width: 48%">
+              <h4>CSS Output</h4>
+              <pre><code>
+                .box-left {
+                  border-left: 1px solid #ccc;
+                }
+                .box-left:before {
+                  content: "It's on the left side";
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>We'll see how this can become pretty handy later on</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basicx : Variables : Naming -->
+          <section>
+            <h3><span class="blue">PROTIP</span> Variable Naming</h3>
+            <div class="box left" style="width: 49%">
+              <h4 class="green">OK Variables</h4>
+              <pre><code class="scss">
+                $white: #ffffff;
+                $black: #222222;
+                $eggplant: #531946;
+                $eggplantDark: #30162B;
+                $teal: #095169;
+
+                .header {
+                  background-color: $eggplant;
+                }
+                .header a {
+                  color: $white;
+                }
+                .header a:hover {
+                  color: $teal;
+                }
+
+                .footer {
+                  background-color: $eggplant-dark;
+                  color: $white;
+                }
+                .footer a {
+                  color: $teal;
+                }
+                .footer a:hover {
+                  color: $white;
+                }
+
+                .feature a {
+                  background-color: $eggplant-dark;
+                  color: $white;
+                }
+
+                .feature a:hover {
+                  color: $eggplant;
+                }
+
+                .content {
+                  background-color: $white;
+                  color: $black;
+                }
+              </code></pre>
+            </div>
+            <div class="fragment box right" style="width: 49%">
+              <h4 class="yellow">Better Variables</h4>
+              <pre><code class="scss">
+                // Descriptive Colors
+                $white:        #ffffff;
+                $grey:         #222222;
+                $eggplant:     #531946;
+                $eggplantDark: #30162B;
+                $teal:         #095169;
+
+                // Functional Colors
+                $header--background:          $eggplant;
+                $header__logo--color:         $white;
+                $header__logo--color--hover:  $teal;
+
+                $footer--background:          $eggplant--dark;
+                $footer--color:               $white;
+                $footer__nav--color:          $teal;
+                $footer__nav--color--hover:   $white;
+
+                $content--background:         $white;
+                $content--color:              $grey;
+
+                $feature__link--background:   $eggplant--dark;
+                $feature__link--color:        $white;
+                $feature__link--color--hover: $eggplant;
+
+                .header {
+                  background-color: $header--background;
+                }
+                .header a {
+                  color: $header__logo--color;
+                }
+                .header a:hover {
+                  color: $header__logo--color--hover;
+                }
+
+                .footer {
+                  background-color: $footer--background;
+                  color: $footer--color;
+                }
+                .footer a {
+                  color: $footer__nav--color;
+                }
+                .footer a:hover {
+                  color: $footer__nav--color--hover;
+                }
+
+                .feature a {
+                  background-color: $feature__link--background;
+                  color: $feature__link--color;
+                }
+
+                .feature a:hover {
+                  color: $eggplant;
+                }
+
+                .content {
+                  background-color: $content--background;
+                  color: $content--color;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>You want to be crafty with naming, but also don't spend too much time worrying about them, they're easy enough to update later once patterns become more apparent</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Variables : Develop It! -->
+          <section>
+            <h3>Variables <span class="blue">Let's develop it!</span></h3>
+            <div class="box left copy--small" style="width: 48%">
+              <ul>
+                <li><strong>Colors:</strong>
+                  <ul>
+                    <li><span class="green">Find</span> a <a href="http://colourlovers.com" target="_blank">color pallete</a></li>
+                    <li><span class="green">Set</span> <code>color</code> and <code>background</code> for header, content, footer* and nav items</li>
+                    <li><span class="green">Abstract</span> colors to variables, name based on usage</li>
+                  </ul>
+                </li>
+                <li><strong>Fonts:</strong>
+                  <ul>
+                    <li><span class="green">Set variables</span> for different base and heading <code>font-family</code> stacks**</li>
+                    <li><span class="green">Set</span> <code>html</code> to use the base variable, and <code>h1...h6</code> to your heading variable</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="box right" style="width: 48%">
+              <img src="images/comic.jpeg" style="max-width: 100%;" />
+              <p class="box box--small"><small>* Hint: Set footer background on <code>html</code> so it fills the entire bottom of the page</small></p>
+              <p><small>** Try a fancy font or two from <a href="http://www.google.com/fonts" target="_blank">google</a>!</small></p>
+              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
+            </div>
+            <aside class="notes">
+              <p>So we're not going to focus too much on globals or overrides or interpolation at this stage, let's just get comfortable with setting and using variables</p>
+            </aside>
+          </section>
+
+
+          <!-- Sass Basics : Core Features : 3.3 Imports & Organization -->
+          <section>
+            <h3>Sass Basics</h3>
+            <p>Imports &amp; Organization</p>
+          </section>
+
+          <!-- Sass Basics : Core Features : Imports & Organization -->
+          <section>
+            <h3><span class="blue">3.3</span> Imports &amp; Organization</h3>
+            <ul class="copy--small box">
+              <li>CSS <code>@import</code> has always meant an <span class="red">extra file download</span></li>
+              <li><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side</li>
+            </ul>
+            <p class="pink">Organization OMGZZ!</p>
+            <pre><code class="scss">
+              @import "vars";
+
+              @import "compass";
+              @import "fontawesome";
+
+              @import "utilities";
+
+              @import "grid";
+              @import "base";
+
+              @import "modules/all";
+              @import "pages/all";
+            </code></pre>
+            <aside class="notes">
+
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Imports -->
+          <section>
+            <h3>Imports</h3>
+            <div class="box left left-align copy--small" style="width: 48%">
+              <p><code>@import</code> takes a <span class="green">path</span> to a Sass resource, the <span class="green">file extension is optional</span></p>
+              <p>These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory</p>
+            </div>
+            <div class="box right" style="width: 48%">
+              <pre><code class="scss">
+                @import "vars";
+
+                @import "compass";
+                @import "fontawesome";
+
+                @import "utilities";
+
+                @import "grid";
+                @import "base";
+
+                @import "modules/all";
+                @import "pages/all";
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Now when I say MAIN SASS FILE we're starting to get into file organization here...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Import File Structure -->
+          <section>
+            <h3><span class="blue">Imports</span> File Structure</h3>
+            <div class="box left" style="width: 48%">
+              <h4 class="green">screen.scss</h4>
+              <pre><code>
+                @import "vars";
+                @import "lib/compass";
+                @import "lib/fontawesome";
+                @import "utilities";
+                @import "grid";
+                @import "base";
+              </code></pre>
+
+              <p class="box"><small><code>sass sass/screen.scss css/screen.css</code></small></p>
+            </div>
+            <div class="box right copy--small" style="width: 48%">
+              <ul>
+                <li>project_awesome
+                  <ul>
+                    <li>sass
+                      <ul>
+                        <li>lib
+                          <ul>
+                            <li>compass.scss</li>
+                            <li>fontawesome.scss</li>
+                          </ul>
+                        </li>
+                        <li>base.scss</li>
+                        <li>grid.scss</li>
+                        <li class="green">screen.scss</li>
+                        <li>utilities.scss</li>
+                        <li>vars.scss</li>
+                      </ul>
+                    </li>
+                    <li>css
+                      <ul>
+                        <li class="green">screen.css</li>
+                      </ul>
+                    </li>
+                    <li>index.html</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <ul class="copy--small">
+                <li>screen.scss would be considered our "main" sass file, it's where we import and organize our project</li>
+                <li>the @import paths reference files in the same directory or nested below</li>
+                <li>so if we were to run this <code>sass</code> command, we'd end up with screen.css</li>
+                <li>Now there's sort of a gotchya here...</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Import Gotchya -->
+          <section>
+            <h3><span class="blue">Imports</span> Compiling Directories</h3>
+
+            <p class="box"><code>sass sass/ css/</code></p>
+
+            <div class=" left copy--small" style="width: 48%">
+              <ul>
+                <li>sass
+                  <ul>
+                    <li>lib
+                      <ul>
+                        <li>compass.scss</li>
+                        <li>fontawesome.scss</li>
+                      </ul>
+                    </li>
+                    <li>base.scss</li>
+                    <li>grid.scss</li>
+                    <li class="green">screen.scss</li>
+                    <li>utilities.scss</li>
+                    <li>vars.scss</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class=" left" style="width: 4%">
+              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+              <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+            </div>
+            <div class=" right copy--small" style="width: 48%">
+              <ul>
+                <li class="red">css
+                  <ul>
+                    <li>lib
+                      <ul>
+                        <li>compass.css</li>
+                        <li>fontawesome.css</li>
+                      </ul>
+                    </li>
+                    <li>base.css</li>
+                    <li>grid.css</li>
+                    <li class="yellow">screen.css</li>
+                    <li>utilities.css</li>
+                    <li>vars.css</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>if we compile the whole directory, we get output for every file</p>
+              <p>running <code>sass</code> on directories will compile all Sass files regardless of whether or not they've been included elsewhere</p>
+              <p>how do we fix that? what if we wanted to compile a screen and a print stylesheet and didn't want to run multiple sass commands...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Partials -->
+          <section>
+            <h3><span class="blue">Imports</span> Partials</h3>
+
+            <p class="box"><code>sass sass/ css/</code></p>
+
+            <div class=" left copy--small" style="width: 48%">
+              <ul>
+                <li>sass
+                  <ul>
+                    <li>lib
+                      <ul>
+                        <li>_compass.scss</li>
+                        <li>_fontawesome.scss</li>
+                      </ul>
+                    </li>
+                    <li>_base.scss</li>
+                    <li>_grid.scss</li>
+                    <li class="green">print.scss</li>
+                    <li class="green">screen.scss</li>
+                    <li>_utilities.scss</li>
+                    <li>_vars.scss</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class=" left" style="width: 4%">
+              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+            </div>
+            <div class=" right copy--small" style="width: 48%">
+              <ul>
+                <li>css
+                  <ul>
+                    <li class="yellow">print.css</li>
+                    <li class="yellow">screen.css</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="box  copy--small left-align">
+                <ul>
+                  <li class="box">An <span class="pink">_underscore</span> creates a partial</li>
+                  <li>Partials will not compile to <code>.css</code> on their own, they <span class="pink">must be <code>@import</code>ed</span></li>
+                  <li class="box">Partials allow us to break up our code into more <span class="pink">modular, maintainable chunks</span>!</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>partial help us break up our code in the </p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Organization -->
+          <section>
+            <h3><span class="blue">Imports</span> Organization</h3>
+            <div class="left box" style="width: 48%">
+              <h4 class="yellow">Common Practices</h4>
+              <ul class=" copy--small">
+                <li><code>_vars.scss</code> is a separate sheet for all your variables</li>
+                <li><code>_vars.scss</code> is added first so that it's variables can override later <code>!default</code>ed ones</li>
+                <li>Variables > Libraries > Base > Modules > Pages<br/><small>OOCSS, BEM, SMACSS, Atomic Design</small></li>
+                <li class="green">Modular Architecture</li>
+              </ul>
+            </div>
+            <div class="right box" style="width: 48%">
+              <h4 class="green">screen.scss</h4>
+              <pre><code>
+                // Variables
+                @import "vars";
+
+                // Libraries
+                @import "lib/compass";
+                @import "lib/fontawesome";
+
+                // Base Styles, Utility Classes, etc.
+                @import "base/all";
+
+                // Individual Components
+                @import "modules/all";
+
+                // Page Styles
+                @import "pages/all";
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Ultimately, how you organize your code is up to you</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organizations : Develop It! -->
+          <section>
+            <h3>Imports <span class="blue">Let's develop it!</span></h3>
+            <div class="box left copy--small" style="width: 48%">
+              <ul class="box">
+                <li><span class="green">Update your project's file structure</span> to look something like the one on the right</li>
+                <li><span class="green">Move ALL styles</span> from <code>screen.scss</code> to more modular / organized locations</li>
+                <li><span class="green">Update</span> <code>screen.scss</code> to <code>@import</code> your new partials</li>
+              </ul>
+              <p><span class="blue">PRO</span> Add MOAR stylez</p>
+            </div>
+            <div class="box right copy--small" style="width: 48%">
+              <ul>
+                <li>project_awesome
+                  <ul>
+                    <li>sass
+                      <ul>
+                        <li>base
+                          <ul>
+                            <li>_vars.scss</li>
+                            <li>_base.scss</li>
+                          </ul>
+                        </li>
+                        <li>modules
+                          <ul>
+                            <li>_header.scss</li>
+                            <li>_footer.scss</li>
+                            <li>_navigation.scss</li>
+                          </ul>
+                        </li>
+                        <li>screen.scss</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes"></aside>
+          </section>
+        </section>
+        <!-- COMPLETE  -->
+
+
+        <!-- BREAK TIME -->
+        <section>
+          <h3>Break Time!</h3>
+          <p class="box">Enjoy some snacks courtesy of Atomic Object!</p>
+          <img src="images/sloth-snack.gif" />
+        </section>
+        <!-- COMPLETE -->
+
+
+        <!-- REVIEW -->
+        <section>
+          <h3 class="green"><span class="blue">Part 1</span> Review</h3>
+          <p class="box">Sass Intro</p>
+          <p>Workflow</p>
+          <p class="box">Nesting</p>
+          <p>Variables</p>
+          <p class="box">Imports &amp; Organization</p>
+          <p class="yellow">Questions?</p>
+          <aside class="notes">
+          </aside>
+        </section>
+        <!-- COMPLETE -->
+
+
+        <!-- SECTION 4 : ADVANCED SASS -->
+        <section>
+          <section>
+            <h3>Section IV</h3>
+            <p>Advanced Sass</p>
+          </section>
+
+          <section>
+            <h3>Advanced Sass</h3>
+            <ol class="broken">
+              <li>Mixins (@include)</li>
+              <li class="break">Inheritence (@extend)</li>
+              <li class="break">Directives</li>
+            </ol>
+          </section>
+
+          <!-- Advanced Sass : Mixins -->
+          <section>
+            <h3>Mixins</h3>
+            <p></p>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+
+          <!-- DUE 12/27 -->
+
+
+          <!-- Advanced Sass : Inheritence -->
+          <section>
+            <h3>Inheritence</h3>
+            <p></p>
+          </section>
+
+          <!-- Advanced Sass : Inheritence : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+
+          <!-- DUE 12/28 -->
+
+
+          <!-- Advanced Sass : Directives -->
+          <section>
+            <h3>Directives</h3>
+            <ul class="box">
+              <li>Functions</li>
+              <li>Conditionals</li>
+              <li>Loops</li>
+              <li>Math</li>
+              <li>Color</li>
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Directives : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul class="box">
+            </ul>
+          </section>
+        </section>
+
+
+        <!-- BREAK TIME -->
+        <section>
+          <h3>Break Time!</h3>
+          <p class="box">Enjoy some snacks courtesy of Atomic Object!</p>
+          <img src="images/puppy-snack.gif" />
+        </section>
+        <!-- COMPLETE -->
+
+
+        <!-- REVIEW -->
+        <section>
+          <h3 class="green"><span class="blue">Part 2</span> Review</h3>
+          <p></p>
+        </section>
+
+
+        <!-- DUE 11/30 -->
+
+
+        <!-- SECTION 5 : MEDIA QUERIES -->
+        <section>
+          <section>
+            <h3>Section V</h3>
+            <p>Media Queries</p>
+          </section>
+
+          <!-- Media Queries : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul class="box">
+            </ul>
+          </section>
+        </section>
+
+
+        <!-- SECTION 6 : LIBRARIES & TOOLS -->
+        <section>
+          <section>
+            <h3>Section VI</h3>
+            <p>Libraries &amp; Tools</p>
+          </section>
+
+          <section>
+            <h3>Libraries &amp; Tools</h3>
+            <ul class="box">
+              <li>Compass</li>
+              <li>Susy</li>
+            </ul>
+          </section>
+
+          <!-- Sass Workflow : Compass -->
+          <section>
+            <h3>Compass</h3>
+
+            <code>compass init</code>
+            <code>compass config</code>
+            <code>compass watch</code>
+
+          </section>
+
+          <!-- SASS WORKFLOW : Tools -->
+          <section>
+            <h3>Sass Tools</h3>
+            <p class="box"><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a></p>
+            <p class="box"><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a></p>
+            <p class="box"><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a></p>
+          </section>
+
+          <!-- Libraries & Tools : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul></ul>
+          </section>
+        </section>
+
+
+        <!-- SECTION 7 : MODULAR ARCHITECTURE -->
+        <section>
+          <section>
+            <h3>Section VII</h3>
+            <p>Modular Architecture</p>
+          </section>
+
+          <section>
+            <h3>Modular Architecture</h3>
+            <ul class="box">
+              <li>OOCSS, BEM, SMACSS, Atomic Design, ...</li>
+              <li>Styleguides</li>
+            </ul>
+          </section>
+
+          <!-- Modular Architecture : OOCSS, BEM, SMACSS, Atomic Design -->
+          <section>
+            <h3>OOCSS, BEM, SMACSS, Atomic Design..</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Modular Architecture : OOCSS, BEM, SMACSS, Atomic Design : Develop It! -->
+          <section>
+            <h3 class="blue">Let's develop it!</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Modular Architecture : Styleguides -->
+          <section>
+            <h3>Styleguides</h3>
+            <ul class="box">
+            </ul>
+          </section>
+        </section>
+
+
+        <!-- REVIEW -->
+        <section>
+          <h3 class="green"><span class="blue">Part 3</span> Review</h3>
+          <p></p>
+        </section>
+
+
+        <!-- DUE 12/1 -->
+
+
+        <!-- WRAP UP -->
+        <section>
+          <section>
+            <h3>Wrap Up</h3>
+            <p></p>
+          </section>
+
+          <!-- WRAP UP : Questions -->
+          <section>
+            <h3>Questions?</h3>
+            <p>I'm here to help!</p>
+            <img src="images/questions_cat.jpg" alt="Confused? Let us help!" />
+            <p>
+              <a href="mailto:jewlofthelotus@gmail.com">jewlofthelotus@gmail.com</a> Twitter: <a href="http://twitter.com/jewlofthelotus" target="_blank">@jewlofthelotus</a><br/>
+          </section>
+
+          <!-- WRAP UP : Resources -->
+          <section>
+            <h3>Resources</h3>
+            <ul>
+              <li><a target="_blank" href="http://sass-lang.com">Sass-Lang.com</a></li>
+              <li><a target="_blank" href="http://sassmeister.com">SassMeister.com</a></li>
+              <li><a target="_blank" href="http://compass-style.org">Compass-Style.org</a></li>
+              <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a></li>
+              <li><a target="_blank" href="http://sassconf.con">Sass Conf</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+        <!-- DUE 12/2 -->
+
+
+        <!-- COURSE OUTRO -->
+        <section>
+          <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
+          <h3>Getting Sassy with CSS</h3>
+          <p><small>#SassShopDetroit</small></p>
+        </section>
+        <!-- COMPLETE -->
+      </div>
+
+      <footer>
+        <div class="copyright">
+          #SassShopDetroit ~ Girl Develop It ~
+          <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+            <img alt="Creative Commons License" style="border-width:0" src="images/cc.png" />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>

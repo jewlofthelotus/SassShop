@@ -1,0 +1,10 @@
+.header {
+  background: $header-background;
+  color: $header-color;
+  padding: $padding-default;
+
+  h1 {
+    display: inline-block;
+    font-family: $logo-font-family;
+  }
+}

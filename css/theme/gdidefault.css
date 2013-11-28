@@ -1,0 +1,75 @@
+/*
+Syntax error: File to import not found or unreadable: compass/css3.
+              Load paths:
+                /Users/jewls/Sites/gdi-sass (DEPRECATED)
+                /Users/jewls/Sites/gdi-sass/css/theme/source
+        on line 2 of css/theme/source/template/_settings.scss
+        from line 2 of css/theme/source/gdidefault.scss
+
+1: // Settings
+2: @import "template/settings";
+3: 
+4: 
+5: // Override theme settings (see ../template/settings.scss)
+6: $linkColor: #01A9B4;
+7: 
+
+Backtrace:
+css/theme/source/template/_settings.scss:2
+css/theme/source/gdidefault.scss:2
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:45:in `import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:28:in `imported_file'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:37:in `css_import?'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:278:in `visit_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `with_base'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:292:in `block (2 levels) in visit_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:292:in `map'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:292:in `block in visit_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:88:in `block in with_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:88:in `with_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:289:in `visit_import'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `with_base'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit_children'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:174:in `with_environment'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:161:in `visit_children'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:181:in `visit_root'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/engine.rb:277:in `render'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:348:in `update_stylesheet'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:192:in `block in update_stylesheets'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:189:in `each'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:189:in `update_stylesheets'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:224:in `watch'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/plugin.rb:109:in `method_missing'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:508:in `watch_or_update'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:346:in `process_result'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:43:in `parse'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:22:in `parse!'
+/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/sass-3.3.0.rc.1/bin/sass:9:in `<top (required)>'
+/usr/local/var/rbenv/versions/2.0.0-p247/bin/sass:23:in `load'
+/usr/local/var/rbenv/versions/2.0.0-p247/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: compass/css3.\A               Load paths:\A                 /Users/jewls/Sites/gdi-sass (DEPRECATED)\A                 /Users/jewls/Sites/gdi-sass/css/theme/source\A         on line 2 of css/theme/source/template/_settings.scss\A         from line 2 of css/theme/source/gdidefault.scss\A \A 1: // Settings\A 2: @import \"template/settings\";\A 3: \A 4: \A 5: // Override theme settings (see ../template/settings.scss)\A 6: $linkColor: #01A9B4;\A 7: "; }

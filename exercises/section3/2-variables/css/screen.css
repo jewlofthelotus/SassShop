@@ -1,0 +1,52 @@
+html {
+  background: #d8c358;
+  color: #d0e799;
+  font-family: Tahoma, Verdana, Arial, sans-serif; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fauna One", Palatino, Georgia, Times; }
+
+.header {
+  background: #6d0839;
+  color: #fbeff4;
+  padding: 20px; }
+  .header h1 {
+    display: inline-block;
+    font-family: "Lily Script One", "Fauna One", Palatino, Georgia, Times; }
+
+.content {
+  background: #f1f1f1;
+  color: #25271e;
+  padding: 20px; }
+
+.footer {
+  background: #d8c358;
+  color: #d0e799;
+  padding: 20px; }
+
+.navigation {
+  display: inline-block; }
+  .navigation ul {
+    padding: 0; }
+  .navigation li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 1em; }
+  .navigation a {
+    background: #9d6673;
+    color: #fbeff4;
+    display: block;
+    padding: 10px;
+    text-decoration: none; }
+    .navigation a:hover {
+      background: #25271e; }
+  .header .navigation {
+    float: right; }
+    .header .navigation li {
+      margin-left: 1em;
+      margin-right: 0; }
+  .footer .navigation a {
+    background: #6d0839; }
