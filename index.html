@@ -727,7 +727,6 @@
             </aside>
           </section>
         </section>
-        <!-- COMPLETE -->
 
 
         <!-- SECTION 2 : SASS WORKFLOW -->
@@ -864,7 +863,7 @@
               <li>In the <code>head</code> of <code>index.html</code>, include a link to your CSS output</li>
               <li>Open <code>index.html</code> in the broswer, optionally enable <strong>LivePage</strong>**</li>
               <li>Open <code>screen.scss</code>, add a few basic styles and <strong>save</strong> the file.</li>
-              <li>Run <code>sass --watch sass/screen.scss:css/screen.css</code></li>
+              <li>Run (on one line): <small><code>sass --watch --style expanded sass/screen.scss:css/screen.css</code></small></li>
               <li>Checkout your page in the browser to see your <em class="yellow">sassy new stylez</em>.</li>
               <li><span class="blue">PRO</span> MOAR stylez!!</li>
             </ul>
@@ -888,7 +887,6 @@
             </div>
           </section>
         </section>
-        <!-- COMPLETE -->
 
 
         <!-- SECTION 3 : SASS BASICS -->
@@ -2035,7 +2033,6 @@
             <aside class="notes"></aside>
           </section>
         </section>
-        <!-- COMPLETE  -->
 
 
         <!-- BREAK TIME -->
@@ -2044,7 +2041,6 @@
           <p class="box">Enjoy some snacks courtesy of Atomic Object!</p>
           <img src="images/sloth-snack.gif" />
         </section>
-        <!-- COMPLETE -->
 
 
         <!-- REVIEW -->
@@ -2059,7 +2055,6 @@
           <aside class="notes">
           </aside>
         </section>
-        <!-- COMPLETE -->
 
 
         <!-- SECTION 4 : ADVANCED SASS -->
@@ -2075,7 +2070,8 @@
             <ol class="broken">
               <li>Mixins (@include)</li>
               <li class="break">Inheritence (@extend)</li>
-              <li class="break">Directives</li>
+              <li class="break">Math &amp; Color</li>
+              <li class="break">Directives (Overview)</li>
             </ol>
           </section>
 
@@ -2279,6 +2275,18 @@
           <section>
             <h3><span class="blue">Mixins</span> Efficiency</h3>
             <div class="box left" style="width: 49%">
+              <h4 class="yellow">CSS Grouping</h4>
+              <pre><code class="scss">
+                .header,
+                .footer,
+                .feature a,
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 49%">
               <h4>Mixin Output</h4>
               <pre><code class="css">
                 .header {
@@ -2304,18 +2312,6 @@
                   border-radius: 5px;
                   padding: 5px 20px;
                   /* ... */
-                }
-              </code></pre>
-            </div>
-            <div class="box right" style="width: 49%">
-              <h4 class="yellow">Grouping Output</h4>
-              <pre><code class="scss">
-                .header,
-                .footer,
-                .feature a,
-                .content {
-                  border-radius: 5px;
-                  padding: 5px 20px;
                 }
               </code></pre>
             </div>
@@ -2362,8 +2358,7 @@
           <!-- Advanced Sass : Mixins : Arguments -->
           <section>
             <h3><span class="blue">Mixins</span> Arguments</h3>
-            <p class="box copy--small fragment" data-fragment-index="2">Mixins are great for repeated <span class="green">blocks of styles</span><br />where the <span class="yellow">values differ</span> from case to case.</p>
-            <div class="left" style="width: 48%;">
+            <div class="box left" style="width: 48%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
                 @mixin rounded-corners($radius) {
@@ -2383,7 +2378,7 @@
                 }
               </code></pre>
             </div>
-            <div class="right fragment" data-fragment-index="1" style="width: 48%;">
+            <div class="box right" data-fragment-index="1" style="width: 48%;">
               <h4>CSS Output</h4>
               <pre><code>
                 .header {
@@ -2403,6 +2398,7 @@
 
               <!-- TODO insert funny image here -->
             </div>
+            <p class="clear copy--small" data-fragment-index="2">Mixins are great for repeated <span class="green">blocks of styles</span><br />where the <span class="yellow">values differ</span> from case to case.</p>
             <aside class="notes">
               <p>I mentioned before that mixins can accept arguments</p>
               <p>Output..</p>
@@ -2619,7 +2615,7 @@
             <div class="left copy--small" style="width: 64%">
               <ul class="box">
                 <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file</li>
-                <li><span class="green">Create a <code>@mixin</code></span>* that accepts arguments for and sets the properties to the right, give padding a default</li>
+                <li><span class="green">Create a <code>@mixin</code></span>* that accepts arguments for each of the properties on the right, give padding a default</li>
                 <li><span class="green"><code>@include</code> this mixin</span> where it makes sense</li>
               </ul>
               <p><span class="blue">PRO</span> Add MOAR mixins, here are some ideas:</p>
@@ -2641,95 +2637,380 @@
               <p>Feel free to try anything you like though</p>
             </aside>
           </section>
-          <!-- COMPLETE -->
 
 
-          <!-- Advanced Sass : Inheritence -->
+          <!-- Advanced Sass : Inheritance -->
           <section>
-            <h3>Inheritence</h3>
-            <p></p>
-            <aside class="notes">
+            <h3>Advanced Sass</h3>
+            <p>Inheritence</p>
+          </section>
 
+          <!-- Advanced Sass : Inheritance : Mixin Efficiency Flashback -->
+          <section>
+            <h3><span class="blue">Mixin</span> Efficiency</h3>
+            <div class="box left" style="width: 49%">
+              <h4>Mixin Output</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  color: $header-color;
+                  /* ... */
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  /* ... */
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 49%">
+              <h4 class="yellow">Grouping Optimiztion</h4>
+              <pre><code class="scss">
+                .header,
+                .footer,
+                .feature a,
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>We kept running into a problem with mixins in that they weren't good for including styles that were exactly the same</p>
+              <p>We ended up with output like this</p>
+              <p>When really it'd be more efficent to just group these selectors together</p>
+              <p>Well of course Sass has tool to address this need</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritence : Use -->
+          <section>
+            <h3><span class="blue">4.2</span> Inheritence</h3>
+            <p class="box"><code>@extend</code> let's us group selectors together!</p>
+            <div class="left" style="width: 48%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code>
+                .message {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
+
+                .message-alert {
+                  @extend .message;
+                  @include message-colors($yellow);
+                }
+
+                .message-error {
+                  @extend .message;
+                  @include message-colors($red);
+                }
+
+                .message-notice {
+                  @extend .message;
+                  @include message-colors($green);
+                }
+              </code></pre>
+            </div>
+            <div class="right" style="width: 48%">
+              <h4 class="green">CSS Output</h4>
+              <pre><code>
+                .message,
+                .message-alert,
+                .message-error,
+                .message-notice {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
+
+                .message-alert {
+                  border-color: goldenrod;
+                  color: goldenrod;
+                }
+
+                .message-error {
+                  border-color: darkred;
+                  color: darkred;
+                }
+
+                .message-notice {
+                  border-color: green;
+                  color: green;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <small>
+              <p>When you @extend a class, it basically just adds that class  to the group of the class you're extending</p>
+              <p>@extend will then add a second declaration for additional prop-vals (message-alert)</p>
+              <ul>
+                <li>So this is pretty huge, especially for modular architectures where you have base classes that get modified</li>
+                <li>typically what we've done in the past is chain selectors together "message message-alert"</li>
+                <li>with extensions, we can get back to more semantic classes rather than presentational ones.</li>
+                <li>your presentational classes come in via extensions</li>
+              </ul>
+              </small>
             </aside>
           </section>
 
           <!-- Advanced Sass : Inheritence : Setup -->
           <section>
             <h3><span class="blue">Inheritence</span> Setup</h3>
-            <p></p>
-            <aside class="notes">
+            <div class="box left" style="width: 49%">
+              <pre><code>
+                .message {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
 
+                .message-alert {
+                  @extend .message;
+                  @include message-colors($yellow);
+                }
+
+                .message-error {
+                  @extend .message;
+                  @include message-colors($red);
+                }
+
+                .message-notice {
+                  @extend .message;
+                  @include message-colors($green);
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small" style="width: 49%">
+              <ul>
+                <li><span class="green">Any CSS class can be extended</span></li>
+                <li>We <span class="green">reference</span> a class to extend with the <code>@extend</code> directive</li>
+              </ul>
+              <ul class="box">
+                <li>Extended classes DO NOT need to be defined before they're referenced</li>
+                <li>Extensions can be used with any other style rules</li>
+                <li>You can <span class="green">nest</span> within extended classes just like you can elsewhere</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>It's possible to extend, I believe, any CSS selector, but I'm not sure why you'd want to</p>
+              <p>So let's look at that output one more time...</p>
             </aside>
           </section>
 
-          <!-- Advanced Sass : Inheritence : Nesting -->
+          <!-- Advanced Sass : Inheritence : Output -->
           <section>
-            <h3><span class="blue">Inheritence</span> Nesting</h3>
-            <p></p>
-            <aside class="notes">
+            <h3><span class="blue">Inheritence</span> Output</h3>
+            <p class="box copy--small">If Sass allows us to apply only <code>.message-alert</code> to an HTML element, I don't need <code>.message</code> in my output at all - but how do I get rid of it?!</p>
+            <div class="left" style="width: 48%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code>
+                .message {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
 
+                .message-alert {
+                  @extend .message;
+                  @include message-colors($yellow);
+                }
+
+                .message-error {
+                  @extend .message;
+                  @include message-colors($red);
+                }
+
+                .message-notice {
+                  @extend .message;
+                  @include message-colors($green);
+                }
+              </code></pre>
+            </div>
+            <div class="right" style="width: 48%">
+              <h4 class="green">CSS Output</h4>
+              <pre><code>
+                .message,
+                .message-alert,
+                .message-error,
+                .message-notice {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
+
+                .message-alert {
+                  border-color: goldenrod;
+                  color: goldenrod;
+                }
+
+                .message-error {
+                  border-color: darkred;
+                  color: darkred;
+                }
+
+                .message-notice {
+                  border-color: green;
+                  color: green;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
             </aside>
           </section>
 
           <!-- Advanced Sass : Inheritence : Placeholders -->
           <section>
             <h3><span class="blue">Inheritence</span> Placeholders</h3>
-            <p></p>
+            <p class="box copy--small">Placeholders are a special type of selector denoted by a <code>%</code>. They can be <code>@extend</code>ed but will never compile to the CSS on their own.</p>
+            <div class="left" style="width: 48%">
+              <pre><code>
+                %message {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
+
+                .message-alert {
+                  @extend %message;
+                  @include message-colors($yellow);
+                }
+
+                .message-error {
+                  @extend .message;
+                  @include message-colors($red);
+                }
+
+                .message-notice {
+                  @extend .message;
+                  @include message-colors($green);
+                }
+              </code></pre>
+            </div>
+            <div class="right" style="width: 48%">
+              <pre><code>
+                .message-alert,
+                .message-error,
+                .message-notice, {
+                  border: 2px solid;
+                  margin-bottom: 1em;
+                  padding: 1em;
+                  text-align: center;
+                }
+
+                .message-alert {
+                  border-color: goldenrod;
+                  color: goldenrod;
+                }
+
+                .message-error {
+                  border-color: darkred;
+                  color: darkred;
+                }
+
+                .message-notice {
+                  border-color: green;
+                  color: green;
+                }
+              </code></pre>
+            </div>
             <aside class="notes">
-
-            </aside>
-          </section>
-
-          <!-- Advanced Sass : Inheritence : OOCSS -->
-          <section>
-            <h3><span class="blue">Inheritence</span> OOCSS</h3>
-            <p></p>
-            <aside class="notes">
-
+              <p>Placeholders are realy great for modular OOCSS frameworks where your styles are very abstract and tend to build on each other</p>
+              <p>.message, .message-list, .message-large</p>
+              <p>I've mentioned OOCSS a few times now</p>
             </aside>
           </section>
 
           <!-- Advanced Sass : Inheritence : Develop It! -->
           <section>
-            <h3 class="blue">Let's develop it!</h3>
-            <ul class="box">
-            </ul>
+            <h3>@extend <span class="blue">Let's develop it!</span></h3>
+            <div class="box left copy--small" style="width: 48%;">
+              <ul>
+                <li><span class="green">Add</span> a <code>_buttons.scss</code> partial to your modules directory, <code>@import</code> it in your main sheet</li>
+                <li><span class="green">Setup</span> a <code>.button</code> selector* to <code>@extend</code>, use the base styles on the right</li>
+                <li><span class="green">Setup</span> a <code>button-colors</code> <code>@mixin</code> that accepts arguments and sets <code>background</code> and <code>color</code> properties</li>
+                <li><span class="green">Add</span> <code>.button-#{mod}</code>s for primary, secondary, and tertiary classes; <code>@extend .button;</code></li>
+              </ul>
+            </div>
+            <div class="box right" style="width: 48%;">
+              <pre><code>
+                .button {
+                  display: inline-block;
+                  padding: .5em 1em;
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              </code></pre>
+              <p class="box"><small>* You get to decide if the @extended <code>.button</code> selector should be output or not (hint: <code>%</code>)</small></p>
+              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
+            </div>
           </section>
+          <!-- COMPLETE -->
 
 
-          <!-- DUE 12/29 -->
-
-
-          <!-- Advanced Sass : Directives -->
+          <!-- Advanced Sass : Math & Color -->
           <section>
-            <h3>Directives</h3>
-            <ul class="box">
-              <li>Math</li>
-              <li>Color</li>
-              <li>Functions</li>
-              <li>Conditionals</li>
-              <li>Loops</li>
-            </ul>
+            <h3>Advanced Sass</h3>
+            <p>Math &amp; Color</p>
           </section>
 
-          <!-- Advanced Sass : Directives : Math -->
+          <!-- Advanced Sass : Math & Color : Math -->
           <section>
-            <h3><span class="blue">Directives</span> Math</h3>
+            <h3><span class="blue">Utilities</span> Math</h3>
             <ul class="box">
             </ul>
           </section>
 
-          <!-- Advanced Sass : Directives : Color -->
+          <!-- Advanced Sass : Math & Color : Color -->
           <section>
-            <h3><span class="blue">Directives</span> Color</h3>
+            <h3><span class="blue">Utilities</span> Color</h3>
             <ul class="box">
             </ul>
           </section>
 
-          <!-- Advanced Sass : Directives : Develop It! -->
+          <!-- Advanced Sass : Math & Color : Develop It! -->
           <section>
             <h3>Math &amp; Color <span class="blue">Let's develop it!</span></h3>
             <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Directives -->
+          <section>
+            <h3>Advanced Sass</h3>
+            <p>Directive</p>
+          </section>
+
+          <!-- Advanced Sass : Directives : Overview -->
+          <section>
+            <h3>Directive</h3>
+            <ul class="box">
+              <li>Functions</li>
+              <li>Conditionals</li>
+              <li>Loops</li>
             </ul>
           </section>
 
@@ -2902,7 +3183,19 @@
         <section>
           <section>
             <h3>Wrap Up</h3>
-            <p></p>
+            <p>#SassShopDetroit</p>
+          </section>
+
+          <section>
+            <h3>Final Tips</h3>
+            <ul>
+              <li>Check your output regularly.</li>
+              <li>Be careful not to <code>@extend</code> too much</li>
+            </ul>
+            <aside class="notes">
+              <p>It's easy to go a bit crazy with all these features and easy to lose track of what you might be outputting</p>
+              <p>mass @extending can create crazy long selector groups, &lt;IE9 4095 selectors per file limit</p>
+            </aside>
           </section>
 
           <!-- WRAP UP : Questions -->
