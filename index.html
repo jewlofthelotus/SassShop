@@ -3116,7 +3116,6 @@
               <p>** We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
             </div>
           </section>
-          <!-- COMPLETE -->
 
 
           <!-- Advanced Sass : Directive -->
@@ -3131,18 +3130,43 @@
           <!-- Advanced Sass : Directive : Overview -->
           <section>
             <h3>Directive</h3>
-            <ul class="box">
+            <ol class=" broken">
               <li>Functions</li>
-              <li>Conditionals</li>
-              <li>Loops</li>
-            </ul>
+              <li class="break">Conditionals</li>
+              <li class="break">Loops</li>
+            </ol>
+            <aside class="notes">
+              <p>Now we've already got some experience when it comes to functions - from our math and color utilities</p>
+            </aside>
           </section>
 
           <!-- Advanced Sass : Directive : Functions -->
           <section>
             <h3><span class="blue">Directives</span> Functions</h3>
-            <ul class="box">
-            </ul>
+            <p class="box">Sass let's us define <span class="green">custom functions</span>.</p>
+            <div class="left" style="width: 53%">
+              <pre><code class="scss">
+                @function fluidize($target, $context) {
+                  @return ($target / $context) * 100%;
+                }
+
+                .sidebar {
+                  width: fluidize(350px, 1000px);
+                  // => width: 35%;
+                }
+              </code></pre>
+            </div>
+            <div class="right copy--small" style="width: 47%">
+              <ul>
+                <li>We <span class="green">define</span> a function with the <code>@function</code> directive</li>
+                <li>We <span class="green">call</span> a function by it's name, passing arguments in parens</li>
+              </ul>
+              <ul class="box">
+                <li><em>Functions must be defined before they're referenced</em></li>
+                <li>Functional accept optional <span class="green">arguments</span></li>
+                <li>Function args have the same rules as mixins (ie. defaults, order, keyword args, etc.)</li>
+              </ul>
+            </div>
           </section>
 
           <!-- Advanced Sass : Directive : Conditionals -->
@@ -3154,6 +3178,27 @@
           </section>
 
           <!-- Advanced Sass : Directive : Loops -->
+          <section>
+            <h3><span class="blue">Directives</span> Loops</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Directive : If -->
+          <section>
+            <h3><span class="blue">Directives</span> Loops</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Directive : Each -->
+          <section>
+            <h3><span class="blue">Directives</span> Loops</h3>
+            <ul class="box">
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Directive : For While -->
           <section>
             <h3><span class="blue">Directives</span> Loops</h3>
             <ul class="box">
