@@ -1,0 +1,8 @@
+.header {
+  @include block-base($header-background, $header-color, ($padding-default / 4) $padding-default);
+
+  h1 {
+    display: inline-block;
+    font-family: $logo-font-family;
+  }
+}

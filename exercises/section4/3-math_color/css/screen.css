@@ -1,0 +1,95 @@
+html {
+  background: #d8c358;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 16px; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fauna One", Palatino, Georgia, Times; }
+
+.content {
+  background: #f1f1f1;
+  color: #244f3e;
+  padding: 20px; }
+
+.header {
+  background: #6d0839;
+  color: #fef5fa;
+  padding: 5px 20px; }
+  .header h1 {
+    display: inline-block;
+    font-family: "Lily Script One", "Fauna One", Palatino, Georgia, Times; }
+
+.footer {
+  background: #d8c358;
+  color: #244f3e;
+  padding: 20px; }
+  .footer:after {
+    content: "Brought to you by Girl Develop It Detroit"; }
+
+.navigation {
+  display: inline-block; }
+  .navigation ul {
+    padding: 0; }
+  .navigation li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 1em; }
+  .navigation a {
+    background: #9d6673;
+    color: #fef5fa;
+    padding: 10px;
+    -webkit-border-radius: 10% 40%;
+    -moz-border-radius: 10% 40%;
+    border-radius: 10% 40%;
+    border-top: 4px solid #15090b;
+    display: block;
+    text-decoration: none; }
+    .navigation a:hover {
+      background: #39171f; }
+  .header .navigation {
+    float: right; }
+    .header .navigation li {
+      margin-left: 1em;
+      margin-right: 0; }
+  .footer .navigation a {
+    -webkit-border-radius: 40% 10%;
+    -moz-border-radius: 40% 10%;
+    border-radius: 40% 10%;
+    border-bottom: 4px solid #15090b;
+    border-top: 0 solid #15090b;
+    background: #6d0839; }
+    .footer .navigation a:hover {
+      background: #39171f; }
+
+.btn-primary, .btn-cta, .btn-secondary, .btn-tertiary {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: .5em 1em;
+  text-decoration: none; }
+
+.btn-primary, .btn-cta {
+  background: #59b390;
+  color: #f1f1f1; }
+  .btn-primary:hover, .btn-cta:hover {
+    background: rgba(52, 114, 90, 0.8); }
+
+.btn-secondary {
+  background: #d3c8b4;
+  color: #244f3e; }
+  .btn-secondary:hover {
+    background: rgba(173, 153, 116, 0.8); }
+
+.btn-tertiary {
+  background: #e6e0d4;
+  color: #244f3e; }
+  .btn-tertiary:hover {
+    background: rgba(192, 176, 148, 0.8); }
+
+.btn-cta {
+  font-size: 24px;
+  padding: .5em 1em; }
