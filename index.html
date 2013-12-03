@@ -2994,6 +2994,7 @@
             </div>
             <div class="box right" style="width: 48%">
               <pre><code>
+                $title: "Girl Develop It Detroit";
                 $base-font-size: 16px;
                 $padding-default: 2em;
 
@@ -3093,7 +3094,8 @@
             </div>
             <p><small>Here's an awesome tool to help <a href="http://jackiebalzer.com/color" target="_blank">visualize color output</a>.</small></p>
             <aside class="notes">
-              <p>So these tools for math and color really help with maintainability and managing color palettes.</p>
+              <p>These are awesome and invaluable</p>
+              <p>These tools for math and color really help with maintainability and managing color palettes.</p>
               <p>Let's give some of this a try...</p>
             </aside>
           </section>
@@ -3101,7 +3103,9 @@
           <!-- Advanced Sass : Math & Color : Develop It! -->
           <section>
             <h3>Math &amp; Color <span class="blue">Let's develop it!</span></h3>
-            <div class="box left copy--small" style="width: 48%">
+            <p class="box">We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
+
+            <div class="copy--small">
               <ul>
                 <li><span class="green">Try out some math operations</span> (<code>+ - * / %</code>):
                   <ul>
@@ -3109,11 +3113,8 @@
                     <li>At least 1 string concatenation (hint: set <code>:before</code> / <code>:after</code> content</li>
                   </ul>
                 </li>
-                <li><span class="green">Apply some color functions</span> to your <code>nav</code> links and <code>.button</code> hover states</li>
+                <li><span class="green">Apply some color functions</span> to your <code>nav a</code> and <code>.button</code> hover states</li>
               </ul>
-            </div>
-            <div class="box right left-align" style="width: 48%">
-              <p>** We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
             </div>
           </section>
 
@@ -3143,8 +3144,8 @@
           <!-- Advanced Sass : Directive : Functions -->
           <section>
             <h3><span class="blue">Directives</span> Functions</h3>
-            <p class="box">Sass let's us define <span class="green">custom functions</span>.</p>
             <div class="left" style="width: 53%">
+              <p class="box">Sass let's us define<br /><span class="yellow">custom functions</span>.</p>
               <pre><code class="scss">
                 @function fluidize($target, $context) {
                   @return ($target / $context) * 100%;
@@ -3156,60 +3157,188 @@
                 }
               </code></pre>
             </div>
-            <div class="right copy--small" style="width: 47%">
+            <div class="box right copy--small" style="width: 47%">
               <ul>
                 <li>We <span class="green">define</span> a function with the <code>@function</code> directive</li>
-                <li>We <span class="green">call</span> a function by it's name, passing arguments in parens</li>
+                <li>We <span class="green">return a value</span> with the <code>@return</code> directive</li>
+                <li>We <span class="green">call</span> a function by it's <span class="blue">name and parens</span>, passing arguments if needed</li>
               </ul>
               <ul class="box">
                 <li><em>Functions must be defined before they're referenced</em></li>
-                <li>Functional accept optional <span class="green">arguments</span></li>
-                <li>Function args have the same rules as mixins (ie. defaults, order, keyword args, etc.)</li>
+                <li>Functions accept <span class="green">arguments</span>, they have the same rules as mixins (ie. defaults, order, keyword args, etc.)</li>
               </ul>
             </div>
-          </section>
-
-          <!-- Advanced Sass : Directive : Conditionals -->
-          <section>
-            <h3><span class="blue">Directives</span> Conditionals</h3>
-            <ul class="box">
-                    <li>Relational Operators:<br /><code>&lt; &gt; &lt;= &gt;= == != </code></li>
-            </ul>
-          </section>
-
-          <!-- Advanced Sass : Directive : Loops -->
-          <section>
-            <h3><span class="blue">Directives</span> Loops</h3>
-            <ul class="box">
-            </ul>
+            <aside class="notes">
+            </aside>
           </section>
 
           <!-- Advanced Sass : Directive : If -->
           <section>
-            <h3><span class="blue">Directives</span> Loops</h3>
-            <ul class="box">
-            </ul>
+            <h3><span class="blue">Directives</span> Conditionals</h3>
+            <div class="left" style="width: 53%">
+              <p class="box">Sass let's us set<br /><span class="yellow">conditions</span>.</p>
+              <pre><code class="scss">
+                $theme: light !default;
+
+                body {
+                  @if $theme == dark {
+                    background: #000;
+
+                  } @else if $theme == dark-mid {
+                    background: #4f4f4f;
+
+                  } @else if $theme == light-mid {
+                    background: #afafaf;
+
+                  } @else {
+                    background: #fff;
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="right copy--small" style="width: 47%">
+              <ul class="box">
+                <li>We <span class="green">begin</span> a conditon with the <code>@if</code> directive, then give it a <span class="green">comparison to evaluate</span></li>
+                <li>We have <code>@else if</code> for <span class="green">additional comparisons</span></li>
+                <li>And <code>@else</code> as a <span class="green">fallback</span> if all prior comparisons evaluate to <code>null</code> or <code>false</code></li>
+              </ul>
+              <div class="copy--small">
+                <p><span class="blue">Comparators include:</span><br /><span class="copy--small">* only compare numbers</span></p>
+                <ul class="left" style="width: 43%">
+                  <li><code>==</code> equal to</li>
+                  <li><code>&gt;</code> greater than *</li>
+                  <li><code>&gt;=</code> greater than or equal to *</li>
+                </ul>
+                <ul class="right" style="width: 43%">
+                  <li><code>!=</code> not equal to</li>
+                  <li><code>&lt;</code> less than *</li>
+                  <li><code>&lt;=</code> less than or equal to *</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+            </aside>
           </section>
 
           <!-- Advanced Sass : Directive : Each -->
           <section>
-            <h3><span class="blue">Directives</span> Loops</h3>
-            <ul class="box">
-            </ul>
+            <h3><span class="blue">Directives</span> Each</h3>
+            <div class="left" style="width: 53%">
+              <p class="box">Sass let's us <br /><span class="yellow">loop through lists</span>.</p>
+              <pre><code class="scss">
+              $themes: dark dark-mid light-mid light;
+
+              @each $theme in $themes {
+                .theme-#{$theme} {
+                  @include theme-colors($theme);
+                }
+              }
+
+              // .theme-dark {
+              //   background: #000;
+              //   color: #fff;
+              // }
+              // .theme-dark-mid {
+              //   background: #000;
+              //   color: #fff;
+              // }
+              // ...
+              </code></pre>
+            </div>
+            <div class="box right copy--small" style="width: 47%">
+              <ul class="box">
+                <li>The <code>@each</code> directive takes the form of:<br /><code>@each $var in &lt;list&gt;</code>
+                  <ul>
+                    <li><code>$var</code> can be any variable name</li>
+                    <li><code>&lt;list&gt;</code> could be a list, or a variable storing one</li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="box">
+                <li>A little bit of <a href="https://github.com/roytomeij/sassconf" target="_blank">list amazesauce</a> for you.</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>Loops like this can be really helpful for generating repetetive and calculated style blocks - grid columns are a good example</p>
+            </aside>
           </section>
 
-          <!-- Advanced Sass : Directive : For While -->
+          <!-- Advanced Sass : Directive : For Loops -->
           <section>
-            <h3><span class="blue">Directives</span> Loops</h3>
-            <ul class="box">
-            </ul>
+            <h3><span class="blue">Directives</span> For Loops</h3>
+            <div class="box left" style="width: 43%">
+              <pre><code class="scss">
+              @for $i from 1 through 12 {
+                .grid-col-#{$i} {
+                  width: $grid-col-width * $i;
+                }
+              }
+
+              // .grid-col-1 {
+              //   width: 60px;
+              // }
+              // .grid-col-2 {
+              //   width: 120px;
+              // }
+              // ...
+              </code></pre>
+            </div>
+            <div class="box right copy--small" style="width: 57%">
+              <ul class="box">
+                <li>Two forms of <code>@for</code> loops;</code>
+                  <ul class="copy--small">
+                    <li><code>@for $var from &lt;start&gt; <strong>through</strong> &lt;end&gt;</code><br />
+                      <span class="copy--small">Loop range <em>includes</em> start and end</span></li>
+                    <li><code>@for $var from &lt;start&gt; <strong>to</strong> &lt;end&gt;</code><br />
+                      <span class="copy--small">Loop range <em>excludes</em> end</span></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li><code>$var</code> can be any variable name</li>
+                <li><code>&lt;start&gt;</code> and <code>&lt;end&gt;</code> can be an integer, or a variable storing one</li>
+              </ul>
+            </div>
           </section>
 
-          <!-- Advanced Sass : Directive : Develop It! -->
+          <!-- Advanced Sass : Directive : While Loops -->
           <section>
-            <h3 class="blue">Let's develop it!</h3>
-            <ul class="box">
-            </ul>
+            <h3><span class="blue">Directives</span> While Loops</h3>
+            <div class="box left" style="width: 43%">
+              <pre><code class="scss">
+              $i: 1;
+
+              @while $i &lt;= 12 {
+                .grid-col-#{$i} {
+                  width: $grid-col-width * $i;
+                }
+
+                $i: $i + 1;
+              }
+
+              // .grid-col-1 {
+              //   width: 60px;
+              // }
+              // .grid-col-2 {
+              //   width: 120px;
+              // }
+              // ...
+              </code></pre>
+            </div>
+            <div class="box right left-align copy--small" style="width: 57%">
+              <ul class="box">
+                <li><code>@while</code> directives take the form of:<br />
+                  <code class="copy--small">@while &lt;comparison&gt;</code></li>
+              </ul>
+              <ul class="box">
+                <li>They output styles until the comparison statement returns <code>false</code></li>
+                <li><em>You must manually update the variable you're comparing against</em></li>
+                <li class="copy--small box">The <code>&lt;comparison&gt;</code> variable will often be an integer that you increment, but it could be any data type that you modify as you go</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>@while loops can acheive more complex looping than @for, it's rarely necessary though</p>
+            </aside>
           </section>
         </section>
 
@@ -3220,7 +3349,6 @@
           <p class="box">Enjoy some snacks courtesy of Atomic Object!</p>
           <img src="images/puppy-snack.gif" />
         </section>
-        <!-- COMPLETE -->
 
 
         <!-- REVIEW -->
@@ -3235,10 +3363,6 @@
           <p class="box yellow">Questions?</p>
           <p></p>
         </section>
-        <!-- COMPLETE -->
-
-
-        <!-- DUE 11/30 -->
 
 
         <!-- SECTION 5 : MEDIA QUERIES -->
@@ -3248,11 +3372,320 @@
             <p>Media Queries</p>
           </section>
 
+          <!-- Media Queries : CSS -->
+          <section>
+            <h3><span class="blue">Media Queries</span> CSS3</h3>
+            <div class="box left" style="width: 50%;">
+              <pre><code class="css">
+                @media screen and (max-width: 500px) {
+                  .sidebar {
+                    float: none;
+                    width: 100%;
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small left-align" style="width: 48%;">
+              <p class="box"><span class="green">Media queries</span> allow you to <span class="green">conditionally load styles</span> based on things like page width and orientation.</p>
+              <p>You've always been able to <span class="green">nest</span> declarations within media queries.</p>
+            </div>
+            <aside class="notes">
+              <p>Hopefully you've heard of responsive web design by now and have had the chance to try it out</p>
+            </aside>
+          </section>
+
+          <!-- Media Queries : Sass -->
+          <section>
+            <h3><span class="blue">Media Queries</span> Sass</h3>
+            <div class="box left" style="width: 52%;">
+              <pre><code class="scss">
+                .sidebar {
+                  float: left;
+                  width: 35%;
+
+                  @media screen and (max-width: 800px) {
+                    width: 25%;
+                  }
+
+                  @media screen and (max-width: 500px) {
+                    float: none;
+                    width: 100%;
+
+                    a { display: block; }
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small left-align" style="width: 46%;">
+              <p class="box">In <span class="yellow">Sass</span>, you can nest your media queries under any declaration.</p>
+              <p class="blue">OMG THIS IS SO AWESOME.</p>
+              <p class="box">Having media queries nested within their selectors, makes it easy to see exactly how the module is morphing through breakpoints</p>
+            </div>
+            <aside class="notes">
+              <p>nested media queries sort of "bubble up"</p>
+              <p>Let's take a look at what we're outputting here...</p>
+            </aside>
+          </section>
+
+          <!-- Media Queries : Nesting Output -->
+          <section>
+            <h3><span class="blue">Media Queries</span> Output</h3>
+            <div class="box left" style="width: 52%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                .sidebar {
+                  float: left;
+                  width: 35%;
+
+                  @media screen and (max-width: 800px) {
+                    width: 25%;
+                  }
+
+                  @media screen and (max-width: 500px) {
+                    float: none;
+                    width: 100%;
+
+                    a { display: block; }
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right" style="width: 48%;">
+              <h4 class="green">CSS Output</h4>
+              <pre><code class="css">
+                .sidebar {
+                  float: left;
+                  width: 35%;
+                }
+
+                @media screen and (max-width: 800px) {
+                  .sidebar {
+                    width: 25%;
+                  }
+                }
+
+                @media screen and (max-width: 500px) {
+                  .sidebar {
+                    float: none;
+                    width: 100%;
+                  }
+
+                  .sidebar a { display: block; }
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>See how the media query declarations have sort of bubbled up beyond their containing declarations?</p>
+              <p>Alright, there's another way we can make media queries easier on us...</p>
+            </aside>
+          </section>
+
+          <!-- Media Queries : Variables -->
+          <section>
+            <h3><span class="blue">Media Queries</span> Variables</h3>
+            <div class="box left" style="width: 62%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $break-large: 800px;
+                $break-small: 500px;
+
+                .sidebar {
+                  float: left;
+                  width: 35%;
+
+                  @media screen and (max-width: $break-large) {
+                    width: 25%;
+                  }
+
+                  @media screen and (max-width: $break-small) {
+                    float: none;
+                    width: 100%;
+
+                    a { display: block; }
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small left-align" style="width: 36%;">
+              <p class="box">Breakpoints are often obscure numbers, and we repeat them all over the place.</p>
+              <p class="box green">Of course, we should make them variables!</p>
+            </div>
+          </section>
+
+          <!-- Media Queries : Variables II -->
+          <section>
+            <h3><span class="blue">Media Queries</span> Variables II</h3>
+            <div class="box left" style="width: 62%;">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                $mobile-med: "screen and (min-width: 480px)";
+                $tablet-port: "screen and (min-width: 768px)";
+
+                .sidebar {
+                  float: left;
+                  width: 35%;
+
+                  @media #{$tablet-port} {
+                    width: 25%;
+                  }
+
+                  @media #{$mobile-med} {
+                    float: none;
+                    width: 100%;
+
+                    a { display: block; }
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right copy--small left-align" style="width: 35%;">
+              <p class="box">We have to interpolate <code>#{}</code> our variables so that Sass compiles them.</p>
+            </div>
+            <aside class="notes">
+              <p>Again, we can get another step closer to simplification here..</p>
+            </aside>
+          </section>
+
+          <!-- Media Queries : Mixin @content -->
+          <section>
+            <h3><span class="blue">Media Query</span> Mixin</h3>
+            <div class="box left" style="width: 70%;">
+              <pre><code class="scss">
+              $width-small:  400px;
+              $width-medium: 760px;
+              $width-large:  1200px;
+
+              @mixin respond-to($breakpoint) {
+                @if $breakpoint == desktop-large {
+                  @media only screen and (max-width: $width-large) {
+                    @content;
+                  }
+                } @else if $breakpoint == tablet-landscape {
+                  @media only screen and (max-width: $width-medium) {
+                    @content;
+                  }
+                } @else if $breakpoint == mobile-large {
+                  @media only screen and (max-width: $width-small) {
+                    @content;
+                  }
+                }
+              }
+
+              .sidebar {
+                float: left;
+                width: 35%;
+
+                @include respond-to(tablet-landscape) {
+                  width: 25%;
+                }
+
+                @include respond-to(mobile-large) {
+                  float: none;
+                  width: 100%;
+
+                  a { display: block; }
+                }
+              }
+              </code></pre>
+            </div>
+            <div class="box right left-align copy--small" style="width: 30%;">
+              <ul class="box">
+                <li><code>@content</code> allows us to pass blocks of styles to mixins to be output back into the declaration that called the mixin</li>
+                <li class="red">WAT.</li>
+              </ul>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Media Queries : Gotchyas -->
+          <section>
+            <h3><span class="blue">Media Query</span> 2 Gotchyas</h3>
+            <p class="box">Declarations created outside a media query can't be <code>@extend</code>ed within it :(</p>
+            <p>Output can become rather lengthy :(</p>
+          </section>
+
+          <!-- Media Queries : Output -->
+          <section>
+            <h3><span class="blue">Media Query</span> Output</h3>
+            <div class="box left" style="width: 56%">
+              <pre><code>
+                .sidebar {
+                  float: left;
+                  width: 35%;
+                }
+
+                @media only screen and (max-width: 760px) {
+                  .sidebar {
+                    width: 25%;
+                  }
+                }
+
+                @media only screen and (max-width: 400px) {
+                  .sidebar {
+                    float: none;
+                    width: 100%;
+                  }
+                  .sidebar a {
+                    display: block;
+                  }
+                }
+
+                .footer {
+                  height: 100px;
+                }
+
+                @media only screen and (max-width: 760px) {
+                  .footer {
+                    height: 75px;
+                  }
+                }
+
+                @media only screen and (max-width: 400px) {
+                  .footer {
+                    height: 50px;
+                  }
+                }
+              </code></pre>
+            </div>
+            <div class="box right left-align copy--small" style="width: 34%">
+              <p class="red box">Sass doesn't group like media queries.</p>
+              <p class="green">Keep an eye on your output!</p>
+              <p class="yellow box">Sometimes it's best not to nest your media queries so granularly.</p>
+            </div>
+          </section>
+
           <!-- Media Queries : Develop It! -->
           <section>
-            <h3 class="blue">Let's develop it!</h3>
-            <ul class="box">
-            </ul>
+            <h3>Media Queries <span class="blue">Let's develop it!</span></h3>
+            <div class="box left copy--small" style="width: 48%;">
+              <ul>
+                <li class="box"><span class="green">Try nesting</span> a few media queries with the various options to the right</li>
+                <li>Try to <span class="green">identify</span> a few scenarios where it'd make more sense to group media queries together</li>
+              </ul>
+              <p class="box"><span class="blue">PRO</span> Add MOAR responsiveness</p>
+            </div>
+            <div class="box right" style="width: 48%;">
+              <pre><code class="scss">
+                @media screen and (max-width: 500px) {
+                  // ...
+                }
+
+                @media #{$tablet-small} {
+                  // ...
+                }
+
+                @mixin respond-to($breakpoint) {
+                  @if $breakpoint == desktop-large {
+                    @media only screen and (max-width: $width-large) {
+                      @content;
+                    }
+                  } @else if $breakpoint == mobile-large {
+                    // ...
+                  }
+                }
+              </code></pre>
+            </div>
           </section>
         </section>
 
@@ -3264,38 +3697,33 @@
             <p>Libraries &amp; Tools</p>
           </section>
 
+          <!-- Libraries & Tools : Compass -->
           <section>
-            <h3>Libraries &amp; Tools</h3>
-            <ul class="box">
-              <li>Compass</li>
-              <li>Susy</li>
-            </ul>
-          </section>
-
-          <!-- Sass Workflow : Compass -->
-          <section>
-            <h3>Compass</h3>
-
-            <code>compass init</code>
-            <code>compass config</code>
-            <code>compass watch</code>
+            <h3><span class="blue">Libraries</span> Compass</h3>
 
           </section>
 
-          <!-- SASS WORKFLOW : Tools -->
+          <!-- Libraries & Tools : Bourbon -->
+          <section>
+            <h3><span class="blue">Libraries</span> Bourbon</h3>
+
+          </section>
+
+          <!-- Libraries & Tools : Susy -->
+          <section>
+            <h3><span class="blue">Libraries</span> Responsive Design</h3>
+
+          </section>
+
+          <!-- Libraries & Tools : Tools -->
           <section>
             <h3>Sass Tools</h3>
             <p class="box"><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a></p>
             <p class="box"><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a></p>
             <p class="box"><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a></p>
           </section>
-
-          <!-- Libraries & Tools : Develop It! -->
-          <section>
-            <h3 class="blue">Let's develop it!</h3>
-            <ul></ul>
-          </section>
         </section>
+        <!-- TODO -->
 
 
         <!-- SECTION 7 : MODULAR ARCHITECTURE -->
@@ -3334,6 +3762,7 @@
             </ul>
           </section>
         </section>
+        <!-- TODO -->
 
 
         <!-- REVIEW -->
@@ -3344,9 +3773,7 @@
           <p class="box">Modular Architecture</p>
           <p class="yellow">Questions?</p>
         </section>
-
-
-        <!-- DUE 12/1 -->
+        <!-- TODO -->
 
 
         <!-- WRAP UP -->
@@ -3389,9 +3816,7 @@
             </ul>
           </section>
         </section>
-
-
-        <!-- DUE 12/2 -->
+        <!-- TODO -->
 
 
         <!-- COURSE OUTRO -->
@@ -3400,7 +3825,6 @@
           <h3>Getting Sassy with CSS</h3>
           <p><small>#SassShopDetroit</small></p>
         </section>
-        <!-- COMPLETE -->
       </div>
 
       <footer>
