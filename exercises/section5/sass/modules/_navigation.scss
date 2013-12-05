@@ -1,0 +1,62 @@
+.navigation {
+  display: inline-block;
+
+  ul { padding: 0; }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 1em;
+  }
+
+  a {
+    @include block-base($nav-background, $nav-color, 10px);
+    @include border-radius(10% 40%);
+    @include nav-border("top");
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      background: $nav-background-hover;
+    }
+  }
+
+  .header & {
+    float: right;
+
+    li {
+      margin-left: 1em;
+      margin-right: 0;
+    }
+  }
+
+  .footer & {
+    a {
+      @include border-radius(40% 10%);
+      @include nav-border("bottom");
+      @include nav-border("top", 0);
+      background: $nav-background-footer;
+
+      &:hover {
+        background: $nav-background-hover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .header &,
+    .footer & {
+      display: block;
+      float: none;
+
+      ul {
+        margin-top: 0;
+      }
+
+      a {
+        font-size: .8em;
+        padding: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.header {
+  @include block-base($header-background, $header-color, ($padding-default / 4) $padding-default);
+
+  h1 {
+    display: inline-block;
+    font-family: $logo-font-family;
+  }
+
+  @media screen and (max-width: 560px) {
+    text-align: center;
+
+    h1 {
+      font-size: 1.75em;
+      margin: .25em 0;
+    }
+  }
+}

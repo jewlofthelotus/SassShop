@@ -1,0 +1,37 @@
+%btn {
+  @include border-radius(5px);
+  display: inline-block;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+@mixin btn-colors($background, $color) {
+  background: $background;
+  color: $color;
+
+  &:hover {
+    background: rgba(darken($background, 20%), .8);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  @include btn-colors($btn-primary-background, $btn-primary-color);
+}
+
+.btn-secondary {
+  @extend %btn;
+  @include btn-colors($btn-secondary-background, $btn-secondary-color);
+}
+
+.btn-tertiary {
+  @extend %btn;
+  @include btn-colors($btn-tertiary-background, $btn-tertiary-color);
+}
+
+.btn-cta {
+  @extend %btn;
+  @extend .btn-primary;
+  font-size: $base-font-size * 1.5;
+  padding: .5em 1em;
+}
