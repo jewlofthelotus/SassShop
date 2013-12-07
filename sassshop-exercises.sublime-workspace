@@ -1,0 +1,413 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"break-mobi",
+				"break-mobile-large"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"nav-back",
+				"nav-background-hover"
+			],
+			[
+				"egg",
+				"eggplant--dark"
+			],
+			[
+				"lin",
+				"linear-gradient"
+			],
+			[
+				"list-sty",
+				"list-style-type"
+			],
+			[
+				"i",
+				"inside"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"selected_items":
+		[
+			[
+				"remoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/final/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/test.scss",
+		"/Users/jewls/Sites/gdi-sass/examples/lists/stylesheets/animation-grid-rotation.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_mixins.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/modules/_buttons.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/modules/_navigation.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/modules/_header.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/modules/_footer.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/modules/_buttons.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/modules/_header.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/modules/_footer.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/base/_base.scss",
+		"/Users/jewls/Sites/gdi-sass/examples/lists/views/animation-grid-rotation.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/sass/base/_mixins.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/css/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/sass/modules/_buttons.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/sass/base/_mixins.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/2-extends/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/base/_vars.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/2-variables/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/2-variables/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/modules/_navigation.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/base/_base.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/base/_mixins.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/modules/_footer.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/modules/_header.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/base/_base.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_footer.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_header.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_navigation.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/css/screen.css",
+		"/Users/jewls/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/css/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/index.html",
+		"/Users/jewls/Sites/gdi-sass/.sass-cache/a30de24cd261957c84169ad1ad7d2db8a3e1f326/gdi-sass.scssc",
+		"/Users/jewls/Sites/gdi-sass/.sass-cache/b5fdc0a8b0ebc0cef0163480a6235cfe4687c0b9/gdi-sass.scssc",
+		"/Users/jewls/Sites/gdi-sass/css/theme/gdi-sass.css",
+		"/Users/jewls/Sites/gdi-sass/css/reveal.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/template/_settings.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/template/_theme.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/lib/font-awesome/_core.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/lib/font-awesome/_variables.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/template/_mixins.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/README.md",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/gdisunny.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/gdilight.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/gdidefault.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/gdicool.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/gdicool.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/js/reveal.js",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/template/theme.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme/source/template/settings.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/js/reveal.min.js",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/compass.rb",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/index.html",
+		"/Library/WebServer/Documents/htdocs/sassshop/css/theme/gdilight.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/compass.rb",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/sass/_slides.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/source/gdisunny.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/gdilight.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/source/gdidefault.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/source/gdilight.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/source/gdicool.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/theme/source/gdi-sass.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/css/reveal.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/index.html",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/sass/sassshop.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/lib/css/light.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/js/reveal.js",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/js/reveal.min.js",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/wp.html.bak",
+		"/Library/WebServer/Documents/htdocs/sassshop/lib/js/html5shiv.js",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/theme/README.md",
+		"/Users/jewls/Downloads/pkamb-PowerKey-99f4cc2/README.md",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/reveal/plugin/notes/notes.js",
+		"/Library/WebServer/Documents/htdocs/sassshop/css/reveal.css",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/sass/ie.scss",
+		"/Library/WebServer/Documents/htdocs/gdi-sass/wp.html",
+		"/Library/WebServer/Documents/wordpress/wp-content/themes/jotus-photo/comments.php",
+		"/Library/WebServer/Documents/wordpress/wp-content/themes/jotus-text/comments.php",
+		"/Library/WebServer/Documents/wordpress/.htaccess",
+		"/Users/jewls/.bash_profile",
+		"/Library/WebServer/Documents/index.html.en",
+		"/Users/jewls/Desktop/Chrome",
+		"/Users/jewls/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/jewls/Sites/gdi-sass/exercises",
+			"/Users/jewls/Sites/gdi-sass",
+			"/Library/WebServer/Documents/wordpress/wp-content/themes/jotus-text",
+			"/Library/WebServer/Documents/htdocs/gdi-sass/",
+			"/Library/WebServer/Documents/htdocs/gdi-sass/css/",
+			"/Library/WebServer/Documents/htdocs/gdi-sass/css/source",
+			"/Library/WebServer/Documents/htdocs/gdi-sass/css/theme",
+			"<project>/css/theme/source",
+			"<project>/css/theme",
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@media",
+			"break-tab-small",
+			"@media",
+			"@media screen",
+			"max-width: 560px",
+			"border-radius",
+			"default-padding",
+			"darkEggplant",
+			"notes",
+			"jquery",
+			"fold",
+			"box--short",
+			"box",
+			"box--short",
+			"box",
+			"box--short",
+			"clear",
+			"#fff",
+			"#ffffff",
+			"#095169",
+			"#222222",
+			"#ffffff",
+			"#30162B",
+			"#531946",
+			"vertical-gradient",
+			"horizontal-gradient",
+			".reveal ",
+			"roll",
+			"config",
+			".roll",
+			"roll",
+			"FOOTER",
+			"pink-logo",
+			"footer",
+			"../../images",
+			".copyright",
+			"copyright",
+			"gdi",
+			"reveal/",
+			"pre>",
+			"images",
+			"Gotham",
+			"pre",
+			"code",
+			"<h3>Let's Review",
+			"<h3>Let's develop it!",
+			"code",
+			"notes",
+			"plugin/notes/notes",
+			"notes",
+			"images",
+			"footer",
+			"socket",
+			"sock"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"break-mobile-large",
+			"rounded-box",
+			"eggplantDark",
+			"box",
+			"$white",
+			"$teal",
+			"$grey",
+			"$white",
+			"$eggplant-dark",
+			"$eggplant",
+			"",
+			"<h3 class=\"green\">Let's Review",
+			"<h3 class=\"blue\">Let's develop it!"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "sassshop-exercises.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"var",
+				"section3/3-imports/sass/base/_vars.scss"
+			],
+			[
+				"highligh",
+				"plugin/highlight/highlight.js"
+			],
+			[
+				"reveal",
+				"css/reveal.css"
+			],
+			[
+				"reveal.js",
+				"gdi-sass/js/reveal.min.js"
+			],
+			[
+				"light",
+				"gdi-sass/reveal/lib/css/light.css"
+			],
+			[
+				"html5",
+				"sassshop/lib/js/html5shiv.js"
+			],
+			[
+				"reveal.css",
+				"gdi-sass/reveal/css/reveal.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 156.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

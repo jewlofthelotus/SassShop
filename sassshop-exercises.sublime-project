@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "exercises"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "examples/lists"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/jewls/code/heroes"
+		}
+	]
+}
