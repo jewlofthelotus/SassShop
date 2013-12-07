@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   .header h1 {
     display: inline-block;
     font-family: "Lily Script One", "Fauna One", Palatino, Georgia, Times; }
-  @media screen and (max-width: 560px) {
+  @media only screen and (max-width: 560px) {
     .header {
       text-align: center; }
       .header h1 {
@@ -34,6 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px; }
   .footer:after {
     content: "Brought to you by Girl Develop It Detroit"; }
+  @media only screen and (max-width: 560px) {
+    .footer {
+      text-align: center; }
+      .footer p, .footer:after {
+        font-size: .75em; } }
 
 .navigation {
   display: inline-block; }
@@ -69,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #6d0839; }
     .footer .navigation a:hover {
       background: #39171f; }
-  @media screen and (max-width: 560px) {
+  @media only screen and (max-width: 560px) {
     .header .navigation, .footer .navigation {
       display: block;
       float: none; }
@@ -86,6 +91,9 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: .5em 1em;
   text-decoration: none; }
+  @media only screen and (max-width: 380px) {
+    .btn-primary, .btn-cta, .btn-secondary, .btn-tertiary {
+      font-size: 12px; } }
 
 .btn-primary, .btn-cta {
   background: #59b390;
@@ -108,3 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 .btn-cta {
   font-size: 24px;
   padding: .5em 1em; }
+  @media only screen and (max-width: 380px) {
+    .btn-cta {
+      font-size: 16px; } }

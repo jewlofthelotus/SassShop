@@ -2044,7 +2044,7 @@
         </section>
 
 
-        <!-- REVIEW -->
+        <!-- PART 1 : REVIEW -->
         <section>
           <h3 class="green"><span class="blue">Part 1</span> Review</h3>
           <p class="box">Sass Intro</p>
@@ -3353,7 +3353,7 @@
         </section>
 
 
-        <!-- REVIEW -->
+        <!-- PART 2 : REVIEW -->
         <section>
           <h3 class="green"><span class="blue">Part 2</span> Review</h3>
           <p class="box">Mixins (@include)</p>
@@ -3780,39 +3780,115 @@
             <p>Modular Architecture</p>
           </section>
 
+          <!-- Modular Architecture : Explained -->
           <section>
-            <h3>Modular Architecture</h3>
+            <h3><span class="blue">Modular Architecture</span> Explained</h3>
+            <p class="box copy--small">Modular architecture is the abstraction of repetition into "objects".</p>
+            <ul>
+              <li>Objects / <span class="green">Modules</span> / Blocks<br />
+                <small><code>.header</code>, <code>.footer</code>, <code>.comment</code>, <code>.button</code>, etc.</small><br />
+              </li>
+              <li><span class="green">Parent - Child</span> Relationships<br />
+                <small><code>.media</code>, <code>.media__img</code>, <code>.media__body</code>, etc.</small>
+              </li>
+              <li><span class="green">Modifiers</span><br />
+                <small><code>.btn--primary</code>, <code>.btn--small</code>, <code>.btn--selected</code>, etc.</small>
+              </li>
+              <li><span class="yellow">Classes</span> VS. <span class="red">IDs</span> VS. <span class="red">Child Selectors</span><br />
+                <small>Take that, specificity!</small>
+              </li>
+              <li><span class="yellow">Naming</span> Conventions<br />
+                <small>Semantic <code>.content</code>, <code>.news__title</code>, <code>.callNow</code><br />
+                Presentational <code>.grid__col--9</code>, <code>.btn--small</code>, <code>.btn--primary</code></small>
+              </li>
+            </ul>
+            <aside class="notes">
+              <p>It's a programmatic approach to styles.</p>
+              <p>3 parts to these objects : modules, parent-child relationships, and modifiers</p>
+              <p>2 key components to making this work : classes and naming conventions</p>
+            </aside>
+          </section>
+
+          <!-- Modular Architecture : Goals -->
+          <section>
+            <h3><span class="blue">Modular Architecture</span> Goals</h3>
             <ul class="box">
-              <li>OOCSS, BEM, SMACSS, Atomic Design, ...</li>
-              <li>Styleguides</li>
+              <li><span class="green">Modularity</span><br />
+                <small>Plug n' Play</small>
+              </li>
+              <li><span class="green">Scalability</span><br />
+                <small>I got 99 problems, but specificity ain't one.</small>
+              </li>
+              <li><span class="green">Maintainability</span><br />
+                <small>Oh, you wanted a <em>big</em> button? <code>.btn--large</code></small>
+              </li>
+              <li>DRY</li>
+            </ul>
+            <aside class="notes">
+              <p>goals are 3-fold</p>
+              <p>scalability: cascade is king</p>
+              <p>maintainability: modules are the basis for new pages, we might not need to write any new CSS</p>
+              <p>many people take a custom approach, there are several established frameworks...</p>
+            </aside>
+          </section>
+
+          <!-- Modular Architecture : Methodologies -->
+          <section>
+            <h4><span class="blue">Modular Architecture</span> Methodologies</h4>
+            <ul class="box left copy--small" style="width: 48%">
+              <li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank">OOCSS</a> Nicole Sullivan<br />
+                <small><em>Object Oriented CSS</em><br />
+                  Structure vs. Skin &nbsp; | &nbsp; Container vs. Content
+                </small>
+              </li>
+              <li><a href="http://smacss.com/" target="_blank">SMACSS</a> Jonathan Snook<br />
+                <small><em>Scalable and Modular Architecture for CSS</em><br />
+                  Base > Layout > Module > State > Theme
+                </small>
+              </li>
+              <li><a href="http://bradfrostweb.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a> Brad Frost<br />
+                <small>Atoms > Molecules > Organisms > Templates > Pages</small>
+              </li>
+            </ul>
+            <ul class="box right copy--small" style="width: 46%">
+              <li><a href="http://bem.info/method/definitions/" target="_blank">BEM</a> Yandex<br />
+                <small>.block__element--modifier</small>
+              </li>
+              <li class="copy--small"><a href="http://vimeo.com/38063798" target="_blank">DRY CSS</a> Jeremy Clarke</li>
+              <li class="copy--small"><a href="http://mvcss.github.io/" target="_blank">MVCSS</a> Envy Labs</li>
+              <li class="copy--small"><a href="https://speakerdeck.com/andyhume/css-for-grown-ups-maturing-best-practises" target="_blank">CSS for Grown Ups</a> Andy Hume</li>
+              <li class="copy--small">etc., etc., etc.</li>
             </ul>
           </section>
 
-          <!-- Modular Architecture : OOCSS, BEM, SMACSS, Atomic Design -->
+          <!-- Modular Architecture : Demo -->
           <section>
-            <h3>OOCSS, BEM, SMACSS, Atomic Design..</h3>
-            <ul class="box">
-            </ul>
+            <h3><span class="blue">Modular Architecture</span> Demo</h3>
+            <p class="box">My Current Hybrid Sass System</p>
+            <p class="copy--small">Julie + Sass == <span class="green">Jass</span>??</p>
           </section>
 
-          <!-- Modular Architecture : OOCSS, BEM, SMACSS, Atomic Design : Develop It! -->
+          <!-- Modular Architecture : Resources -->
           <section>
-            <h3 class="blue">Let's develop it!</h3>
-            <ul class="box">
-            </ul>
-          </section>
-
-          <!-- Modular Architecture : Styleguides -->
-          <section>
-            <h3>Styleguides</h3>
-            <ul class="box">
+            <h3><span class="blue">Modular Architecture</span> Resources</h3>
+            <ul class="box copy--small">
+              <li><a href="http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/" target="_blank">An Introduction To Object Oriented CSS</a></li>
+              <li><a href="http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/" target="_blank">OOCSS + Sass = The best way to CSS</a></li>
+              <li><a href="http://www.sitepoint.com/css-architectures-scalable-and-modular-approaches/" target="_blank">CSS Architectures: Scalable and Modular Approaches</a></li>
+              <li><a href="http://www.creativebloq.com/css3/create-modular-and-scalable-css-9134351" target="_blank">4 ways to create CSS that's modular and scalable</a></li>
             </ul>
           </section>
         </section>
-        <!-- TODO -->
 
 
-        <!-- REVIEW -->
+        <!-- YAY -->
+        <section>
+          <h3 class="green">Yay!</h3>
+          <img src="images/kermit.gif" />
+        </section>
+
+
+        <!-- PART 3 : REVIEW -->
         <section>
           <h3 class="green"><span class="blue">Part 3</span> Review</h3>
           <p class="box">Media Queries</p>
@@ -3827,23 +3903,24 @@
         <section>
           <section>
             <h3>Wrap Up</h3>
-            <p>#SassShopDetroit</p>
+            <p class="copy--small">#SassShopDetroit</p>
           </section>
 
           <!-- WRAP UP : Tips -->
           <section>
-            <h3>Final Tips</h3>
-            <ul>
-              <li>Check your output regularly.</li>
-              <li>Be careful not to <code>@extend</code> too much</li>
-              <li><code>-l, --line-numbers</code> Outputs source line number comments</li>
+            <h3><span class="yellow">Sass</span> Closing Tips</h3>
+            <ul class="box copy--small">
+              <li>Take it one step at a time.</li>
+              <li>Check your output.</li>
+              <li>Mind your <code>@mixin</code>s.</li>
+              <li>Don't <code>@extend</code> too much.</li>
+              <li><code>-l, --line-numbers</code><br /><small>Outputs Sass line numbers as comments</small></li>
+              <li>Modules, modules, modules.</li>
             </ul>
             <aside class="notes">
-              <p>It's easy to go a bit crazy with all these features and easy to lose track of what you might be outputting</p>
               <p>mass @extending can create crazy long selector groups, &lt;IE9 4095 selectors per file limit</p>
             </aside>
           </section>
-          <!-- TODO -->
 
           <!-- WRAP UP : Resources -->
           <section>
@@ -3852,8 +3929,8 @@
               <li><a target="_blank" href="http://sass-lang.com">Sass-Lang.com</a></li>
               <li><a target="_blank" href="http://thesassway.com">The Sass Way</a></li>
               <li><a target="_blank" href="http://sassmeister.com">SassMeister.com</a></li>
-              <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a> (A Book Apart)</li>
-              <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">Assembling Sass</a> (Code School)</li>
+              <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a></li>
+              <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">Assembling Sass</a></li>
               <li><a target="_blank" href="http://compass-style.org">Compass-Style.org</a></li>
               <li><a target="_blank" href="http://sassconf.com">Sass Conf</a></li>
             </ul>
