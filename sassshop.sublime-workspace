@@ -39,7 +39,15 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 154813,
+				"buffer_size": 155090,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "compass.rb",
+			"settings":
+			{
+				"buffer_size": 862,
 				"line_ending": "Unix"
 			}
 		}
@@ -286,8 +294,8 @@
 						"selection":
 						[
 							[
-								615,
-								616
+								261,
+								294
 							]
 						],
 						"settings":
@@ -297,7 +305,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 266.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -308,15 +316,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 154813,
+						"buffer_size": 155090,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								88354,
-								88354
+								3108,
+								3108
 							]
 						],
 						"settings":
@@ -328,7 +336,34 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 593.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "compass.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

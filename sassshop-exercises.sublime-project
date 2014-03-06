@@ -8,10 +8,6 @@
 		{
 			"follow_symlinks": true,
 			"path": "examples/lists"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "/Users/jewls/code/heroes"
 		}
 	]
 }

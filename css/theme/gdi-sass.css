@@ -2443,68 +2443,72 @@ body {
   font-size: .8em;
 }
 /* line 12, source/gdi-sass.scss */
+.reveal .copy--xsmall {
+  font-size: .6em;
+}
+/* line 16, source/gdi-sass.scss */
 .reveal strong {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
-/* line 16, source/gdi-sass.scss */
+/* line 20, source/gdi-sass.scss */
 .reveal .horz--auto {
   margin: inherit auto;
 }
-/* line 20, source/gdi-sass.scss */
-.reveal .box {
-  padding: 1em 0;
-}
 /* line 24, source/gdi-sass.scss */
-.reveal .box--top {
-  padding-top: 2em;
+.reveal .box {
+  margin: 2em 0;
 }
 /* line 28, source/gdi-sass.scss */
-.reveal .box--small {
-  padding: .5em 0;
+.reveal .box--top {
+  margin-top: 3em;
 }
-/* line 33, source/gdi-sass.scss */
+/* line 32, source/gdi-sass.scss */
+.reveal .box--small {
+  margin: 1em 0;
+}
+/* line 37, source/gdi-sass.scss */
 .reveal ul ul, .reveal ul ol, .reveal ol ul, .reveal ol ol {
   margin-top: 10px;
 }
-/* line 39, source/gdi-sass.scss */
+/* line 43, source/gdi-sass.scss */
 .reveal .list--tall ol, .reveal .list--tall ul {
   margin-top: 20px;
 }
-/* line 40, source/gdi-sass.scss */
+/* line 44, source/gdi-sass.scss */
 .reveal .list--tall li {
   margin-bottom: 20px;
 }
-/* line 43, source/gdi-sass.scss */
+/* line 47, source/gdi-sass.scss */
 .reveal .broken {
   list-style-position: inside;
   margin-top: .25em;
 }
-/* line 47, source/gdi-sass.scss */
+/* line 51, source/gdi-sass.scss */
 .reveal .broken li {
   display: block;
   padding: .25em 1em;
 }
-/* line 53, source/gdi-sass.scss */
+/* line 57, source/gdi-sass.scss */
 .reveal ol.broken {
   counter-reset: counter;
 }
-/* line 57, source/gdi-sass.scss */
+/* line 61, source/gdi-sass.scss */
 .reveal ol.broken li:before {
   color: #ccc;
   content: counter(counter) ".";
   counter-increment: counter;
   padding-right: .5em;
 }
-/* line 66, source/gdi-sass.scss */
+/* line 70, source/gdi-sass.scss */
 .reveal .break {
   border-top: 20px solid #efefef;
   padding-top: 2em;
 }
-/* line 71, source/gdi-sass.scss */
+/* line 75, source/gdi-sass.scss */
 .reveal section img {
   margin: 0 15px;
 }
-/* line 75, source/gdi-sass.scss */
+/* line 79, source/gdi-sass.scss */
 .reveal .gist {
   font-size: .5em;
   line-height: 1.3em;
@@ -2512,18 +2516,18 @@ body {
   overflow: scroll;
 }
 
-/* line 83, source/gdi-sass.scss */
+/* line 87, source/gdi-sass.scss */
 code {
   background: #e8e8e8;
 }
 
-/* line 87, source/gdi-sass.scss */
+/* line 91, source/gdi-sass.scss */
 pre {
   margin: 0;
   width: auto;
   box-shadow: none;
 }
-/* line 92, source/gdi-sass.scss */
+/* line 96, source/gdi-sass.scss */
 pre code {
   background: transparent;
   border: 6px solid #fff;

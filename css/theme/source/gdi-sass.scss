@@ -9,6 +9,10 @@
     font-size: .8em;
   }
 
+  .copy--xsmall {
+    font-size: .6em;
+  }
+
   strong {
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
@@ -18,15 +22,15 @@
   }
 
   .box {
-    padding: 1em 0;
+    margin: 2em 0;
   }
 
   .box--top {
-    padding-top: 2em;
+    margin-top: 3em;
   }
 
   .box--small {
-    padding: .5em 0;
+    margin: 1em 0;
   }
 
   ul, ol {

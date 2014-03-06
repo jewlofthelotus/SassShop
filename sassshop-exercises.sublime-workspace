@@ -35,6 +35,52 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/jewls/code/heroes/stylesheets/application.css.scss",
+			"settings":
+			{
+				"buffer_size": 425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jewls/code/heroes/stylesheets/helpers/_utilities.css.scss",
+			"settings":
+			{
+				"buffer_size": 1011,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "//  _Main styles \n\n\ndark.scss\n  $theme: dark;\n  @import \"base\";\n  @import \"body\";\n\nlight.scss\n  $theme: light;\n  @import \"base\";\n  @import \"body\";\n\n",
+			"file": "exercises/test/test.scss",
+			"file_size": 203,
+			"file_write_time": 130309162380000000,
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jewls/code/heroes/stylesheets/core/_grid.css.scss",
+			"settings":
+			{
+				"buffer_size": 1580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/* ==========================================================================\n   Style Variables\n   ========================================================================== */\n\n\n$spacer--default: 40px;\n$spacer--large:   70px;\n\n$border--radius: 4px;\n\n$avatar--primary--width:     75px;\n$avatar--primary--padding:   28px;\n$avatar--primary--horz:      $avatar--primary--width + $avatar--primary--padding;\n\n$avatar--secondary--width:   60px;\n$avatar--secondary--padding: 20px;\n$avatar--secondary--horz:    $avatar--secondary--width + $avatar--secondary--padding;\n\n$avatar--tertiary--width:    40px;\n$avatar--tertiary--padding:  14px;\n$avatar--tertiary--horz:     $avatar--tertiary--width + $avatar--tertiary--padding;\n\n\n/* --------------------------------------------------------------------------\n   Normalize.css Settings\n   -------------------------------------------------------------------------- */\n\n$strict-normalize:       true !default;\n$legacy-support-for-ie6: false !default;\n$legacy-support-for-ie7: false !default;\n$indent-amount:          $spacer--default - 5 !default; // for lists and blockquotes\n\n\n/* --------------------------------------------------------------------------\n   Typography\n   -------------------------------------------------------------------------- */\n\n$base-font-family:  \"Whitney A\", \"Whitney B\", \"Trebuchet MS\", Arial, sans-serif;\n$fancy-font-family: \"adelle\", Georgia, Times, serif;\n$icon-font-family:  \"FontAwesome\";\n\n$base-font-size:   22px;\n$base-line-height: 33px;\n\n$h1-font-size: 46px;\n$h2-font-size: 38px;\n$h3-font-size: 28px;\n$h4-font-size: 22px;\n$h5-font-size: 20px;\n$h6-font-size: 18px;\n\n\n/* --------------------------------------------------------------------------\n   Descriptive Colors\n   -------------------------------------------------------------------------- */\n\n$white:                #ffffff;  // body bg, header color\n$grey-dark-black:      #323536;  // body copy\n$grey-dark-blue:       #303538;  // footer bg, article series nav bg\n$grey-med-black:       #8c9497;  // secondary button copy, tertiary button copy\n$grey-med-blue:        #61696d;  // footer copy, secondary copy, tertiary small hover\n$grey-light-black:     #d1cfcf;  // primary button border\n$grey-light-blue:      #a3adb1;  // small copy, tertiary content\n$grey-lightest-black:  #e9ebec;  // secondary button bg, tertiary button border\n$grey-lightest-blue:   #d5dde1;  // footer nav, article related content link border\n$blue-dark-1:          #368db4;  // logo bg\n$blue-dark-2:          #1d8fbb;  // primary button copy, primary button hover bg\n$blue-med-1:           #3f9ac3;  // header bg, link color\n$blue-med-2:           #5caed2;  // header nav dropdown bg\n$blue-light-1:         #8fcee9;  // header nav dropdown sub-header color\n$blue-light-2:         #a6d4e9;  // header top-level nav hover color\n$blue-lightest:        #bce1f1;  // header dropdown nav hover color\n$red:                  #ec553c;  // author / staff badges, error content\n$green:                green;    // (flash) notice content\n$yellow:               goldenrod; // (flash) alert / warning content\n\n/* --------------------------------------------------------------------------\n   Functional Colors\n   -------------------------------------------------------------------------- */\n\n// BEM Variables? Sure, let's give them a try...\n\n$content--background:                     $white;\n$content--color:                          $grey-dark-black;\n\n$content--secondary--color:               $grey-med-blue;\n$content--tertiary--color:                $grey-light-blue;\n$content--error--color:                   $red;\n$content--success--color:                 $green;\n$content--warning--color:                 $yellow;\n\n$hr--color:                               $grey-lightest-black;\n\n$table--border:                           $grey-lightest-blue;\n$table--background--hover:                $grey-lightest-black;\n\n$link--color:                             $blue-med-1;\n$link--color--hover:                      $blue-light-1;\n$link--light--color:                      $grey-lightest-blue;\n$link--light--color--hover:               $white;\n\n$button--primary--background:             $white;\n$button--primary--background--hover:      $blue-dark-2;\n$button--primary--border:                 $grey-light-black;\n$button--primary--border--hover:          $blue-dark-2;\n$button--primary--color:                  $blue-dark-2;\n$button--primary--color--hover:           $white;\n\n$button--secondary--background:           $grey-lightest-black;\n$button--secondary--background--hover:    $grey-med-black;\n$button--secondary--border:               $grey-lightest-black;\n$button--secondary--border--hover:        $grey-med-black;\n$button--secondary--color:                $grey-med-black;\n$button--secondary--color--hover:         $white;\n\n$button--tertiary--background:            $white;\n$button--tertiary--background--hover:     $white;\n$button--tertiary--border:                $grey-lightest-black;\n$button--tertiary--border--hover:         $grey-med-black;\n$button--tertiary--color:                 $grey-med-black;\n$button--tertiary--color--hover:          $grey-med-black;\n\n$button--badge--color:                    $white;\n$button--badge--important--background:    $red;\n\n$dropdown__menu--box--background:         $grey-lightest-black;\n\n$modal--background:                       $white;\n\n$header--background:                      $blue-med-1;\n$header--color:                           $white;\n$header__logo--background:                $blue-dark-1;\n$header__nav--color:                      $white;\n$header__nav--color--hover:               $blue-light-2;\n$header__navDrop--background:             $blue-med-2;\n$header__navDropHeader--color:            $blue-light-1;\n$header__navDropHeader--color--hover:     $blue-lightest;\n\n$footer--background:                      $grey-dark-blue;\n$footer--color:                           $grey-med-blue;\n\n$article__seriesNav--background:          $grey-dark-blue;\n$article__seriesNav--color:               $grey-med-black;\n$article__relContentLink--border:         $grey-lightest-blue;\n$article__relContentLink--border--hover:  $blue-med-1;\n\n$series__articleNav--background:          $white;\n$series__articleNav--background--hover:   $blue-dark-2;\n$series__articleNav--border:              $grey-light-black;\n$series__articleNav--border--hover:       $blue-dark-2;\n$series__articleNav--color--hover:        $white;\n\n$comment__header--color:                  $grey-lightest-blue;\n$comment__reply--background:              $white;\n$comment__reply--color:                   $grey-lightest-black;\n$comment__reply--new--color:              $grey-light-blue;\n\n\n/* --------------------------------------------------------------------------\n   Grid Settings\n   -------------------------------------------------------------------------- */\n\n$grid-max-width:    1200px;\n$grid-num-cols:     12;\n$grid-col-selector: \"[class*='grid__col--']\";\n$grid-col-pct:      percentage(1 / $grid-num-cols);\n$grid-col-gutter:   percentage(20px / $grid-max-width);\n\n\n/* --------------------------------------------------------------------------\n   Responsive Breakpoints\n   -------------------------------------------------------------------------- */\n\n// $tab-end: 768px;\n// $palm-end: 30.0625em;\n\n\n/* --------------------------------------------------------------------------\n   Vertical Rhythm / Modular Scale Helpers\n   -------------------------------------------------------------------------- */\n\n$base-size: $base-font-size $base-line-height;\n$ratio: fourth();\n@include establish-baseline;\n\n\n// @include ms-list(); // Outputs the following:\n\n/*\n * At 22px $base-font-size your available modular scale values are:\n *  ms(-6)  =   9px\n *  ms(-5)  =  10px\n *  ms(-4)  =  12px\n *  ms(-3)  =  14px\n *  ms(-1)  =  17px\n *  ms(0)   =  22px\n *  ms(1)   =  25px\n *  ms(2)   =  29px\n *  ms(3)   =  33px\n *  ms(4)   =  39px\n *  ms(5)   =  44px\n *  ms(6)   =  52px\n *  ms(7)   =  59px\n *  ms(8)   =  70px\n *  ms(9)   =  78px\n *  ms(10)  =  93px\n */\n\n// A background image for making sure your elements line up to you baseline.\n// $grid-background-baseline-color: pink;\n// html { @include debug-vertical-alignment(); }\n",
+			"file": "/Users/jewls/code/heroes/stylesheets/_var.css.scss",
+			"file_size": 8208,
+			"file_write_time": 130308688250000000,
+			"settings":
+			{
+				"buffer_size": 8208,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -75,12 +121,22 @@
 	},
 	"file_history":
 	[
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/css/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/css/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/sass/screen.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/css/screen.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/section2/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/test.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/test.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/section4/3-math_color/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/section5/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/final/index.html",
-		"/Users/jewls/Sites/gdi-sass/exercises/test/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/test/screen.css",
-		"/Users/jewls/Sites/gdi-sass/exercises/test/test.scss",
 		"/Users/jewls/Sites/gdi-sass/examples/lists/stylesheets/animation-grid-rotation.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_vars.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_mixins.scss",
@@ -107,7 +163,6 @@
 		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/2-variables/index.html",
-		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/index.html",
 		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/modules/_navigation.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/base/_base.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section4/1-mixins/sass/base/_mixins.scss",
@@ -119,12 +174,6 @@
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_footer.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_header.scss",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/3-imports/sass/modules/_navigation.scss",
-		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting2/sass/screen.scss",
-		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/sass/screen.scss",
-		"/Users/jewls/Sites/gdi-sass/exercises/section3/1-nesting/index.html",
-		"/Users/jewls/Sites/gdi-sass/exercises/section2/index.html",
-		"/Users/jewls/Sites/gdi-sass/exercises/section2/sass/screen.scss",
-		"/Users/jewls/Sites/gdi-sass/exercises/section2/css/screen.css",
 		"/Users/jewls/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/css/screen.css",
 		"/Users/jewls/Sites/gdi-sass/exercises/section3/sass/screen.scss",
@@ -292,13 +341,150 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "/Users/jewls/code/heroes/stylesheets/application.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/jewls/code/heroes/stylesheets/helpers/_utilities.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								532,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "exercises/test/test.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								40
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/jewls/code/heroes/stylesheets/core/_grid.css.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1419,
+								1419
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1216.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/jewls/code/heroes/stylesheets/_var.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7060,
+								7060
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -319,18 +505,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
