@@ -140,8 +140,8 @@
               <li>Sass Basics</li>
               <li class="break">Advanced Sass</li>
               <li class="break">Media Queries</li>
-              <li>Libraries &amp; Tools</li>
               <li>Modular Architecture</li>
+              <li>Libraries &amp; Tools</li>
               <li>Wrap-Up</li>
             </ol>
           </section>
@@ -221,7 +221,7 @@
               <li><strong>2007:</strong> Designed by <a href="http://www.hamptoncatlin.com/" target="_blank">Hampton Catlin</a> (Haml)
               </li>
               <li>Developed by <a href="http://nex-3.com/" target="_blank">Nathan Weizenbaum</a> and <a href="http://chriseppstein.github.io/" target="_blank">Chris Eppstein</a> (Compass)</li>
-              <li><strong>October 2013:</strong> <span class="yellow">3.3.0.rc.1</span> became available </li>
+              <li><strong>March 2014:</strong> <span class="yellow">Sass 3.3</span> is released!</li>
               <li class="green">Pushing CSS ahead!</li>
             </ul>
             <aside class="notes">
@@ -767,11 +767,7 @@
             </div>
             <div class="box">
               <h4 class="yellow">Sass</h4>
-              <p><code>gem install sass</code></p>
-            </div>
-            <div class="box">
-              <h4 class="yellow"><span class="blue">PRO</span> Sass 3.3</h4>
-              <p><code>gem install sass --pre</code></p>
+              <p><code><strong>$</strong> gem install sass</code></p>
             </div>
           </section>
 
@@ -779,14 +775,15 @@
           <section>
             <h3>Running Sass</h3>
             <p class="box" style="font-size: 72px;">Sass <i class="fa fa-arrow-right blue"></i> CSS</p>
-            <p><code>sass source.scss output.css</code></p>
-            <p class="box"><code>sass source_dir output_dir</code></p>
+            <p><code><strong>$</strong> sass source.scss output.css</code></p>
+            <p class="box"><code><strong>$</strong> sass source_dir output_dir</code></p>
             <aside class="notes">
               <p>So let's get a more visual representation...</p>
             </aside>
           </section>
 
           <!-- SASS WORKFLOW : Running -->
+          <!-- TODO: switch project to kittens -->
           <section>
             <h3>Running Sass</h3>
             <div class="box--top">
@@ -808,7 +805,7 @@
                 </li>
               </ul>
             </div>
-            <p class=""><code>sass sass/screen.scss css/screen.css</code></p>
+            <p class=""><code><strong>$</strong> sass sass/screen.scss css/screen.css</code></p>
 
             <aside class="notes">
               <p>At this point you might be thinking</p>
@@ -820,7 +817,7 @@
           <!-- SASS WORKFLOW : Watching -->
           <section>
             <h3>Sass Is Watching You...</h3>
-            <div class="box"><code>sass <span class="green">--watch</span> source.scss:output.css</code></div>
+            <div class="box"><code><strong>$</strong> sass <span class="green">--watch</span> source.scss:output.css</code></div>
             <div class="blue">This is the best thing EVER.</div>
             <div class="box"><span class="red">Gotchya:</span> Colon vs. Space</div>
             <aside class="notes copy--small">
@@ -835,19 +832,19 @@
           <section>
             <h3>More Sassy Options</h3>
             <div class="box">
-              <code>sass source.scss output.css</code>
+              <code><strong>$</strong> sass source.scss output.css</code>
               <div><small>Compile <code>source.scss</code> to <code>output.css</code>. <span class="red">Gotchya:</span> will fail if output directory doesn't exist.</small></div>
             </div>
             <div>
-              <code>sass <span class="green">--update</span> source.scss<span class="yellow">:</span>output.css</code></code>
+              <code><strong>$</strong> sass <span class="green">--update</span> source.scss<span class="yellow">:</span>output.css</code></code>
               <div><small>Compile <code>source.scss</code> to <code>output.css</code>. Will create new directories if they don't exist.</small></div>
             </div>
             <div class="box">
-              <code>sass <span class="green">--watch</span> source.scss<span class="yellow">:</span>output.css</code>
+              <code><strong>$</strong> sass <span class="green">--watch</span> source.scss<span class="yellow">:</span>output.css</code>
               <div><small>Watch <code>source.scss</code> for changes. Same syntax as <code>--update</code>.</small></div>
             </div>
             <div>
-              <code>sass <span class="green">--style expanded</span> source.scss<span class="yellow">:</span>output.css</code></code>
+              <code><strong>$</strong> sass <span class="green">--style expanded</span> source.scss<span class="yellow">:</span>output.css</code></code>
               <div><small>Adjusts output format. Options: nested, expanded, compact, compressed</small></div>
             </div>
 
@@ -873,6 +870,7 @@
           </section>
 
           <!-- Sass Workflow : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3 class="blue"><span class="pink">Section II</span> Let's develop it!</h3>
 
@@ -1077,6 +1075,7 @@
           </section>
 
           <!-- Sass Basics : Nesting : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Nesting <span class="blue">Let's develop it!</span></h3>
             <ul class="box left copy--small list--tall" style="width: 50%;">
@@ -1217,6 +1216,7 @@
           </section>
 
           <!-- Sass Basics : Nesting 2 : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>&amp; Selector <span class="blue">Let's develop it!</span></h3>
             <ul class="box left copy--small list--tall" style="width: 50%;">
@@ -1713,6 +1713,7 @@
           </section>
 
           <!-- Sass Basics : Variables : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Variables <span class="blue">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%">
@@ -1819,7 +1820,7 @@
                 @import "base";
               </code></pre>
 
-              <p class="box"><small><code>sass sass/screen.scss css/screen.css</code></small></p>
+              <p class="box"><small><code><strong>$</strong> sass sass/screen.scss css/screen.css</code></small></p>
             </div>
             <div class="box right copy--small" style="width: 48%">
               <ul>
@@ -1864,7 +1865,7 @@
           <section>
             <h3><span class="blue">Imports</span> Compiling Directories</h3>
 
-            <p class="box"><code>sass sass/ css/</code></p>
+            <p class="box"><code><strong>$</strong> sass sass/ css/</code></p>
 
             <div class=" left copy--small" style="width: 48%">
               <ul>
@@ -1920,7 +1921,7 @@
           <section>
             <h3><span class="blue">Imports</span> Partials</h3>
 
-            <p class="box"><code>sass sass/ css/</code></p>
+            <p class="box"><code><strong>$</strong> sass sass/ css/</code></p>
 
             <div class=" left copy--small" style="width: 48%">
               <ul>
@@ -2005,6 +2006,7 @@
           </section>
 
           <!-- Sass Basics : Imports & Organizations : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Imports <span class="blue">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%">
@@ -2619,6 +2621,7 @@
           </section>
 
           <!-- Advanced Sass : Mixins : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Mixins <span class="blue">Let's develop it!</span></h3>
             <div class="left copy--small" style="width: 64%">
@@ -2951,6 +2954,7 @@
           </section>
 
           <!-- Advanced Sass : Inheritence : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>@extend <span class="blue">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%;">
@@ -3111,6 +3115,7 @@
           </section>
 
           <!-- Advanced Sass : Math & Color : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Math &amp; Color <span class="blue">Let's develop it!</span></h3>
             <p class="box">We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
@@ -3669,6 +3674,7 @@
           </section>
 
           <!-- Media Queries : Develop It! -->
+          <!-- TODO -->
           <section>
             <h3>Media Queries <span class="blue">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%;">
@@ -3703,88 +3709,10 @@
         </section>
 
 
-        <!-- SECTION 6 : LIBRARIES & TOOLS -->
+        <!-- SECTION 6 : MODULAR ARCHITECTURE -->
         <section>
           <section>
             <h3>Section VI</h3>
-            <p class="blue">Libraries &amp; Tools</p>
-            <aside class="notes">
-              <p>With Sass becoming so popular, a lot of people are contributing ideas and addons..</p>
-            </aside>
-          </section>
-
-          <!-- Libraries & Tools : Compass -->
-          <section>
-            <h3><span class="blue">Libraries</span> Compass</h3>
-            <a href="http://compass-style.org/" target="_blank"><img class="box" src="images/compass.png" style="border: none; box-shadow: none;" /></a>
-            <p class="copy--small">"Compass is an open-source CSS Authoring Framework." ~ <a href="http://compass-style.org/" target="
-            _blank">Compass</a></p>
-            <ul class="box">
-              <li class="yellow">CSS3 mixins!</li>
-              <li><span class="green">Typography</span> pattern tools.</li>
-              <li>Lots of other utilities!</li>
-            </ul>
-            <aside class="notes">
-              <p>Newest version will check caniuse.com for the most up to date prefixes</p>
-            </aside>
-          </section>
-
-          <!-- Libraries & Tools : Bourbon -->
-          <section>
-            <h3><span class="blue">Libraries</span> Bourbon</h3>
-            <a href="http://bourbon.io/" target="_blank"><img class="box" src="images/bourbon.png" style="border: none; box-shadow: none;" /></a>
-            <p class="copy--small">"A simple and lightweight mixin library for Sass." ~ <a href="http://bourbon.io/" target="
-            _blank">Bourbon</a></p>
-            <ul class="box">
-              <li class="yellow">CSS3 mixins!</li>
-              <li><span class="green">Vanilla</span> styles.</li>
-              <li>Super slim.</li>
-              <li>No configuration.</li>
-            </ul>
-          </section>
-
-          <!-- Libraries & Tools : Susy -->
-          <section>
-            <h3><span class="blue">Libraries</span> Susy</h3>
-            <p class="box"><a href="http://susy.oddbird.net/" target="_blank"><img src="images/susy.png" style="padding: 0;" /></a></p>
-            <p class="copy--small">"Responsive grids for Compass." ~ <a href="http://susy.oddbird.net/" target="_blank">Susy</a></p>
-            <ul class="box">
-              <li class="yellow">Grid mixins!</li>
-              <li>Very flexible.</li>
-            </ul>
-            <aside class="notes">Because it's @mixin based, you can avoid cluttering up your markup with non-semantic grid classes</aside>
-          </section>
-
-          <!-- Libraries & Tools : More -->
-          <section>
-            <h3><span class="blue">Libraries</span> A Few More</h3>
-            <ul class="box">
-              <li><a href="https://github.com/JohnAlbin/normalize.css-with-sass-or-compass" target="_blank">Normalize.css</a></li>
-              <li class="box"><a href="https://github.com/Team-Sass/modular-scale" target="_blank">Modular Scale</a> (Compass Extension)</li>
-              <li><a href="http://breakpoint-sass.com/" target="_blank">Breakpoint</a> (Compass Extension)</li>
-              <li class="box"><a href="http://foundation.zurb.com/" target="_blank">Foundation</a>  or <a href="https://github.com/thomas-mcdonald/bootstrap-sass">Bootstrap Sass</a></li>
-            </ul>
-          </section>
-
-          <!-- Libraries & Tools : Tools -->
-          <section>
-            <h3><span class="blue">Tools</span> GUIs</h3>
-            <ul class="box copy--small">
-              <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> (OS X) - "It's like steroids for developers."</li>
-              <li class="box"><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a> - Compilation and live reload</li>
-              <li><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a> - Self-contained Ruby environment.</li>
-            </ul>
-            <aside class="notes">
-              <p>If you're not a fan of the command line, we've got apps for that.</p>
-            </aside>
-          </section>
-        </section>
-
-
-        <!-- SECTION 7 : MODULAR ARCHITECTURE -->
-        <section>
-          <section>
-            <h3>Section VII</h3>
             <p class="blue">Modular Architecture</p>
           </section>
 
@@ -3841,6 +3769,7 @@
           </section>
 
           <!-- Modular Architecture : Methodologies -->
+          <!-- TODO : update -->
           <section>
             <h4><span class="blue">Modular Architecture</span> Methodologies</h4>
             <ul class="box left copy--small" style="width: 48%">
@@ -3870,6 +3799,7 @@
           </section>
 
           <!-- Modular Architecture : Demo -->
+          <!-- TODO -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Demo</h3>
             <p class="box">My Current Hybrid Sass System</p>
@@ -3889,6 +3819,85 @@
         </section>
 
 
+        <!-- SECTION 7 : LIBRARIES & TOOLS -->
+        <section>
+          <section>
+            <h3>Section VII</h3>
+            <p class="blue">Libraries &amp; Tools</p>
+            <aside class="notes">
+              <p>With Sass becoming so popular, a lot of people are contributing ideas and addons..</p>
+            </aside>
+          </section>
+
+          <!-- Libraries & Tools : Compass -->
+          <section>
+            <h3><span class="blue">Libraries</span> Compass</h3>
+            <a href="http://compass-style.org/" target="_blank"><img class="box" src="images/compass.png" style="border: none; box-shadow: none;" /></a>
+            <p class="copy--small">"Compass is an open-source CSS Authoring Framework." ~ <a href="http://compass-style.org/" target="
+            _blank">Compass</a></p>
+            <ul class="box">
+              <li class="yellow">CSS3 mixins!</li>
+              <li><span class="green">Typography</span> pattern tools.</li>
+              <li>Lots of other utilities!</li>
+            </ul>
+            <aside class="notes">
+              <p>Newest version will check caniuse.com for the most up to date prefixes</p>
+            </aside>
+          </section>
+
+          <!-- Libraries & Tools : Bourbon -->
+          <section>
+            <h3><span class="blue">Libraries</span> Bourbon</h3>
+            <a href="http://bourbon.io/" target="_blank"><img class="box" src="images/bourbon.png" style="border: none; box-shadow: none;" /></a>
+            <p class="copy--small">"A simple and lightweight mixin library for Sass." ~ <a href="http://bourbon.io/" target="
+            _blank">Bourbon</a></p>
+            <ul class="box">
+              <li class="yellow">CSS3 mixins!</li>
+              <li><span class="green">Vanilla</span> styles.</li>
+              <li>Super slim.</li>
+              <li>No configuration.</li>
+            </ul>
+          </section>
+
+          <!-- Libraries & Tools : Susy -->
+          <section>
+            <h3><span class="blue">Libraries</span> Susy</h3>
+            <p class="box"><a href="http://susy.oddbird.net/" target="_blank"><img src="images/susy.png" style="padding: 0;" /></a></p>
+            <p class="copy--small">"Responsive grids for Compass." ~ <a href="http://susy.oddbird.net/" target="_blank">Susy</a></p>
+            <ul class="box">
+              <li class="yellow">Grid mixins!</li>
+              <li>Very flexible.</li>
+            </ul>
+            <aside class="notes">Because it's @mixin based, you can avoid cluttering up your markup with non-semantic grid classes</aside>
+          </section>
+
+          <!-- Libraries & Tools : More -->
+          <!-- TODO : update -->
+          <section>
+            <h3><span class="blue">Libraries</span> A Few More</h3>
+            <ul class="box">
+              <li><a href="https://github.com/JohnAlbin/normalize.css-with-sass-or-compass" target="_blank">Normalize.css</a></li>
+              <li class="box"><a href="https://github.com/Team-Sass/modular-scale" target="_blank">Modular Scale</a> (Compass Extension)</li>
+              <li><a href="http://breakpoint-sass.com/" target="_blank">Breakpoint</a> (Compass Extension)</li>
+              <li class="box"><a href="http://foundation.zurb.com/" target="_blank">Foundation</a>  or <a href="https://github.com/thomas-mcdonald/bootstrap-sass">Bootstrap Sass</a></li>
+            </ul>
+          </section>
+
+          <!-- Libraries & Tools : Tools -->
+          <section>
+            <h3><span class="blue">Tools</span> GUIs</h3>
+            <ul class="box copy--small">
+              <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> (OS X) - "It's like steroids for developers."</li>
+              <li class="box"><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a> - Compilation and live reload</li>
+              <li><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a> - Self-contained Ruby environment.</li>
+            </ul>
+            <aside class="notes">
+              <p>If you're not a fan of the command line, we've got apps for that.</p>
+            </aside>
+          </section>
+        </section>
+
+
         <!-- YAY -->
         <section>
           <h3 class="green">Yay!</h3>
@@ -3900,9 +3909,9 @@
         <section>
           <h3 class="green"><span class="blue">Part 3</span> Review</h3>
           <p class="box">Media Queries</p>
-          <p>Libraries</p>
-          <p class="box">Tools</p>
           <p>Modular Architecture</p>
+          <p class="box">Libraries</p>
+          <p>Tools</p>
           <p class="box yellow">Questions?</p>
         </section>
 
@@ -3913,6 +3922,43 @@
             <h3>Wrap Up</h3>
             <p class="copy--small blue">#SassShopDetroit</p>
           </section>
+
+
+          <!-- WRAP UP : Sass 3.3 -->
+          <!-- TODO -->
+          <section>
+            <h3><span class="yellow">Sass</span> 3.3 Changes</h3>
+            <p class="box copy--small"><a href="http://thesassway.com/news/sass-3-3-released">http://thesassway.com/news/sass-3-3-released</a></p>
+            <ul class="copy--small">
+              <li>Map Data Structure</li>
+              <li>Source Maps</li>
+              <li>Parent Selector Suffixes</li>
+              <li><code>@at-root</code> Selector</li>
+              <li>Improved <code>@if</code></li>
+              <li>Backwards <code>@for</code> loops</li>
+              <li>Multiple Assignment in <code>@each</code> loops</li>
+            </ul>
+            <aside class="notes">
+            </aside>
+          </section>
+
+
+          <!-- WRAP UP : Resources -->
+          <!-- TODO : update -->
+          <section>
+            <h3><span class="yellow">Sass</span> Resources</h3>
+            <ul class="box copy--small">
+              <li><a target="_blank" href="http://sass-lang.com">Sass-Lang.com</a></li>
+              <li><a target="_blank" href="http://thesassway.com">The Sass Way</a></li>
+              <li><a target="_blank" href="http://sassmeister.com">SassMeister.com</a></li>
+              <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a></li>
+              <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">Assembling Sass</a></li>
+              <li><a target="_blank" href="http://compass-style.org">Compass-Style.org</a></li>
+              <li><a target="_blank" href="http://sassconf.com">Sass Conf</a></li>
+              <li><a target="_blank" href="http://css-tricks.com/sass-style-guide/">Sass Style Guide</a></li>
+            </ul>
+          </section>
+
 
           <!-- WRAP UP : Tips -->
           <section>
@@ -3931,20 +3977,6 @@
             </aside>
           </section>
 
-          <!-- WRAP UP : Resources -->
-          <section>
-            <h3><span class="yellow">Sass</span> Resources</h3>
-            <ul class="box copy--small">
-              <li><a target="_blank" href="http://sass-lang.com">Sass-Lang.com</a></li>
-              <li><a target="_blank" href="http://thesassway.com">The Sass Way</a></li>
-              <li><a target="_blank" href="http://sassmeister.com">SassMeister.com</a></li>
-              <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a></li>
-              <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">Assembling Sass</a></li>
-              <li><a target="_blank" href="http://compass-style.org">Compass-Style.org</a></li>
-              <li><a target="_blank" href="http://sassconf.com">Sass Conf</a></li>
-              <li><a target="_blank" href="http://css-tricks.com/sass-style-guide/">Sass Style Guide</a></li>
-            </ul>
-          </section>
 
           <!-- WRAP UP : Questions -->
           <section>
