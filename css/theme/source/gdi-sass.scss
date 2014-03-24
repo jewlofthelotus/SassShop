@@ -3,7 +3,7 @@
 @import "gdilight";
 
 .reveal {
-  word-wrap: break-word;
+  // word-wrap: break-word;
 
   .copy--small {
     font-size: .8em;
@@ -37,11 +37,20 @@
     ul, ol {
       margin-top: 10px;
     }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .list--tall {
     ol, ul {margin-top: 20px;}
     li {margin-bottom: 20px;}
+  }
+
+  .list--xtall {
+    ol, ul {margin-top: 40px;}
+    li {margin-bottom: 40px;}
   }
 
   .broken {
@@ -74,6 +83,12 @@
 
   section img {
     margin: 0 15px;
+  }
+
+  .img--bare {
+    border: none;
+    background: transparent;
+    box-shadow: none;
   }
 
   .gist {

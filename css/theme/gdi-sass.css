@@ -2434,10 +2434,6 @@ body {
   vertical-align: middle;
 }
 
-/* line 5, source/gdi-sass.scss */
-.reveal {
-  word-wrap: break-word;
-}
 /* line 8, source/gdi-sass.scss */
 .reveal .copy--small {
   font-size: .8em;
@@ -2470,45 +2466,63 @@ body {
 .reveal ul ul, .reveal ul ol, .reveal ol ul, .reveal ol ol {
   margin-top: 10px;
 }
-/* line 43, source/gdi-sass.scss */
+/* line 41, source/gdi-sass.scss */
+.reveal ul li:last-child, .reveal ol li:last-child {
+  margin-bottom: 0;
+}
+/* line 47, source/gdi-sass.scss */
 .reveal .list--tall ol, .reveal .list--tall ul {
   margin-top: 20px;
 }
-/* line 44, source/gdi-sass.scss */
+/* line 48, source/gdi-sass.scss */
 .reveal .list--tall li {
   margin-bottom: 20px;
 }
-/* line 47, source/gdi-sass.scss */
+/* line 52, source/gdi-sass.scss */
+.reveal .list--xtall ol, .reveal .list--xtall ul {
+  margin-top: 40px;
+}
+/* line 53, source/gdi-sass.scss */
+.reveal .list--xtall li {
+  margin-bottom: 40px;
+}
+/* line 56, source/gdi-sass.scss */
 .reveal .broken {
   list-style-position: inside;
   margin-top: .25em;
 }
-/* line 51, source/gdi-sass.scss */
+/* line 60, source/gdi-sass.scss */
 .reveal .broken li {
   display: block;
   padding: .25em 1em;
 }
-/* line 57, source/gdi-sass.scss */
+/* line 66, source/gdi-sass.scss */
 .reveal ol.broken {
   counter-reset: counter;
 }
-/* line 61, source/gdi-sass.scss */
+/* line 70, source/gdi-sass.scss */
 .reveal ol.broken li:before {
   color: #ccc;
   content: counter(counter) ".";
   counter-increment: counter;
   padding-right: .5em;
 }
-/* line 70, source/gdi-sass.scss */
+/* line 79, source/gdi-sass.scss */
 .reveal .break {
   border-top: 20px solid #efefef;
   padding-top: 2em;
 }
-/* line 75, source/gdi-sass.scss */
+/* line 84, source/gdi-sass.scss */
 .reveal section img {
   margin: 0 15px;
 }
-/* line 79, source/gdi-sass.scss */
+/* line 88, source/gdi-sass.scss */
+.reveal .img--bare {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+/* line 94, source/gdi-sass.scss */
 .reveal .gist {
   font-size: .5em;
   line-height: 1.3em;
@@ -2516,18 +2530,18 @@ body {
   overflow: scroll;
 }
 
-/* line 87, source/gdi-sass.scss */
+/* line 102, source/gdi-sass.scss */
 code {
   background: #e8e8e8;
 }
 
-/* line 91, source/gdi-sass.scss */
+/* line 106, source/gdi-sass.scss */
 pre {
   margin: 0;
   width: auto;
   box-shadow: none;
 }
-/* line 96, source/gdi-sass.scss */
+/* line 111, source/gdi-sass.scss */
 pre code {
   background: transparent;
   border: 6px solid #fff;
