@@ -5,6 +5,8 @@
 .reveal {
   // word-wrap: break-word;
 
+  .center-align{ text-align: center}
+
   .copy--small {
     font-size: .8em;
   }
@@ -51,6 +53,10 @@
   .list--xtall {
     ol, ul {margin-top: 40px;}
     li {margin-bottom: 40px;}
+  }
+
+  .list--bare {
+    list-style-type: none;
   }
 
   .broken {
