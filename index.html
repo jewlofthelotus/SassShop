@@ -950,10 +950,10 @@
           <!-- Sass Basics : Nesting -->
           <section>
             <h3><span class="blue">3.1</span> Nesting</h3>
-            <ul class="box">
-              <li><span class="green">HTML has a clear hierarchy</span> - elements are <span class="yellow">nested</span></li>
-              <li>We can do the same thing with Sass</li>
-            </ul>
+            <div class="box copy--small">
+              <p><span class="green">HTML has a clear hierarchy</span> - elements are <em class="yellow">nested</em>.</p>
+              <p>We can apply the same concept in Sass.</p>
+            </div>
 
             <div class="left" style="width: 49%">
               <h4>HTML</h4>
@@ -1000,7 +1000,7 @@
           <section>
             <h3><span class="blue">Nesting</span> Output</h3>
 
-            <div class="box left" style="width: 49%">
+            <div class="box--small left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 .navigation {
@@ -1020,7 +1020,7 @@
               </code></pre>
             </div>
 
-            <div class="box right" style="width: 49%">
+            <div class="box--small right" style="width: 49%">
               <h4>CSS Output</h4>
               <pre><code class="css">
                 .navigation {
@@ -1040,10 +1040,10 @@
               </code></pre>
             </div>
 
-            <ul>
-              <li>Sass gives us <span class="green">organization</span></li>
-              <li>Sass reduces <span class="green">repetition</span></li>
-            </ul>
+            <div class="copy--small">
+              <p>Sass gives us <span class="green">organization</span>.</p>
+              <p>Sass reduces <span class="green">repetition</span>.</p>
+            </div>
 
             <aside class="notes">
               <p>So, there's kid of a gotchya with nesting though...</p>
@@ -1053,11 +1053,11 @@
           <!-- Sass Basics : Nesting : Gotchya -->
           <section>
             <h3><span class="blue">Nesting</span> Gotchya</h3>
-            <ul class="box  copy--small">
-              <li>Mirroring HTML nesting is SUPER easy</li>
-              <li class="fragment red" data-fragment-index="1">Overly verbose and overly specific</li>
-              <li class="fragment green" data-fragment-index="3">Rule of thumb: no more than 3 levels deep</li>
-            </ul>
+            <div class="box--small copy--small">
+              <p>Mirroring HTML nesting is SUPER easy.</p>
+              <p class="fragment red" data-fragment-index="1">Overly verbose and overly specific.</p>
+              <p class="fragment green" data-fragment-index="3">Rule of thumb: no more than 3 levels deep.</p>
+            </div>
 
             <div class="left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
@@ -1092,44 +1092,7 @@
             </aside>
           </section>
 
-          <!-- Sass Basics : Nesting : Develop It! -->
-          <!-- TODO -->
-          <section>
-            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
-            <ul class="box left copy--small list--tall" style="width: 50%;">
-              <li>Add the header on the right to your <code>index.html</code>.</li>
-              <li>In <code>screen.scss</code>, <span class="yellow">nest</span> styles that:
-                <ul>
-                  <li>Display <code>header h1</code> and <code>header nav</code> as <code>inline-block</code></li>
-                  <li>Float <code>header nav</code> to the right</li>
-                  <li>Display <code>nav li</code> as <code>inline-block</code>, with no bullets, and a <code>1em</code> left margin</li>
-                  <li>Display <code>nav a</code> as <code>block</code> with no <code>text-decoration</code>, <code>10px</code> padding, and your choice of <code>background</code> and <code>color</code> colors</li>
-                </ul>
-              </li>
-            </ul>
-            <div class="box right" style="width: 45%">
-              <pre><code class="html">
-                &lt;header class="header">
-                  &lt;h1>My Site Title&lt;/h1>
-                  &lt;nav class="navigation">
-                    &lt;ul>
-                      &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
-                      &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
-                      &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
-                    &lt;/ul>
-                  &lt;/nav>
-                &lt;/header>
-              </code></pre>
-
-              <p class="box green copy--small"><strong>Remember</strong><br/>Don't nest too deeply!</p>
-              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
-            </div>
-
-            <aside class="notes">
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Nesting 2 : Parent Selectors -->
+          <!-- Sass Basics : Nesting : Parent Selectors -->
           <section>
             <h3><span class="blue">Nesting</span> Parent Selectors</h3>
             <p class="box copy--small">Sass allows us to reference the <strong>current <span class="green">parent</span> selector(s)</strong> via the <span class="yellow">ampersand</span> character:</p>
@@ -1181,7 +1144,7 @@
             </aside>
           </section>
 
-          <!-- Sass Basics : Nesting 2 : Parent Selectors -->
+          <!-- Sass Basics : Nesting : Parent Selectors -->
           <section>
             <h3><span class="blue">Nesting</span> Parent Selectors</h3>
             <p class="copy--small box">The <code>&</code> selector can follow other selectors.  This will <span class="green">override</span> the parent element's (<code>&</code>) styles when it exists within the preceding selector.</p>
@@ -1233,40 +1196,48 @@
             </aside>
           </section>
 
-          <!-- Sass Basics : Nesting 2 : Develop It! -->
-          <!-- TODO -->
+          <!-- Sass Basics : Nesting : Develop It! -->
           <section>
-            <h3>&amp; Selector <span class="blue">Let's develop it!</span></h3>
-            <ul class="box left copy--small list--tall" style="width: 50%;">
-              <li>Add the <code>.footer</code> on the right to <code>index.html</code>.</li>
-              <li>Move <code>nav</code> styles out of the <code>header</code> so they'll apply to <code>nav</code> anywhere**</li>
-              <li>Use <span class="yellow">parent selector nesting</span> to:
-                <ul>
-                  <li>Float <code>nav</code> to the right <em>only</em> if it's within the <code>.header</code></li>
-                  <li>Change the background color of <code>nav a</code> on <code>:hover</code></li>
-                  <li>Set the <code>.navigation li</code> to have <code>1em</code> right margin, by default; and <code>1em</code> left margin if it exists within <code>.header</code></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="box right" style="width: 45%">
-              <pre><code class="html">
-                &lt;footer class="footer">
-                  &lt;nav class="navigation">
-                    &lt;ul>
-                      &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
-                      &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
-                      &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
-                    &lt;/ul>
-                  &lt;/nav>
-                &lt;/footer>
-              </code></pre>
-            </div>
-            <div class="right" style="width: 45%;">
-              <p><small>** You may need to readjust your nesting</small></p>
+            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
+
+            <div class="box--small left" style="width: 55%;">
+              <p class="yellow">NEST ALL THE THINGS!!</p>
+              <p class="box green copy--small"><strong>Remember</strong><br/>Don't nest too deeply!</p>
+              <p class="red copy--small"><strong>Hint</strong><br/>Not everything <em>needs</em> to be nested.</p>
+              <p class="box pink copy--small"><strong>Don't Forget</strong><br/>The parent <code>&amp;</code> selector.</p>
             </div>
 
+            <div class="box--small right" style="width: 45%">
+              <pre><code class="scss">
+                // good
+                .navigation {
+                  li {//...}
+                  a  {
+                    //...
+                    &amp;:hover { //... }
+                  }
+                }
+
+                // bad
+                body {
+                  .header {
+                    .navigation {
+                      ul {
+                        li {
+                          a {
+                            // ...
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
+
             <aside class="notes">
-              <p>Alright, so before we move on from nesting there is one more thing I'd like to cover</p>
             </aside>
           </section>
 

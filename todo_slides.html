@@ -1,0 +1,55 @@
+          <!-- Sass Basics : Nesting : Modularity -->
+          <section>
+            <h3>Nesting <span class="blue">Modularity</span></h3>
+
+            <div class="box copy--small">
+              <p>Not everything <em><strong>needs</strong></em> to be nested.<br />
+                <small>These are often your "base," or default, styles (ex. <code>body</code>, <code>a</code>, <code>p</code>).</small></p>
+
+              <p class="box--small">Start to think in terms of <em>reusable <strong>components.</strong></em><br />
+                <small>Buttons, media objects, cards.</small></p>
+
+              <p>Use <em><strong>minimal specificity</strong></em> with selectors.<br />
+                <small>How might you combine multiple selectors to achieve an effect?</small></p>
+
+              <p class="box--small green">If an element's style is specific to the component,<br />it's a perfect candidate for nesting.</p>
+            </div>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting : Modularity Example -->
+          <section>
+            <h3>Nesting <span class="blue">Modularity</span></h3>
+
+            <div class="box left" style="width: 50%;">
+              <pre><code class="scss">
+                .btn {
+                  // base button styles
+                  // padding, border-radius, text-align, etc.
+                }
+
+                .btn-primary {
+                  // color, background-color, border-color
+                }
+
+                .btn-large {
+                  // font-size, line-height, base padding overrides
+                }
+
+                // &lt;a class="btn btn-secondary" ...
+              </code>
+              </pre>
+            </div>
+
+            <div class="copy--small box right left-align" style="width: 48%;">
+              <p class="box">This is a module.</p>
+              <p>No nesting required.</p>
+              <p class="box">We're relying on the cascade.</p>
+              <p>Reusable, combinable components.</p>
+            </div>
+
+            <aside class="notes">
+            </aside>
+          </section>
