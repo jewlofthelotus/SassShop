@@ -879,7 +879,7 @@
 
           <!-- Sass Workflow : Develop It! -->
           <section>
-            <h3 class="blue"><span class="pink">Section II</span> Let's develop it!</h3>
+            <h3>Workflow <span class="yellow">Let's develop it!</span></h3>
 
             <ol class="left copy--small " style="width: 55%;">
               <li class="box--small">Open up your <strong>kittens</strong> project</li>
@@ -1235,7 +1235,7 @@
 
           <!-- Sass Basics : Nesting : Develop It! -->
           <section>
-            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
+            <h3>Nesting <span class="yellow">Let's develop it!</span></h3>
 
             <div class="box--small left" style="width: 55%;">
               <p class="yellow">NEST ALL THE THINGS!!</p>
@@ -1707,7 +1707,7 @@
 
           <!-- Sass Basics : Variables : Develop It! -->
           <section>
-            <h3>Variables <span class="blue">Let's develop it!</span></h3>
+            <h3>Variables <span class="yellow">Let's develop it!</span></h3>
             <div class="box left" style="width: 48%">
               <p class="green"><strong>DRY Up Your Styles</strong></p>
               <p class="box--small yellow">Add Variables</p>
@@ -1739,11 +1739,11 @@
 
           <!-- Sass Basics : Core Features : Imports & Organization -->
           <section>
-            <h3><span class="blue">Sass Basics</span> Imports &amp; Organization</h3>
-            <ul class="copy--small box">
-              <li>CSS <code>@import</code> has always meant an <span class="red">extra file download</span></li>
-              <li><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side</li>
-            </ul>
+            <h4><span class="blue">Sass Basics</span> Imports &amp; Organization</h4>
+            <div class="box--small copy--small">
+              <p class="box">CSS <code>@import</code> has always meant an <span class="red">extra file download</span>.</p>
+              <p><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side.</p>
+            </div>
             <p class="pink">Organization OMGZZ!</p>
             <pre><code class="scss">
               @import "vars";
@@ -1760,18 +1760,19 @@
               @import "pages/all";
             </code></pre>
             <aside class="notes">
-
+              <p>What does this mean?</p>
+              <p>We can now organize our styles in a modular fashion</p>
             </aside>
           </section>
 
           <!-- Sass Basics : Imports & Organization : Imports -->
           <section>
-            <h3>Imports</h3>
+            <h3><span class="blue">Organization</span> Imports</h3>
             <div class="box left left-align copy--small" style="width: 48%">
-              <p><code>@import</code> takes a <span class="green">path</span> to a Sass resource, the <span class="green">file extension is optional</span></p>
-              <p>These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory</p>
+              <p><code>@import</code> takes a <span class="green">path</span> to a Sass resource, the <span class="green">file extension is optional</span>.</p>
+              <p class="box">These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory.</p>
             </div>
-            <div class="box right" style="width: 48%">
+            <div class="box--small right" style="width: 48%">
               <pre><code class="scss">
                 @import "vars";
 
@@ -1795,8 +1796,8 @@
           <!-- Sass Basics : Imports & Organization : Import File Structure -->
           <section>
             <h3><span class="blue">Imports</span> File Structure</h3>
-            <div class="box left" style="width: 48%">
-              <h4 class="green">screen.scss</h4>
+            <div class="box--small left" style="width: 48%">
+              <h4 class="green">application.scss</h4>
               <pre><code>
                 @import "vars";
                 @import "lib/compass";
@@ -1808,7 +1809,7 @@
 
               <p class="box"><small><code><strong>$</strong> sass sass/screen.scss css/screen.css</code></small></p>
             </div>
-            <div class="box right copy--small" style="width: 48%">
+            <div class="box--small right copy--small" style="width: 48%">
               <ul>
                 <li>project_awesome
                   <ul>
@@ -1829,19 +1830,18 @@
                     </li>
                     <li>css
                       <ul>
-                        <li class="green">screen.css</li>
+                        <li class="yellow">screen.css</li>
                       </ul>
                     </li>
-                    <li>index.html</li>
                   </ul>
                 </li>
               </ul>
             </div>
             <aside class="notes">
               <ul class="copy--small">
-                <li>screen.scss would be considered our "main" sass file, it's where we import and organize our project</li>
+                <li>application.scss is our "main" sass file, where we import and organize our project</li>
                 <li>the @import paths reference files in the same directory or nested below</li>
-                <li>so if we were to run this <code>sass</code> command, we'd end up with screen.css</li>
+                <li>so if we were to run this <code>sass</code> command, we'd end up with application.css</li>
                 <li>Now there's sort of a gotchya here...</li>
               </ul>
             </aside>
@@ -1851,7 +1851,7 @@
           <section>
             <h3><span class="blue">Imports</span> Compiling Directories</h3>
 
-            <p class="box"><code><strong>$</strong> sass sass/ css/</code></p>
+            <p class="box copy--small"><code><strong>$</strong> sass sass/ css/</code></p>
 
             <div class=" left copy--small" style="width: 48%">
               <ul>
@@ -1873,9 +1873,9 @@
               </ul>
             </div>
             <div class=" left" style="width: 4%">
-              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
               <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
-              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+              <p class="box"><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+              <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
             </div>
             <div class=" right copy--small" style="width: 48%">
               <ul>
@@ -1907,7 +1907,7 @@
           <section>
             <h3><span class="blue">Imports</span> Partials</h3>
 
-            <p class="box"><code><strong>$</strong> sass sass/ css/</code></p>
+            <p class="copy--small box"><code><strong>$</strong> sass sass/ css/</code></p>
 
             <div class=" left copy--small" style="width: 48%">
               <ul>
@@ -1932,7 +1932,7 @@
             <div class=" left" style="width: 4%">
               <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
             </div>
-            <div class=" right copy--small" style="width: 48%">
+            <div class="right left-align copy--small" style="width: 40%">
               <ul>
                 <li>css
                   <ul>
@@ -1941,16 +1941,15 @@
                   </ul>
                 </li>
               </ul>
-              <div class="box  copy--small left-align">
+              <div class="box copy--small">
                 <ul>
-                  <li class="box">An <span class="pink">_underscore</span> creates a partial</li>
+                  <li class="box--small">An <span class="pink">_underscore</span> creates a partial</li>
                   <li>Partials will not compile to <code>.css</code> on their own, they <span class="pink">must be <code>@import</code>ed</span></li>
-                  <li class="box">Partials allow us to break up our code into more <span class="pink">modular, maintainable chunks</span>!</li>
+                  <li class="box--small">Partials allow us to break up our code into more <span class="pink">modular, maintainable chunks</span>!</li>
                 </ul>
               </div>
             </div>
             <aside class="notes">
-              <p>partial help us break up our code in the </p>
             </aside>
           </section>
 
@@ -1959,7 +1958,7 @@
             <h3><span class="blue">Imports</span> Organization</h3>
             <div class="left box" style="width: 48%">
               <h4 class="yellow">Common Practices</h4>
-              <ul class=" copy--small">
+              <ul class="list--tall box--small copy--small">
                 <li><code>_vars.scss</code> is a separate sheet for all your variables</li>
                 <li><code>_vars.scss</code> is added first so that it's variables can override later <code>!default</code>ed ones</li>
                 <li>Variables > Libraries > Base > Modules > Pages<br/><small>OOCSS, BEM, SMACSS, Atomic Design</small></li>
@@ -1967,7 +1966,7 @@
               </ul>
             </div>
             <div class="right box" style="width: 48%">
-              <h4 class="green">screen.scss</h4>
+              <h4 class="green">application.scss</h4>
               <pre><code>
                 // Variables
                 @import "vars";
@@ -1992,20 +1991,18 @@
           </section>
 
           <!-- Sass Basics : Imports & Organizations : Develop It! -->
-          <!-- TODO -->
           <section>
-            <h3>Imports <span class="blue">Let's develop it!</span></h3>
+            <h3>Imports <span class="yellow">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%">
-              <ul class="box">
-                <li><span class="green">Update your project's file structure</span> to look something like the one on the right</li>
-                <li><span class="green">Move ALL styles</span> from <code>screen.scss</code> to more modular / organized locations</li>
-                <li><span class="green">Update</span> <code>screen.scss</code> to <code>@import</code> your new partials</li>
+              <ul class="list--xtall">
+                <li><span class="green">Update your Sass structure</span> to look something like the one on the right.</li>
+                <li><span class="green">Move ALL styles</span> from <code>application.scss</code> to more modular / organized locations.</li>
+                <li><span class="green">Update</span> <code>application.scss</code> to <code>@import</code> your new partials.</li>
               </ul>
-              <p><span class="blue">PRO</span> Add MOAR stylez</p>
             </div>
-            <div class="box right copy--small" style="width: 48%">
+            <div class="box--small right copy--small" style="width: 48%">
               <ul>
-                <li>project_awesome
+                <li>kittens
                   <ul>
                     <li>sass
                       <ul>
@@ -2019,7 +2016,8 @@
                           <ul>
                             <li>_header.scss</li>
                             <li>_footer.scss</li>
-                            <li>_navigation.scss</li>
+                            <li>_kitten.scss</li>
+                            <li>_news.scss</li>
                           </ul>
                         </li>
                         <li>screen.scss</li>
@@ -2029,6 +2027,7 @@
                 </li>
               </ul>
             </div>
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
             <aside class="notes"></aside>
           </section>
         </section>
@@ -2037,7 +2036,7 @@
         <!-- BREAK TIME -->
         <section>
           <h3>Break Time!</h3>
-          <p class="box">Enjoy some snacks courtesy of Atomic Object!</p>
+          <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
           <img src="images/sloth-snack.gif" />
         </section>
 
@@ -2045,12 +2044,14 @@
         <!-- PART 1 : REVIEW -->
         <section>
           <h3 class="green"><span class="blue">Part 1</span> Review</h3>
-          <p class="box">Sass Intro</p>
-          <p>Workflow</p>
-          <p class="box">Nesting</p>
-          <p>Variables</p>
-          <p class="box">Imports &amp; Organization</p>
-          <p class="yellow">Questions?</p>
+          <div class="box">
+            <p class="box--small">Sass Intro</p>
+            <p>Workflow</p>
+            <p class="box--small">Nesting</p>
+            <p>Variables</p>
+            <p class="box--small">Imports &amp; Organization</p>
+            <p class="yellow">Questions?</p>
+          </div>
           <aside class="notes">
           </aside>
         </section>
@@ -2609,7 +2610,7 @@
           <!-- Advanced Sass : Mixins : Develop It! -->
           <!-- TODO -->
           <section>
-            <h3>Mixins <span class="blue">Let's develop it!</span></h3>
+            <h3>Mixins <span class="yellow">Let's develop it!</span></h3>
             <div class="left copy--small" style="width: 64%">
               <ul class="box">
                 <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file</li>
@@ -2942,7 +2943,7 @@
           <!-- Advanced Sass : Inheritence : Develop It! -->
           <!-- TODO -->
           <section>
-            <h3>@extend <span class="blue">Let's develop it!</span></h3>
+            <h3>@extend <span class="yellow">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%;">
               <ul>
                 <li><span class="green">Add</span> a <code>_buttons.scss</code> partial to your modules directory, <code>@import</code> it in your main sheet</li>
@@ -3103,7 +3104,7 @@
           <!-- Advanced Sass : Math & Color : Develop It! -->
           <!-- TODO -->
           <section>
-            <h3>Math &amp; Color <span class="blue">Let's develop it!</span></h3>
+            <h3>Math &amp; Color <span class="yellow">Let's develop it!</span></h3>
             <p class="box">We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
 
             <div class="copy--small">
@@ -3662,7 +3663,7 @@
           <!-- Media Queries : Develop It! -->
           <!-- TODO -->
           <section>
-            <h3>Media Queries <span class="blue">Let's develop it!</span></h3>
+            <h3>Media Queries <span class="yellow">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%;">
               <ul>
                 <li class="box"><span class="green">Try nesting</span> a few media queries with the various options to the right</li>
