@@ -1,7 +1,0 @@
-.footer {
-  @include block-base($footer-background, $footer-color);
-
-  &:after {
-    content: "Brought to you by " + $info-organization;
-  }
-}
