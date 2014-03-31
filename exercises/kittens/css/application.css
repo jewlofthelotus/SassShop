@@ -75,6 +75,7 @@ a:hover {
 
 .footer {
   background: #506F8E;
+  border-top: 10px solid #EEE4DA;
 }
 
 .footer .copy {
@@ -112,6 +113,7 @@ a:hover {
 }
 
 .kittens li {
+  border-radius: 20px;
   float: left;
   margin-bottom: 2em;
   text-align: center;
@@ -128,6 +130,7 @@ a:hover {
 
 .kittens li img {
   border: 10px solid #fff;
+  border-radius: 20px;
 }
 
 .kittens li label {

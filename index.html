@@ -949,7 +949,7 @@
 
           <!-- Sass Basics : Nesting -->
           <section>
-            <h3><span class="blue">3.1</span> Nesting</h3>
+            <h3><span class="blue">Sass Basics</span> Nesting</h3>
             <div class="box copy--small">
               <p><span class="green">HTML has a clear hierarchy</span> - elements are <em class="yellow">nested</em>.</p>
               <p>We can apply the same concept in Sass.</p>
@@ -1196,51 +1196,6 @@
             </aside>
           </section>
 
-          <!-- Sass Basics : Nesting : Develop It! -->
-          <section>
-            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
-
-            <div class="box--small left" style="width: 55%;">
-              <p class="yellow">NEST ALL THE THINGS!!</p>
-              <p class="box green copy--small"><strong>Remember</strong><br/>Don't nest too deeply!</p>
-              <p class="red copy--small"><strong>Hint</strong><br/>Not everything <em>needs</em> to be nested.</p>
-              <p class="box pink copy--small"><strong>Don't Forget</strong><br/>The parent <code>&amp;</code> selector.</p>
-            </div>
-
-            <div class="box--small right" style="width: 45%">
-              <pre><code class="scss">
-                // good
-                .navigation {
-                  li {//...}
-                  a  {
-                    //...
-                    &amp;:hover { //... }
-                  }
-                }
-
-                // bad
-                body {
-                  .header {
-                    .navigation {
-                      ul {
-                        li {
-                          a {
-                            // ...
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              </code></pre>
-            </div>
-
-            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
-
-            <aside class="notes">
-            </aside>
-          </section>
-
           <!-- Sass Basics : Nesting Properties  -->
           <section>
             <h3><span class="blue">Nesting</span> Properties</h3>
@@ -1278,6 +1233,51 @@
             </aside>
           </section>
 
+          <!-- Sass Basics : Nesting : Develop It! -->
+          <section>
+            <h3>Nesting <span class="blue">Let's develop it!</span></h3>
+
+            <div class="box--small left" style="width: 55%;">
+              <p class="yellow">NEST ALL THE THINGS!!</p>
+              <p class="box green copy--small"><strong>Remember</strong><br/>Don't nest too deeply!</p>
+              <p class="red copy--small"><strong>Tip</strong><br/>Not everything <em>needs</em> to be nested.</p>
+              <p class="box pink copy--small"><strong>Don't Forget</strong><br/>The parent <code>&amp;</code> selector.</p>
+            </div>
+
+            <div class="box--small right" style="width: 45%">
+              <pre><code class="scss">
+                // good
+                .navigation {
+                  li {//...}
+                  a  {
+                    //...
+                    &amp;:hover { //... }
+                  }
+                }
+
+                // bad
+                body {
+                  .header {
+                    .navigation {
+                      ul {
+                        li {
+                          a {
+                            // ...
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
 
           <!-- Sass Basics : Variables -->
           <section>
@@ -1296,7 +1296,7 @@
 
           <!-- Sass Basics : Variables : Uses -->
           <section>
-            <h3><span class="blue">3.2</span> Variables</h3>
+            <h3><span class="blue">Sass Basics</span> Variables</h3>
             <div class="box left left-align" style="width: 48%">
               <h4 class="green">Some Uses</h4>
               <ul>
@@ -1329,13 +1329,13 @@
 
           <!-- Sass Basics : Variables : Assignment & Use -->
           <section>
-            <h3><span class="blue">Variables</span> Assignment &amp; Reference</h3>
+            <h4><span class="blue">Variables</span> Assignment &amp; Reference</h4>
 
-            <p class="box copy--small">Variables are defined like normal CSS rules<br />(<code>property: value;</code>), only prefixed with a <code>$</code></p>
+            <p class="box copy--small">Variables are defined à la CSS prop/val pairs: <code>$property: value;</code></p>
 
             <p class="copy--small">Variables are then referenced by their <code>$</code>-prefixed names.</p>
 
-            <div class="box left" style="width: 45%">
+            <div class="box--small left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $grey: rgba(0,0,0,.5);
@@ -1351,23 +1351,23 @@
                   }
                 }
 
-                p {
-                  padding-bottom: $default-padding
-                }
+                p { padding-bottom: $default-padding; }
               </code></pre>
             </div>
 
-            <div class="box right" style="width: 45%">
+            <div class="box--small right" style="width: 49%">
               <h4>CSS Output</h4>
               <pre><code class="scss">
                 a {
                   color: #095169;
                   padding: 1em;
                 }
+
                 a:hover {
                   color: rgba(0,0,0,.5);
                   background: #095169;
                 }
+
                 p {
                   padding-bottom: 1em;
                 }
@@ -1375,7 +1375,7 @@
             </div>
 
             <aside class="notes">
-              <p>as you can see, we've set a few different types of data - there a total of 6 data types that Sass accepts</p>
+              <p>as you can see, we've set a few different types of data - there are 7 main data types that Sass accepts</p>
             </aside>
           </section>
 
@@ -1391,12 +1391,13 @@
                 <li>Lists</li>
                 <li>Booleans</li>
                 <li>Null</li>
+                <li>Maps</li>
               </ul>
             </div>
 
-            <div class="box right" style="width:55%;">
+            <div class="box--small right" style="width:62%;">
               <h4 class="green">Uses</h4>
-              <pre><code class="scss">
+              <pre><code class="scss" style="max-height: 430px;">
                 $base-padding: 10px;
                 $line-height: 1.5;
 
@@ -1413,6 +1414,8 @@
                 $shadowed: false;
 
                 $secondary: null;
+
+                $map: (key1: value1, key2: value2, key3: value3);
               </code></pre>
             </div>
 
@@ -1457,7 +1460,7 @@
           <!-- Sass Basics : Variables : Guarded Assignment -->
           <section>
             <h3><span class="blue">Variable</span> Guarded Assignment</h3>
-            <p class="box">The <span class="green">!default</span> flag<br />
+            <p class="box--small">The <span class="green">!default</span> flag<br />
               <small>Means: set if it does not already have a value</small>
             </p>
             <div class=" left" style="width:48%;">
@@ -1490,31 +1493,31 @@
             <h3><span class="blue">Variable</span> Scope</h3>
 
             <div class="left box left-align" style="width: 48%;">
-              <p class="box copy--small">Variables are only available within the level of nested selectors where they're defined.</p>
+              <p class="box--small copy--small">Variables are only available within the level of nested selectors where they're defined.</p>
               <p class="copy--small">If they're defined outside of any nested selectors, they're available everywhere.</p>
-              <p class="box"><cite><small>~ <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">Sass Documentation</a></small></cite></p>
+              <p class="box--small"><cite><small>~ <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">Sass Documentation</a></small></cite></p>
             </div>
 
-            <div class="right box" style="width: 48%;">
+            <div class="right box--small" style="width: 49%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $border-width: 4px; // Global
 
                 a {
                   $color: orange;   // Local
-                  border: $border-width solid green;
+                  border: $border-width solid $color;
                 }
 
                 p {
-                  border: $border-width solid red;
-                  color: $color; // ERROR!!
-                  // Undefined variable "$color"
+                  border: $border-width solid $color;
+                  // ERROR!! Undefined variable "$color"
                 }
               </code></pre>
             </div>
 
             <aside class="notes">
               <p>This is sort of a global / local setup</p>
+              <p>Globals are a bit more flexible, let's take a look</p>
             </aside>
           </section>
 
@@ -1522,22 +1525,22 @@
           <section>
             <h3><span class="blue">Variable</span> Globals</h3>
 
-            <div class="left box left-align" style="width: 40%;">
-              <p class="box"><span class="green">Setting new values</span> to "global" variables within a selector <span class="green">changes future instances</span> of that variable</p>
+            <div class="left box--small left-align" style="width: 44%;">
+              <p class="box"><span class="green">Setting new values</span> to "global" variables within a selector <span class="green">changes future instances</span> of that variable.</p>
             </div>
 
-            <div class="right box" style="width: 56%;">
+            <div class="right box--small" style="width: 52%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $border-width: 4px;
 
                 a {
                   $border-width: 2px;
-                  border: $border-width solid green;
+                  border-width: $border-width; //=> 2px
                 }
 
                 p {
-                  border: $border-width solid red; //=> 2px
+                  border-width: $border-width; //=> 2px
                 }
               </code></pre>
             </div>
@@ -1552,7 +1555,7 @@
           <!-- Sass Basics : Variables : Interpolation -->
           <section>
             <h3><span class="blue">Variable</span> Interpolation</h3>
-              <p class='box'>Variables can be injected into <span class="green">selectors, property names, and strings</span> with <code>#{$variable}</code></p>
+              <p class='box copy--small'>Variables can be injected into <span class="green">selectors,<br />property names, and strings</span> via <code>#{$variable}</code></p>
             <div class=" left align-left" style="width: 52%">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
@@ -1573,6 +1576,7 @@
                 .box-left {
                   border-left: 1px solid #ccc;
                 }
+
                 .box-left:before {
                   content: "It's on the left side";
                 }
@@ -1584,9 +1588,9 @@
             </aside>
           </section>
 
-          <!-- Sass Basicx : Variables : Naming -->
+          <!-- Sass Basicx : Variables : Modular Naming -->
           <section>
-            <h3><span class="blue">PROTIP</span> Variable Naming</h3>
+            <h3><span class="blue">PROTIP</span> Modular Naming</h3>
             <div class="box left" style="width: 49%">
               <h4 class="green">OK Variables</h4>
               <pre><code class="scss">
@@ -1702,32 +1706,25 @@
           </section>
 
           <!-- Sass Basics : Variables : Develop It! -->
-          <!-- TODO -->
           <section>
             <h3>Variables <span class="blue">Let's develop it!</span></h3>
-            <div class="box left copy--small" style="width: 48%">
-              <ul>
-                <li><strong>Colors:</strong>
-                  <ul>
-                    <li><span class="green">Find</span> a <a href="http://colourlovers.com" target="_blank">color pallete</a></li>
-                    <li><span class="green">Set</span> <code>color</code> and <code>background</code> for header, content, footer* and nav items</li>
-                    <li><span class="green">Abstract</span> colors to variables, name based on usage</li>
-                  </ul>
-                </li>
-                <li><strong>Fonts:</strong>
-                  <ul>
-                    <li><span class="green">Set variables</span> for different base and heading <code>font-family</code> stacks**</li>
-                    <li><span class="green">Set</span> <code>html</code> to use the base variable, and <code>h1...h6</code> to your heading variable</li>
-                  </ul>
-                </li>
+            <div class="box left" style="width: 48%">
+              <p class="green"><strong>DRY Up Your Styles</strong></p>
+              <p class="box--small yellow">Add Variables</p>
+              <ul class="copy--small">
+                <li>colors values</li>
+                <li>font family</li>
+                <li>border width</li>
+                <li>border radius</li>
               </ul>
             </div>
             <div class="box right" style="width: 48%">
-              <img src="images/comic.jpeg" style="max-width: 100%;" />
-              <p class="box box--small"><small>* Hint: Set footer background on <code>html</code> so it fills the entire bottom of the page</small></p>
-              <p><small>** Try a fancy font or two from <a href="http://www.google.com/fonts" target="_blank">google</a>!</small></p>
-              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
+              <p class="box red">Repetitious values.</p>
+              <p class="red">"Arbitrary" values.</p>
             </div>
+
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
+
             <aside class="notes">
               <p>So we're not going to focus too much on globals or overrides or interpolation at this stage, let's just get comfortable with setting and using variables</p>
             </aside>
@@ -1742,7 +1739,7 @@
 
           <!-- Sass Basics : Core Features : Imports & Organization -->
           <section>
-            <h3><span class="blue">3.3</span> Imports &amp; Organization</h3>
+            <h3><span class="blue">Sass Basics</span> Imports &amp; Organization</h3>
             <ul class="copy--small box">
               <li>CSS <code>@import</code> has always meant an <span class="red">extra file download</span></li>
               <li><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side</li>
@@ -2079,7 +2076,7 @@
 
           <!-- Advanced Sass : Mixins -->
           <section>
-            <h3>Mixins</h3>
+            <h3><span class="blue">Advanced Sass</span> Mixins</h3>
             <p class="box"><span class="green">Variables</span> let you reuse <span class="green">single values</span>.</p>
             <p><span class="yellow">Mixins</span> let you reuse <span class="yellow">blocks of styles</span>.</p>
             <aside class="notes">
@@ -2699,7 +2696,7 @@
 
           <!-- Advanced Sass : Inheritence : Use -->
           <section>
-            <h3><span class="blue">4.2</span> Inheritence</h3>
+            <h3><span class="blue">Advanced Sass</span> Inheritence</h3>
             <p class="box"><code>@extend</code> let's us group selectors together!</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
@@ -2980,7 +2977,7 @@
 
           <!-- Advanced Sass : Math & Color : Math Operators -->
           <section>
-            <h3><span class="blue">Math</span> Operators</h3>
+            <h3><span class="blue">Advanced Sass</span> Math Operators</h3>
             <div class="box left copy--small" style="width: 48%">
               <ul class="box">
                 <li>Sass allows us to do <span class="green">basic math operations</span>*, like:
@@ -3075,7 +3072,7 @@
 
           <!-- Advanced Sass : Math & Color : Color Utilities -->
           <section>
-            <h3><span class="blue">Color</span> Utilities</h3>
+            <h3><span class="blue">Advanced Sass</span> Color Utilities</h3>
             <p class="box">Sass comes with a set of <span class="green">color functions</span>.</p>
             <div class="left copy--small" style="width: 52%">
               <ul>
@@ -3134,7 +3131,7 @@
 
           <!-- Advanced Sass : Directive : Overview -->
           <section>
-            <h3>Directive</h3>
+            <h3><span class="blue">Advanced Sass</span> Directive</h3>
             <ol class=" broken">
               <li>Functions</li>
               <li class="break">Conditionals</li>
