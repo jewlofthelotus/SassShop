@@ -2020,7 +2020,7 @@
                             <li>_news.scss</li>
                           </ul>
                         </li>
-                        <li>screen.scss</li>
+                        <li>application.scss</li>
                       </ul>
                     </li>
                   </ul>
@@ -2094,25 +2094,21 @@
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
 
                 .footer {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
 
                 .feature a {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
 
                 .content {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
               </code></pre>
             </div>
@@ -2126,27 +2122,23 @@
 
                 .header {
                   @include rounded-box;
-                  // ...
                 }
 
                 .footer {
                   @include rounded-box;
-                  // ...
                 }
 
                 .feature a {
                   @include rounded-box;
-                  // ...
                 }
 
                 .content {
                   @include rounded-box;
-                  // ...
                 }
               </code></pre>
             </div>
             <aside class="notes">
-              <p>Earlier we saw this CSS example where we're repeating the same border-radius and padding over and over</p>
+              <p>Earlier we saw this border-radius / padding combination repeated</p>
               <p>They're sort of default settings, if you will</p>
               <p>We can make this more maintainable, by pulling these out into one location</p>
               <p>let's dig into this code a bit more...</p>
@@ -2185,16 +2177,14 @@
                 }
               </code></pre>
             </div>
-            <div class="box right copy--small" style="width: 49%">
-              <ul>
-                <li>We <span class="green">define</span> a mixin with the <code>@mixin</code> directive</li>
-                <li>We <span class="green">reference</span> a mixin with the <code>@include</code> directive</li>
-              </ul>
-              <ul class="box">
-                <li><em>Mixins must be defined before they're referenced</em></li>
-                <li>Mixins accept optional <span class="green">arguments</span></li>
-                <li>Mixins can be used with any other style rules</li>
-                <li>You can <span class="green">nest</span> within mixins just like you can elsewhere</li>
+            <div class="box--small right align-left copy--small" style="width: 49%">
+              <ul class="list--tall">
+                <li>We <span class="yellow">define</span> a mixin with the <code>@mixin</code> directive.</li>
+                <li>We <span class="yellow">reference</span> a mixin with the <code>@include</code> directive.</li>
+                <li><em>Mixins must be defined before they're referenced.</em></li>
+                <li>Mixins accept optional <span class="green">arguments</span>.</li>
+                <li>Mixins can be used with any other style rules.</li>
+                <li>You can <span class="green">nest</span> within mixins just like you can elsewhere.</li>
               </ul>
             </div>
             <aside class="notes">
@@ -2358,7 +2348,8 @@
           <!-- Advanced Sass : Mixins : Arguments -->
           <section>
             <h3><span class="blue">Mixins</span> Arguments</h3>
-            <div class="box left" style="width: 48%;">
+            <p class="box copy--small" data-fragment-index="2">Mixins are great for repeated <span class="green">blocks of styles</span><br />where the <span class="yellow">values differ</span> from case to case.</p>
+            <div class="left" style="width: 48%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
                 @mixin rounded-corners($radius) {
@@ -2378,7 +2369,7 @@
                 }
               </code></pre>
             </div>
-            <div class="box right" data-fragment-index="1" style="width: 48%;">
+            <div class="right" data-fragment-index="1" style="width: 48%;">
               <h4>CSS Output</h4>
               <pre><code>
                 .header {
@@ -2396,18 +2387,15 @@
                 }
               </code></pre>
             </div>
-            <p class="clear copy--small" data-fragment-index="2">Mixins are great for repeated <span class="green">blocks of styles</span><br />where the <span class="yellow">values differ</span> from case to case.</p>
             <aside class="notes">
               <p>I mentioned before that mixins can accept arguments</p>
-              <p>Output..</p>
-              <p>Mixins are great for repeated blocks of properties where the values differ from case to case...</p>
             </aside>
           </section>
 
           <!-- Advanced Sass : Mixins : Argument Defaults -->
           <section>
             <h3><span class="blue">Mixins</span> Argument Defaults</h3>
-            <p class="box copy--small">You can also set an argument's default value,<br />making it <em>optional</em> to pass one in.</p>
+            <p class="box copy--small">You can also set an argument's <em>default value</em>,<br />making it <em>optional</em> to pass one in.</p>
             <div class="left" style="width: 48%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2455,7 +2443,7 @@
           <!-- Advanced Sass : Mixins : Multiple Arguments -->
           <section>
             <h3><span class="blue">Mixins</span> Multiple Arguments</h3>
-            <p class="box">Comma separated, order matters.</p>
+            <p class="box copy--small"><em>Comma</em> separated, <em>order</em> matters.</p>
             <div class="left" style="width: 49%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2500,7 +2488,7 @@
           <!-- Advanced Sass : Mixins : Optional Arguments -->
           <section>
             <h3><span class="blue">Mixins</span> Optional Arguments</h3>
-            <p class="box copy--small">Optional arguments (ones with defaults) must be last in the set.</p>
+            <p class="box copy--small"><em>Optional</em> arguments (ones with defaults) must be <em>last</em> in the set.</p>
             <div class="left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2580,60 +2568,62 @@
 
           <!-- Advanced Sass : Mixins : Interpolation -->
           <section>
-            <h3><span class="blue">Mixin</span> Interpolation</h3>
+            <h3><span class="blue">Mixin</span> Variable Interpolation</h3>
 
-            <div class="box left" style="width: 65%">
+            <div class="box left" style="width: 58%">
               <h4 class="yellow">Sass</h4>
               <pre><code>
                 @mixin toolbar-border($side, $width: 2px) {
                   border-#{$side}: $width solid $toolbar-border;
                 }
 
-                .sidebar {
+                .sidebar--left {
+                  @include toolbar-border("right");
+                }
+
+                .sidebar--right {
                   @include toolbar-border("left");
                 }
               </code></pre>
             </div>
 
-            <div class="box left" style="width: 33%">
+            <div class="box left" style="width: 40%">
               <h4>CSS Output</h4>
               <pre><code>
-                .sidebar {
+                .sidebar--left {
+                  border-right: 2px solid #213213;
+                }
+
+                .sidebar--right {
                   border-left: 2px solid #213213;
                 }
               </code></pre>
             </div>
             <aside class="notes">
+              <p>This helps us create even more dynamic mixins</p>
+              <p>We can do this sort of interpolation all over the place, not just in mixins</p>
             </aside>
           </section>
 
           <!-- Advanced Sass : Mixins : Develop It! -->
-          <!-- TODO -->
           <section>
             <h3>Mixins <span class="yellow">Let's develop it!</span></h3>
-            <div class="left copy--small" style="width: 64%">
-              <ul class="box">
-                <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file</li>
-                <li><span class="green">Create a <code>@mixin</code></span>* that accepts arguments for each of the properties on the right, give padding a default</li>
-                <li><span class="green"><code>@include</code> this mixin</span> where it makes sense</li>
-              </ul>
-              <p><span class="blue">PRO</span> Add MOAR mixins, here are some ideas:</p>
-              <ul class="box">
-                <li><code>border-radius</code> with required radius argument</li>
-                <li><code>border-#{side}</code> with required side argument, optional width</li>
+            <div class="box--small left copy--small" style="width: 64%">
+              <ul class="list--tall">
+                <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
+                <li><span class="green">Create a <code>border-radius</code> <code>@mixin</code></span> with a required radius argument. Include <em>all</em> vendor prefixes.</li>
+                <li><span class="green">Create a similar <code>@mixin</code></span> for scaled transformations.<br />
+                  <small>ie. <code>transform: scale(1.1);</code></small></li>
+                <li><span class="green"><code>@include</code> these mixins</span> wherever they can be applied.</li>
               </ul>
             </div>
-            <div class="box right" style="width: 34%">
-              <pre><code class="scss">
-                background: $background;
-                color: $color;
-                padding: $padding;
-              </code></pre>
-              <p class="box"><small>* Be sure to name your mixin with versatility in mind</small></p>
+            <div class="box--small right" style="width: 32%">
+              <img src='images/mixin-cat.jpg' />
+
+              <p class="box--small copy--small blue">Feel free to experiment and play around!</p>
             </div>
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
             <aside class="notes">
-              <p>I know at this point our designs have likely begun to diverge, so I tried to think of mixin ideas that we could all still use</p>
-              <p>Feel free to try anything you like though</p>
             </aside>
           </section>
 
