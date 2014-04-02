@@ -101,6 +101,7 @@ a:hover {
 .footer nav a {
   color: #AEA4AD;
   display: block;
+  padding: 1em;
 }
 
 .footer nav a:hover {
@@ -140,6 +141,10 @@ a:hover {
 .subcontent {
   background: #fff;
   padding: 2em 0 3em;
+}
+
+.search {
+  float: right;
 }
 
 .news, .events, .location {

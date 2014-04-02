@@ -2972,7 +2972,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Math Operators</h3>
             <div class="box left copy--small" style="width: 48%">
-              <ul class="box">
+              <ul class="list--tall">
                 <li>Sass allows us to do <span class="green">basic math operations</span>*, like:
                   <ul>
                     <li><code>+</code> addition</li>
@@ -2985,7 +2985,7 @@
                 <li>AND <span class="green">string concatenation</span></li>
               </ul>
             </div>
-            <div class="box right" style="width: 48%">
+            <div class="box--small right" style="width: 48%">
               <pre><code>
                 $title: "Girl Develop It Detroit";
                 $base-font-size: 16px;
@@ -3014,7 +3014,8 @@
             <h3><span class="blue">Math</span> Division</h3>
             <p class="copy--small box">CSS allows <code>/</code> to be used for separating values.</p>
             <p class="copy--small"><code>font: normal 1.5em/1.25 Tahoma, Arial, sans-serif;</code></p>
-            <p class="copy--small box">SassScript maintains this support,<br />so there are three alternative ways to <span class="green">trigger division:</span></p>
+            <p class="copy--small box">SassScript maintains this support.<br />
+              <strong>There are three alternative ways to <span class="green">trigger division:</span></strong></p>
             <ul class="copy--small">
               <li>If any part of the equation is a <span class="green">variable</span>: <code>$padding / 2</code></li>
               <li>If the equation is surrounded by <span class="green">parentheses</span>: <code>(350 / .25)</code></li>
@@ -3025,7 +3026,7 @@
           <!-- Advanced Sass : Math & Color : Math Utilities -->
           <section>
             <h3><span class="blue">Math</span> Utilities</h3>
-            <p class="box">Sass also comes with a set of <span class="green">math functions</span>:</p>
+            <p class="box copy--small">Sass also comes with a set of <span class="green">math functions</span>:</p>
             <ul class="copy--small">
               <li><code>abs($num)</code> - absolute value</li>
               <li><code>ceil($num)</code> - round up to closest whole number</li>
@@ -3066,7 +3067,7 @@
           <!-- Advanced Sass : Math & Color : Color Utilities -->
           <section>
             <h3><span class="blue">Advanced Sass</span> Color Utilities</h3>
-            <p class="box">Sass comes with a set of <span class="green">color functions</span>.</p>
+            <p class="box copy--small">Sass comes with a set of <span class="green">color functions</span>.</p>
             <div class="left copy--small" style="width: 52%">
               <ul>
                 <li><code>rgba($hex, $alpha)</code><br /><small>Converts HEX to RGBA and sets alpha (opacity)</small></li>
@@ -3094,22 +3095,26 @@
           </section>
 
           <!-- Advanced Sass : Math & Color : Develop It! -->
-          <!-- TODO -->
           <section>
             <h3>Math &amp; Color <span class="yellow">Let's develop it!</span></h3>
-            <p class="box">We've likely divered quite a bit at this point. So just play around, have fun, and get familiar with the tools.</p>
 
-            <div class="copy--small">
-              <ul>
-                <li><span class="green">Try out some math operations</span> (<code>+ - * / %</code>):
-                  <ul>
-                    <li>At least 1 arithmatic operation</li>
-                    <li>At least 1 string concatenation (hint: set <code>:before</code> / <code>:after</code> content</li>
+            <div class="box left copy--small" style="width: 48%">
+              <ul class="list--tall">
+                <li><span class="green">Use a color function</span> to darken the background color of header nav links on hover.<br />
+                  <small>Be sure to set the new color to a variable, too!</small></li>
+                <li><span class="green">Use math operations</span> to calculate any widths being set:
+                  <ul class="copy--small">
+                    <li>See <code>.wrapper</code> and <code>.kitten</code></li>
+                    <li>See <code>.news</code>, <code>.events</code>, and <code>.location</code></li>
                   </ul>
-                </li>
-                <li><span class="green">Apply some color functions</span> to your <code>nav a</code> and <code>.button</code> hover states</li>
+                  <small class="box--small"><strong>Hint:</strong> setup variables for "base" widths.</small></li>
               </ul>
             </div>
+            <div class="box--small right" style="width: 48%">
+              <img src="images/math.jpg" style="width: 75%;" />
+            </div>
+
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
           </section>
 
 
