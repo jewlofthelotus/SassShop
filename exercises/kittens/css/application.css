@@ -96,11 +96,11 @@ a:hover {
 
 .footer nav li {
   display: inline-block;
-  padding: 1em;
 }
 
 .footer nav a {
   color: #AEA4AD;
+  display: block;
 }
 
 .footer nav a:hover {

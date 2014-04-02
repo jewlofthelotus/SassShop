@@ -2638,7 +2638,7 @@
           <!-- Advanced Sass : Inheritance : Mixin Efficiency Flashback -->
           <section>
             <h3><span class="blue">Mixin</span> Efficiency</h3>
-            <div class="box left" style="width: 49%">
+            <div class="box--small left" style="width: 49%">
               <h4>Mixin Output</h4>
               <pre><code class="css">
                 .header {
@@ -2666,7 +2666,7 @@
                 }
               </code></pre>
             </div>
-            <div class="box right" style="width: 49%">
+            <div class="box--small right" style="width: 49%">
               <h4 class="yellow">Grouping Optimiztion</h4>
               <pre><code class="scss">
                 .header,
@@ -2689,7 +2689,7 @@
           <!-- Advanced Sass : Inheritence : Use -->
           <section>
             <h3><span class="blue">Advanced Sass</span> Inheritence</h3>
-            <p class="box"><code>@extend</code> let's us group selectors together!</p>
+            <p class="box copy--small"><code>@extend</code> let's us group selectors together!</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2750,10 +2750,10 @@
               <p>When you @extend a class, it basically just adds that class  to the group of the class you're extending</p>
               <p>@extend will then add a second declaration for additional prop-vals (message-alert)</p>
               <ul>
-                <li>So this is pretty huge, especially for modular architectures where you have base classes that get modified</li>
+                <li>this is pretty huge, esp for modular architectures where you have base classes that get modified</li>
                 <li>typically what we've done in the past is chain selectors together "message message-alert"</li>
                 <li>with extensions, we can get back to more semantic classes rather than presentational ones.</li>
-                <li>your presentational classes come in via extensions</li>
+                <li>your presentational classes come in via extensions - classitis in css vs html</li>
               </ul>
               </small>
             </aside>
@@ -2788,26 +2788,24 @@
               </code></pre>
             </div>
             <div class="box right copy--small" style="width: 49%">
-              <ul>
-                <li><span class="green">Any CSS class can be extended</span></li>
-                <li>We <span class="green">reference</span> a class to extend with the <code>@extend</code> directive</li>
-              </ul>
-              <ul class="box">
-                <li>Extended classes DO NOT need to be defined before they're referenced</li>
-                <li>Extensions can be used with any other style rules</li>
-                <li>You can <span class="green">nest</span> within extended classes just like you can elsewhere</li>
+              <ul class="list--tall">
+                <li><span class="yellow">Any CSS class can be extended.</span></li>
+                <li>We <span class="yellow">reference a class</span> to extend with the <code>@extend</code> directive.</li>
+                <li><em>Extended classes DO NOT need to be defined before they're referenced.</em></li>
+                <li>Extensions can be used with any other style rules.</li>
+                <li>You can <span class="green">nest</span> within extended classes just like you can elsewhere.</li>
               </ul>
             </div>
             <aside class="notes">
-              <p>It's possible to extend, I believe, any CSS selector, but I'm not sure why you'd want to</p>
-              <p>So let's look at that output one more time...</p>
+              <p><small><em>It's possible to extend, I believe, any CSS selector, but I'm not sure why you'd want to</em></small></p>
+              <p>So let's look at that output one again...</p>
             </aside>
           </section>
 
           <!-- Advanced Sass : Inheritence : Output -->
           <section>
             <h3><span class="blue">Inheritence</span> Output</h3>
-            <p class="box copy--small">If Sass allows us to apply only <code>.message-alert</code> to an HTML element, I don't need <code>.message</code> in my output at all - but how do I get rid of it?!</p>
+            <p class="box copy--small">If we don't need to apply both <code>.message</code> AND <code>.message-alert</code> to an element, then why do we even need <code>.message</code> anymore?!</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2870,7 +2868,7 @@
           <!-- Advanced Sass : Inheritence : Placeholders -->
           <section>
             <h3><span class="blue">Inheritence</span> Placeholders</h3>
-            <p class="box copy--small">Placeholders are a special type of selector denoted by a <code>%</code>. They can be <code>@extend</code>ed but will never compile to the CSS on their own.</p>
+            <p class="box copy--small"><strong>Placeholders</strong> are a special type of selector denoted by a <code>%</code>. They can be <code>@extend</code>ed but will never compile to the CSS on their own.</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -2932,32 +2930,35 @@
           </section>
 
           <!-- Advanced Sass : Inheritence : Develop It! -->
-          <!-- TODO -->
           <section>
             <h3>@extend <span class="yellow">Let's develop it!</span></h3>
-            <div class="box left copy--small" style="width: 48%;">
-              <ul>
-                <li><span class="green">Add</span> a <code>_buttons.scss</code> partial to your modules directory, <code>@import</code> it in your main sheet</li>
-                <li><span class="green">Setup</span> a <code>.button</code> selector* to <code>@extend</code>, use the base styles on the right</li>
-                <li><span class="green">Setup</span> a <code>button-colors</code> <code>@mixin</code> that accepts arguments and sets <code>background</code> and <code>color</code> properties</li>
-                <li><span class="green">Add</span> <code>.button-#{mod}</code>s for primary, secondary, and tertiary classes; <code>@extend .button;</code></li>
+            <div class="box--small left copy--small" style="width: 50%;">
+              <ul class="list--tall">
+                <li><span class="green">Create a placeholder partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
+                <li><span class="green">Create a placeholder for <code>%clearfix</code></span> and <code>@extend</code> it on the appropriate selectors.<br/>
+                  <small>Also remove the <code>.clearfix</code> class from the markup.</small></li>
+                <li><span class="green">Create a <code>.navlist--inline</code> class</span> like the one on the right.</li>
+                <li><span class="green"><code>@extend</code> that class on elements that match the pattern.</span><br />
+                  <small><strong>Hint:</strong> checkout the header and footer styles.</small></li>
               </ul>
             </div>
-            <div class="box right" style="width: 48%;">
-              <pre><code>
-                .button {
-                  display: inline-block;
-                  padding: .5em 1em;
-                  text-decoration: none;
+            <div class="box right" style="width: 46%;">
+              <span class="blue">Let's get modular!</span>
+              <pre><code class="scss">
+                .navlist--inline {
+                  list-style-type: none;
 
-                  &:hover {
-                    text-decoration: underline;
+                  li {
+                    display: inline-block;
+                  }
+
+                  a {
+                    display: block;
                   }
                 }
               </code></pre>
-              <p class="box"><small>* You get to decide if the @extended <code>.button</code> selector should be output or not (hint: <code>%</code>)</small></p>
-              <p class="copy--small"><span class="blue">PRO</span> Add MOAR stylez</p>
             </div>
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
           </section>
 
 
