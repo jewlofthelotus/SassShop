@@ -2038,7 +2038,7 @@
         <section>
           <h3>Break Time!</h3>
           <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
-          <img src="images/sloth-snack.gif" />
+          <img src="images/banana-cat.gif" />
         </section>
 
 
@@ -3143,7 +3143,7 @@
           <!-- Advanced Sass : Directive : Functions -->
           <section>
             <h3><span class="blue">Directives</span> Functions</h3>
-            <div class="left" style="width: 53%">
+            <div class="left" style="width: 50%">
               <p class="box">Sass let's us define<br /><span class="yellow">custom functions</span>.</p>
               <pre><code class="scss">
                 @function fluidize($target, $context) {
@@ -3156,14 +3156,12 @@
                 }
               </code></pre>
             </div>
-            <div class="box right copy--small" style="width: 47%">
-              <ul>
-                <li>We <span class="green">define</span> a function with the <code>@function</code> directive</li>
-                <li>We <span class="green">return a value</span> with the <code>@return</code> directive</li>
-                <li>We <span class="green">call</span> a function by it's <span class="blue">name and parens</span>, passing arguments if needed</li>
-              </ul>
-              <ul class="box">
-                <li><em>Functions must be defined before they're referenced</em></li>
+            <div class="box--small right copy--small" style="width: 47%">
+              <ul class="list--tall">
+                <li>We <span class="green">define</span> a function with the <code>@function</code> directive.</li>
+                <li>We <span class="green">return a value</span> with the <code>@return</code> directive.</li>
+                <li>We <span class="green">call</span> a function by it's <span class="blue">name and parens</span>, passing arguments if needed.</li>
+                <li><em>Functions must be defined before they're referenced</em>.</li>
                 <li>Functions accept <span class="green">arguments</span>, they have the same rules as mixins (ie. defaults, order, keyword args, etc.)</li>
               </ul>
             </div>
@@ -3171,11 +3169,11 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directive : If -->
+          <!-- Advanced Sass : Directive : Conditionals -->
           <section>
             <h3><span class="blue">Directives</span> Conditionals</h3>
-            <div class="left" style="width: 53%">
-              <p class="box">Sass let's us set<br /><span class="yellow">conditions</span>.</p>
+            <div class="left" style="width: 48%">
+              <p class="box--small">Sass let's us set<br /><span class="yellow">conditions</span>.</p>
               <pre><code class="scss">
                 $theme: light !default;
 
@@ -3195,13 +3193,13 @@
                 }
               </code></pre>
             </div>
-            <div class="right copy--small" style="width: 47%">
-              <ul class="box">
+            <div class="box--small right copy--small" style="width: 47%">
+              <ul class="list--tall">
                 <li>We <span class="green">begin</span> a conditon with the <code>@if</code> directive, then give it a <span class="green">comparison to evaluate</span></li>
                 <li>We have <code>@else if</code> for <span class="green">additional comparisons</span></li>
                 <li>And <code>@else</code> as a <span class="green">fallback</span> if all prior comparisons evaluate to <code>null</code> or <code>false</code></li>
               </ul>
-              <div class="copy--small">
+              <div class="box--small copy--small">
                 <p><span class="blue">Comparators include:</span><br /><span class="copy--small">* only compare numbers</span></p>
                 <ul class="left" style="width: 43%">
                   <li><code>==</code> equal to</li>
@@ -3219,11 +3217,11 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directive : Each -->
+          <!-- Advanced Sass : Directive : Each Loops -->
           <section>
-            <h3><span class="blue">Directives</span> Each</h3>
-            <div class="left" style="width: 53%">
-              <p class="box">Sass let's us <br /><span class="yellow">loop through lists</span>.</p>
+            <h3><span class="blue">Directives</span> Each Loops</h3>
+            <div class="left" style="width: 48%">
+              <p class="box--small">Sass let's us <br /><span class="yellow">loop through lists</span>.</p>
               <pre><code class="scss">
               $themes: dark dark-mid light-mid light;
 
@@ -3244,18 +3242,14 @@
               // ...
               </code></pre>
             </div>
-            <div class="box right copy--small" style="width: 47%">
-              <ul class="box">
-                <li>The <code>@each</code> directive takes the form of:<br /><code>@each $var in &lt;list&gt;</code>
-                  <ul>
-                    <li><code>$var</code> can be any variable name</li>
-                    <li><code>&lt;list&gt;</code> could be a list, or a variable storing one</li>
-                  </ul>
-                </li>
+            <div class="box right left-align copy--small" style="width: 47%">
+              <ul class="list--tall">
+                <li class="box">The <code>@each</code> <span class="green">directive</span> takes the form of:
+                  <ul class="copy--small"><li><code>@each $var in &lt;list&gt;</code></li></ul><br /></li>
+                <li><code>$var</code> can be any variable name</li>
+                <li><code>&lt;list&gt;</code> could be a list, or a variable storing one</li>
               </ul>
-              <ul class="box">
-                <li>A little bit of <a href="https://github.com/roytomeij/sassconf" target="_blank">list amazesauce</a> for you.</li>
-              </ul>
+              <p class="box--top copy--small">A little bit of <a href="https://github.com/roytomeij/sassconf" target="_blank">list amazesauce</a> for you.</p>
             </div>
             <aside class="notes">
               <p>Loops like this can be really helpful for generating repetetive and calculated style blocks - grid columns are a good example</p>
@@ -3265,7 +3259,8 @@
           <!-- Advanced Sass : Directive : For Loops -->
           <section>
             <h3><span class="blue">Directives</span> For Loops</h3>
-            <div class="box left" style="width: 43%">
+            <div class="left" style="width: 43%">
+              <p class="box--small">Sass lets us <span class="yellow">loop<br /> through # ranges</span>.</p>
               <pre><code class="scss">
               @for $i from 1 through 12 {
                 .grid-col-#{$i} {
@@ -3282,18 +3277,16 @@
               // ...
               </code></pre>
             </div>
-            <div class="box right copy--small" style="width: 57%">
-              <ul class="box">
-                <li>Two forms of <code>@for</code> loops;</code>
-                  <ul class="copy--small">
+            <div class="box right copy--small" style="width: 54%">
+              <ul class="list--tall">
+                <li><span class="green">Two forms</span> of <code>@for</code> loops;</code>
+                  <ul class="copy--small" style="margin-left: 1em;">
                     <li><code>@for $var from &lt;start&gt; <strong>through</strong> &lt;end&gt;</code><br />
                       <span class="copy--small">Loop range <em>includes</em> start and end</span></li>
                     <li><code>@for $var from &lt;start&gt; <strong>to</strong> &lt;end&gt;</code><br />
                       <span class="copy--small">Loop range <em>excludes</em> end</span></li>
-                  </ul>
+                  </ul><br />
                 </li>
-              </ul>
-              <ul>
                 <li><code>$var</code> can be any variable name</li>
                 <li><code>&lt;start&gt;</code> and <code>&lt;end&gt;</code> can be an integer, or a variable storing one</li>
               </ul>
@@ -3303,7 +3296,8 @@
           <!-- Advanced Sass : Directive : While Loops -->
           <section>
             <h3><span class="blue">Directives</span> While Loops</h3>
-            <div class="box left" style="width: 43%">
+            <div class="left" style="width: 43%">
+              <p class="box--small">Sass lets us <br /><span class="yellow">loop conditionally</span>.</p>
               <pre><code class="scss">
               $i: 1;
 
@@ -3324,15 +3318,14 @@
               // ...
               </code></pre>
             </div>
-            <div class="box right left-align copy--small" style="width: 57%">
-              <ul class="box">
-                <li><code>@while</code> directives take the form of:<br />
-                  <code class="copy--small">@while &lt;comparison&gt;</code></li>
-              </ul>
-              <ul class="box">
-                <li>They output styles until the comparison statement returns <code>false</code></li>
+            <div class="box right left-align copy--small" style="width: 52%">
+              <ul class="list--tall">
+                <li>The <code>@while</code> <span class="green">directives</span> take the form of:
+                  <ul class="copy--small"><li><code class="copy--small">@while &lt;comparison&gt;</code></li></ul><br />
+                  </li>
+                <li>It will output styles until the comparison statement returns <code>false</code></li>
                 <li><em>You must manually update the variable you're comparing against</em></li>
-                <li class="copy--small box">The <code>&lt;comparison&gt;</code> variable will often be an integer that you increment, but it could be any data type that you modify as you go</li>
+                <li class="copy--small">The <code>&lt;comparison&gt;</code> variable will often be an integer that you increment, but it could be any data type that you modify as you go</li>
               </ul>
             </div>
             <aside class="notes">
@@ -3346,7 +3339,7 @@
         <section>
           <h3>Break Time!</h3>
           <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
-          <img src="images/puppy-snack.gif" />
+          <img src="images/hungry-lion.gif" />
         </section>
 
 
