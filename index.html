@@ -134,22 +134,19 @@
           </section>
 
           <!-- Intro : Course : Project -->
-          <!-- TODO: screenshot -->
-          <!-- TODO: project setup link -->
           <section>
             <h2>The Project...</h2>
 
-            <div class="box--top left left-align copy--small" style="width: 53%;">
-              <p><strong>Client:</strong> Kittens "R" Us</p>
+            <div class="box--top left left-align copy--small" style="width: 45%;">
+              <p><strong>Client:</strong> <span class="green">Kittens "R" Us</span></p>
               <p class="box--small"><strong>Description:</strong> A local adoption listing website for kitties in need of homes.</p>
-              <p><strong>Documentation:</strong> <a href="">Setup Instructions</a></p>
+              <p><strong>Framework:</strong> HTML5 &amp; CSS3</p>
+              <p class="box clear"><strong>Slides</strong>: <a target="_blank" href="http://gdidetroit.com/sass">gdidetroit.com/sass</a></p>
             </div>
 
-            <div class="box right" style="width: 45%;">
+            <div class="box--small right" style="width: 45%;">
               <img src="images/making-this-today.png" />
             </div>
-
-            <p class="box--small clear"><strong>Slides</strong>: <a target="_blank" href="http://gdidetroit.com/sass">gdidetroit.com/sass</a></p>
 
             <aside class="notes">
               <small>
@@ -3707,16 +3704,16 @@
           <!-- Modular Architecture : Explained -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Explained</h3>
-            <p class="box copy--small">Modular architecture is the abstraction of repetition into "objects".</p>
-            <ul>
+            <p class="box--small copy--small">Modular architecture is the abstraction of repetition into "objects".</p>
+            <ul class="list--tall">
               <li>Objects / <span class="green">Modules</span> / Blocks<br />
-                <small><code>.header</code>, <code>.footer</code>, <code>.comment</code>, <code>.button</code>, etc.</small><br />
+                <small><code>.header</code>, <code>.footer</code>, <code>.comment</code>, <code>.button</code>, etc.</small>
               </li>
               <li><span class="green">Parent - Child</span> Relationships<br />
                 <small><code>.media</code>, <code>.media__img</code>, <code>.media__body</code>, etc.</small>
               </li>
-              <li><span class="green">Modifiers</span><br />
-                <small><code>.btn--primary</code>, <code>.btn--small</code>, <code>.btn--selected</code>, etc.</small>
+              <li><span class="green">Modifiers &amp; States</span><br />
+                <small><code>.btn--primary</code>, <code>.btn--small</code>, <code>.btn.is-selected</code>, etc.</small>
               </li>
               <li><span class="yellow">Classes</span> VS. <span class="red">IDs</span> VS. <span class="red">Child Selectors</span><br />
                 <small>Take that, specificity!</small>
@@ -3733,20 +3730,35 @@
             </aside>
           </section>
 
+          <!-- Modular Architecture : Organization -->
+          <section>
+            <h4><span class="blue">Modular Architecture</span> Organization</h4>
+            <div>
+              <p class="green box">ALL THE ORGANIZATION!!</p>
+              <img src="images/organization.jpg" />
+            </div>
+            <aside class="notes">
+              <p>Well defined framework "guidelines"</p>
+              <p>None of them are set in stone</p>
+              <p></p>
+            </aside>
+          </section>
+
           <!-- Modular Architecture : Goals -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Goals</h3>
-            <ul class="box">
+            <ul class="box--small list--tall">
               <li><span class="green">Modularity</span><br />
-                <small>Plug n' Play</small>
+                <small>Added new page. Wrote 0 lines of CSS. <i class="fa fa-thumbs-o-up"></i></small>
               </li>
               <li><span class="green">Scalability</span><br />
                 <small>I got 99 problems, but specificity ain't one.</small>
               </li>
               <li><span class="green">Maintainability</span><br />
-                <small>Oh, you wanted a <em>big</em> button? <code>.btn--large</code></small>
+                <small>Oh, you wanted a <em>big</em> button? <code>.btn--large</code>. BOOM.</small>
               </li>
-              <li>DRY</li>
+              <li><span class="green">DRY &amp; Organized</span><br />
+                <small>That's just plain smart.</small></li>
             </ul>
             <aside class="notes">
               <p>goals are 3-fold</p>
@@ -3757,10 +3769,9 @@
           </section>
 
           <!-- Modular Architecture : Methodologies -->
-          <!-- TODO : update -->
           <section>
             <h4><span class="blue">Modular Architecture</span> Methodologies</h4>
-            <ul class="box left copy--small" style="width: 48%">
+            <ul class="box list--tall left copy--small" style="width: 48%">
               <li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank">OOCSS</a> Nicole Sullivan<br />
                 <small><em>Object Oriented CSS</em><br />
                   Structure vs. Skin &nbsp; | &nbsp; Container vs. Content
@@ -3775,7 +3786,7 @@
                 <small>Atoms > Molecules > Organisms > Templates > Pages</small>
               </li>
             </ul>
-            <ul class="box right copy--small" style="width: 46%">
+            <ul class="box list--tall right copy--small" style="width: 46%">
               <li><a href="http://bem.info/method/definitions/" target="_blank">BEM</a> Yandex<br />
                 <small>.block__element--modifier</small>
               </li>
@@ -3787,21 +3798,21 @@
           </section>
 
           <!-- Modular Architecture : Demo -->
-          <!-- TODO -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Demo</h3>
-            <p class="box">My Current Hybrid Sass System</p>
-            <p class="copy--small">Julie + Sass == <span class="green">Jass</span>??</p>
+            <p class="box green">My Hybrid Sass System</p>
+            <p class="copy--small">OOCSS / SMACSS / Atomic / BEM</p>
           </section>
 
           <!-- Modular Architecture : Resources -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Resources</h3>
-            <ul class="box copy--small">
+            <ul class="list--tall box copy--small">
               <li><a href="http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/" target="_blank">An Introduction To Object Oriented CSS</a></li>
               <li><a href="http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/" target="_blank">OOCSS + Sass = The best way to CSS</a></li>
               <li><a href="http://www.sitepoint.com/css-architectures-scalable-and-modular-approaches/" target="_blank">CSS Architectures: Scalable and Modular Approaches</a></li>
               <li><a href="http://www.creativebloq.com/css3/create-modular-and-scalable-css-9134351" target="_blank">4 ways to create CSS that's modular and scalable</a></li>
+              <li><a href="http://thesassway.com/advanced/modular-css-naming-conventions" target="_blank">Modular CSS Naming Conventions</a></li>
             </ul>
           </section>
         </section>
