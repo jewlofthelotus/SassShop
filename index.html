@@ -3387,7 +3387,7 @@
               <p>You <span class="green">nest</span> declarations <em>within</em> media queries.</p>
             </div>
             <aside class="notes">
-              <p>Responsive web design is adapting your design to the browser environment.</p>
+              <p>Responsive web design is adapting your design to the user environment.</p>
               <p>Media queries allow us to do that.</p>
             </aside>
           </section>
@@ -3415,9 +3415,9 @@
               </code></pre>
             </div>
             <div class="box right copy--small left-align" style="width: 46%;">
-              <p class="box">In <span class="yellow">Sass</span>, you can nest your media queries under any declaration.</p>
+              <p class="box">In <span class="yellow">Sass</span>, you can <span class="green">nest your media queries</span> under any declaration.</p>
               <p class="blue">OMG THIS IS SO AWESOME.</p>
-              <p class="box">It's easy to see exactly how the module is morphing through breakpoints.</p>
+              <p class="box">It becomes easy to see exactly how the module is morphing through breakpoints.</p>
             </div>
             <aside class="notes">
               <p>Let's take a look at what we're outputting here...</p>
@@ -3455,19 +3455,16 @@
                   float: left;
                   width: 35%;
                 }
-
                 @media screen and (max-width: 800px) {
                   .sidebar {
                     width: 25%;
                   }
                 }
-
                 @media screen and (max-width: 500px) {
                   .sidebar {
                     float: none;
                     width: 100%;
                   }
-
                   .sidebar a { display: block; }
                 }
               </code></pre>
@@ -3480,7 +3477,7 @@
           <!-- Media Queries : Variables -->
           <section>
             <h3><span class="blue">Media Queries</span> Variables</h3>
-            <div class="box left" style="width: 62%;">
+            <div class="box--small left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $break-large: 800px;
@@ -3505,7 +3502,7 @@
             </div>
             <div class="box right copy--small left-align" style="width: 36%;">
               <p class="box">Breakpoints are often <span class="red">obscure</span> numbers, and we <span class="red">repeat</span> them all over the place.</p>
-              <p class="box green">Of course, we should make them variables!</p>
+              <p class="box">Of course, we should <span class="green">make them variables</span>!</p>
             </div>
             <aside class="notes">
               <p>Now we can take this one step further..</p>
@@ -3515,7 +3512,7 @@
           <!-- Media Queries : Variables II -->
           <section>
             <h3><span class="blue">Media Queries</span> Variables II</h3>
-            <div class="box left" style="width: 62%;">
+            <div class="box--small left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $mobile-med: "screen and (min-width: 480px)";
@@ -3539,10 +3536,11 @@
               </code></pre>
             </div>
             <div class="box right copy--small left-align" style="width: 35%;">
-              <p class="box">We have to interpolate <code>#{}</code> our variables so that Sass compiles them.</p>
+              <p class="box">Why not make the <span class="green">entire media query a variable</span>?</p>
+              <p>We have to <span class="yellow">interpolate</span><br/><code>#{}</code> our variables so that Sass compiles them.</p>
             </div>
             <aside class="notes">
-              <p></p>
+              <p>If we didn't interpolate, Sass would output a string, quotes and all.</p>
               <p>Again, we can get another step closer to simplification here..</p>
             </aside>
           </section>
@@ -3550,7 +3548,7 @@
           <!-- Media Queries : Mixin @content -->
           <section>
             <h3><span class="blue">Media Queries</span> @content</h3>
-            <div class="box left" style="width: 70%;">
+            <div class="box--small left" style="width: 55%;">
               <pre><code class="scss">
               @mixin respond-to($breakpoint) {
                 @if $breakpoint == tablet-large {
@@ -3566,24 +3564,19 @@
 
               .sidebar {
                 width: 35%;
-
                 @include respond-to(tablet-large) {
                   width: 25%;
                 }
-
                 @include respond-to(mobile-large) {
                   width: 100%;
-
                   a { display: block; }
                 }
               }
               </code></pre>
             </div>
-            <div class="box right left-align copy--small" style="width: 30%;">
-              <ul class="box">
-                <li><code>@content</code> allows us to pass blocks of styles to mixins to be output back into the declaration that called the mixin</li>
-                <li class="red">WAT?</li>
-              </ul>
+            <div class="box--small right left-align" style="width: 40%;">
+              <p class="box copy--small">The <span class="green"><code>@content</code> directive</span> allows us to pass entire blocks of styles to a mixin, which then outputs that content back into the declaration that called the mixin.</p>
+              <p class="red">WAT?</p>
             </div>
             <aside class="notes">
             </aside>
@@ -3592,10 +3585,10 @@
           <!-- Media Queries : Gotchyas -->
           <section>
             <h3><span class="blue">Media Query</span> Gotchyas</h3>
-            <ul class="box">
-              <li>Declarations created outside of a media query can't be <code>@extend</code>ed within it :(</li>
-              <li class="box">Output can get rather lengthy :(</li>
-            </ul>
+            <div class="box">
+              <p>Declarations created outside of a media<br />query cannot be <code>@extend</code>ed within it :(</p>
+              <p class="box">Output can get rather lengthy :(</p>
+            </div>
           </section>
 
           <!-- Media Queries : Output -->
@@ -3641,7 +3634,7 @@
                 }
               </code></pre>
             </div>
-            <div class="box right left-align copy--small" style="width: 34%">
+            <div class="box right left-align copy--small" style="width: 42%">
               <p class="red box">Sass doesn't group like media queries.</p>
               <p class="yellow">Sometimes it's best <em>not</em> to nest your media queries so granularly.</p>
               <p class="green box">Keep an eye on your output!</p>
@@ -3652,17 +3645,34 @@
           </section>
 
           <!-- Media Queries : Develop It! -->
-          <!-- TODO -->
           <section>
             <h3>Media Queries <span class="yellow">Let's develop it!</span></h3>
-            <div class="box left copy--small" style="width: 48%;">
-              <ul>
-                <li class="box"><span class="green">Try nesting</span> a few media queries with the various options to the right</li>
-                <li>Try to <span class="green">identify</span> a few scenarios where it'd make more sense to group media queries together</li>
-              </ul>
-              <p class="box"><span class="blue">PRO</span> Add MOAR responsiveness</p>
+            <p class="copy--small box--small">Turn this CSS <i class="fa fa-arrow-right blue"></i> Sass via the example methods below.<br/>
+              <small>You get to decide the best way to nest things.</small></p>
+            <div class="left" style="width: 49%;">
+              <h4 class="yellow">CSS</h4>
+              <pre><code class="css">
+                @media screen and (max-width: 480px) {
+                  body     { text-align: center; }
+                  .wrapper { width: 100%; }
+                  .search  { margin-top: 1em; }
+
+                  .header nav, .footer nav,
+                  .footer .copy, .search {
+                    float: none;
+                  }
+
+                  .kittens li,
+                  .news, .events, .location {
+                    float: none;
+                    padding: 1em 0;
+                    width: 100%;
+                  }
+                }
+              </code></pre>
             </div>
-            <div class="box right" style="width: 48%;">
+            <div class="right" style="width: 49%;">
+              <h4 class="green">Sass</h4>
               <pre><code class="scss">
                 @media screen and (max-width: $mobile-large) {
                   // ...

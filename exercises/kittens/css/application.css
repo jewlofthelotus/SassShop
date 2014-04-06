@@ -29,6 +29,10 @@ a:hover {
   width: 1200px;
 }
 
+.header nav {
+  float: right;
+}
+
 .header {
   background: #AEA4AD;
   border-bottom: 10px solid #fff;
@@ -49,6 +53,7 @@ a:hover {
 
 .header nav ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .header nav li {
@@ -183,4 +188,13 @@ a:hover {
 .location {
   padding-right: 0;
   width: 20%;
+}
+
+.location dt {
+  color: #506F8E;
+  font-weight: bold;
+}
+
+.location dd {
+  margin: 0;
 }
