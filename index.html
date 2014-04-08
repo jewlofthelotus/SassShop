@@ -83,7 +83,7 @@
             <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
             <div class="box">
               <h3>Getting Sassy with CSS</h3>
-              <p><small>#SassShopDetroit</small></p>
+              <p><small>#SassShop</small></p>
               <aside class="notes">
                 <p>First sass class in Detroit</p>
                 <p>You're all very cutting edge right now</p>
@@ -2387,6 +2387,7 @@
             </div>
             <aside class="notes">
               <p>I mentioned before that mixins can accept arguments</p>
+              <p><strong>Dynamic</strong> VS Static</p>
             </aside>
           </section>
 
@@ -2677,6 +2678,7 @@
             </div>
             <aside class="notes">
               <p>We kept running into a problem with mixins in that they weren't good for including styles that were exactly the same</p>
+              <p>Dynamic VS <strong>Static</strong></p>
               <p>We ended up with output like this</p>
               <p>When really it'd be more efficent to just group these selectors together</p>
               <p>Well of course Sass has tool to address this need</p>
@@ -3704,7 +3706,7 @@
           <!-- Modular Architecture : Explained -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Explained</h3>
-            <p class="box--small copy--small">Modular architecture is the abstraction of repetition into "objects".</p>
+            <p class="box copy--small">Modular architecture is the <em>abstraction of repetition</em> into "objects".</p>
             <ul class="list--tall">
               <li>Objects / <span class="green">Modules</span> / Blocks<br />
                 <small><code>.header</code>, <code>.footer</code>, <code>.comment</code>, <code>.button</code>, etc.</small>
@@ -3715,32 +3717,46 @@
               <li><span class="green">Modifiers &amp; States</span><br />
                 <small><code>.btn--primary</code>, <code>.btn--small</code>, <code>.btn.is-selected</code>, etc.</small>
               </li>
-              <li><span class="yellow">Classes</span> VS. <span class="red">IDs</span> VS. <span class="red">Child Selectors</span><br />
-                <small>Take that, specificity!</small>
-              </li>
-              <li><span class="yellow">Naming</span> Conventions<br />
-                <small>Semantic <code>.content</code>, <code>.news__title</code>, <code>.callNow</code><br />
-                Presentational <code>.grid__col--9</code>, <code>.btn--small</code>, <code>.btn--primary</code></small>
-              </li>
             </ul>
             <aside class="notes">
               <p>It's a programmatic approach to styles.</p>
               <p>3 parts to these objects : modules, parent-child relationships, and modifiers</p>
-              <p>2 key components to making this work : classes and naming conventions</p>
             </aside>
           </section>
 
-          <!-- Modular Architecture : Organization -->
+          <!-- Modular Architecture : Categorization -->
           <section>
-            <h4><span class="blue">Modular Architecture</span> Organization</h4>
+            <h4><span class="blue">Modular Architecture</span> Categorization</h4>
             <div>
-              <p class="green box">ALL THE ORGANIZATION!!</p>
+              <p class="green box">ALL THE CATEGORIZATION!!</p>
               <img src="images/organization.jpg" />
             </div>
             <aside class="notes">
+              <p>CATEGORIZATION</p>
               <p>Well defined framework "guidelines"</p>
               <p>None of them are set in stone</p>
-              <p></p>
+            </aside>
+          </section>
+
+          <!-- Modular Architecture : Methodology -->
+          <section>
+            <h4><span class="blue">Modular Architecture</span> Methodology</h4>
+            <div>
+              <ul class="box list--tall">
+                <li><span class="yellow">Thinking</span> in <span class="green">modules</span> with various <span class="green">states</span>.<br />
+                  <small><code>.btn</code>, <code>.btn--primary</code>, <code>.btn--disabled</code></small>
+                </li>
+                <li><span class="yellow">Classes</span> VS. <span class="red">IDs</span> VS. <span class="red">Child Selectors</span><br />
+                  <small>Take that, specificity!</small>
+                </li>
+                <li><span class="yellow">Naming</span> Conventions<br />
+                  <small>Semantic <code>.content</code>, <code>.news__title</code>, <code>.callNow</code><br />
+                  Presentational <code>.grid__col--9</code>, <code>.btn--small</code>, <code>.btn--primary</code></small>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>2 key components to making this work : classes and naming conventions</p>
             </aside>
           </section>
 
@@ -3762,8 +3778,10 @@
             </ul>
             <aside class="notes">
               <p>goals are 3-fold</p>
-              <p>scalability: cascade is king</p>
-              <p>maintainability: modules are the basis for new pages, we might not need to write any new CSS</p>
+              <p><strong>modularity</strong>: patterns, categorization</p>
+              <p><strong>scalability</strong>: cascade is king</p>
+              <p><strong>maintainability</strong>: modules are the basis for new pages, we might not need to write any new CSS</p>
+              <p><strong>DRY</strong>: REUSE</p>
               <p>many people take a custom approach, there are several established frameworks...</p>
             </aside>
           </section>
@@ -3775,18 +3793,18 @@
               <li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank">OOCSS</a> Nicole Sullivan<br />
                 <small><em>Object Oriented CSS</em><br />
                   Structure vs. Skin &nbsp; | &nbsp; Container vs. Content
-                </small>
+                </small><br /><br />
               </li>
               <li><a href="http://smacss.com/" target="_blank">SMACSS</a> Jonathan Snook<br />
                 <small><em>Scalable and Modular Architecture for CSS</em><br />
                   Base > Layout > Module > State > Theme
-                </small>
+                </small><br /><br />
               </li>
               <li><a href="http://bradfrostweb.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a> Brad Frost<br />
                 <small>Atoms > Molecules > Organisms > Templates > Pages</small>
               </li>
             </ul>
-            <ul class="box list--tall right copy--small" style="width: 46%">
+            <ul class="box list--tall right copy--small" style="width: 42%">
               <li><a href="http://bem.info/method/definitions/" target="_blank">BEM</a> Yandex<br />
                 <small>.block__element--modifier</small>
               </li>
@@ -3835,7 +3853,7 @@
             <p class="copy--small">"Compass is an open-source CSS Authoring Framework." ~ <a href="http://compass-style.org/" target="
             _blank">Compass</a></p>
             <ul class="box">
-              <li class="yellow">CSS3 mixins!</li>
+              <li><span class="yellow">CSS3</span> mixins!</li>
               <li><span class="green">Typography</span> pattern tools.</li>
               <li>Lots of other utilities!</li>
             </ul>
@@ -3851,7 +3869,7 @@
             <p class="copy--small">"A simple and lightweight mixin library for Sass." ~ <a href="http://bourbon.io/" target="
             _blank">Bourbon</a></p>
             <ul class="box">
-              <li class="yellow">CSS3 mixins!</li>
+              <li><span class="yellow">CSS3</span> mixins!</li>
               <li><span class="green">Vanilla</span> styles.</li>
               <li>Super slim.</li>
               <li>No configuration.</li>
@@ -3864,34 +3882,35 @@
             <p class="box"><a href="http://susy.oddbird.net/" target="_blank"><img src="images/susy.png" style="padding: 0;" /></a></p>
             <p class="copy--small">"Responsive grids for Compass." ~ <a href="http://susy.oddbird.net/" target="_blank">Susy</a></p>
             <ul class="box">
-              <li class="yellow">Grid mixins!</li>
+              <li><span class="yellow">Grid</span> mixins!</li>
               <li>Very flexible.</li>
             </ul>
             <aside class="notes">Because it's @mixin based, you can avoid cluttering up your markup with non-semantic grid classes</aside>
           </section>
 
           <!-- Libraries & Tools : More -->
-          <!-- TODO : update -->
           <section>
             <h3><span class="blue">Libraries</span> A Few More</h3>
-            <ul class="box">
-              <li><a href="https://github.com/JohnAlbin/normalize.css-with-sass-or-compass" target="_blank">Normalize.css</a></li>
-              <li class="box"><a href="https://github.com/Team-Sass/modular-scale" target="_blank">Modular Scale</a> (Compass Extension)</li>
+            <ul class="box list--tall copy--small">
+              <li><a href="https://github.com/JohnAlbin/normalize.css-with-sass-or-compass" target="_blank">Normalize.css w/ Sass or Compass</a></li>
+              <li><a href="https://github.com/Team-Sass/modular-scale" target="_blank">Modular Scale</a> (Compass Extension)</li>
               <li><a href="http://breakpoint-sass.com/" target="_blank">Breakpoint</a> (Compass Extension)</li>
-              <li class="box"><a href="http://foundation.zurb.com/" target="_blank">Foundation</a>  or <a href="https://github.com/thomas-mcdonald/bootstrap-sass">Bootstrap Sass</a></li>
+              <li><a href="http://foundation.zurb.com/" target="_blank">Foundation</a>  or <a href="https://github.com/thomas-mcdonald/bootstrap-sass">Bootstrap Sass</a></li>
+              <li>And soooo many more at <a href="http://www.sache.in/" target="_blank">Sache.in</a></li>
             </ul>
           </section>
 
           <!-- Libraries & Tools : Tools -->
           <section>
             <h3><span class="blue">Tools</span> GUIs</h3>
-            <ul class="box copy--small">
-              <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> (OS X) - "It's like steroids for developers."</li>
-              <li class="box"><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a> - Compilation and live reload</li>
-              <li><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a> - Self-contained Ruby environment.</li>
+            <ul class="box list--tall">
+              <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> (OS X)<br /><small>"It's like steroids for developers."</small></li>
+              <li><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a><br /><small>Compilation + live reload from the menubar.</small></li>
+              <li><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a><br /><small>Self-contained Ruby environment.</small></li>
             </ul>
             <aside class="notes">
               <p>If you're not a fan of the command line, we've got apps for that.</p>
+              <p>ANNND with that, let's take a second to rejoice, because we've just made it through SassShop!</p>
             </aside>
           </section>
         </section>
@@ -3921,40 +3940,40 @@
         <section>
           <section>
             <h3>Wrap Up</h3>
-            <p class="copy--small blue">#SassShopDetroit</p>
+            <p class="copy--small blue">#SassShop</p>
           </section>
 
-
           <!-- WRAP UP : Sass 3.3 -->
-          <!-- TODO -->
           <section>
-            <h3><span class="yellow">Sass</span> 3.3 Changes</h3>
+            <h3><span class="yellow">Sass 3.3</span> Maptastic Maple</h3>
             <p class="box copy--small"><a href="http://thesassway.com/news/sass-3-3-released">http://thesassway.com/news/sass-3-3-released</a></p>
-            <ul class="copy--small">
-              <li>Map Data Structure</li>
-              <li>Source Maps</li>
-              <li>Parent Selector Suffixes</li>
-              <li><code>@at-root</code> Selector</li>
-              <li>Improved <code>@if</code></li>
-              <li>Backwards <code>@for</code> loops</li>
-              <li>Multiple Assignment in <code>@each</code> loops</li>
+            <ul class="left copy--small" style="width: 36%">
+              <li>Map Data Structure<br /><small>Key-value pairs.</small></li>
+              <li>Source Maps<br /><small>View Sass source in your browser.</small></li>
+              <li>Parent Selector Suffixes<br /><small><code>.btn { &amp;-primary { //... } }</code></small></li>
+              <li><code>@at-root</code> Directive<br /><small>Break out of nesting.</small></li>
+            </ul>
+            <ul class="right copy--small" style="width: 52%">
+              <li>Backwards <code>@for</code> loops<br /><small>Count down, instead of up.</small></li>
+              <li>Multiple Assignment in <code>@each</code> loops<br /><small><code>@each $animal, $color in $animals {}</code></small></li>
+              <li>Improved <code>@if</code> directive<br /><br /></li>
+              <li>And much more!</li>
             </ul>
             <aside class="notes">
             </aside>
           </section>
 
-
           <!-- WRAP UP : Resources -->
           <section>
             <h3><span class="yellow">Sass</span> Resources</h3>
-            <ul class="box center-align list--bare copy--small left" style="width: 50%">
+            <ul class="box list--tall center-align list--bare copy--small left" style="width: 50%">
               <li><a target="_blank" href="http://sass-lang.com">Sass-Lang.com</a></li>
               <li><a target="_blank" href="http://thesassway.com">The Sass Way</a></li>
               <li><a target="_blank" href="http://abookapart.com/products/sass-for-web-designers">Sass For Web Designers</a></li>
               <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">Assembling Sass</a></li>
               <li><a target="_blank" href="http://sassnews.us7.list-manage.com/subscribe?u=b4a4054cce715a3b0ae5e7d35&id=f7c505323d">SassNews Newsletter</a></li>
             </ul>
-            <ul class="box center-align list--bare copy--small right" style="width: 50%">
+            <ul class="box list--tall center-align list--bare copy--small right" style="width: 50%">
               <li><a target="_blank" href="http://sassconf.com">SassConf</a></li>
               <li><a target="_blank" href="http://vimeo.com/sassconf/videos">SassConf 2013 Videos</a></li>
               <li><a target="_blank" href="http://sassmeister.com">SassMeister.com</a></li>
@@ -3963,11 +3982,10 @@
             </ul>
           </section>
 
-
           <!-- WRAP UP : Tips -->
           <section>
             <h3><span class="yellow">Sass</span> Closing Tips</h3>
-            <ul class="box copy--small">
+            <ul class="box list--tall copy--small">
               <li><span class="blue">Take it one step at a time.</span></li>
               <li>Check your <span class="green">output</span>.</li>
               <li>Mind your <code>@mixin</code>s and <code>@media</code> queries.</li>
@@ -3980,7 +3998,6 @@
               <p>mass @extending can create crazy long selector groups, &lt;IE9 4095 selectors per file limit</p>
             </aside>
           </section>
-
 
           <!-- WRAP UP : Questions -->
           <section>
@@ -3996,20 +4013,19 @@
           </section>
         </section>
 
-        <!-- TODO : remove old exercise folders -->
         <!-- TODO : submodule examples/lists and push gh-pages -->
 
         <!-- COURSE OUTRO -->
         <section>
           <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
           <h3>Getting Sassy with CSS</h3>
-          <p><small>#SassShopDetroit</small></p>
+          <p><small>#SassShop</small></p>
         </section>
       </div>
 
       <footer>
         <div class="copyright">
-          #SassShopDetroit ~ Girl Develop It ~
+          #SassShop ~ Girl Develop It ~
           <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
             <img alt="Creative Commons License" style="border-width:0" src="images/cc.png" />
           </a>
