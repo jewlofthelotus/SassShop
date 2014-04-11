@@ -15,22 +15,20 @@ a {
   &:hover { color: $purple; }
 }
 
-.wrapper {
-  @extend %clearfix;
-  margin: 0 auto;
-  width: $page-width;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.search { float: right; }
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
 
 .subcontent {
   background: $white;
   padding: 2em 0 3em;
 }
 
-.navlist--inline {
-  list-style-type: none;
-
-  li { display: inline-block; }
-  a  { display: block; }
-}
+.search { float: right; }
