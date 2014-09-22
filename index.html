@@ -36,10 +36,10 @@
           <section>
             <h3>Get Setup!</h3>
 
-            <!-- <div class="box">
-              <p><strong>Wifi Network:</strong> </p>
-              <p><strong>Password:</strong> </p>
-            </div> -->
+            <div class="box">
+              <p class="hide"><strong>Wifi Network:</strong> <span class="js-wifi-name"></span></p>
+              <p class="hide"><strong>Password:</strong> <span class="js-wifi-pass"></span></p>
+            </div>
 
             <div class="box"><strong>Slides</strong>: <a target="_blank" href="http://sassshop.com">SassShop.com</a></div>
 
@@ -47,7 +47,7 @@
               <div class="box--small"><strong>Recommended Tools:</strong></div>
 
               <p><a target="_blank" href="http://www.sublimetext.com">Sublime Text</a></p>
-              <p><span class="blue">Terminal or Command Prompt</span></p>
+              <p><span class="blue">Terminal or Command Prompt / Git Bash</span></p>
               <p><a target="_blank" href="http://google.com/chrome">Google Chrome</a></p>
               <p><a target="_blank" href="https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=en">LivePage</a><br />
               </p>
@@ -64,7 +64,7 @@
 
           <!-- Intro : Course -->
           <section>
-            <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
+            <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
             <div class="box--small">
               <h3>Getting Sassy with CSS</h3>
               <p><small>#SassShop</small></p>
@@ -75,7 +75,7 @@
           <section>
             <h3>Welcome!</h3>
 
-            <p class="box">Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+            <p class="box"><strong>Girl Develop It</strong> is here to empower and assist women interested in getting into and advancing in the tech industry through affordable and accessible programs.</p>
 
             <div class="copy--small">
               <h4 class="green">Some "rules"</h4>
@@ -92,18 +92,17 @@
           <section>
             <h2>Julie Cameron</h2>
 
-            <p class="box"><small><a href="http://juliecameron.com" target="_blank">JulieCameron.com</a> | <a href="http://twitter.com/jewlofthelotus" target="_blank">@JewlOfTheLotus</a> | <a href="mailto:jewlofthelotus@gmail.com">jewlofthelotus@gmail.com</a></small></p>
+            <p class="box"><small><a href="http://juliecameron.com" target="_blank">JulieCameron.com</a> &nbsp; | &nbsp; <a href="http://twitter.com/jewlofthelotus" target="_blank">@JewlOfTheLotus</a> &nbsp; | &nbsp; <a href="mailto:jewlofthelotus@gmail.com">jewlofthelotus@gmail.com</a></small></p>
 
-            <div class="right box--small">
+            <div class="right">
               <img src="images/julie.jpg" />
             </div>
 
             <ul class="left">
+              <li><strong>Co-Founder</strong> of <a href="http://gdiannarbor.com" target="_blank">GDI Ann Arbor</a></li>
               <li><strong>Remote Frontender</strong> for <a href="http://articlate.com" target="_blank">Articulate</a></li>
               <li><strong>Sassy CSS</strong> Fan</li>
               <li><strong>Modular Architecture</strong> Proponent</li>
-              <li><strong>Responsive Web Design</strong> Advocate</li>
-              <li><strong><a href="https://github.com/jewlofthelotus/SlickQuiz" target="_blank">Open</a> <a href="http://wordpress.org/plugins/slickquiz" target="_blank">Source</a></strong> JS &amp; WP Developer</li>
             </ul>
 
             <aside class="notes">
@@ -119,8 +118,8 @@
           <section>
             <h3>Meet the team!</h3>
             <p class="box box--top">What is <span class="yellow">your name</span>?</p>
-            <p class="box">What type of <span class="yellow">dev experience</span> do you have?</p>
-            <p class="box">What is your <span class="yellow">fave dev tool / plugin / resource / etc.</span>?</p>
+            <p class="box">What is your <span class="yellow">140 character</span> dev bio?</p>
+            <p class="box">What is your <span class="yellow">fave dev tool / plugin / blog / etc.</span>?</p>
             <aside class="notes">
               <p>Well you all rule because I love all cookies, my nickname as a child was "the cookie monster."</p>
             </aside>
@@ -134,7 +133,7 @@
               <li>The Sass Workflow</li>
               <li>Sass Basics</li>
               <li class="break">Advanced Sass</li>
-              <li class="break">Media Queries</li>
+              <li class="break js-break-1day">Media Queries</li>
               <li>Modular Architecture</li>
               <li>Libraries &amp; Tools</li>
               <li>Wrap-Up</li>
@@ -229,7 +228,8 @@
                 </li>
                 <li class="box">Developed by <a href="http://nex-3.com/" target="_blank">Natalie Weizenbaum</a> and <a href="http://chriseppstein.github.io/" target="_blank">Chris Eppstein</a> (Compass)</li>
                 <li><strong>March 2014:</strong> <span class="yellow">Sass 3.3</span> was released!</li>
-                <li class="box--small green">Pushing CSS ahead!</li>
+                <li><strong>August 2014:</strong> <span class="yellow">Sass 3.4</span> was released!</li>
+                <li class="green">Pushing CSS ahead!</li>
               </ul>
             </div>
 
@@ -884,17 +884,30 @@
             </aside>
           </section>
 
+          <!-- SASS Workflow : Source Maps -->
+          <section>
+            <h3>Sass <span class="blue">Sourcemaps</span></h3>
+            <p class="box--small copy--small">Sourcemaps tell browsers where the Sass that generated the CSS is.<br/>
+              <small class="green">You must enable sourcemaps in the browser to use this feature.</small></p>
+            <img src="images/chrome-settings.png" />
+            <img src="images/css-sourcemaps.png" />
+            <aside class="notes">
+              <p>LET'S ALL DO THIS TOGETHER!</p>
+              <p>"Auto reload generated CSS" is a bit beyond our scope for today, but it will let you make CSS changes in the browser and have them saved back to your Sass code.</p>
+            </aside>
+          </section>
+
           <!-- Sass Workflow : Develop It! -->
           <section>
             <h3>Workflow <span class="yellow">Let's develop it!</span></h3>
 
-            <ol class="left copy--small " style="width: 55%;">
+            <ol class="left copy--small " style="width: 60%;">
               <li class="box--small">Open up your <strong>kittens</strong> project</li>
               <li>Open <code>index.html</code> in the broswer<br />
                 <small>Optionally enable <strong>LivePage</strong>**</small>
               </li>
               <li>Copy <code>css/application.css</code> to <code>sass/application.scss</code><br />
-                <small><code>cp css/application.css sass/application.scss</code></small>
+                <small><code>mkdir sass &amp;&amp; cp css/application.css sass/application.scss</code></small>
               </li>
               <li>Remove <code>application.css</code> <br />
                 <small><code>rm css/application.css</code></small>
@@ -933,7 +946,7 @@
         <!-- BREAK TIME -->
         <section class="js-2day">
           <h3>Break Time!</h3>
-          <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
+          <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/banana-cat.gif" />
         </section>
 
@@ -2053,7 +2066,7 @@
         <!-- BREAK TIME -->
         <section class="js-1day">
           <h3>Break Time!</h3>
-          <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
+          <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/banana-cat.gif" />
         </section>
 
@@ -2076,7 +2089,7 @@
 
         <!-- DAY 2 : INTRO -->
         <section class="js-2day">
-          <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
+          <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
           <div class="box--small">
             <h3>Getting Sassy with CSS</h3>
             <p><small>#SassShop</small></p>
@@ -3382,7 +3395,7 @@
         <!-- BREAK TIME -->
         <section class="js-1day js-2day">
           <h3>Break Time!</h3>
-          <p class="box">Enjoy some snacks!<br /><small>courtesy of <strong>Atomic Object</strong></small></p>
+          <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/hungry-lion.gif" />
         </section>
 
@@ -4061,7 +4074,7 @@
 
         <!-- COURSE OUTRO -->
         <section>
-          <img src="images/gdi_logo_badge.png" style="border: none; box-shadow: none;">
+          <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
           <div class="box--small">
             <h3>Getting Sassy with CSS</h3>
             <p><small>#SassShop</small></p>
@@ -4084,13 +4097,25 @@
     <script>
       // Toggle Session Format (1-Day or 2-Days)
       var queryStr = window.location.search;
+
       if (queryStr.indexOf('days=1') > -1) {
-        $('.js-2day:not(.js-1day)').remove()
+        $('.js-2day:not(.js-1day)').remove();
+
       } else if (queryStr.indexOf('days=2') > -1) {
-        $('.js-1day:not(.js-2day)').remove()
+        $('.js-1day:not(.js-2day)').remove();
+        $('.js-break-1day').removeClass('break');
+
       } else {
-        $('.js-1day, .js-2day').remove()
+        $('.js-1day, .js-2day').remove();
       }
+
+      // Set Sponsor Info
+      var sponsor   = "Nutshell";
+      var wifi_name = null;
+      var wifi_pass = null;
+      if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
+      if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
+      if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration

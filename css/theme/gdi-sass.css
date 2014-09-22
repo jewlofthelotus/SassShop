@@ -2435,102 +2435,106 @@ body {
 }
 
 /* line 8, source/gdi-sass.scss */
+.reveal .hide {
+  display: none;
+}
+/* line 10, source/gdi-sass.scss */
 .reveal .center-align {
   text-align: center;
 }
-/* line 10, source/gdi-sass.scss */
+/* line 12, source/gdi-sass.scss */
 .reveal .copy--small {
   font-size: .8em;
 }
-/* line 14, source/gdi-sass.scss */
+/* line 16, source/gdi-sass.scss */
 .reveal .copy--xsmall {
   font-size: .6em;
 }
-/* line 18, source/gdi-sass.scss */
+/* line 20, source/gdi-sass.scss */
 .reveal strong {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
-/* line 22, source/gdi-sass.scss */
+/* line 24, source/gdi-sass.scss */
 .reveal .horz--auto {
   margin: inherit auto;
 }
-/* line 26, source/gdi-sass.scss */
+/* line 28, source/gdi-sass.scss */
 .reveal .box {
   margin: 2em 0;
 }
-/* line 30, source/gdi-sass.scss */
+/* line 32, source/gdi-sass.scss */
 .reveal .box--top {
   margin-top: 3em;
 }
-/* line 34, source/gdi-sass.scss */
+/* line 36, source/gdi-sass.scss */
 .reveal .box--small {
   margin: 1em 0;
 }
-/* line 39, source/gdi-sass.scss */
+/* line 41, source/gdi-sass.scss */
 .reveal ul ul, .reveal ul ol, .reveal ol ul, .reveal ol ol {
   margin-top: 10px;
 }
-/* line 43, source/gdi-sass.scss */
+/* line 45, source/gdi-sass.scss */
 .reveal ul li:last-child, .reveal ol li:last-child {
   margin-bottom: 0;
 }
-/* line 49, source/gdi-sass.scss */
+/* line 51, source/gdi-sass.scss */
 .reveal .list--tall ol, .reveal .list--tall ul {
   margin-top: 20px;
 }
-/* line 50, source/gdi-sass.scss */
+/* line 52, source/gdi-sass.scss */
 .reveal .list--tall li {
   margin-bottom: 20px;
 }
-/* line 54, source/gdi-sass.scss */
+/* line 56, source/gdi-sass.scss */
 .reveal .list--xtall ol, .reveal .list--xtall ul {
   margin-top: 40px;
 }
-/* line 55, source/gdi-sass.scss */
+/* line 57, source/gdi-sass.scss */
 .reveal .list--xtall li {
   margin-bottom: 40px;
 }
-/* line 58, source/gdi-sass.scss */
+/* line 60, source/gdi-sass.scss */
 .reveal .list--bare {
   list-style-type: none;
 }
-/* line 62, source/gdi-sass.scss */
+/* line 64, source/gdi-sass.scss */
 .reveal .broken {
   list-style-position: inside;
   margin-top: .25em;
 }
-/* line 66, source/gdi-sass.scss */
+/* line 68, source/gdi-sass.scss */
 .reveal .broken li {
   display: block;
   padding: .25em 1em;
 }
-/* line 72, source/gdi-sass.scss */
+/* line 74, source/gdi-sass.scss */
 .reveal ol.broken {
   counter-reset: counter;
 }
-/* line 76, source/gdi-sass.scss */
+/* line 78, source/gdi-sass.scss */
 .reveal ol.broken li:before {
   color: #ccc;
   content: counter(counter) ".";
   counter-increment: counter;
   padding-right: .5em;
 }
-/* line 85, source/gdi-sass.scss */
+/* line 87, source/gdi-sass.scss */
 .reveal .break {
   border-top: 20px solid #efefef;
   padding-top: 2em;
 }
-/* line 90, source/gdi-sass.scss */
+/* line 92, source/gdi-sass.scss */
 .reveal section img {
   margin: 0 15px;
 }
-/* line 94, source/gdi-sass.scss */
+/* line 96, source/gdi-sass.scss */
 .reveal .img--bare {
   border: none;
   background: transparent;
   box-shadow: none;
 }
-/* line 100, source/gdi-sass.scss */
+/* line 102, source/gdi-sass.scss */
 .reveal .gist {
   font-size: .5em;
   line-height: 1.3em;
@@ -2538,18 +2542,18 @@ body {
   overflow: scroll;
 }
 
-/* line 108, source/gdi-sass.scss */
+/* line 110, source/gdi-sass.scss */
 code {
   background: #e8e8e8;
 }
 
-/* line 112, source/gdi-sass.scss */
+/* line 114, source/gdi-sass.scss */
 pre {
   margin: 0;
   width: auto;
   box-shadow: none;
 }
-/* line 117, source/gdi-sass.scss */
+/* line 119, source/gdi-sass.scss */
 pre code {
   background: transparent;
   border: 6px solid #fff;
