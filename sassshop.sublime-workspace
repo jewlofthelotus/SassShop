@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
 				"data",
 				"data-fragment-index"
 			],
@@ -28,26 +32,10 @@
 	"buffers":
 	[
 		{
-			"file": "css/theme/source/gdi-sass.scss",
-			"settings":
-			{
-				"buffer_size": 1368,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 155090,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "compass.rb",
-			"settings":
-			{
-				"buffer_size": 862,
+				"buffer_size": 161624,
 				"line_ending": "Unix"
 			}
 		}
@@ -75,9 +63,10 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 153.0,
 		"history":
 		[
+			"ls"
 		]
 	},
 	"distraction_free":
@@ -91,10 +80,35 @@
 	},
 	"file_history":
 	[
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/gdi-sass.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens-final/sass/application.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens-final/index.html",
+		"/Users/jewls/Sites/gdi-sass/todo_slides.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/index.html",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/css/application.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/final/css/application.css",
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/template/_theme.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/section5/sass/base/_mixins.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/js/application.js",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/sass/application.scss",
+		"/Users/jewls/Sites/gdi-sass/exercises/workflow/css/test.css",
+		"/Users/jewls/Sites/gdi-sass/exercises/workflow/test.scss",
+		"/Users/jewls/Sites/gdi-sass/aawc.html",
+		"/Users/jewls/Sites/gdi-sass/.gitignore",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/js/modernizr-2.5.2.min.js",
+		"/Users/jewls/Sites/gdi-sass/exercises/kittens/js/jquery-2.1.0.min.js",
+		"/Users/jewls/Sites/gdi-sass/exercises/test/test.scss",
+		"/Users/jewls/Sites/gdi-sass/css/theme/gdicool.css",
+		"/Users/jewls/Sites/gdi-sass/examples/lists/Gemfile",
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/gdicool.scss",
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/gdilight.scss",
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/gdisunny.scss",
+		"/Users/jewls/Sites/gdi-sass/css/theme/source/gdidefault.scss",
+		"/Users/jewls/Sites/gdi-sass/css/theme/gdilight.css",
+		"/Users/jewls/Sites/gdi-sass/lib/css/dark.css",
 		"/Users/jewls/Sites/test-sass/test.css",
 		"/Users/jewls/Sites/test-sass/test.scss",
 		"/Users/jewls/Sites/test-sass/index.html",
-		"/Users/jewls/Sites/gdi-sass/aawc.html",
 		"/Users/jewls/Sites/gdi-sass/README.md",
 		"/Users/jewls/Sites/gdi-sass/Gruntfile.js",
 		"/Users/jewls/Sites/gdi-sass/package.json",
@@ -192,6 +206,42 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Develop It! -->",
+			"Develop It -->",
+			"gdidetroit.com/sass",
+			"TODO",
+			"SassShop",
+			"SassShopDet",
+			"SassShopDestr",
+			"Gotham",
+			"width",
+			"height",
+			"width",
+			"Inheritence",
+			"nav",
+			"hover",
+			"clearfix",
+			"Let's develop it",
+			"border",
+			"border-ra",
+			"font-size",
+			"<span class=\"blue\">2.",
+			"<span class=\"blue\">1.",
+			"<span class=\"blue\">8.",
+			"<span class=\"blue\">7.",
+			"<span class=\"blue\">6.",
+			"<span class=\"blue\">5.",
+			"<span class=\"blue\">4.",
+			"<span class=\"blue\">2.",
+			"<span class=\"blue\">3.",
+			"WHAT IS SASS : R",
+			"WHAT IS SASS",
+			"break",
+			"img",
+			"10deg",
+			"<<<<<<<",
+			"caption",
+			"line",
 			"TODO",
 			"<section",
 			"clear",
@@ -255,6 +305,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Inheritance",
+			"footer",
 			"",
 			"rounded-box",
 			"eggplantDark",
@@ -278,53 +330,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "css/theme/source/gdi-sass.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1368,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								261,
-								294
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 266.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 155090,
+						"buffer_size": 161624,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3108,
-								3108
+								76875,
+								76875
 							]
 						],
 						"settings":
@@ -336,36 +359,10 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4987.0,
 						"zoom_level": 1.0
 					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "compass.rb",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 862,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								215,
-								215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -402,6 +399,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
 	"project": "sassshop.sublime-project",
 	"replace":
 	{
@@ -413,6 +414,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"theme",
+				"css/theme/source/template/_theme.scss"
+			],
+			[
+				"theme.sc",
+				"css/theme/source/template/_theme.scss"
+			],
 			[
 				"highligh",
 				"plugin/highlight/highlight.js"
