@@ -132,7 +132,7 @@
               <li>What is Sass</li>
               <li>The Sass Workflow</li>
               <li>Sass Basics</li>
-              <li class="break">Advanced Sass</li>
+              <li class="break js-break-1day js-break-2day">Advanced Sass</li>
               <li class="break js-break-1day">Media Queries</li>
               <li>Modular Architecture</li>
               <li>Libraries &amp; Tools</li>
@@ -4100,13 +4100,15 @@
 
       if (queryStr.indexOf('days=1') > -1) {
         $('.js-2day:not(.js-1day)').remove();
+        $('.js-break-2day:not(.js-break-1day)').removeClass('break');
 
       } else if (queryStr.indexOf('days=2') > -1) {
         $('.js-1day:not(.js-2day)').remove();
-        $('.js-break-1day').removeClass('break');
+        $('.js-break-1day:not(.js-break-2day)').removeClass('break');
 
       } else {
         $('.js-1day, .js-2day').remove();
+        $('.js-break-1day, .js-break-2day').removeClass('break');
       }
 
       // Set Sponsor Info
