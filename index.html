@@ -1224,6 +1224,90 @@
             </aside>
           </section>
 
+          <!-- Sass Basics : Nesting : Parent Selectors -->
+          <section>
+            <h3><span class="blue">Nesting</span> Parent Selectors</h3>
+            <p class="copy--small box">The <code>&</code> selector can also be <span class="green">combined</span> with strings.<br/>
+              <small>PERFECT for BEM, child elements, states, and modifications.</small></p>
+
+            <div class=" left" style="width: 45%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                .module {
+                  &__child {
+                    margin-bottom: 1em;
+                  }
+
+                  &--modifier {
+                    display: inline;
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class=" right" style="width: 45%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                .module__child {
+                  margin-bottom: 1em;
+                }
+
+                .module--modifier {
+                  display: inline;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              <p>AGAIN this can be really really helpful, especially if you're familiar with the concept of modifiers as they relate to the concepts of OOCSS and BEM.</p>
+
+              <p>What you're essentially doing is <em>modifying</em> the parent selector</p>
+
+              <p>We'll jump quickly into OOCSS and BEM later, but you'll see hints of it throughout the shop</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Nesting : Parent Selectors -->
+          <section>
+            <h3><span class="blue">Nesting</span> Parent Selectors</h3>
+            <p class="copy--small box">The <code>&</code> contents can also be <span class="green">accessed as a string/list</span> and used in SassScript.</p>
+
+            <div class=" left" style="width: 52%">
+              <h4 class="yellow">Sass</h4>
+              <pre><code class="scss">
+                .thing.thang {
+                  .thung {
+                    content: &;
+                    content: &--mod;
+                    content: selector-append(&, '--mod');
+
+                    &--mod { content: 'here'; }
+                  }
+                }
+              </code></pre>
+            </div>
+
+            <div class=" right" style="width: 48%">
+              <h4>CSS Output</h4>
+              <pre><code class="css">
+                .thing.thang .thung {
+                  content: .thing.thang .thung;
+                  content: .thing.thang .thung --mod;
+                  content: .thing.thang .thung--mod;
+                }
+                .thing.thang .thung--mod {
+                  content: 'here';
+                }
+              </code></pre>
+            </div>
+
+            <p class="copy--xsmall box">There are a handful of additional selector methods.</p>
+
+            <aside class="notes">
+              <p>this is some pretty advanced stuff that you probably won't use for a while</p>
+            </aside>
+          </section>
+
           <!-- Sass Basics : Nesting Properties  -->
           <section>
             <h3><span class="blue">Nesting</span> Properties</h3>
@@ -1360,7 +1444,7 @@
           <section>
             <h4><span class="blue">Variables</span> Assignment &amp; Reference</h4>
 
-            <p class="box copy--small">Variables are defined à la CSS prop/val pairs: <code>$property: value;</code></p>
+            <p class="box--small copy--small">Variables are defined à la CSS prop/val pairs: <code>$property: value;</code></p>
 
             <p class="copy--small">Variables are then referenced by their <code>$</code>-prefixed names.</p>
 
@@ -1459,7 +1543,7 @@
           <!-- Sass Basics : Variables : Simple Assignment -->
           <section>
             <h3><span class="blue">Variable</span> Simple Assignment</h3>
-            <p class="box">You can redeclare variables to <span class="green">override</span> previous values</p>
+            <p class="box">You can <span class="green">redeclare</span> variables to <span class="green">override</span> previous values</p>
             <div class=" left" style="width:48%;">
               <h4 class="yellow">Sass</h4>
               <pre><code>
@@ -1521,13 +1605,13 @@
           <section>
             <h3><span class="blue">Variable</span> Scope</h3>
 
-            <div class="left box left-align" style="width: 48%;">
+            <div class="left box left-align" style="width: 46%;">
               <p class="box--small copy--small">Variables are only available within the level of nested selectors where they're defined.</p>
               <p class="copy--small">If they're defined outside of any nested selectors, they're available everywhere.</p>
               <p class="box--small"><cite><small>~ <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">Sass Documentation</a></small></cite></p>
             </div>
 
-            <div class="right box--small" style="width: 49%;">
+            <div class="right box--small" style="width: 54%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $border-width: 4px; // Global
@@ -1554,28 +1638,37 @@
           <section>
             <h3><span class="blue">Variable</span> Globals</h3>
 
-            <div class="left box--small left-align" style="width: 44%;">
-              <p class="box"><span class="green">Setting new values</span> to "global" variables within a selector <span class="green">changes future instances</span> of that variable.</p>
+            <div class="left box--small left-align copy--small" style="width: 44%;">
+              <!-- <p class="box"><span class="green">Setting new values</span> to "global" variables within a selector <span class="green">changes future instances</span> of that variable.</p> --> <!-- Sass 3.3 deprecated -->
+
+              <p class="box">Changes to "global" variables within a selector are local to that selector.</p>
+              <p class="box">UNLESS defined with the <code>!global</code> flag, in which case the change is set globally.</p>
+              <p><a href="http://sassmeister.com/gist/c1d4071722021db84a25" target="_blank">DEMO</a></p>
             </div>
 
-            <div class="right box--small" style="width: 52%;">
+            <div class="right box--small" style="width: 56%;">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
                 $border-width: 4px;
+                $border-radius: 4px;
 
                 a {
-                  $border-width: 2px;
-                  border-width: $border-width; //=> 2px
+                  $border-width: 2px !global;
+                  $border-radius: 8px;
+
+                  border-width: $border-width;   //=> 2px
+                  border-radius: $border-radius; //=> 8px
                 }
 
                 p {
-                  border-width: $border-width; //=> 2px
+                  border-width: $border-width;   //=> 2px
+                  border-radius: $border-radius; //=> 4px
                 }
               </code></pre>
             </div>
 
             <aside class="notes">
-              <p>We can change global variables anywhere</p>
+              <p>We can change global variables anywhere IF we use the !global flag</p>
               <p>We can only create or change local variables within that nesting level</p>
               <p>So this brings us to the last aspect of variables - interpolation</p>
             </aside>
@@ -1584,7 +1677,7 @@
           <!-- Sass Basics : Variables : Interpolation -->
           <section>
             <h3><span class="blue">Variable</span> Interpolation</h3>
-              <p class='box copy--small'>Variables can be injected into <span class="green">selectors,<br />property names, and strings</span> via <code>#{$variable}</code></p>
+              <p class='box copy--small'>Variables can be injected into <span class="green">selectors,<br />property names and values, and strings</span> via <code>#{$variable}</code></p>
             <div class=" left align-left" style="width: 52%">
               <h4 class="yellow">Sass</h4>
               <pre><code class="scss">
@@ -1826,7 +1919,7 @@
           <!-- Sass Basics : Imports & Organization : Import File Structure -->
           <section>
             <h3><span class="blue">Imports</span> File Structure</h3>
-            <div class="box--small left" style="width: 48%">
+            <div class="box--small left" style="width: 50%">
               <h4 class="green">application.scss</h4>
               <pre><code>
                 @import "vars";
@@ -4127,7 +4220,7 @@
         history: true,
         rollingLinks: true,
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
