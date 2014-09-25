@@ -2211,15 +2211,29 @@
           <!-- Day 2 : Project Setup : Develop It! -->
           <section>
             <h3>Day 2 Setup <span class="yellow">Let's develop it!</span></h3>
-            <ol class="box--small copy--small">
+            <ol class="box--small copy--small list--tall">
               <li>Load up the slides.<br/><small><a href="https://sassshop.com/" target="_blank">https://SassShop.com</a></small></li>
               <li>Open the entire <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
               <li>Navigate to the <code>exercises/kittens</code> directory via the <span class="green">command line</span>.<br /><small>Use <code>cd</code> to navigate the file structure.</small></li>
               <li>Run the Sass watch command.<br /><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></li>
               <li>Open <code>exercises/kittens/index.html</code> in your <span class="green">browser</span>.<br /><small class="yellow">Yay, kittens!</small></li>
-              <li>Open the <code>exercises</code> director in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
             </ol>
             <aside class="notes">
+            </aside>
+          </section>
+
+
+          <!-- Day 2 : Project Sync Up : Develop It! -->
+          <section>
+            <h3>Day 2 Sync Up <span class="yellow">Let's develop it!</span></h3>
+            <ol class="box copy--small list--tall">
+              <li>Open the <code>exercises</code> director in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
+              <li>In <code>kittens</code>, <span class="green">create a new folder</span> called "day1".<br /><small>The name really isn't too important.</small></li>
+              <li><span class="green">Move the contents</span> of <code>kittens</code> into the new <code>day1</code> folder.<br /><small>This should include: <code>index.html</code>, <code>sass/</code>, and <code>css/</code>.</small></li>
+              <li><span class="green">Copy the contents</span> of <code>kittens-3-imports</code> into the <code>kittens</code> folder.<br /><small class="yellow">Yay, nesting, variables, and imports!</small></li>
+            </ol>
+            <aside class="notes">
+              <p>LET'S DO THIS TOGETHER</p>
             </aside>
           </section>
         </section>
@@ -3156,7 +3170,7 @@
             </div>
             <div class="box--small right" style="width: 48%">
               <pre><code>
-                $title: "Girl Develop It Detroit";
+                $title: "Girl Develop It";
                 $base-font-size: 16px;
                 $padding-default: 2em;
 
@@ -3418,7 +3432,6 @@
                 <li><code>$var</code> can be any variable name</li>
                 <li><code>&lt;list&gt;</code> could be a list, or a variable storing one</li>
               </ul>
-              <p class="box--top copy--small">A little bit of <a href="https://github.com/roytomeij/sassconf" target="_blank">list amazesauce</a> for you.</p>
             </div>
             <aside class="notes">
               <p>Loops like this can be really helpful for generating repetetive and calculated style blocks - grid columns are a good example</p>
@@ -3499,6 +3512,14 @@
             </div>
             <aside class="notes">
               <p>@while loops can acheive more complex looping than @for, it's rarely necessary though</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Demo -->
+          <section>
+            <h3><span class="blue">Advanced Sass</span> Demo</h3>
+            <p class="box--top copy--small">A little bit of <a href="https://github.com/roytomeij/sassconf" target="_blank">list amazesauce</a> for you.<br/><small>via Roy Tomeij &amp; Sass Conf 2013</small></p>
+            <aside class="notes">
             </aside>
           </section>
         </section>
@@ -4077,6 +4098,7 @@
               <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> (OS X)<br /><small>"It's like steroids for developers."</small></li>
               <li><a target="_blank" href="http://compass.kkbox.com/">Compass.app</a><br /><small>Compilation + live reload from the menubar.</small></li>
               <li><a target="_blank" href="http://mhs.github.io/scout-app/">Scout</a><br /><small>Self-contained Ruby environment.</small></li>
+              <li>More at the <a href="http://sass-lang.com/install">Sass Install</a> page.</li>
             </ul>
             <aside class="notes">
               <p>If you're not a fan of the command line, we've got apps for that.</p>
@@ -4113,20 +4135,19 @@
             <p class="copy--small blue">#SassShop</p>
           </section>
 
-          <!-- WRAP UP : Sass 3.3 -->
+          <!-- WRAP UP : Sass 3.? -->
           <section>
-            <h3><span class="yellow">Sass 3.3</span> Maptastic Maple</h3>
-            <p class="box copy--small"><a href="http://thesassway.com/news/sass-3-3-released">http://thesassway.com/news/sass-3-3-released</a></p>
-            <ul class="left copy--small" style="width: 36%">
-              <li>Map Data Structure<br /><small>Key-value pairs.</small></li>
-              <li>Source Maps<br /><small>View Sass source in your browser.</small></li>
-              <li>Parent Selector Suffixes<br /><small><code>.btn { &amp;-primary { //... } }</code></small></li>
+            <h3><span class="yellow">Sass X</span> Other Stuff</h3>
+            <ul class="box left copy--small" style="width: 48%">
+              <li>Map Data Structures<br /><small>Key-value pairs.</small></li>
+              <li>Map Functions<br /><small>ie. <code>map-get($map, $key)</code></small></li>
+              <li>Selector Functions<br /><small>ie. <code>selector-append(&amp;, '--mod') </code></small></li>
               <li><code>@at-root</code> Directive<br /><small>Break out of nesting.</small></li>
             </ul>
-            <ul class="right copy--small" style="width: 52%">
-              <li>Backwards <code>@for</code> loops<br /><small>Count down, instead of up.</small></li>
+            <ul class="box right copy--small" style="width: 52%">
               <li>Multiple Assignment in <code>@each</code> loops<br /><small><code>@each $animal, $color in $animals {}</code></small></li>
-              <li>Improved <code>@if</code> directive<br /><br /></li>
+              <li><code>@warn</code>, <code>@debug</code>, <code>@error</code><br /><small>Compile messages.</small></li>
+              <li>Comments via <code>/* */</code> and <code>//</code><br /><small>Multi-line vs. Single</small></li>
               <li>And much more!</li>
             </ul>
             <aside class="notes">
@@ -4160,8 +4181,7 @@
               <li>Check your <span class="green">output</span>.</li>
               <li>Mind your <code>@mixin</code>s and <code>@media</code> queries.</li>
               <li>Don't <code>@extend</code> too much.</li>
-              <li>Enable Sass <span class="green">line numbers</span> for debugging<br/>
-                <small><code>-l, --line-numbers</code></small></li>
+              <li>Enable Sass <span class="green">sourcemaps</span> for debugging</li>
               <li><span class="blue">Modules</span>, <span class="green">modules</span>, <span class="yellow">modules</span>.</li>
             </ul>
             <aside class="notes">
@@ -4174,8 +4194,11 @@
             <h3><span class="yellow">Sass</span> Questions?</h3>
             <div class="box left" style="width: 48%">
               <p>I'm here to help!</p>
-              <p class="box"><small><a href="mailto:jewlofthelotus@gmail.com">jewlofthelotus@gmail.com</a></small></p>
+              <div class="box--small">
+              <p><small><a href="mailto:jewlofthelotus@gmail.com">jewlofthelotus@gmail.com</a></small></p>
               <p><small><a href="http://twitter.com/jewlofthelotus" target="_blank">@JewlOfTheLotus</a></small></p>
+              </div>
+              <p class="box--small"><small>#SassShop</small></p>
             </div>
             <div class="box right" style="width: 48%">
               <img src="images/doge.gif" alt="Confused? Let us help!" />
