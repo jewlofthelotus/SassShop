@@ -2182,27 +2182,46 @@
 
         <!-- DAY 2 : INTRO -->
         <section class="js-2day">
-          <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
-          <div class="box--small">
-            <h3>Getting Sassy with CSS</h3>
-            <p><small>#SassShop</small></p>
-          </div>
-        </section>
+          <!-- DAY 2 : Event Intro -->
+          <section>
+            <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
+            <div class="box--small">
+              <h3>Getting Sassy with CSS</h3>
+              <p><small>#SassShop</small></p>
+            </div>
+          </section>
 
 
-        <!-- DAY 2 : DAY 1 REVIEW -->
-        <section class="js-2day">
-          <h3 class="green"><span class="blue">Day 1</span> Review</h3>
-          <div class="box">
-            <p class="box--small">Sass Intro</p>
-            <p>Workflow</p>
-            <p class="box--small">Nesting</p>
-            <p>Variables</p>
-            <p class="box--small">Imports &amp; Organization</p>
-            <p class="yellow">Questions?</p>
-          </div>
-          <aside class="notes">
-          </aside>
+          <!-- DAY 2 : Day 1 Review -->
+          <section class="js-2day">
+            <h3 class="green"><span class="blue">Day 1</span> Review</h3>
+            <div class="box">
+              <p class="box--small">Sass Intro</p>
+              <p>Workflow</p>
+              <p class="box--small">Nesting</p>
+              <p>Variables</p>
+              <p class="box--small">Imports &amp; Organization</p>
+              <p class="yellow">Questions?</p>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+
+          <!-- Day 2 : Project Setup : Develop It! -->
+          <section>
+            <h3>Day 2 Setup <span class="yellow">Let's develop it!</span></h3>
+            <ol class="box--small copy--small">
+              <li>Load up the slides.<br/><small><a href="https://sassshop.com/" target="_blank">https://SassShop.com</a></small></li>
+              <li>Open the entire <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
+              <li>Navigate to the <code>exercises/kittens</code> directory via the <span class="green">command line</span>.<br /><small>Use <code>cd</code> to navigate the file structure.</small></li>
+              <li>Run the Sass watch command.<br /><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></li>
+              <li>Open <code>exercises/kittens/index.html</code> in your <span class="green">browser</span>.<br /><small class="yellow">Yay, kittens!</small></li>
+              <li>Open the <code>exercises</code> director in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
+            </ol>
+            <aside class="notes">
+            </aside>
+          </section>
         </section>
 
 
@@ -4185,6 +4204,12 @@
       </footer>
     </div>
 
+    <!-- TODO:
+
+          make sure screen.js / application.js refs match up
+
+     -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/reveal.min.js"></script>
     <script>
@@ -4206,8 +4231,8 @@
 
       // Set Sponsor Info
       var sponsor   = "Nutshell";
-      var wifi_name = null;
-      var wifi_pass = null;
+      var wifi_name = "Nutshell";
+      var wifi_pass = "2muchofaslope229";
       if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
       if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
       if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
