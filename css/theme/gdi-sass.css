@@ -2295,10 +2295,15 @@ body {
   color: #8B0036 !important;
 }
 
+/* line 106, source/template/_theme.scss */
+.grey {
+  color: #333333 !important;
+}
+
 /*********************************************
  * LINKS
  *********************************************/
-/* line 112, source/template/_theme.scss */
+/* line 113, source/template/_theme.scss */
 .reveal a:not(.image) {
   -moz-transition: color 0.15x ease;
   -o-transition: color 0.15x ease;
@@ -2308,14 +2313,14 @@ body {
   text-decoration: none;
 }
 
-/* line 117, source/template/_theme.scss */
+/* line 118, source/template/_theme.scss */
 .reveal a:not(.image):hover {
   color: #f9b8bb;
   text-shadow: none;
   border: none;
 }
 
-/* line 124, source/template/_theme.scss */
+/* line 125, source/template/_theme.scss */
 .reveal .roll span:after {
   color: #fff;
   background: #01a9b4;
@@ -2324,7 +2329,7 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-/* line 134, source/template/_theme.scss */
+/* line 135, source/template/_theme.scss */
 .reveal section img {
   margin: 15px;
   background: rgba(255, 255, 255, 0.12);
@@ -2336,7 +2341,7 @@ body {
   transition: all 0.2s linear;
 }
 
-/* line 144, source/template/_theme.scss */
+/* line 145, source/template/_theme.scss */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #01a9b4;
@@ -2346,46 +2351,46 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-/* line 156, source/template/_theme.scss */
+/* line 157, source/template/_theme.scss */
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
   border-right-color: #01a9b4;
 }
 
-/* line 161, source/template/_theme.scss */
+/* line 162, source/template/_theme.scss */
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
   border-left-color: #01a9b4;
 }
 
-/* line 166, source/template/_theme.scss */
+/* line 167, source/template/_theme.scss */
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
   border-bottom-color: #01a9b4;
 }
 
-/* line 171, source/template/_theme.scss */
+/* line 172, source/template/_theme.scss */
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
   border-top-color: #01a9b4;
 }
 
-/* line 176, source/template/_theme.scss */
+/* line 177, source/template/_theme.scss */
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #f9b8bb;
 }
 
-/* line 180, source/template/_theme.scss */
+/* line 181, source/template/_theme.scss */
 .reveal .controls div.navigate-right.enabled:hover {
   border-left-color: #f9b8bb;
 }
 
-/* line 184, source/template/_theme.scss */
+/* line 185, source/template/_theme.scss */
 .reveal .controls div.navigate-up.enabled:hover {
   border-bottom-color: #f9b8bb;
 }
 
-/* line 188, source/template/_theme.scss */
+/* line 189, source/template/_theme.scss */
 .reveal .controls div.navigate-down.enabled:hover {
   border-top-color: #f9b8bb;
 }
@@ -2393,12 +2398,12 @@ body {
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-/* line 197, source/template/_theme.scss */
+/* line 198, source/template/_theme.scss */
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 200, source/template/_theme.scss */
+/* line 201, source/template/_theme.scss */
 .reveal .progress span {
   background: #01a9b4;
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -2410,7 +2415,7 @@ body {
 /*********************************************
  * FOOTER
  *********************************************/
-/* line 211, source/template/_theme.scss */
+/* line 212, source/template/_theme.scss */
 .reveal footer {
   position: fixed;
   height: 40px;
@@ -2424,12 +2429,12 @@ body {
   background-repeat: no-repeat;
   background-size: auto 100%;
 }
-/* line 225, source/template/_theme.scss */
+/* line 226, source/template/_theme.scss */
 .reveal .copyright {
   margin: 15px 5px 0 100px;
   font-style: italic;
 }
-/* line 229, source/template/_theme.scss */
+/* line 230, source/template/_theme.scss */
 .reveal .copyright a img {
   vertical-align: middle;
 }

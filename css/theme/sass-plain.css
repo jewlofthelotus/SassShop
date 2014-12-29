@@ -1,3 +1,5 @@
+/* Getting Sassy With CSS - Workshop Settings*/
+/* Getting Sassy With CSS - Workshop Settings*/
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2144,11 +2146,11 @@
  *********************************************/
 /* line 7, source/template/_theme.scss */
 body {
-  background: #92bb44;
-  background: -moz-radial-gradient(#e9f1da, #f7fbfc);
-  background: -o-radial-gradient(#e9f1da, #f7fbfc);
-  background: -webkit-radial-gradient(#e9f1da, #f7fbfc);
-  background: radial-gradient(#e9f1da, #f7fbfc);
+  background: white;
+  background: -moz-radial-gradient(#ffffff, #f2f2f2);
+  background: -o-radial-gradient(#ffffff, #f2f2f2);
+  background: -webkit-radial-gradient(#ffffff, #f2f2f2);
+  background: radial-gradient(#ffffff, #f2f2f2);
 }
 
 @font-face {
@@ -2187,7 +2189,7 @@ body {
 /* line 50, source/template/_theme.scss */
 ::selection {
   color: white;
-  background: #134674;
+  background: rgba(11, 79, 81, 0.99);
   text-shadow: none;
 }
 
@@ -2208,12 +2210,12 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #8b0036;
+  color: #f05b62;
   font-family: "Gotham-Bold", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  text-transform: none;
+  text-shadow: #cccccc;
 }
 
 /* line 84, source/template/_theme.scss */
@@ -2436,4 +2438,144 @@ body {
 /* line 230, source/template/_theme.scss */
 .reveal .copyright a img {
   vertical-align: middle;
+}
+
+/* line 8, source/gdi-sass.scss */
+.reveal .hide {
+  display: none;
+}
+/* line 10, source/gdi-sass.scss */
+.reveal .center-align {
+  text-align: center;
+}
+/* line 12, source/gdi-sass.scss */
+.reveal .copy--small {
+  font-size: .8em;
+}
+/* line 16, source/gdi-sass.scss */
+.reveal .copy--xsmall {
+  font-size: .6em;
+}
+/* line 20, source/gdi-sass.scss */
+.reveal strong {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+/* line 24, source/gdi-sass.scss */
+.reveal .horz--auto {
+  margin: inherit auto;
+}
+/* line 28, source/gdi-sass.scss */
+.reveal .box {
+  margin: 2em 0;
+}
+/* line 32, source/gdi-sass.scss */
+.reveal .box--top {
+  margin-top: 3em;
+}
+/* line 36, source/gdi-sass.scss */
+.reveal .box--small {
+  margin: 1em 0;
+}
+/* line 41, source/gdi-sass.scss */
+.reveal ul ul, .reveal ul ol, .reveal ol ul, .reveal ol ol {
+  margin-top: 10px;
+}
+/* line 45, source/gdi-sass.scss */
+.reveal ul li:last-child, .reveal ol li:last-child {
+  margin-bottom: 0;
+}
+/* line 51, source/gdi-sass.scss */
+.reveal .list--tall ol, .reveal .list--tall ul {
+  margin-top: 20px;
+}
+/* line 52, source/gdi-sass.scss */
+.reveal .list--tall li {
+  margin-bottom: 20px;
+}
+/* line 56, source/gdi-sass.scss */
+.reveal .list--xtall ol, .reveal .list--xtall ul {
+  margin-top: 40px;
+}
+/* line 57, source/gdi-sass.scss */
+.reveal .list--xtall li {
+  margin-bottom: 40px;
+}
+/* line 60, source/gdi-sass.scss */
+.reveal .list--bare {
+  list-style-type: none;
+}
+/* line 64, source/gdi-sass.scss */
+.reveal .broken {
+  list-style-position: inside;
+  margin-top: .25em;
+}
+/* line 68, source/gdi-sass.scss */
+.reveal .broken li {
+  display: block;
+  padding: .25em 1em;
+}
+/* line 74, source/gdi-sass.scss */
+.reveal ol.broken {
+  counter-reset: counter;
+}
+/* line 78, source/gdi-sass.scss */
+.reveal ol.broken li:before {
+  color: #ccc;
+  content: counter(counter) ".";
+  counter-increment: counter;
+  padding-right: .5em;
+}
+/* line 87, source/gdi-sass.scss */
+.reveal .break {
+  border-top: 20px solid #efefef;
+  padding-top: 2em;
+}
+/* line 92, source/gdi-sass.scss */
+.reveal section img {
+  margin: 0 15px;
+}
+/* line 96, source/gdi-sass.scss */
+.reveal .img--bare {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+/* line 102, source/gdi-sass.scss */
+.reveal .gist {
+  font-size: .5em;
+  line-height: 1.3em;
+  max-height: 475px;
+  overflow: scroll;
+}
+
+/* line 110, source/gdi-sass.scss */
+code {
+  background: #e8e8e8;
+}
+
+/* line 114, source/gdi-sass.scss */
+pre {
+  margin: 0;
+  width: auto;
+  box-shadow: none;
+}
+/* line 119, source/gdi-sass.scss */
+pre code {
+  background: transparent;
+  border: 6px solid #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  min-height: 300px;
+  max-height: 475px;
+  padding: 5px 10px;
+}
+
+/* line 6, source/sass-plain.scss */
+.reveal footer {
+  background-image: none;
+  font-size: 40%;
+  text-align: left;
+}
+/* line 12, source/sass-plain.scss */
+.reveal .copyright {
+  margin: 15px 0 0 15px;
 }

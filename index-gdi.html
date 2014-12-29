@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Getting Sassy with CSS ~ Julie Cameron</title>
+    <title>Getting Sassy with CSS ~ Girl Develop It</title>
 
-    <meta name="description" content="This is Sass curriculum was originally prepared for Girl Develop It Detroit by Julie Cameron. The course is intended to be one overview session lasting 6-8 hours.">
+    <meta name="description" content="This is a Girl Develop It Sass Shop curriculum. Designed originally by Julie Cameron for GDI Detroit. The course is intended to be one overview session lasting 6 hours, or two 3-hour sessions. I hope that you will build on this curriculum and turn it into an even more awesome class. Oh, and Sass is awesome! Go Girl Developers!">
 
-    <meta name="author" content="Julie Cameron">
+    <meta name="author" content="Girl Develop It">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/sass-plain.css" id="theme">
+    <link rel="stylesheet" href="css/theme/gdi-sass.css" id="theme">
     <link rel="stylesheet" href="lib/css/rainbow.css">
     <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
@@ -34,7 +34,7 @@
         <section>
           <!-- Intro : Setup -->
           <section>
-            <h2><span class="red">Getting Sassy</span><br/><span class="copy--small">with CSS</span></h2>
+            <h3>Get Setup!</h3>
 
             <div class="box">
               <p class="hide"><strong>Wifi Network:</strong> <span class="js-wifi-name"></span></p>
@@ -44,7 +44,7 @@
             <div class="box"><strong>Slides</strong>: <a target="_blank" href="http://sassshop.com">SassShop.com</a></div>
 
             <div class="left copy--xsmall" style="width: 48%;">
-              <div class="box--small"><strong>Recommended Tools</strong></div>
+              <div class="box--small"><strong>Recommended Tools:</strong></div>
 
               <p><a target="_blank" href="http://www.sublimetext.com">Sublime Text</a></p>
               <p><span class="blue">Terminal or Command Prompt / Git Bash</span></p>
@@ -54,13 +54,39 @@
             </div>
 
             <div class="right copy--xsmall" style="width: 48%;">
-              <div class="box--small"><strong>Setup</strong></div>
+              <div class="box--small"><strong>Get Ready!</strong></div>
 
               <p class="box--small"><a href="http://sass-lang.com/install" target="_blank">Install Sass</a> <span class="copy--small">(via Command Line)</span></p>
               <p><a href="https://github.com/jewlofthelotus/SassShop" target="_blank">Download the Slides + Project</a></p>
               <p class="box--small"><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Command Line Tutorial</a></p>
             </div>
           </section>
+
+          <!-- Intro : Course -->
+          <!-- <section>
+            <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
+            <div class="box--small">
+              <h3>Getting Sassy with CSS</h3>
+              <p><small>#SassShop</small></p>
+            </div>
+          </section> -->
+
+          <!-- Intro : GDI Welcome -->
+          <!-- <section>
+            <h3>Welcome!</h3>
+
+            <p class="box"><strong>Girl Develop It</strong> is here to empower and assist women interested in getting into and advancing in the tech industry through affordable and accessible programs.</p>
+
+            <div class="copy--small">
+              <h4 class="green">Some "rules"</h4>
+              <ul>
+                <li>We are here for you!</li>
+                <li>Every question is important.</li>
+                <li>Help each other.</li>
+                <li><strong>Have fun!</strong></li>
+              </ul>
+            </div>
+          </section> -->
 
           <!-- Intro : About Me -->
           <section>
@@ -88,10 +114,21 @@
             </aside>
           </section>
 
+          <!-- Intro : About You -->
+          <section>
+            <h3>Meet the team!</h3>
+            <p class="box box--top">What is <span class="yellow">your name</span>?</p>
+            <p class="box">What is your <span class="yellow">140 character</span> dev bio?</p>
+            <p class="box">What is your <span class="yellow">fave dev tool / plugin / blog / etc.</span>?</p>
+            <aside class="notes">
+              <p>Well you all rule because I love all cookies, my nickname as a child was "the cookie monster."</p>
+            </aside>
+          </section>
+
           <!-- Intro : Course : Outline -->
           <section>
             <h2>Getting Sassy with CSS</h2>
-            <ol class="broken">
+            <ol class="box broken">
               <li>What is Sass</li>
               <li>The Sass Workflow</li>
               <li>Sass Basics</li>
@@ -99,6 +136,7 @@
               <li class="break js-break-1day">Media Queries</li>
               <li>Modular Architecture</li>
               <li>Libraries &amp; Tools</li>
+              <li>Wrap-Up</li>
             </ol>
           </section>
 
@@ -129,7 +167,7 @@
 
           <!-- Intro : Project Setup : Develop It! -->
           <section>
-            <h3>Project Setup <span class="yellow">Exercise</span></h3>
+            <h3>Project Setup <span class="yellow">Let's develop it!</span></h3>
             <ol class="box list--tall">
               <li>Download the slides.<br/><small><a href="https://github.com/jewlofthelotus/SassShop" target="_blank">https://github.com/jewlofthelotus/SassShop</a></small></li>
               <li class="copy--small">Open the <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
@@ -734,14 +772,13 @@
             <p>The Sass <span class="blue">Workflow</span></p>
           </section>
 
-          <!-- Sass Workflow : Installation -->
+          <!-- SASS Workflow : Installation -->
           <section>
             <h3>Sass <span class="blue">Installation</span></h3>
             <div class="box">
               <h4 class="green">Ruby</h4>
-              <p><strong>OS X?</strong> Lucky you, it's preinstalled!</p>
-              <p><strong>Windows?</strong> Try <a href="http://rubyinstaller.org/">RubyInstaller</a>.</p>
-              <p><strong>Linux?</strong> You know what to do.</p>
+              <p>OS X? Lucky you, it's preinstalled!</p>
+              <p>Windows? Try <a href="http://rubyinstaller.org/">RubyInstaller</a>.</p>
             </div>
             <div class="box">
               <h4 class="yellow">Sass</h4>
@@ -749,7 +786,7 @@
             </div>
           </section>
 
-          <!-- Sass Workflow : Running -->
+          <!-- SASS Workflow : Running -->
           <section>
             <h3><span class="blue">Running</span> Sass</h3>
             <p>(aka Compiling Sass)</p>
@@ -761,7 +798,7 @@
             </aside>
           </section>
 
-          <!-- Sass Workflow : Running -->
+          <!-- SASS Workflow : Running -->
           <section>
             <h3><span class="blue">Running</span> Sass</h3>
             <div class="box">
@@ -783,7 +820,7 @@
                 </li>
               </ul>
             </div>
-            <div class="copy--small"><code><strong>$</strong> sass sass/application.scss css/application.css</code></div>
+            <div><code><strong>$</strong> sass sass/screen.scss css/screen.css</code></div>
 
             <aside class="notes">
               <p>At this point you might be thinking</p>
@@ -792,7 +829,7 @@
             </aside>
           </section>
 
-          <!-- Sass Workflow : Watching -->
+          <!-- SASS Workflow : Watching -->
           <section>
             <h3>Sass Is <span class="blue">Watching</span> You...</h3>
             <div class="box"><code><strong>$</strong> sass <span class="green">--watch</span> source.scss:output.css</code></div>
@@ -806,7 +843,7 @@
             </aside>
           </section>
 
-          <!-- Sass Workflow : Other Commands -->
+          <!-- SASS Workflow : Other Commands -->
           <section>
             <h3>More Sass <span class="blue">Options</span></h3>
             <div class="box--small">
@@ -831,7 +868,7 @@
             </aside>
           </section>
 
-          <!-- Sass Workflow : Demo -->
+          <!-- SASS Workflow : Demo -->
           <section>
             <h3><span class="blue">Demo</span> Sass Workflow</h3>
             <aside class="notes">
@@ -847,7 +884,7 @@
             </aside>
           </section>
 
-          <!-- Sass Workflow : Source Maps -->
+          <!-- SASS Workflow : Source Maps -->
           <section>
             <h3>Sass <span class="blue">Sourcemaps</span></h3>
             <p class="box--small copy--small">Sourcemaps tell browsers where the Sass that generated the CSS is.<br/>
@@ -862,9 +899,10 @@
 
           <!-- Sass Workflow : Develop It! -->
           <section>
-            <h3>Workflow <span class="yellow">Exercise</span></h3>
+            <h3>Workflow <span class="yellow">Let's develop it!</span></h3>
 
-            <ol class="box--small left copy--small " style="width: 60%;">
+            <ol class="left copy--small " style="width: 60%;">
+              <li class="box--small">Open up your <strong>kittens</strong> project</li>
               <li>Open <code>index.html</code> in the broswer<br />
                 <small>Optionally enable <strong>LivePage</strong>**</small>
               </li>
@@ -874,10 +912,10 @@
               <li>Remove <code>application.css</code> <br />
                 <small><code>rm css/application.css</code></small>
               </li>
-              <li>Run Sass: <br />
-                <small><code>sass --watch sass/application.scss:css/application.css</code><br /></small>
+              <li>Run Sass (on one line): <br />
+                <small><code>sass --watch --style expanded sass/application.scss:css/application.css</code><br /></small>
               </li>
-              <li>Refresh <code>index.html</code> in the browser and verify the new Sass-based styles are loading properly.</li>
+              <li class="box--small">Checkout your page in the browser to see your new <em class="yellow">sassified stylez</em>!</li>
             </ol>
 
             <ul class="box right" style="width: 35%;">
@@ -931,7 +969,6 @@
               <li>Nesting</li>
               <li class="break">Variables</li>
               <li class="break">Imports &amp; Organization</li>
-              <li class="break">Math &amp; Color Utilities</li>
             </ol>
             <aside class="notes">
               <p>Imports are critical for a modular and organized architecture</p>
@@ -1310,7 +1347,7 @@
 
           <!-- Sass Basics : Nesting : Develop It! -->
           <section>
-            <h3>Nesting <span class="yellow">Exercise</span></h3>
+            <h3>Nesting <span class="yellow">Let's develop it!</span></h3>
 
             <div class="box left" style="width: 55%;">
               <p class="yellow">NEST ALL THE THINGS!!</p>
@@ -1792,7 +1829,7 @@
 
           <!-- Sass Basics : Variables : Develop It! -->
           <section>
-            <h3>Variables <span class="yellow">Exercise</span></h3>
+            <h3>Variables <span class="yellow">Let's develop it!</span></h3>
             <div class="box left" style="width: 48%">
               <p class="green"><strong>DRY Up Your Styles</strong></p>
               <p class="box--small yellow">Add Variables</p>
@@ -2078,7 +2115,7 @@
 
           <!-- Sass Basics : Imports & Organizations : Develop It! -->
           <section>
-            <h3>Imports <span class="yellow">Exercise</span></h3>
+            <h3>Imports <span class="yellow">Let's develop it!</span></h3>
             <div class="box left copy--small" style="width: 48%">
               <ul class="list--xtall">
                 <li><span class="green">Update your Sass structure</span> to look something like the one on the right.</li>
@@ -2115,162 +2152,6 @@
             </div>
             <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
             <aside class="notes"></aside>
-          </section>
-
-
-          <!-- Sass Basics : Math & Color -->
-          <section>
-            <h3>Sass Basics</h3>
-            <p>Math &amp; Color</p>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Math Operators -->
-          <section>
-            <h3><span class="blue">Sass Basics</span> Math Operators</h3>
-            <div class="box left copy--small" style="width: 48%">
-              <ul class="list--tall">
-                <li>Sass allows us to do <span class="green">basic math operations</span>*, like:
-                  <ul>
-                    <li><code>+</code> addition</li>
-                    <li><code>-</code> subtraction</li>
-                    <li><code>*</code> multiplication</li>
-                    <li><code>/</code> division</li>
-                    <li><code>%</code> modulus<br /><small>(remainder from division)</small></li>
-                  </ul>
-                </li>
-                <li>AND <span class="green">string concatenation</span></li>
-              </ul>
-            </div>
-            <div class="box--small right" style="width: 48%">
-              <pre><code>
-                $title: "Girl Develop It";
-                $base-font-size: 16px;
-                $padding-default: 2em;
-
-                .header {
-                  padding: $padding-default / 2;
-                  font-size: $base-font-size * 2;
-
-                  &:before {
-                    content: "Welcome to " + $title;
-                  }
-                }
-              </code></pre><br />
-              <p><small>* Sass attempts to operate on mismatched units, but will throw an error if incompatible</small></p>
-              <p><small><span class="green">Good:</span> <code>20px * 2</code> &nbsp; | &nbsp; <span class="red">Bad:</span> <code>20px + 4em</code></small></p>
-            </div>
-            <aside class="notes">
-              <p>This includes operations on <span class="green">numbers with units</span> (px, em, pt, rem, etc.)*</p>
-              <p>We have a gotchya when it comes to division...</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Math Division -->
-          <section>
-            <h3><span class="blue">Math</span> Division</h3>
-            <p class="copy--small box">CSS allows <code>/</code> to be used for separating values.</p>
-            <p class="copy--small"><code>font: normal 1.5em/1.25 Tahoma, Arial, sans-serif;</code></p>
-            <p class="copy--small box">SassScript maintains this support.<br />
-              <strong>There are three alternative ways to <span class="green">trigger division:</span></strong></p>
-            <ul class="copy--small">
-              <li>If any part of the equation is a <span class="green">variable</span>: <code>$padding / 2</code></li>
-              <li>If the equation is surrounded by <span class="green">parentheses</span>: <code>(350 / .25)</code></li>
-              <li>If the equation involves <span class="green">another expression</span>: <code>2 + 3 / 10</code></li>
-            </ul>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Math Utilities -->
-          <section>
-            <h3><span class="blue">Math</span> Utilities</h3>
-            <p class="box copy--small">Sass also comes with a set of <span class="green">math functions</span>:</p>
-            <ul class="copy--small">
-              <li><code>abs($num)</code> - absolute value</li>
-              <li><code>ceil($num)</code> - round up to closest whole number</li>
-              <li><code>floor($num)</code> - round down to closest whole number</li>
-              <li><code>percentage($num)</code> - convert to percentage</li>
-              <li><code>round($num)</code> - round to closest whole number </li>
-              <li><code>max($list)</code> - maximum list value </li>
-              <li><code>min($list)</code> - minimum list value</li>
-            </ul>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Math Color -->
-          <section>
-            <h3><span class="blue">Math</span> Color</h3>
-            <p class="copy--small box">We can also use <span class="green">math to manipulate colors</span>.</p>
-            <p class="copy--small">Math operations on colors <span class="green">work on pieces</span> (r, g, b).</p>
-            <div class="box">
-              <pre><code>
-                .addition {
-                  color: #555555 + #112233; // => #667788
-                }
-                .subtraction {
-                  color: #555555 - #112233; // => #443322
-                }
-                .multiplication {
-                  color: #555555 * 2;       // => #aaaaaa
-                }
-                .division {
-                  color: (#555555 / 2);     // => #2a2a2a
-                }
-              </code></pre>
-            </div>
-            <aside class="notes">
-              <p>However, there's an easier way.</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Color Utilities -->
-          <section>
-            <h3><span class="blue">Sass Basics</span> Color Utilities</h3>
-            <p class="box copy--small">Sass comes with a set of <span class="green">color functions</span>.</p>
-            <div class="left copy--small" style="width: 52%">
-              <ul>
-                <li><code>rgba($hex, $alpha)</code><br /><small>Converts HEX to RGBA and sets alpha (opacity)</small></li>
-                <li><code>lighten($color, $percent)</code><br /><small>Makes a color lighter</small></li>
-                <li><code>darken($color, $percent)</code><br /><small>Makes a color darker</small></li>
-                <li><code>saturate($color, $percent)</code><br /><small>Makes a color more saturated</small></li>
-                <li><code>desaturate($color, $percent)</code><br /><small>Makes a color less saturated</small></li>
-              </ul>
-            </div>
-            <div class="right copy--small" style="width: 46%">
-              <ul>
-                <li><code>mix($color1, $color2)</code><br /><small>Mixes two colors together</small></li>
-                <li><code>grayscale($color)</code><br /><small>Converts a color to grayscale</small></li>
-                <li><code>invert($color)</code><br /><small>Inverts a color</small></li>
-                <li><code>complement($color)</code><br /><small>Returns the complement of a color</small></li>
-                <li>AND SO MUCH MORE!</li>
-              </ul>
-            </div>
-            <p><small>Here's are two awesome tools to help <a href="http://sassme.arc90.com/" target="_blank">visualize</a> <a href="http://jackiebalzer.com/color" target="_blank">color</a> output.</small></p>
-            <aside class="notes">
-              <p>These are awesome and invaluable</p>
-              <p>These tools for math and color really help with maintainability and managing color palettes.</p>
-              <p>Let's give some of this a try...</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Math & Color : Develop It! -->
-          <section>
-            <h3>Math &amp; Color <span class="yellow">Exercise</span></h3>
-
-            <div class="box left copy--small" style="width: 48%">
-              <ul class="list--tall">
-                <li><span class="green">Use a color function</span> to darken the background color of header nav links on hover.<br />
-                  <small>Be sure to set the new color to a variable, too!</small></li>
-                <li><span class="green">Use math operations</span> to calculate any widths being set:
-                  <ul class="copy--small">
-                    <li>See <code>.wrapper</code> and <code>.kitten</code></li>
-                    <li>See <code>.news</code>, <code>.events</code>, and <code>.location</code></li>
-                  </ul>
-                  <small class="box--small"><strong>Hint:</strong> use variables for "base" widths.</small></li>
-              </ul>
-            </div>
-            <div class="box--small right" style="width: 48%">
-              <img src="images/math.jpg" style="width: 75%;" />
-            </div>
-
-            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
           </section>
         </section>
 
@@ -2329,7 +2210,7 @@
 
           <!-- Day 2 : Project Setup : Develop It! -->
           <section>
-            <h3>Day 2 Setup <span class="yellow">Exercise</span></h3>
+            <h3>Day 2 Setup <span class="yellow">Let's develop it!</span></h3>
             <ol class="box--small copy--small list--tall">
               <li>Load up the slides.<br/><small><a href="https://sassshop.com/" target="_blank">https://SassShop.com</a></small></li>
               <li>Open the entire <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
@@ -2344,9 +2225,9 @@
 
           <!-- Day 2 : Project Sync Up : Develop It! -->
           <section>
-            <h3>Day 2 Sync Up <span class="yellow">Exercise</span></h3>
+            <h3>Day 2 Sync Up <span class="yellow">Let's develop it!</span></h3>
             <ol class="box copy--small list--tall">
-              <li>Open the <code>exercises</code> directory in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
+              <li>Open the <code>exercises</code> director in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
               <li>In <code>kittens</code>, <span class="green">create a new folder</span> called "day1".<br /><small>The name really isn't too important.</small></li>
               <li><span class="green">Move the contents</span> of <code>kittens</code> into the new <code>day1</code> folder.<br /><small>This should include: <code>index.html</code>, <code>sass/</code>, and <code>css/</code>.</small></li>
               <li><span class="green">Copy the contents</span> of <code>kittens-3-imports</code> into the <code>kittens</code> folder.<br /><small class="yellow">Yay, nesting, variables, and imports!</small></li>
@@ -2371,6 +2252,7 @@
             <ol class="broken">
               <li>Mixins (@include)</li>
               <li class="break">Inheritance (@extend)</li>
+              <li class="break">Math &amp; Color</li>
               <li class="break">Directives (Overview)</li>
             </ol>
           </section>
@@ -2908,7 +2790,7 @@
 
           <!-- Advanced Sass : Mixins : Develop It! -->
           <section>
-            <h3>Mixins <span class="yellow">Exercise</span></h3>
+            <h3>Mixins <span class="yellow">Let's develop it!</span></h3>
             <div class="box--small left copy--small" style="width: 64%">
               <ul class="list--tall">
                 <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
@@ -3232,7 +3114,7 @@
 
           <!-- Advanced Sass : Inheritance : Develop It! -->
           <section>
-            <h3>@extend <span class="yellow">Exercise</span></h3>
+            <h3>@extend <span class="yellow">Let's develop it!</span></h3>
             <div class="box--small left copy--small" style="width: 50%;">
               <ul class="list--tall">
                 <li><span class="green">Create a placeholder partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
@@ -3262,7 +3144,164 @@
             <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
           </section>
 
-          <!-- Advanced Sass : Directives -->
+
+          <!-- Advanced Sass : Math & Color -->
+          <section>
+            <h3>Advanced Sass</h3>
+            <p>Math &amp; Color</p>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Math Operators -->
+          <section>
+            <h3><span class="blue">Advanced Sass</span> Math Operators</h3>
+            <div class="box left copy--small" style="width: 48%">
+              <ul class="list--tall">
+                <li>Sass allows us to do <span class="green">basic math operations</span>*, like:
+                  <ul>
+                    <li><code>+</code> addition</li>
+                    <li><code>-</code> subtraction</li>
+                    <li><code>*</code> multiplication</li>
+                    <li><code>/</code> division</li>
+                    <li><code>%</code> modulus<br /><small>(remainder from division)</small></li>
+                  </ul>
+                </li>
+                <li>AND <span class="green">string concatenation</span></li>
+              </ul>
+            </div>
+            <div class="box--small right" style="width: 48%">
+              <pre><code>
+                $title: "Girl Develop It";
+                $base-font-size: 16px;
+                $padding-default: 2em;
+
+                .header {
+                  padding: $padding-default / 2;
+                  font-size: $base-font-size * 2;
+
+                  &:before {
+                    content: "Welcome to " + $title;
+                  }
+                }
+              </code></pre><br />
+              <p><small>* Sass attempts to operate on mismatched units, but will throw an error if incompatible</small></p>
+              <p><small><span class="green">Good:</span> <code>20px * 2</code> &nbsp; | &nbsp; <span class="red">Bad:</span> <code>20px + 4em</code></small></p>
+            </div>
+            <aside class="notes">
+              <p>This includes operations on <span class="green">numbers with units</span> (px, em, pt, rem, etc.)*</p>
+              <p>We have a gotchya when it comes to division...</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Math Division -->
+          <section>
+            <h3><span class="blue">Math</span> Division</h3>
+            <p class="copy--small box">CSS allows <code>/</code> to be used for separating values.</p>
+            <p class="copy--small"><code>font: normal 1.5em/1.25 Tahoma, Arial, sans-serif;</code></p>
+            <p class="copy--small box">SassScript maintains this support.<br />
+              <strong>There are three alternative ways to <span class="green">trigger division:</span></strong></p>
+            <ul class="copy--small">
+              <li>If any part of the equation is a <span class="green">variable</span>: <code>$padding / 2</code></li>
+              <li>If the equation is surrounded by <span class="green">parentheses</span>: <code>(350 / .25)</code></li>
+              <li>If the equation involves <span class="green">another expression</span>: <code>2 + 3 / 10</code></li>
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Math Utilities -->
+          <section>
+            <h3><span class="blue">Math</span> Utilities</h3>
+            <p class="box copy--small">Sass also comes with a set of <span class="green">math functions</span>:</p>
+            <ul class="copy--small">
+              <li><code>abs($num)</code> - absolute value</li>
+              <li><code>ceil($num)</code> - round up to closest whole number</li>
+              <li><code>floor($num)</code> - round down to closest whole number</li>
+              <li><code>percentage($num)</code> - convert to percentage</li>
+              <li><code>round($num)</code> - round to closest whole number </li>
+              <li><code>max($list)</code> - maximum list value </li>
+              <li><code>min($list)</code> - minimum list value</li>
+            </ul>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Math Color -->
+          <section>
+            <h3><span class="blue">Math</span> Color</h3>
+            <p class="copy--small box">We can also use <span class="green">math to manipulate colors</span>.</p>
+            <p class="copy--small">Math operations on colors <span class="green">work on pieces</span> (r, g, b).</p>
+            <div class="box">
+              <pre><code>
+                .addition {
+                  color: #555555 + #112233; // => #667788
+                }
+                .subtraction {
+                  color: #555555 - #112233; // => #443322
+                }
+                .multiplication {
+                  color: #555555 * 2;       // => #aaaaaa
+                }
+                .division {
+                  color: (#555555 / 2);     // => #2a2a2a
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>However, there's an easier way.</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Color Utilities -->
+          <section>
+            <h3><span class="blue">Advanced Sass</span> Color Utilities</h3>
+            <p class="box copy--small">Sass comes with a set of <span class="green">color functions</span>.</p>
+            <div class="left copy--small" style="width: 52%">
+              <ul>
+                <li><code>rgba($hex, $alpha)</code><br /><small>Converts HEX to RGBA and sets alpha (opacity)</small></li>
+                <li><code>lighten($color, $percent)</code><br /><small>Makes a color lighter</small></li>
+                <li><code>darken($color, $percent)</code><br /><small>Makes a color darker</small></li>
+                <li><code>saturate($color, $percent)</code><br /><small>Makes a color more saturated</small></li>
+                <li><code>desaturate($color, $percent)</code><br /><small>Makes a color less saturated</small></li>
+              </ul>
+            </div>
+            <div class="right copy--small" style="width: 46%">
+              <ul>
+                <li><code>mix($color1, $color2)</code><br /><small>Mixes two colors together</small></li>
+                <li><code>grayscale($color)</code><br /><small>Converts a color to grayscale</small></li>
+                <li><code>invert($color)</code><br /><small>Inverts a color</small></li>
+                <li><code>complement($color)</code><br /><small>Returns the complement of a color</small></li>
+                <li>AND SO MUCH MORE!</li>
+              </ul>
+            </div>
+            <p><small>Here's are two awesome tools to help <a href="http://sassme.arc90.com/" target="_blank">visualize</a> <a href="http://jackiebalzer.com/color" target="_blank">color</a> output.</small></p>
+            <aside class="notes">
+              <p>These are awesome and invaluable</p>
+              <p>These tools for math and color really help with maintainability and managing color palettes.</p>
+              <p>Let's give some of this a try...</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Math & Color : Develop It! -->
+          <section>
+            <h3>Math &amp; Color <span class="yellow">Let's develop it!</span></h3>
+
+            <div class="box left copy--small" style="width: 48%">
+              <ul class="list--tall">
+                <li><span class="green">Use a color function</span> to darken the background color of header nav links on hover.<br />
+                  <small>Be sure to set the new color to a variable, too!</small></li>
+                <li><span class="green">Use math operations</span> to calculate any widths being set:
+                  <ul class="copy--small">
+                    <li>See <code>.wrapper</code> and <code>.kitten</code></li>
+                    <li>See <code>.news</code>, <code>.events</code>, and <code>.location</code></li>
+                  </ul>
+                  <small class="box--small"><strong>Hint:</strong> use variables for "base" widths.</small></li>
+              </ul>
+            </div>
+            <div class="box--small right" style="width: 48%">
+              <img src="images/math.jpg" style="width: 75%;" />
+            </div>
+
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
+          </section>
+
+
+          <!-- Advanced Sass : Directive -->
           <section>
             <h3>Advanced Sass</h3>
             <p>Directive</p>
@@ -3271,7 +3310,7 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directives : Overview -->
+          <!-- Advanced Sass : Directive : Overview -->
           <section>
             <h3><span class="blue">Advanced Sass</span> Directive</h3>
             <ol class=" broken">
@@ -3284,7 +3323,7 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directives : Functions -->
+          <!-- Advanced Sass : Directive : Functions -->
           <section>
             <h3><span class="blue">Directives</span> Functions</h3>
             <div class="left" style="width: 50%">
@@ -3313,7 +3352,7 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directives : Conditionals -->
+          <!-- Advanced Sass : Directive : Conditionals -->
           <section>
             <h3><span class="blue">Directives</span> Conditionals</h3>
             <div class="left" style="width: 48%">
@@ -3361,7 +3400,7 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directives : Each Loops -->
+          <!-- Advanced Sass : Directive : Each Loops -->
           <section>
             <h3><span class="blue">Directives</span> Each Loops</h3>
             <div class="left" style="width: 48%">
@@ -3399,7 +3438,7 @@
             </aside>
           </section>
 
-          <!-- Advanced Sass : Directives : For Loops -->
+          <!-- Advanced Sass : Directive : For Loops -->
           <section>
             <h3><span class="blue">Directives</span> For Loops</h3>
             <div class="left" style="width: 43%">
@@ -3436,7 +3475,7 @@
             </div>
           </section>
 
-          <!-- Advanced Sass : Directives : While Loops -->
+          <!-- Advanced Sass : Directive : While Loops -->
           <section>
             <h3><span class="blue">Directives</span> While Loops</h3>
             <div class="left" style="width: 43%">
@@ -3797,7 +3836,7 @@
 
           <!-- Media Queries : Develop It! -->
           <section>
-            <h3>Media Queries <span class="yellow">Exercise</span></h3>
+            <h3>Media Queries <span class="yellow">Let's develop it!</span></h3>
             <p class="copy--small box--small">Turn this CSS <i class="fa fa-arrow-right blue"></i> Sass via the example methods below.<br/>
               <small>You get to decide the best way to organize and nest things.</small></p>
             <div class="left" style="width: 49%;">
@@ -4180,7 +4219,10 @@
 
       <footer>
         <div class="copyright">
-          #SassShop &nbsp; | &nbsp; @JewlOfTheLotus<span class="hide"> &nbsp; | &nbsp; <span class="js-event-name"></span></span>
+          #SassShop ~ Girl Develop It ~
+          <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+            <img alt="Creative Commons License" style="border-width:0" src="images/cc.png" />
+          </a>
         </div>
       </footer>
     </div>
@@ -4212,11 +4254,9 @@
 
 
       // Set Event Info
-      var eventName = "CodeMash 2015";
       var sponsor   = null;
       var wifi_name = null;
       var wifi_pass = null;
-      if (eventName) { $('.js-event-name').text(eventName).parent().show(); }
       if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
       if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
       if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
