@@ -95,8 +95,8 @@
               <li>What is Sass</li>
               <li>The Sass Workflow</li>
               <li>Sass Basics</li>
-              <li class="break js-break-1day js-break-2day">Advanced Sass</li>
-              <li class="break js-break-1day">Media Queries</li>
+              <li class="break js-break-1part js-break-2part">Advanced Sass</li>
+              <li class="break js-break-1part">Media Queries</li>
               <li>Modular Architecture</li>
               <li>Libraries &amp; Tools</li>
             </ol>
@@ -906,7 +906,7 @@
 
 
         <!-- BREAK TIME -->
-        <section class="js-2day">
+        <section class="js-2part js-break">
           <h3>Break Time!</h3>
           <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/banana-cat.gif" />
@@ -2276,50 +2276,25 @@
 
 
         <!-- BREAK TIME -->
-        <section class="js-1day">
+        <section class="js-1part js-break">
           <h3>Break Time!</h3>
           <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/banana-cat.gif" />
         </section>
 
 
-        <!-- PART 1 : REVIEW -->
-        <section class="js-1day js-2day">
-          <h3 class="green"><span class="blue">Part 1</span> Review</h3>
-          <div class="box">
-            <p class="box--small">Sass Intro</p>
-            <p>Workflow</p>
-            <p class="box--small">Nesting</p>
-            <p>Variables</p>
-            <p class="box--small">Imports &amp; Organization</p>
-            <p class="yellow">Questions?</p>
-          </div>
-          <aside class="notes">
-          </aside>
-        </section>
-
-
         <!-- DAY 2 : INTRO -->
-        <section class="js-2day">
-          <!-- DAY 2 : Event Intro -->
-          <section>
-            <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
-            <div class="box--small">
-              <h3>Getting Sassy with CSS</h3>
-              <p><small>#SassShop</small></p>
-            </div>
-          </section>
-
-
+        <section class="js-2part">
           <!-- DAY 2 : Day 1 Review -->
-          <section class="js-2day">
-            <h3 class="green"><span class="blue">Day 1</span> Review</h3>
+          <section class="js-2part">
+            <h3 class="green"><span class="blue">Basics</span> Review</h3>
             <div class="box">
-              <p class="box--small">Sass Intro</p>
+              <p class="box--small">About Sass</p>
               <p>Workflow</p>
               <p class="box--small">Nesting</p>
               <p>Variables</p>
               <p class="box--small">Imports &amp; Organization</p>
+              <p class="box--small">Math &amp; Color Utilities</p>
               <p class="yellow">Questions?</p>
             </div>
             <aside class="notes">
@@ -2328,8 +2303,8 @@
 
 
           <!-- Day 2 : Project Setup : Develop It! -->
-          <section>
-            <h3>Day 2 Setup <span class="yellow">Exercise</span></h3>
+          <section class="js-2part-setup">
+            <h3>Part 2 Setup <span class="yellow">Exercise</span></h3>
             <ol class="box--small copy--small list--tall">
               <li>Load up the slides.<br/><small><a href="https://sassshop.com/" target="_blank">https://SassShop.com</a></small></li>
               <li>Open the entire <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
@@ -2344,7 +2319,7 @@
 
           <!-- Day 2 : Project Sync Up : Develop It! -->
           <section>
-            <h3>Day 2 Sync Up <span class="yellow">Exercise</span></h3>
+            <h3>Part 2 Sync Up <span class="yellow">Exercise</span></h3>
             <ol class="box copy--small list--tall">
               <li>Open the <code>exercises</code> directory in your <span class="green">file browser</span>.<br /><small><strong>OS X:</strong> Finder; <strong>Windows:</strong> File Explorer</small></li>
               <li>In <code>kittens</code>, <span class="green">create a new folder</span> called "day1".<br /><small>The name really isn't too important.</small></li>
@@ -3487,7 +3462,7 @@
 
 
         <!-- BREAK TIME -->
-        <section class="js-1day js-2day">
+        <section class="js-1part js-2part js-break">
           <h3>Break Time!</h3>
           <p class="box">Enjoy some snacks!<br /><small class="hide">courtesy of <strong class="js-sponsor-name"></strong></small></p>
           <img src="images/hungry-lion.gif" />
@@ -3495,16 +3470,15 @@
 
 
         <!-- PART 2 : REVIEW -->
-        <section class="js-1day js-2day">
-          <h3 class="green"><span class="blue">Part 2</span> Review</h3>
+        <section class="js-1part js-2part">
+          <h3 class="green"><span class="blue">Advanced</span> Review</h3>
           <div class="box">
             <p class="box--small">Mixins (@include)</p>
             <p>Inheritance (@extend)</p>
-            <p class="box--small">Math &amp; Color</p>
-            <p>Functions</p>
-            <p class="box--small">Conditionals</p>
-            <p>Loops</p>
-            <p class="box--small yellow">Questions?</p>
+            <p class="box--small">Functions</p>
+            <p>Conditionals</p>
+            <p class="box--small">Loops</p>
+            <p class="yellow">Questions?</p>
           </div>
         </section>
 
@@ -4069,17 +4043,23 @@
         </section>
 
 
-        <!-- YAY -->
-        <section>
-          <h3 class="green">Yay!</h3>
-          <img src="images/kermit.gif" />
-        </section>
-
-
         <!-- PART 3 : REVIEW -->
-        <section class="js-1day js-2day">
-          <h3 class="green"><span class="blue">Part 3</span> Review</h3>
-          <div class="box">
+        <section class="js-1part js-2part">
+          <h3 class="green"><span class="blue">Closing</span> Review</h3>
+          <div class="left copy--small" style="width: 48%">
+            <p class="box--small">About Sass</p>
+            <p>Workflow</p>
+            <p class="box--small">Nesting</p>
+            <p>Variables</p>
+            <p class="box--small">Imports &amp; Organization</p>
+            <p>Math &amp; Color Utilities</p>
+            <p class="box--small">Mixins (@include)</p>
+            <p>Inheritance (@extend)</p>
+          </div>
+          <div class="right copy--small" style="width: 48%">
+            <p class="box--small">Functions</p>
+            <p>Conditionals</p>
+            <p class="box--small">Loops</p>
             <p class="box--small">Media Queries</p>
             <p>Modular Architecture</p>
             <p class="box--small">Libraries</p>
@@ -4167,15 +4147,6 @@
           </section>
         </section>
 
-
-        <!-- COURSE OUTRO -->
-        <section>
-          <img src="images/gdiaa.png" style="border: none; box-shadow: none;">
-          <div class="box--small">
-            <h3>Getting Sassy with CSS</h3>
-            <p><small>#SassShop</small></p>
-          </div>
-        </section>
       </div>
 
       <footer>
@@ -4194,20 +4165,20 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/reveal.min.js"></script>
     <script>
-      // Toggle Session Format (1-Day or 2-Days)
+      // Toggle Session Format (1 part or 2parts)
       var queryStr = window.location.search;
 
-      if (queryStr.indexOf('days=1') > -1) {
-        $('.js-2day:not(.js-1day)').remove();
-        $('.js-break-2day:not(.js-break-1day)').removeClass('break');
+      if (queryStr.indexOf('parts=1') > -1) {
+        $('.js-2part:not(.js-1part)').remove();
+        $('.js-break-2part:not(.js-break-1part)').removeClass('break');
 
-      } else if (queryStr.indexOf('days=2') > -1) {
-        $('.js-1day:not(.js-2day)').remove();
-        $('.js-break-1day:not(.js-break-2day)').removeClass('break');
+      } else if (queryStr.indexOf('parts=2') > -1) {
+        $('.js-1part:not(.js-2part)').remove();
+        $('.js-break-1part:not(.js-break-2part)').removeClass('break');
 
       } else {
-        $('.js-1day, .js-2day').remove();
-        $('.js-break-1day, .js-break-2day').removeClass('break');
+        $('.js-1part, .js-2part').remove();
+        $('.js-break-1part, .js-break-2part').removeClass('break');
       }
 
 
@@ -4216,10 +4187,14 @@
       var sponsor   = null;
       var wifi_name = null;
       var wifi_pass = null;
+      var breaks    = false;
+      var p2_setup  = false;
       if (eventName) { $('.js-event-name').text(eventName).parent().show(); }
       if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
       if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
       if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
+      if (!breaks)   { $('.js-break').remove(); }
+      if (!p2_setup) { $('.js-2part-setup').remove(); }
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
