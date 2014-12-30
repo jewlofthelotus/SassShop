@@ -837,12 +837,12 @@
             <aside class="notes">
               <p>Exercise - Section 2</p>
               <ul>
-                <li>sass sass/screen.scss css/screen.css</li>
-                <li>sass --update sass/screen.scss:css/screen.css</li>
-                <li>sass --watch sass/screen.scss:css/screen.css</li>
-                <li>sass --style expanded sass/screen.scss:css/screen.css</li>
-                <li>sass --style compact sass/screen.scss:css/screen.css</li>
-                <li>sass --style compressed sass/screen.scss:css/screen.css</li>
+                <li>sass sass/application.scss css/application.css</li>
+                <li>sass --update sass/application.scss:css/application.css</li>
+                <li>sass --watch sass/application.scss:css/application.css</li>
+                <li>sass --style expanded sass/application.scss:css/application.css</li>
+                <li>sass --style compact sass/application.scss:css/application.css</li>
+                <li>sass --style compressed sass/application.scss:css/application.css</li>
               </ul>
             </aside>
           </section>
@@ -865,22 +865,18 @@
             <h3>Workflow <span class="yellow">Exercise</span></h3>
 
             <ol class="box--small left copy--small " style="width: 60%;">
-              <li>Open <code>index.html</code> in the broswer<br />
-                <small>Optionally enable <strong>LivePage</strong>**</small>
-              </li>
-              <li>Copy <code>css/application.css</code> to <code>sass/application.scss</code><br />
-                <small><code>mkdir sass &amp;&amp; cp css/application.css sass/application.scss</code></small>
-              </li>
-              <li>Remove <code>application.css</code> <br />
-                <small><code>rm css/application.css</code></small>
+              <li>Move <code>css/application.css</code> to <code>sass/application.scss</code><br />
+                <small><code>mkdir sass &amp;&amp; mv css/application.css sass/application.scss</code></small>
               </li>
               <li>Run Sass: <br />
                 <small><code>sass --watch sass/application.scss:css/application.css</code><br /></small>
               </li>
-              <li>Refresh <code>index.html</code> in the browser and verify the new Sass-based styles are loading properly.</li>
+              <li>Refresh <code>index.html</code> in the browser and verify the new Sass-based styles are loading properly.
+                <br/><small>Optionally enable <strong>LivePage</strong> for auto-refreshing**</small></li>
+              <li>Make some style changes and verify the new styles are compiling and appearing.</li>
             </ol>
 
-            <ul class="box right" style="width: 35%;">
+            <ul class="box--small right" style="width: 35%;">
               <li><strong>kittens</strong>
                 <ul>
                   <li>index.html</li>
@@ -929,8 +925,8 @@
             <h3>Sass Basics</h3>
             <ol class="box broken">
               <li>Nesting</li>
-              <li class="break">Variables</li>
               <li class="break">Imports &amp; Organization</li>
+              <li class="break">Variables</li>
               <li class="break">Math &amp; Color Utilities</li>
             </ol>
             <aside class="notes">
@@ -1352,6 +1348,334 @@
 
             <aside class="notes">
             </aside>
+          </section>
+
+
+          <!-- Sass Basics : Imports & Organization -->
+          <section>
+            <h3>Sass Basics</h3>
+            <p>Imports &amp; Organization</p>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Use -->
+          <section>
+            <h4><span class="blue">Sass Basics</span> Imports &amp; Organization</h4>
+            <div class="box--small copy--small">
+              <p class="box">CSS <code>@import</code> has always meant an <span class="red">extra file download</span>.</p>
+              <p><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side.</p>
+            </div>
+            <p class="pink">Organization OMGZZ!</p>
+            <pre><code class="scss">
+              @import "vars";
+
+              @import "compass";
+              @import "fontawesome";
+
+              @import "utilities";
+
+              @import "grid";
+              @import "base";
+
+              @import "modules/all";
+              @import "pages/all";
+            </code></pre>
+            <aside class="notes">
+              <p>What does this mean?</p>
+              <p>Now that we've grouped all our styles together with nesting</p>
+              <p>We can now break these groups out into smaller, maintainable modules</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Imports -->
+          <section>
+            <h3><span class="blue">Organization</span> Imports</h3>
+            <div class="box left left-align copy--small" style="width: 48%">
+              <p><code>@import</code> takes a <span class="green">path</span> to a Sass resource, the <span class="green">file extension is optional</span>.</p>
+              <p class="box">These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory.</p>
+            </div>
+            <div class="box--small right" style="width: 48%">
+              <pre><code class="scss">
+                @import "vars";
+
+                @import "compass";
+                @import "fontawesome";
+
+                @import "utilities";
+
+                @import "grid";
+                @import "base";
+
+                @import "modules/all";
+                @import "pages/all";
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Now when I say MAIN SASS FILE we're starting to get into file organization here...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Import File Structure -->
+          <section>
+            <h3><span class="blue">Imports</span> File Structure</h3>
+            <div class="box--small left" style="width: 50%">
+              <h4 class="green">application.scss</h4>
+              <pre><code>
+                @import "vars";
+                @import "lib/compass";
+                @import "lib/fontawesome";
+                @import "utilities";
+                @import "grid";
+                @import "base";
+              </code></pre>
+
+              <p class="box copy--small"><small><code><strong>$</strong> sass sass/application.scss css/application.css</code></small></p>
+            </div>
+            <div class="box--small right copy--small" style="width: 48%">
+              <ul>
+                <li>project_awesome
+                  <ul>
+                    <li>sass
+                      <ul>
+                        <li>lib
+                          <ul>
+                            <li>compass.scss</li>
+                            <li>fontawesome.scss</li>
+                          </ul>
+                        </li>
+                        <li>base.scss</li>
+                        <li>grid.scss</li>
+                        <li class="green">application.scss</li>
+                        <li>utilities.scss</li>
+                        <li>vars.scss</li>
+                      </ul>
+                    </li>
+                    <li>css
+                      <ul>
+                        <li class="yellow">application.css</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <ul class="copy--small">
+                <li>application.scss is our "main" sass file, where we import and organize our project</li>
+                <li>the @import paths reference files in the same directory or nested below</li>
+                <li>so if we were to run this <code>sass</code> command, we'd end up with application.css</li>
+                <li>Now there's sort of a gotchya here...</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Import Gotchya -->
+          <section>
+            <h3><span class="blue">Imports</span> Compiling Directories</h3>
+
+            <p class="box copy--small"><code><strong>$</strong> sass sass/ css/</code></p>
+
+            <div class=" left copy--small" style="width: 48%">
+              <ul>
+                <li>sass
+                  <ul>
+                    <li>lib
+                      <ul>
+                        <li>compass.scss</li>
+                        <li>fontawesome.scss</li>
+                      </ul>
+                    </li>
+                    <li>base.scss</li>
+                    <li>grid.scss</li>
+                    <li class="green">application.scss</li>
+                    <li>utilities.scss</li>
+                    <li>vars.scss</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="fragment right copy--small" style="width: 52%">
+              <div class="left" style="width: 20%">
+                <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+                <p class="box"><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+                <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+              </div>
+              <ul>
+                <li>css
+                  <ul class="red">
+                    <li>lib
+                      <ul>
+                        <li>compass.css</li>
+                        <li>fontawesome.css</li>
+                      </ul>
+                    </li>
+                    <li>base.css</li>
+                    <li>grid.css</li>
+                    <li class="yellow">application.css</li>
+                    <li>utilities.css</li>
+                    <li>vars.css</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>if we compile the whole directory, we get output for every file</p>
+              <p>running <code>sass</code> on directories will compile all Sass files regardless of whether or not they've been included elsewhere</p>
+              <p>how do we fix that? what if we wanted to compile a screen and a print stylesheet and didn't want to run multiple sass commands...</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Partials -->
+          <section>
+            <h3><span class="blue">Imports</span> Partials</h3>
+
+            <p class="copy--small box"><code><strong>$</strong> sass sass/ css/</code></p>
+
+            <div class=" left copy--small" style="width: 48%">
+              <ul>
+                <li>sass
+                  <ul>
+                    <li>lib
+                      <ul>
+                        <li>_compass.scss</li>
+                        <li>_fontawesome.scss</li>
+                      </ul>
+                    </li>
+                    <li>_base.scss</li>
+                    <li>_grid.scss</li>
+                    <li class="green">print.scss</li>
+                    <li class="green">application.scss</li>
+                    <li>_utilities.scss</li>
+                    <li>_vars.scss</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class=" left" style="width: 4%">
+              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
+            </div>
+            <div class="right left-align copy--small" style="width: 40%">
+              <ul>
+                <li>css
+                  <ul>
+                    <li class="yellow">print.css</li>
+                    <li class="yellow">application.css</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="box copy--small">
+                <ul>
+                  <li class="box--small">An <span class="pink">_underscore</span> creates a partial</li>
+                  <li>Partials will not compile to <code>.css</code> on their own, they <span class="pink">must be <code>@import</code>ed</span></li>
+                  <li class="box--small">Partials allow us to break up our code into more <span class="pink">modular, maintainable chunks</span>!</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Organization -->
+          <section>
+            <h3><span class="blue">Imports</span> Organization</h3>
+            <div class="left box" style="width: 48%">
+              <h4 class="yellow">Common Practices</h4>
+              <ul class="list--tall box--small copy--small">
+                <li><code>_vars.scss</code> is a separate sheet for all your variables and settings</li>
+                <li>Variables > Libraries > Base > Modules > Pages<br/><small>Modular Architecture, OOCSS, SMACSS, Atomic Design</small></li>
+                <li><code>_all.scss</code> is often used to import collections of similar imports</li>
+              </ul>
+            </div>
+            <div class="right box" style="width: 48%">
+              <h4 class="green">application.scss</h4>
+              <pre><code>
+                // Variables
+                @import "vars";
+
+                // Libraries
+                @import "lib/compass";
+                @import "lib/fontawesome";
+
+                // Base Styles, Utility Classes, etc.
+                @import "base/all";
+
+                // Individual Components
+                @import "modules/all";
+
+                // Page Styles
+                @import "pages/all";
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Ultimately, how you organize your code is up to you</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organization : Grouped Imported -->
+          <section>
+            <h3><span class="blue">Import</span> Groups</h3>
+            <div class="left left-align box" style="width: 48%">
+              <p class="box copy--small">You can <span class="yellow">DRY</span> up <code>@import</code>s by grouping them together with <span class="yellow">comma separation</span>.</p>
+            </div>
+            <div class="right box" style="width: 48%">
+              <h4 class="green">application.scss</h4>
+              <pre><code>
+                // Variables
+                @import "vars";
+
+                // Libraries
+                @import "lib/compass",
+                        "lib/fontawesome";
+
+                // Application
+                @import "base/all",
+                        "modules/all",
+                        "pages/all";
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Ultimately, how you organize your code is up to you</p>
+            </aside>
+          </section>
+
+          <!-- Sass Basics : Imports & Organizations : Develop It! -->
+          <section>
+            <h3>Imports <span class="yellow">Exercise</span></h3>
+            <div class="box left copy--small" style="width: 48%">
+              <ul class="list--xtall">
+                <li><span class="green">Update your Sass structure</span> to look something like the one on the right.</li>
+                <li><span class="green">Move ALL styles</span> from <code>application.scss</code> to more modular / organized locations.</li>
+                <li><span class="green">Update</span> <code>application.scss</code> to <code>@import</code> your new partials.</li>
+              </ul>
+            </div>
+            <div class="box--small right copy--small" style="width: 48%">
+              <ul>
+                <li>kittens
+                  <ul>
+                    <li>sass
+                      <ul>
+                        <li>base
+                          <ul>
+                            <li>_base.scss</li>
+                          </ul>
+                        </li>
+                        <li>modules
+                          <ul>
+                            <li>_all.scss</li>
+                            <li>_header.scss</li>
+                            <li>_footer.scss</li>
+                            <li>_kittens.scss</li>
+                            <li>_info.scss</li>
+                          </ul>
+                        </li>
+                        <li>application.scss</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
+            <aside class="notes"></aside>
           </section>
 
 
@@ -1793,8 +2117,9 @@
           <!-- Sass Basics : Variables : Develop It! -->
           <section>
             <h3>Variables <span class="yellow">Exercise</span></h3>
-            <div class="box left" style="width: 48%">
-              <p class="green"><strong>DRY Up Your Styles</strong></p>
+            <div class="box--small left" style="width: 54%">
+              <p class="copy--small left-align"><span class="green">Create a vars partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</p>
+              <p class="box--small green"><strong>DRY Up Your Styles</strong></p>
               <p class="box--small yellow">Add Variables</p>
               <ul class="copy--small">
                 <li>colors values</li>
@@ -1803,10 +2128,10 @@
                 <li>border radius</li>
               </ul>
             </div>
-            <div class="right" style="width: 48%">
+            <div class="right" style="width: 46%">
               <p class="box--small red">Repetitious values.</p>
-              <p class="red">"Arbitrary" values.</p>
-              <img src="images/onlyone.jpg" style="width: 60%; margin: 1em auto;" />
+              <p class="red">Arbitrary values.<br/><small class="grey">(Code smells.)</small></p>
+              <img src="images/onlyone.jpg" style="width: 60%; margin: .5em auto;" />
             </div>
 
             <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
@@ -1814,307 +2139,6 @@
             <aside class="notes">
               <p>So we're not going to focus too much on globals or overrides or interpolation at this stage, let's just get comfortable with setting and using variables</p>
             </aside>
-          </section>
-
-
-          <!-- Sass Basics : Core Features : 3.3 Imports & Organization -->
-          <section>
-            <h3>Sass Basics</h3>
-            <p>Imports &amp; Organization</p>
-          </section>
-
-          <!-- Sass Basics : Core Features : Imports & Organization -->
-          <section>
-            <h4><span class="blue">Sass Basics</span> Imports &amp; Organization</h4>
-            <div class="box--small copy--small">
-              <p class="box">CSS <code>@import</code> has always meant an <span class="red">extra file download</span>.</p>
-              <p><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side.</p>
-            </div>
-            <p class="pink">Organization OMGZZ!</p>
-            <pre><code class="scss">
-              @import "vars";
-
-              @import "compass";
-              @import "fontawesome";
-
-              @import "utilities";
-
-              @import "grid";
-              @import "base";
-
-              @import "modules/all";
-              @import "pages/all";
-            </code></pre>
-            <aside class="notes">
-              <p>What does this mean?</p>
-              <p>We can now organize our styles in a modular fashion</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organization : Imports -->
-          <section>
-            <h3><span class="blue">Organization</span> Imports</h3>
-            <div class="box left left-align copy--small" style="width: 48%">
-              <p><code>@import</code> takes a <span class="green">path</span> to a Sass resource, the <span class="green">file extension is optional</span>.</p>
-              <p class="box">These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory.</p>
-            </div>
-            <div class="box--small right" style="width: 48%">
-              <pre><code class="scss">
-                @import "vars";
-
-                @import "compass";
-                @import "fontawesome";
-
-                @import "utilities";
-
-                @import "grid";
-                @import "base";
-
-                @import "modules/all";
-                @import "pages/all";
-              </code></pre>
-            </div>
-            <aside class="notes">
-              <p>Now when I say MAIN SASS FILE we're starting to get into file organization here...</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organization : Import File Structure -->
-          <section>
-            <h3><span class="blue">Imports</span> File Structure</h3>
-            <div class="box--small left" style="width: 50%">
-              <h4 class="green">application.scss</h4>
-              <pre><code>
-                @import "vars";
-                @import "lib/compass";
-                @import "lib/fontawesome";
-                @import "utilities";
-                @import "grid";
-                @import "base";
-              </code></pre>
-
-              <p class="box"><small><code><strong>$</strong> sass sass/screen.scss css/screen.css</code></small></p>
-            </div>
-            <div class="box--small right copy--small" style="width: 48%">
-              <ul>
-                <li>project_awesome
-                  <ul>
-                    <li>sass
-                      <ul>
-                        <li>lib
-                          <ul>
-                            <li>compass.scss</li>
-                            <li>fontawesome.scss</li>
-                          </ul>
-                        </li>
-                        <li>base.scss</li>
-                        <li>grid.scss</li>
-                        <li class="green">screen.scss</li>
-                        <li>utilities.scss</li>
-                        <li>vars.scss</li>
-                      </ul>
-                    </li>
-                    <li>css
-                      <ul>
-                        <li class="yellow">screen.css</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <aside class="notes">
-              <ul class="copy--small">
-                <li>application.scss is our "main" sass file, where we import and organize our project</li>
-                <li>the @import paths reference files in the same directory or nested below</li>
-                <li>so if we were to run this <code>sass</code> command, we'd end up with application.css</li>
-                <li>Now there's sort of a gotchya here...</li>
-              </ul>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organization : Import Gotchya -->
-          <section>
-            <h3><span class="blue">Imports</span> Compiling Directories</h3>
-
-            <p class="box copy--small"><code><strong>$</strong> sass sass/ css/</code></p>
-
-            <div class=" left copy--small" style="width: 48%">
-              <ul>
-                <li>sass
-                  <ul>
-                    <li>lib
-                      <ul>
-                        <li>compass.scss</li>
-                        <li>fontawesome.scss</li>
-                      </ul>
-                    </li>
-                    <li>base.scss</li>
-                    <li>grid.scss</li>
-                    <li class="green">screen.scss</li>
-                    <li>utilities.scss</li>
-                    <li>vars.scss</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class=" left" style="width: 4%">
-              <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
-              <p class="box"><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
-              <p><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
-            </div>
-            <div class=" right copy--small" style="width: 48%">
-              <ul>
-                <li class="red">css
-                  <ul>
-                    <li>lib
-                      <ul>
-                        <li>compass.css</li>
-                        <li>fontawesome.css</li>
-                      </ul>
-                    </li>
-                    <li>base.css</li>
-                    <li>grid.css</li>
-                    <li class="yellow">screen.css</li>
-                    <li>utilities.css</li>
-                    <li>vars.css</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <aside class="notes">
-              <p>if we compile the whole directory, we get output for every file</p>
-              <p>running <code>sass</code> on directories will compile all Sass files regardless of whether or not they've been included elsewhere</p>
-              <p>how do we fix that? what if we wanted to compile a screen and a print stylesheet and didn't want to run multiple sass commands...</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organization : Partials -->
-          <section>
-            <h3><span class="blue">Imports</span> Partials</h3>
-
-            <p class="copy--small box"><code><strong>$</strong> sass sass/ css/</code></p>
-
-            <div class=" left copy--small" style="width: 48%">
-              <ul>
-                <li>sass
-                  <ul>
-                    <li>lib
-                      <ul>
-                        <li>_compass.scss</li>
-                        <li>_fontawesome.scss</li>
-                      </ul>
-                    </li>
-                    <li>_base.scss</li>
-                    <li>_grid.scss</li>
-                    <li class="green">print.scss</li>
-                    <li class="green">screen.scss</li>
-                    <li>_utilities.scss</li>
-                    <li>_vars.scss</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class=" left" style="width: 4%">
-              <p class='box'><i class="fa fa-arrow-right blue" style="font-size: 72px;"></i></p>
-            </div>
-            <div class="right left-align copy--small" style="width: 40%">
-              <ul>
-                <li>css
-                  <ul>
-                    <li class="yellow">print.css</li>
-                    <li class="yellow">screen.css</li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="box copy--small">
-                <ul>
-                  <li class="box--small">An <span class="pink">_underscore</span> creates a partial</li>
-                  <li>Partials will not compile to <code>.css</code> on their own, they <span class="pink">must be <code>@import</code>ed</span></li>
-                  <li class="box--small">Partials allow us to break up our code into more <span class="pink">modular, maintainable chunks</span>!</li>
-                </ul>
-              </div>
-            </div>
-            <aside class="notes">
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organization : Organization -->
-          <section>
-            <h3><span class="blue">Imports</span> Organization</h3>
-            <div class="left box" style="width: 48%">
-              <h4 class="yellow">Common Practices</h4>
-              <ul class="list--tall box--small copy--small">
-                <li><code>_vars.scss</code> is a separate sheet for all your variables</li>
-                <li><code>_vars.scss</code> is added first so that it's variables can override later <code>!default</code>ed ones</li>
-                <li>Variables > Libraries > Base > Modules > Pages<br/><small>OOCSS, BEM, SMACSS, Atomic Design</small></li>
-                <li class="green">Modular Architecture</li>
-              </ul>
-            </div>
-            <div class="right box" style="width: 48%">
-              <h4 class="green">application.scss</h4>
-              <pre><code>
-                // Variables
-                @import "vars";
-
-                // Libraries
-                @import "lib/compass";
-                @import "lib/fontawesome";
-
-                // Base Styles, Utility Classes, etc.
-                @import "base/all";
-
-                // Individual Components
-                @import "modules/all";
-
-                // Page Styles
-                @import "pages/all";
-              </code></pre>
-            </div>
-            <aside class="notes">
-              <p>Ultimately, how you organize your code is up to you</p>
-            </aside>
-          </section>
-
-          <!-- Sass Basics : Imports & Organizations : Develop It! -->
-          <section>
-            <h3>Imports <span class="yellow">Exercise</span></h3>
-            <div class="box left copy--small" style="width: 48%">
-              <ul class="list--xtall">
-                <li><span class="green">Update your Sass structure</span> to look something like the one on the right.</li>
-                <li><span class="green">Move ALL styles</span> from <code>application.scss</code> to more modular / organized locations.</li>
-                <li><span class="green">Update</span> <code>application.scss</code> to <code>@import</code> your new partials.</li>
-              </ul>
-            </div>
-            <div class="box--small right copy--small" style="width: 48%">
-              <ul>
-                <li>kittens
-                  <ul>
-                    <li>sass
-                      <ul>
-                        <li>base
-                          <ul>
-                            <li>_vars.scss</li>
-                            <li>_base.scss</li>
-                          </ul>
-                        </li>
-                        <li>modules
-                          <ul>
-                            <li>_header.scss</li>
-                            <li>_footer.scss</li>
-                            <li>_kittens.scss</li>
-                            <li>_info.scss</li>
-                          </ul>
-                        </li>
-                        <li>application.scss</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <p><small><code>sass --watch --style expanded sass/application.scss:css/application.css</code></small></p>
-            <aside class="notes"></aside>
           </section>
 
 
@@ -2292,10 +2316,10 @@
               <p class="box--small">About Sass</p>
               <p>Workflow</p>
               <p class="box--small">Nesting</p>
-              <p>Variables</p>
-              <p class="box--small">Imports &amp; Organization</p>
-              <p class="box--small">Math &amp; Color Utilities</p>
-              <p class="yellow">Questions?</p>
+              <p>Imports &amp; Organization</p>
+              <p class="box--small">Variables</p>
+              <p>Math &amp; Color Utilities</p>
+              <p class="box--small yellow">Questions?</p>
             </div>
             <aside class="notes">
             </aside>
@@ -2346,7 +2370,8 @@
             <ol class="broken">
               <li>Mixins (@include)</li>
               <li class="break">Inheritance (@extend)</li>
-              <li class="break">Directives (Overview)</li>
+              <li class="break">Directives</li>
+              <li class="break">Maps</li>
             </ol>
           </section>
 
@@ -2457,9 +2482,9 @@
                 <li>We <span class="yellow">define</span> a mixin with the <code>@mixin</code> directive.</li>
                 <li>We <span class="yellow">reference</span> a mixin with the <code>@include</code> directive.</li>
                 <li><em>Mixins must be defined before they're referenced.</em></li>
-                <li>Mixins accept optional <span class="green">arguments</span>.</li>
                 <li>Mixins can be used with any other style rules.</li>
                 <li>You can <span class="green">nest</span> within mixins just like you can elsewhere.</li>
+                <li>Mixins accept optional <span class="green">arguments</span>.</li>
               </ul>
             </div>
             <aside class="notes">
@@ -3240,7 +3265,7 @@
           <!-- Advanced Sass : Directives -->
           <section>
             <h3>Advanced Sass</h3>
-            <p>Directive</p>
+            <p>Directives</p>
             <aside class="notes">
               <p>Last but not least, before we go to break, let's run though one more powerful component of Sass that is a bit beyond the scope of this workshop, but you should definitley know about anyway</p>
             </aside>
@@ -3248,7 +3273,7 @@
 
           <!-- Advanced Sass : Directives : Overview -->
           <section>
-            <h3><span class="blue">Advanced Sass</span> Directive</h3>
+            <h3><span class="blue">Advanced Sass</span> Directives</h3>
             <ol class=" broken">
               <li>Functions</li>
               <li class="break">Conditionals</li>
@@ -3941,13 +3966,6 @@
             </ul>
           </section>
 
-          <!-- Modular Architecture : Demo -->
-          <section>
-            <h3><span class="blue">Modular Architecture</span> Demo</h3>
-            <p class="box green">My Hybrid Sass System</p>
-            <p class="copy--small">OOCSS / SMACSS / Atomic / BEM</p>
-          </section>
-
           <!-- Modular Architecture : Resources -->
           <section>
             <h3><span class="blue">Modular Architecture</span> Resources</h3>
@@ -4050,8 +4068,8 @@
             <p class="box--small">About Sass</p>
             <p>Workflow</p>
             <p class="box--small">Nesting</p>
-            <p>Variables</p>
-            <p class="box--small">Imports &amp; Organization</p>
+            <p>Imports &amp; Organization</p>
+            <p class="box--small">Variables</p>
             <p>Math &amp; Color Utilities</p>
             <p class="box--small">Mixins (@include)</p>
             <p>Inheritance (@extend)</p>
@@ -4079,14 +4097,9 @@
           <!-- WRAP UP : Sass 3.? -->
           <section>
             <h3><span class="yellow">Sass X</span> Other Stuff</h3>
-            <ul class="box left copy--small" style="width: 48%">
-              <li>Map Data Structures<br /><small>Key-value pairs.</small></li>
-              <li>Map Functions<br /><small>ie. <code>map-get($map, $key)</code></small></li>
+            <ul class="box copy--small">
               <li>Selector Functions<br /><small>ie. <code>selector-append(&amp;, '--mod') </code></small></li>
               <li><code>@at-root</code> Directive<br /><small>Break out of nesting.</small></li>
-            </ul>
-            <ul class="box right copy--small" style="width: 52%">
-              <li>Multiple Assignment in <code>@each</code> loops<br /><small><code>@each $animal, $color in $animals {}</code></small></li>
               <li><code>@warn</code>, <code>@debug</code>, <code>@error</code><br /><small>Compile messages.</small></li>
               <li>Comments via <code>/* */</code> and <code>//</code><br /><small>Multi-line vs. Single</small></li>
               <li>And much more!</li>
@@ -4158,7 +4171,7 @@
 
     <!-- TODO:
 
-          make sure screen.js / application.js refs match up
+      command line: windows alternatives
 
      -->
 
