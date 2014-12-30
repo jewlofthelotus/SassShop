@@ -4178,14 +4178,33 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/reveal.min.js"></script>
     <script>
-      // Toggle Session Format (1 part or 2parts)
-      var queryStr = window.location.search;
+      // Set "Temporary" Event Info
+      var eventName = "CodeMash 2015";
+      var eventForm = 2;
+      var sponsor   = null;
+      var wifi_name = null;
+      var wifi_pass = null;
+      var breaks    = false;
+      var p2_setup  = false;
 
-      if (queryStr.indexOf('parts=1') > -1) {
+      if (eventName) { $('.js-event-name').text(eventName).parent().show(); }
+      if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
+      if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
+      if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
+      if (!breaks)   { $('.js-break').remove(); }
+      if (!p2_setup) { $('.js-2part-setup').remove(); }
+
+
+      // Toggle Session Format (1 part or 2 parts)
+      var queryStr = window.location.search;
+      var query_p1 = queryStr.indexOf('parts=1') > -1;
+      var query_p2 = queryStr.indexOf('parts=2') > -1;
+
+      if (query_p1 || eventForm == 1) {
         $('.js-2part:not(.js-1part)').remove();
         $('.js-break-2part:not(.js-break-1part)').removeClass('break');
 
-      } else if (queryStr.indexOf('parts=2') > -1) {
+      } else if (query_p2 || eventForm == 2) {
         $('.js-1part:not(.js-2part)').remove();
         $('.js-break-1part:not(.js-break-2part)').removeClass('break');
 
@@ -4194,20 +4213,6 @@
         $('.js-break-1part, .js-break-2part').removeClass('break');
       }
 
-
-      // Set Event Info
-      var eventName = "CodeMash 2015";
-      var sponsor   = null;
-      var wifi_name = null;
-      var wifi_pass = null;
-      var breaks    = false;
-      var p2_setup  = false;
-      if (eventName) { $('.js-event-name').text(eventName).parent().show(); }
-      if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
-      if (wifi_name) { $('.js-wifi-name').text(wifi_name).parent().show(); }
-      if (wifi_pass) { $('.js-wifi-pass').text(wifi_pass).parent().show(); }
-      if (!breaks)   { $('.js-break').remove(); }
-      if (!p2_setup) { $('.js-2part-setup').remove(); }
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
