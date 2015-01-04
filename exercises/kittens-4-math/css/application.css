@@ -1,8 +1,3 @@
-.wrapper:after, .kittens:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,6 +13,11 @@ a {
   a:hover {
     color: #aea4ad; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .wrapper {
   margin: 0 auto;
   width: 1200px; }
@@ -28,13 +28,6 @@ a {
 
 .search {
   float: right; }
-
-.navlist--inline, .header ul, .footer ul {
-  list-style-type: none; }
-  .navlist--inline li, .header ul li, .footer ul li {
-    display: inline-block; }
-  .navlist--inline a, .header ul a, .footer ul a {
-    display: block; }
 
 .header {
   background: #aea4ad;
@@ -49,11 +42,10 @@ a {
   .header nav {
     float: right; }
     .header nav a {
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px;
       background: #506f8e;
+      border-radius: 20px;
       color: #eee4da;
+      display: block;
       margin-right: 1em;
       padding: .5em 1em;
       text-decoration: none; }
@@ -65,7 +57,10 @@ a {
         transform: scale(1.1);
         background-color: #3e556d; }
   .header ul {
+    list-style-type: none;
     padding: 0; }
+  .header li {
+    display: inline-block; }
 
 .footer {
   background: #506f8e;
@@ -74,12 +69,16 @@ a {
     float: left; }
     .footer nav a {
       color: #aea4ad;
+      display: block;
       padding: 1em; }
       .footer nav a:hover {
         color: #d9d0cb; }
   .footer ul {
+    list-style-type: none;
     margin: 0;
     padding: 0; }
+  .footer li {
+    display: inline-block; }
 
 .copy {
   color: #d9d0cb;
@@ -90,8 +89,6 @@ a {
   list-style-type: none;
   padding: 0; }
   .kittens li {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     float: left;
     margin-bottom: 2em;
@@ -104,10 +101,8 @@ a {
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
   .kittens img {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    border: 10px solid #ffffff; }
+    border: 10px solid #ffffff;
+    border-radius: 20px; }
   .kittens label {
     font-weight: bold; }
 
@@ -142,28 +137,5 @@ a {
     font-weight: bold; }
   .location dd {
     margin: 0; }
-
-@media screen and (max-width: 480px) {
-  body {
-    text-align: center; }
-
-  .wrapper {
-    width: 100%; }
-
-  .search {
-    margin-top: 1em; }
-
-  .header nav,
-  .footer nav,
-  .footer .copy,
-  .search,
-  .kittens li,
-  .info {
-    float: none; }
-
-  .kittens li,
-  .info {
-    padding: 1em 0;
-    width: 100%; } }
 
 /*# sourceMappingURL=application.css.map */
