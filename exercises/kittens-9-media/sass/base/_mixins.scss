@@ -1,9 +1,3 @@
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
 @mixin scale($amount) {
   -webkit-transform: scale($amount);
       -ms-transform: scale($amount);

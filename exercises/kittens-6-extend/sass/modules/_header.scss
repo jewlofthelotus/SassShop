@@ -15,7 +15,7 @@
     float: right;
 
     a {
-      @include border-radius($border-radius);
+      border-radius: $border-radius;
       background: $blue;
       color: $tan;
       margin-right: 1em;

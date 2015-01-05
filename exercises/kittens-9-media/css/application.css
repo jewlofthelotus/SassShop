@@ -49,18 +49,14 @@ a {
   .header nav {
     float: right; }
     .header nav a {
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px;
       background: #506f8e;
+      border-radius: 20px;
       color: #eee4da;
       margin-right: 1em;
       padding: .5em 1em;
       text-decoration: none; }
       .header nav a:hover {
         -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -o-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         background-color: #3e556d; }
@@ -90,8 +86,6 @@ a {
   list-style-type: none;
   padding: 0; }
   .kittens li {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     float: left;
     margin-bottom: 2em;
@@ -99,15 +93,11 @@ a {
     width: 300px; }
     .kittens li:hover {
       -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
   .kittens img {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    border: 10px solid #ffffff; }
+    border: 10px solid #ffffff;
+    border-radius: 20px; }
   .kittens label {
     font-weight: bold; }
 
