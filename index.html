@@ -3389,25 +3389,135 @@
           <!-- Advanced Sass : Inheritance : Versus Mixins -->
           <section>
             <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
-            <div>
-              <pre><code>
-                %copy--small {
-                  font-size: $font-size-small;
-                  line-height: $line-height-small;
+            <div class="box--small copy--small">
+              <p>Are mixins <em>without</em> arguments bad?<br /> <small>Since they duplicate code, on both sides.</small></p>
+            </div>
+
+            <div class=" left" style="width: 49%">
+              <h4>Sass</h4>
+              <pre><code class="scss">
+                @mixin rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
                 }
 
-                %copy--medium {
-                  font-size: $font-size-medium;
-                  line-height: $line-height-medium;
+                .header {
+                  @include rounded-box;
                 }
 
-                %copy--large {
-                  font-size: $font-size-large;
-                  line-height: $line-height-large;
+                .footer {
+                  @include rounded-box;
+                }
+
+                .feature a {
+                  @include rounded-box;
+                }
+
+                .content {
+                  @include rounded-box;
                 }
               </code></pre>
             </div>
+            <div class=" right" style="width: 49%">
+              <h4 class="yellow">CSS Output</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+
             <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <div class="box--small copy--small">
+              <p>Is this better?.</small></p>
+            </div>
+
+            <div class=" left" style="width: 49%">
+              <h4>Sass</h4>
+              <pre><code class="scss">
+                %rounded-box {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .header {
+                  @extend %rounded-box;
+                }
+
+                .footer {
+                  @extend %rounded-box;
+                }
+
+                .feature a {
+                  @extend %rounded-box;
+                }
+
+                .content {
+                  @extend %rounded-box;
+                }
+              </code></pre>
+            </div>
+            <div class=" right" style="width: 49%">
+              <h4 class="yellow">CSS Output</h4>
+              <pre><code class="css">
+                .header,
+                .footer,
+                .feature a,
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+            <p>what if you extend a whooooollle bunch of stuff and end up with this?</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <div class="box--small copy--small">
+              <p>This is probably not good.</small></p>
+            </div>
+
+            <div>
+              <h4>Sass</h4>
+              <pre><code class="scss">
+                .header, .footer, .feature a, .content, .taco ul a, .hipster dl,
+                [class="btn--"], .comment .comment__body .comment__quote, .card__header,
+                .container .wrapper, .link--fancy, #badthing {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+            <p>what if you extend a whooooollle bunch of stuff and end up with this?</p>
             </aside>
           </section>
 
