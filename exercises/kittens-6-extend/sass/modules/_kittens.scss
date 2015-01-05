@@ -4,7 +4,7 @@
   padding: 0;
 
   li {
-    @include border-radius($border-radius);
+      border-radius: $border-radius;
     float: left;
     margin-bottom: 2em;
     text-align: center;
@@ -14,7 +14,7 @@
   }
 
   img {
-    @include border-radius($border-radius);
+    border-radius: $border-radius;
     border: $border-width solid $white;
   }
 

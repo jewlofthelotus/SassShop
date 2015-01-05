@@ -4,9 +4,6 @@
 
 @import "base/base";
 
-@import "modules/header",
-        "modules/footer",
-        "modules/kittens",
-        "modules/info";
+@import "modules/all";
 
 @import "base/media_queries";
