@@ -2904,6 +2904,100 @@
             </aside>
           </section>
 
+          <!-- Advanced Sass : Mixins : Example - Margin & Padding -->
+          <section>
+            <h3><span class="blue">Mixins</span> Margin &amp; Padding</h3>
+            <div>
+              <pre class="scss"><code>
+                @mixin margin--horz($left, $right: $left) {
+                  margin-left: $left;
+                  margin-right: $right;
+                }
+
+                @mixin margin--vert($top, $bottom: $top) {
+                  margin-bottom: $bottom;
+                  margin-top: $top;
+                }
+
+                .module { @include margin--vert(1em, 3em); }
+              </code></pre>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Example - Icons -->
+          <section>
+            <h3><span class="blue">Mixins</span> Icon Content</h3>
+            <div>
+              <pre><code>
+                $icon-plus:  "\e600";
+                $icon-minus: "\e601";
+                # ...
+
+                @mixin icon($name) {
+                  @extend %font--icon;
+                  content: $name;
+                }
+
+                .module:before {
+                  @include icon($icon-plus);
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Example - Shapes -->
+          <section>
+            <h3><span class="blue">Mixins</span> Complex Shapes</h3>
+            <div>
+              <pre><code>
+              </code></pre>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Mixins : Example - Modules -->
+          <section>
+            <h3><span class="blue">Mixins</span> Module Setup</h3>
+            <div>
+              <pre><code>
+                %btn--primary {
+                  background: $btn--primary--bg;
+                  border-color: $btn--primary--border;
+                  color: $btn--primary--color;
+                }
+                # ...
+
+                @mixin button-setup($type) {
+                  @extend %btn;
+                  @extend %btn--#{$type};
+
+                  &:focus { @extend %btn--#{$type}; }
+                  &:hover { @extend %btn--#{type}--hover; }
+
+                  &.disabled {
+                    @extend %disabled;
+                    &:hover { @extend %btn--#{$type}; }
+                  }
+                }
+
+                .btn--primary { @include button-setup("primary"); }
+                .btn--secondary { @include button-setup("secondary"); }
+                .btn--tertiary { @include button-setup("tertiary"); }
+
+                # background: $btn--#{$type}--bg; => Undefined variable: "$btn--"
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>This example is a little funky, but it works around one <em>lack of functionality</em> in sass - the ability to interpolate within variables.</p>
+              <p>if we could interpolate our $type within </p>
+            </aside>
+          </section>
+
           <!-- Advanced Sass : Mixins : Develop It! -->
           <section>
             <h3>Mixins <span class="yellow">Exercise</span></h3>
@@ -2912,13 +3006,11 @@
                 <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
                 <li><span class="green">Create a <code>@mixin</code></span> for scaled transformations with a required scale amount argument. Include common vendor prefixes.<br />
                   <small>ie. <code>transform: scale(1.1);</code></small></li>
-                <li><span class="green"><code>@include</code> these mixins</span> wherever they can be applied.</li>
+                <li>Look for other combinations of <span class="green">repeated styles or complexities</span> that could be abstracted.</li>
               </ul>
             </div>
             <div class="box--small right" style="width: 32%">
               <img src='images/mixin-cat.jpg' />
-
-              <p class="box--small copy--small blue">Feel free to experiment and play around!</p>
             </div>
             <p><small><code>sass --watch sass/application.scss:css/application.css</code></small></p>
             <aside class="notes">
@@ -3224,6 +3316,98 @@
             <aside class="notes">
               <p>Placeholders are realy great for modular OOCSS frameworks where your styles are very abstract and tend to build on each other</p>
               <p>.message, .message-list, .message-large</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Example - Cross-Module Patterns -->
+          <section>
+            <h3><span class="blue">@extend</span> Cross-Module Patterns</h3>
+            <div>
+              <pre><code>
+                %hoverTransition {
+                  transition-property: background, color, font-size, line-height, opacity, border, padding, margin;
+                  transition-duration: .1s;
+                  transition-timing-function: linear;
+                }
+
+                %disabled {
+                  @include opacity(.5);
+                  cursor: not-allowed;
+                }
+
+                %muted {
+                  @include opacity(.3);
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>Common patterns that can be applied to almost anything</p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Example - Font Families -->
+          <section>
+            <h3><span class="blue">@extend</span> Font Families</h3>
+            <div>
+              <pre><code>
+                %font--main--family { font-family: $focus-font-family; letter-spacing: .015em; }
+                %font--main         { @extend %font--focus--family; font-weight: 500; }
+                %font--main--medium { @extend %font--focus--family; font-weight: 600; }
+                %font--main--bold   { @extend %font--focus--family; font-weight: 700; }
+                %font--main--black  { @extend %font--focus--family; font-weight: 800; }
+              </code></pre>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Example - Font Sizes -->
+          <section>
+            <h3><span class="blue">@extend</span> Font Sizes</h3>
+            <div>
+              <pre><code>
+                %copy--small {
+                  font-size: $font-size-small;
+                  line-height: $line-height-small;
+                }
+
+                %copy--medium {
+                  font-size: $font-size-medium;
+                  line-height: $line-height-medium;
+                }
+
+                %copy--large {
+                  font-size: $font-size-large;
+                  line-height: $line-height-large;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <div>
+              <pre><code>
+                %copy--small {
+                  font-size: $font-size-small;
+                  line-height: $line-height-small;
+                }
+
+                %copy--medium {
+                  font-size: $font-size-medium;
+                  line-height: $line-height-medium;
+                }
+
+                %copy--large {
+                  font-size: $font-size-large;
+                  line-height: $line-height-large;
+                }
+              </code></pre>
+            </div>
+            <aside class="notes">
             </aside>
           </section>
 
