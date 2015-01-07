@@ -2506,22 +2506,18 @@
                 .header {
                   @include rounded-box;
                   color: $header-color;
-                  // ...
                 }
 
                 .footer {
                   @include rounded-box;
-                  // ...
                 }
 
                 .feature a {
                   @include rounded-box;
-                  // ...
                 }
 
                 .content {
                   @include rounded-box;
-                  // ...
                 }
               </code></pre>
             </div>
@@ -2531,115 +2527,27 @@
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  color: $header-color;
-                  /* ... */
                 }
 
                 .footer {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
 
                 .feature a {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
 
                 .content {
                   border-radius: 5px;
                   padding: 5px 20px;
-                  /* ... */
                 }
               </code></pre>
             </div>
             <aside class="notes">
-              <p>We're still just repeating properties here....</p>
-            </aside>
-          </section>
-
-          <!-- Advanced Sass : Mixins : Efficiency -->
-          <section>
-            <h3><span class="blue">Mixins</span> Efficiency</h3>
-            <div class="box left" style="width: 49%">
-              <h4>Mixin Output</h4>
-              <pre><code class="css">
-                .header {
-                  border-radius: 5px;
-                  padding: 5px 20px;
-                  /* ... */
-                }
-
-                .footer {
-                  border-radius: 5px;
-                  padding: 5px 20px;
-                  /* ... */
-                }
-
-                .feature a {
-                  border-radius: 5px;
-                  padding: 5px 20px;
-                  /* ... */
-                }
-
-                .content {
-                  border-radius: 5px;
-                  padding: 5px 20px;
-                  /* ... */
-                }
-              </code></pre>
-            </div>
-            <div class="box right" style="width: 49%">
-              <h4 class="yellow">CSS Grouping</h4>
-              <pre><code class="scss">
-                .header,
-                .footer,
-                .feature a,
-                .content {
-                  border-radius: 5px;
-                  padding: 5px 20px;
-                }
-              </code></pre>
-            </div>
-
-            <aside class="notes">
-              <p>It'd actually be more efficient just to group the classes together.</p>
-              <p>So what's a good use case for mixins then...</p>
-            </aside>
-          </section>
-
-          <!-- Advanced Sass : Mixins : CSS3 -->
-          <section>
-            <h3><span class="blue">Mixins</span> CSS3</h3>
-            <p class="box"><strong>Vendor Prefixes?!</strong></p>
-            <div class="left" style="width: 50%">
-              <pre><code>
-                @mixin rounded-corners {
-                  -webkit-border-radius: 10px;
-                     -moz-border-radius: 10px;
-                          border-radius: 10px;
-                }
-
-                .header {
-                  @include rounded-corners;
-                  // ...
-                }
-
-                .footer {
-                  @include rounded-corners;
-                  // ...
-                }
-              </code></pre>
-            </div>
-            <div class="right left-align fragment" style="width: 45%">
-              <p class="box">But... we're still really just <span class="red">copying</span> the same properties and values all over the place.</p>
-            </div>
-            <aside class="notes">
-              <p>How about anything with vendor prefixes?</p>
-              <p>Those things get repetitive, it'd be nice to have a one liner right?</p>
-              <p>But..</p>
-              <p>alright, so when the hell are mixins useful then?...</p>
+              <p>Now, some people would argue that is a bad use case for mixins since it is just creating duplication in the output rather than in the Sass...</p>
+              <p>These peole would argue that the best way to use mixins are for....</p>
             </aside>
           </section>
 
@@ -2686,7 +2594,7 @@
               </code></pre>
             </div>
             <aside class="notes">
-              <p>I mentioned before that mixins can accept arguments</p>
+              <p>And this is where we get into arguments</p>
               <p><strong>Dynamic</strong> VS Static</p>
             </aside>
           </section>
@@ -2869,24 +2777,26 @@
           <section>
             <h3><span class="blue">Mixin</span> Variable Interpolation</h3>
 
-            <div class="box left" style="width: 58%">
+            <div class="box left" style="width: 54%">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
-                @mixin toolbar-border($side, $width: 2px) {
-                  border-#{$side}: $width solid $toolbar-border;
-                }
+              <div class="copy--small">
+                <pre><code>
+                  @mixin toolbar-border($side, $width: 2px) {
+                    border-#{$side}: $width solid $toolbar-border;
+                  }
 
-                .sidebar--left {
-                  @include toolbar-border("right");
-                }
+                  .sidebar--left {
+                    @include toolbar-border("right");
+                  }
 
-                .sidebar--right {
-                  @include toolbar-border("left");
-                }
-              </code></pre>
+                  .sidebar--right {
+                    @include toolbar-border("left");
+                  }
+                </code></pre>
+              </div>
             </div>
 
-            <div class="box left" style="width: 40%">
+            <div class="box left" style="width: 45%">
               <h4>CSS Output</h4>
               <pre><code>
                 .sidebar--left {
@@ -2901,6 +2811,7 @@
             <aside class="notes">
               <p>This helps us create even more dynamic mixins</p>
               <p>We can do this sort of interpolation all over the place, not just in mixins</p>
+              <p><br />alright... so I've put together a couple of realistic use cases for mixins just to give you some ideas... </p>
             </aside>
           </section>
 
@@ -2923,6 +2834,7 @@
               </code></pre>
             </div>
             <aside class="notes">
+              <p>the second argument defaults to the first</p>
             </aside>
           </section>
 
@@ -2954,47 +2866,61 @@
             <h3><span class="blue">Mixins</span> Complex Shapes</h3>
             <div>
               <pre><code>
-              </code></pre>
-            </div>
-            <aside class="notes">
-            </aside>
-          </section>
+                @mixin triangle($dir, $border-color, $width: $triangle--width, $height: $triangle--width/2) {
+                  $vert: 0;
+                  $horz: 0;
+                  $edge: top;
+                  $oedge: bottom;
 
-          <!-- Advanced Sass : Mixins : Example - Modules -->
-          <section>
-            <h3><span class="blue">Mixins</span> Module Setup</h3>
-            <div>
-              <pre><code>
-                %btn--primary {
-                  background: $btn--primary--bg;
-                  border-color: $btn--primary--border;
-                  color: $btn--primary--color;
-                }
-                # ...
+                  @if $dir == "up" {
+                    $edge: bottom;
+                    $oedge: top;
+                    $s1: $width;
+                    $s2: $height;
+                    $vert: $s2;
+                    $horz: $s1 / 2;
 
-                @mixin button-setup($type) {
-                  @extend %btn;
-                  @extend %btn--#{$type};
+                  } @else if $dir == "down" {
+                    $edge: top;
+                    $oedge: bottom;
+                    $s1: $width;
+                    $s2: $height;
+                    $vert: $s2;
+                    $horz: $s1 / 2;
 
-                  &:focus { @extend %btn--#{$type}; }
-                  &:hover { @extend %btn--#{type}--hover; }
+                  } @else if $dir == "right" {
+                    $edge: left;
+                    $oedge: right;
+                    $s1: $height;
+                    $s2: $width;
+                    $vert: $s2 / 2;
+                    $horz: $s1;
 
-                  &.disabled {
-                    @extend %disabled;
-                    &:hover { @extend %btn--#{$type}; }
+                  } @else {
+                    $edge: right;
+                    $oedge: left;
+                    $s1: $height;
+                    $s2: $width;
+                    $vert: $s2 / 2;
+                    $horz: $s1;
                   }
+
+                  @include transform(scale(.9999)); // Firefox jagged lines fix
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: $vert $horz;
+                  border-color: transparent;      // IE8 Fallback
+                  border-color: rgba(0, 0, 0, 0); // actually transparent (for Firefox)
+                  border-#{$edge}-color: $border-color;
+                  border-#{$oedge}-width: 0;
                 }
 
-                .btn--primary { @include button-setup("primary"); }
-                .btn--secondary { @include button-setup("secondary"); }
-                .btn--tertiary { @include button-setup("tertiary"); }
-
-                # background: $btn--#{$type}--bg; => Undefined variable: "$btn--"
+                .thing:before { @include triangle("up", #eeeeee, 25px); }
               </code></pre>
             </div>
             <aside class="notes">
-              <p>This example is a little funky, but it works around one <em>lack of functionality</em> in sass - the ability to interpolate within variables.</p>
-              <p>if we could interpolate our $type within </p>
             </aside>
           </section>
 
@@ -3055,7 +2981,7 @@
                 }
               </code></pre>
             </div>
-            <div class="box--small right" style="width: 49%">
+            <div class="box--small right fragment" style="width: 49%">
               <h4 class="yellow">Grouping Optimiztion</h4>
               <pre><code class="scss">
                 .header,
@@ -3068,11 +2994,9 @@
               </code></pre>
             </div>
             <aside class="notes">
-              <p>We kept running into a problem with mixins in that they weren't good for including styles that were exactly the same</p>
-              <p>Dynamic VS <strong>Static</strong></p>
-              <p>We ended up with output like this</p>
-              <p>When really it'd be more efficent to just group these selectors together</p>
-              <p>Well of course Sass has tool to address this need</p>
+              <p>with mixins, we saw some output that looked like this. and I made a reference to some people feeling like this is bad since it creates duplication in the output...</p>
+              <p>They might see something more similar to this NEXT as better</p>
+              <p>Well of course Sass gives us a way to do this</p>
             </aside>
           </section>
 
@@ -3315,7 +3239,7 @@
             </div>
             <aside class="notes">
               <p>Placeholders are realy great for modular OOCSS frameworks where your styles are very abstract and tend to build on each other</p>
-              <p>.message, .message-list, .message-large</p>
+              <p><br /> alright, so let's look at some extend examples</p>
             </aside>
           </section>
 
@@ -3351,9 +3275,13 @@
             <div>
               <pre><code>
                 %font--main--family { font-family: $focus-font-family; letter-spacing: .015em; }
+
                 %font--main         { @extend %font--focus--family; font-weight: 500; }
+
                 %font--main--medium { @extend %font--focus--family; font-weight: 600; }
+
                 %font--main--bold   { @extend %font--focus--family; font-weight: 700; }
+
                 %font--main--black  { @extend %font--focus--family; font-weight: 800; }
               </code></pre>
             </div>
@@ -3386,11 +3314,59 @@
             </aside>
           </section>
 
+          <!-- Advanced Sass : Mixins : Example - Modules -->
+          <section>
+            <h3><span class="blue">@extend</span> Module Setup</h3>
+            <div>
+              <pre><code>
+                %btn--primary {
+                  background: $btn--primary--bg;
+                  border-color: $btn--primary--border;
+                  color: $btn--primary--color;
+                }
+                # ...
+
+                @mixin button-setup($type) {
+                  @extend %btn;
+                  @extend %btn--#{$type};
+
+                  &:focus { @extend %btn--#{$type}; }
+                  &:hover { @extend %btn--#{type}--hover; }
+
+                  &.disabled {
+                    @extend %disabled;
+                    &:hover { @extend %btn--#{$type}; }
+                  }
+                }
+
+                .btn--primary { @include button-setup("primary"); }
+                .btn--secondary { @include button-setup("secondary"); }
+                .btn--tertiary { @include button-setup("tertiary"); }
+
+                # background: $btn--#{$type}--bg; => Undefined variable: "$btn--"
+              </code></pre>
+            </div>
+            <aside class="notes">
+              <p>This example is a little funky, but it works around one <em>lack of functionality</em> in sass - the ability to interpolate within variables.</p>
+              <p>if we could interpolate our $type within </p>
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <p>sooooo when do I use these...?</p>
+            <aside class="notes">
+              <p>alright, so at this point you might be getting a little confused as to when to use mixins and when to use extends</p>
+              <p>annnnnd... i don't know... their use cases are very debated at this point in times</p>
+            </aside>
+          </section>
+
           <!-- Advanced Sass : Inheritance : Versus Mixins -->
           <section>
             <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
             <div class="box--small copy--small">
-              <p>Are mixins <em>without</em> arguments bad?<br /> <small>Since they duplicate code, on both sides.</small></p>
+              <p>Are mixins <em>without</em> arguments bad?<br /> <small>Since they duplicate code, on both sides?</small></p>
             </div>
 
             <div class=" left" style="width: 49%">
@@ -3451,7 +3427,7 @@
           <section>
             <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
             <div class="box--small copy--small">
-              <p>Is this better?.</small></p>
+              <p>Is this better?</small></p>
             </div>
 
             <div class=" left" style="width: 49%">
@@ -3501,15 +3477,23 @@
           <section>
             <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
             <div class="box--small copy--small">
-              <p>This is probably not good.</small></p>
+              <p>Is <em>this</em> better?</small></p>
             </div>
 
             <div>
-              <h4>Sass</h4>
+              <h4 class="yellow">@extend Vomit</h4>
               <pre><code class="scss">
-                .header, .footer, .feature a, .content, .taco ul a, .hipster dl,
+                .header, .footer, .feature header a, .content, #taco ul a, .hipster dl,
                 [class="btn--"], .comment .comment__body .comment__quote, .card__header,
-                .container .wrapper, .link--fancy, #badthing {
+                .card--standard, .card--transFooter, .card--featured, .card--scroller,
+                .card--static, .card--ebook, .card--transFooter .card__content
+                .container .wrapper, .link--fancy, #badthing, .nope.probably a.not span.good,
+                article header, .article .header, [class*='rabbit'], .party .at .codemash,
+                #hashtag, .dot, [class*="hooligans"], [class*='making'].up.classes.is-hard,
+                .julie + .rocks, #made.up, .bourbon, a div i span, [id="where-the-party"],
+                .this .could [class*="actually-happen"], #actually.it .happens.alot,
+                #seriously [class*="this"].is a.problem, .it .can.get #really .out-of-hand,
+                 {
                   border-radius: 5px;
                   padding: 5px 20px;
                 }
@@ -3519,6 +3503,56 @@
             <aside class="notes">
             <p>what if you extend a whooooollle bunch of stuff and end up with this?</p>
             </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <div class="box--small copy--small">
+              <p>Is this actually bad?? ....what if it's <strong>gzipped</strong>?</small></p>
+            </div>
+
+            <div >
+              <h4 class="yellow">@include Output</h4>
+              <pre><code class="css">
+                .header {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .footer {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .feature a {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+
+                .content {
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                }
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <!-- Advanced Sass : Inheritance : Versus Mixins -->
+          <section>
+            <h3><span class="blue">@mixin</span> VS <span class="blue">@extend</span></h3>
+            <div class="copy--small">
+              <p class="box--small ">It's complicated.</p>
+              <ul class="copy--small">
+                <li>In the beginning... mixins with variable arguments were good<a href="http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html">roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html</a></li>
+                <li>Now... not so much... <a href="http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin">csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/</a></li>
+                <li>It's been a whole year... </li>
+                <li>So... things are rapidly changing and progrpressing in the sass community</li>
+              </ul>
+            </div>
           </section>
 
           <!-- Advanced Sass : Inheritance : Develop It! -->
@@ -3783,7 +3817,7 @@
             <p class="box">Maps give us <span class="yellow">key-value</span> pairings.</p>
             <div class="left" style="width: 43%">
               <pre><code class="scss">
-              $my map: (
+              $mymap: (
                 key1: value1,
                 key2: value2,
                 key3: value3
@@ -3895,6 +3929,7 @@
               </code></pre>
             </div>
             <aside class="notes">
+              <p>So this is very similar to the icon example that we talked aobut for mixins... except that we're using a map to store the variables and a loop to set up the classes</p>
             </aside>
           </section>
 
@@ -3932,14 +3967,14 @@
             <h3><span class="blue">Advanced Sass</span> Z-Indexes</h3>
             <div class="box--small">
               <pre><code class="scss">
-                $layer: (
+                $layers: (
                   bottom: 1,
                   middle: 5,
                   top:    10
                 );
 
                 @mixin layer($name) {
-                  z-index: map-get($layer, $name);
+                  z-index: map-get($layers, $name);
                 };
 
                 .overlay {
@@ -3971,8 +4006,10 @@
 
                 @mixin typeset($level) {
                   @each $item in $font--sizes {
-                    font-size: nth($item, 2);
-                    line-height: nth($item, 3);
+                    @if $level == nth($item, 1) {
+                      font-size: nth($item, 2);
+                      line-height: nth($item, 3);
+                    }
                   }
                 }
 
@@ -4039,13 +4076,26 @@
           <!-- Advanced Sass : Advanced : Develop It! -->
           <section>
             <h3>Advanced <span class="yellow">Exercise</span></h3>
-            <div class="box--small left copy--small" style="width: 64%">
-              <ul class="list--tall">
+            <p class="box">I failed to come up with an exercise for the kittens site.</p>
+            <div class="left-align left" style="width: 48%">
+              <p class="copy--small">Look for things like this in your code:</p>
+              <ul class="list--tall copy--xsmall">
+                <li>Complex Math => try Functions</li>
+                <li>Associated Data => try Maps</li>
+                <li>Repetetive Module Styles => try Loops, Mixins, Extends</li>
               </ul>
             </div>
-            <div class="box--small right" style="width: 32%">
+            <div class="left-align right" style="width: 48%">
+              <p class="copy--small">Play around with this cool stuff:</p>
+              <ul class="copy--xsmall">
+                <li><a href="https://github.com/roytomeij/sassconf">https://github.com/roytomeij/sassconf</a></li>
+                <li><a href="http://codepen.io/bpainter/pen/nJuHk">http://codepen.io/bpainter/pen/nJuHk</a></li>
+                <li><a href="http://codepen.io/bpainter/pen/LaquJ">http://codepen.io/bpainter/pen/LaquJ</a></li>
+                <li><a href="http://codepen.io/bpainter/pen/mIvjx">http://codepen.io/bpainter/pen/mIvjx</a></li>
+                <li><a href="http://codepen.io/bpainter/pen/Fdpxs">http://codepen.io/bpainter/pen/Fdpxs</a></li>
+              </ul>
             </div>
-            <p><small><code>sass --watch sass/application.scss:css/application.css</code></small></p>
+            <p class="clear" style="padding-top: 1em;"><small><code>sass --watch sass/application.scss:css/application.css</code></small></p>
             <aside class="notes">
             </aside>
           </section>
