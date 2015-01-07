@@ -43,7 +43,7 @@ a {
   .header h1 {
     color: #506f8e;
     font-family: "Ribeye Marrow", cursive;
-    font-size: 50px;
+    font-size: 3em;
     margin: .25em 0;
     text-shadow: 1px 1px 0px #d9d0cb; }
   .header nav {
