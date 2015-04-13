@@ -88,6 +88,15 @@
             </aside>
           </section>
 
+          <!-- Intro : About You -->
+          <section>
+            <h3>About You</h3>
+            <p class="box box--top">What is <span class="yellow">your name</span>?</p>
+            <p class="box">What are you <span class="yellow">hoping to get</span> out of this class?</p>
+            <p class="box">What is your <span class="yellow">favorite thing about Spring</span>?</p>
+            <aside class="notes"></aside>
+          </section>
+
           <!-- Intro : Course : Outline -->
           <section>
             <h2>Getting Sassy with CSS</h2>
@@ -132,7 +141,7 @@
             <h3>Project Setup <span class="yellow">Exercise</span></h3>
             <ol class="box list--tall">
               <li>Download the slides.<br/><small><a href="https://github.com/jewlofthelotus/SassShop" target="_blank">https://github.com/jewlofthelotus/SassShop</a></small></li>
-              <li class="copy--small">Open the <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
+              <li class="copy--small">Open the <em>entire</em> <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
               <li class="copy--small">Navigate to the <code>exercises/kittens</code> directory via the <span class="green">command line</span>.<br /><small>Run <code>sass -v</code> to verify that Sass is installed.</small></li>
               <li class="copy--small">Open <code>exercises/kittens/index.html</code> in your <span class="green">browser</span>.<br /><small class="yellow">Yay, kittens!</small></li>
             </ol>
@@ -189,8 +198,7 @@
                 <li><strong>2007:</strong> Designed by <a href="http://www.hamptoncatlin.com/" target="_blank">Hampton Catlin</a> (Haml)
                 </li>
                 <li class="box">Developed by <a href="http://nex-3.com/" target="_blank">Natalie Weizenbaum</a> and <a href="http://chriseppstein.github.io/" target="_blank">Chris Eppstein</a> (Compass)</li>
-                <li><strong>March 2014:</strong> <span class="yellow">Sass 3.3</span> was released!</li>
-                <li><strong>August 2014:</strong> <span class="yellow">Sass 3.4</span> was released!</li>
+                <li class="yellow">Sass is growing fast!</li>
                 <li class="green">Pushing CSS ahead!</li>
               </ul>
             </div>
@@ -2167,7 +2175,7 @@
             </div>
             <div class="box--small right" style="width: 48%">
               <pre><code>
-                $title: "Girl Develop It";
+                $title: "SassShop";
                 $base-font-size: 16px;
                 $padding-default: 2em;
 
@@ -4795,8 +4803,8 @@
       var sponsor   = null;
       var wifi_name = null;
       var wifi_pass = null;
-      var breaks    = true;
-      var p2_setup  = true;
+      var breaks    = false;
+      var p2_setup  = false;
 
       if (eventName) { $('.js-event-name').text(eventName).parent().show(); }
       if (sponsor)   { $('.js-sponsor-name').text(sponsor).parent().show(); }
