@@ -1,7 +1,27 @@
 /* Getting Sassy With CSS - Workshop Settings*/
 
-@import "gdilight";
+// Settings
+@import "template/settings";
 
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingTextShadow: #ccc;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #01A9B4;
+$selectionBackgroundColor: rgba(11, 79, 81, 0.99);
+
+@mixin bodyBackground() {
+  @include background( radial-gradient($backgroundColor, darken($backgroundColor, 5%)) );
+}
+
+
+// Theme
+@import "template/theme";
+
+
+// Customizations
 .reveal {
   // word-wrap: break-word;
 
@@ -104,6 +124,16 @@
     line-height: 1.3em;
     max-height: 475px;
     overflow: scroll
+  }
+
+  footer {
+    background-image: none;
+    font-size: 40%;
+    text-align: left;
+  }
+
+  .copyright {
+    margin: 15px 0 0 15px;
   }
 }
 

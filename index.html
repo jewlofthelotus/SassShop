@@ -5,7 +5,7 @@
 
     <title>Getting Sassy with CSS ~ Julie Cameron</title>
 
-    <meta name="description" content="This is Sass curriculum was originally prepared for Girl Develop It Detroit by Julie Cameron and further modified for various conferences and audiences, including SassConf 2015. The course is intended to be one overview session lasting 3-8 hours, depending on the crowd.">
+    <meta name="description" content="This Sass curriculum was originally prepared for Girl Develop It Detroit by Julie Cameron and further modified for various conferences and audiences, including SassConf 2015. The course is intended to be one overview session lasting 3-8 hours, depending on the crowd.">
 
     <meta name="author" content="Julie Cameron">
 
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico?v=2">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/sass-plain.css" id="theme">
+    <link rel="stylesheet" href="css/theme/sassshop.css" id="theme">
     <link rel="stylesheet" href="lib/css/rainbow.css">
     <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
@@ -41,7 +41,7 @@
               <p class="hide"><strong>Password:</strong> <span class="js-wifi-pass"></span></p>
             </div>
 
-            <div class="box"><strong>Slides</strong>: <a target="_blank" href="http://sassshop.com">SassShop.com</a></div>
+            <div class="box--small"><strong>Slides</strong>: <a target="_blank" href="http://sassshop.com">SassShop.com</a></div>
 
             <div class="left copy--xsmall" style="width: 48%;">
               <div class="box--small"><strong>Recommended Tools</strong></div>
@@ -61,7 +61,7 @@
               <p class="box--small"><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Command Line Tutorial</a></p>
             </div>
 
-            <div class="clear copy--small"><br/><small><i>Use your arrow keys or click the arrows in the lower-right corner to navigate these slides.</i></small></div>
+            <div class="clear copy--small"><br/><small><i>Use your arrow keys or click the arrows in the lower-right corner to navigate these slides.<br/><br/>Hit the <code>o</code> key to see/navigate an overview of slides.</i></small></div>
           </section>
 
           <!-- Intro : About Me -->
@@ -132,7 +132,7 @@
           <section>
             <h3>Project Setup <span class="yellow">Exercise</span></h3>
             <ol class="box list--tall">
-              <li>Download the slides.<br/><small><a href="https://github.com/jewlofthelotus/SassShop-exercises" target="_blank">https://github.com/jewlofthelotus/SassShop-exercises</a></small></li>
+              <li>Download the exercises.<br/><small><a href="https://github.com/jewlofthelotus/SassShop-exercises" target="_blank">https://github.com/jewlofthelotus/SassShop-exercises</a></small></li>
               <li class="copy--small">Open the <em>entire</em> <code>exercises</code> directory in your <span class="green">text editor</span> of choice.<br/><small>The <code>exercises/kittens</code> directory is where we'll be doing our work.</small></li>
               <li class="copy--small">Navigate to the <code>exercises/kittens</code> directory via the <span class="green">command line</span>.<br /><small>Run <code>sass -v</code> to verify that Sass is installed.</small></li>
               <li class="copy--small">Open <code>exercises/kittens/index.html</code> in your <span class="green">browser</span>.<br /><small class="yellow">Yay, kittens!</small></li>
@@ -173,7 +173,7 @@
           <section>
             <h3>Repetition</h3>
             <div class="left" style="width: 50%">
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   background-color: #531946;
                   border-radius: 5px;
@@ -240,7 +240,7 @@
             <h3><span class="blue">Repetition</span> Colors</h3>
             <div class="box left" style="width: 49%">
               <h4>CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   background-color: #531946;
                 }
@@ -279,7 +279,7 @@
             </div>
             <div class="fragment box right" style="width: 49%">
               <h4 class="green">Sass <span class="yellow">Variables</span></h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $white: #ffffff;
                 $black: #222222; // NOT! ;)
                 $eggplant: #531946;
@@ -334,7 +334,7 @@
             <h4><span class="blue">Repetition</span> Border Radius + Padding</h4>
             <div class="box left" style="width: 49%">
               <h4>CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -362,7 +362,7 @@
             </div>
             <div class="box fragment right" style="width: 49%">
               <h4 class="green">Sass <span class="yellow">Mixins</span></h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -400,7 +400,7 @@
             <h3><span class="blue">Repetition</span> Selectors</h3>
             <div class="box left" style="width: 49%">
               <h4>CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   /* ... */
                 }
@@ -435,7 +435,7 @@
             </div>
             <div class="box fragment right" style="width: 49%">
               <h4 class="green">Sass <span class="yellow">Nesting</span></h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .header {
                   // ...
 
@@ -486,7 +486,7 @@
             <h3><span class="blue">RECAP</span> Repetition</h3>
             <div class="box left" style="width: 49%">
               <h4>CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   background-color: #531946;
                   border-radius: 5px;
@@ -532,7 +532,7 @@
             </div>
             <div class="box right" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $white:        #ffffff;
                 $grey:         #222222;
                 $eggplant:     #531946;
@@ -636,7 +636,7 @@
             <h3><span class="blue">Two</span> SassScript Syntaxes</h3>
             <div class="left" style="width: 49%">
               <p><span class="yellow">.scss (Sassy CSS)</span><br /><small>Default syntax; Valid CSS == Valid SCSS</small></p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $black: #000;
                 $white: #fff;
 
@@ -661,7 +661,7 @@
             </div>
             <div class="right" style="width: 49%">
               <p><span class="green">.sass (Indented)</span><br /><small>Original syntax, still supported; Haml-esque</small></p>
-              <pre><code class="sass">
+              <pre><code contenteditable class="sass">
                 $black: #000
                 $white: #fff
 
@@ -915,7 +915,7 @@
 
             <div class="left" style="width: 49%">
               <h4>HTML</h4>
-              <pre class="html"><code class="html">
+              <pre><code contenteditable class="html">
                 &lt;nav class="navigation">
                   &lt;ul>
                     &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
@@ -928,7 +928,7 @@
 
             <div class="right" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .navigation {
                   float: right;
 
@@ -960,7 +960,7 @@
 
             <div class="box--small left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .navigation {
                   float: right;
 
@@ -980,7 +980,7 @@
 
             <div class="box--small right" style="width: 49%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .navigation {
                   float: right;
                 }
@@ -1019,7 +1019,7 @@
 
             <div class="left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 body {
                   .header {
                     .navigation {
@@ -1037,9 +1037,9 @@
             </div>
             <div class="fragment right" data-fragment-index="0" style="width: 49%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 body .header .navigation ul li a {
-                  // ...
+                  /* ... */
                 }
               </code></pre>
             </div>
@@ -1057,7 +1057,7 @@
 
             <div class="left" style="width: 45%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 a {
                   color: #beedee;
 
@@ -1078,7 +1078,7 @@
 
             <div class="right" style="width: 45%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 a {
                   color: #beedee;
                 }
@@ -1109,7 +1109,7 @@
 
             <div class=" left" style="width: 45%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 a {
                   .footer & {
                     text-decoration: none;
@@ -1130,7 +1130,7 @@
 
             <div class=" right" style="width: 45%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .footer a {
                   text-decoration: none;
                 }
@@ -1162,7 +1162,7 @@
 
             <div class=" left" style="width: 45%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .module {
                   &__child {
                     margin-bottom: 1em;
@@ -1177,7 +1177,7 @@
 
             <div class=" right" style="width: 45%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .module__child {
                   margin-bottom: 1em;
                 }
@@ -1204,7 +1204,7 @@
 
             <div class=" left" style="width: 52%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .thing.thang {
                   .thung {
                     content: &;
@@ -1219,7 +1219,7 @@
 
             <div class=" right" style="width: 48%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .thing.thang .thung {
                   content: .thing.thang .thung;
                   content: .thing.thang .thung --mod;
@@ -1246,7 +1246,7 @@
 
             <div class=" left" style="width: 45%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 a {
                   border: {
                     color: #deedee;
@@ -1259,7 +1259,7 @@
 
             <div class=" right" style="width: 45%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 a {
                   border-color: #deedee;
                   border-style: solid;
@@ -1279,16 +1279,16 @@
           <section>
             <h3>Nesting <span class="yellow">Exercise</span></h3>
 
-            <div class="box left" style="width: 55%;">
+            <div class="box--small left" style="width: 55%;">
               <p class="yellow">NEST ALL THE THINGS!!</p>
               <p class="box--small green copy--small"><strong>BUT</strong> Don't nest too deeply!</p>
-              <p class="red copy--small"><strong>And just kidding...</strong><br/>You don't <em>need</em> to nest <em>everything</em>.</p>
+              <p class="red copy--small"><strong>And just kidding...</strong><br/>You don't <em>need</em> to nest <em>everything</em>.<br/><small class="grey"><code>.header</code>, <code>.footer</code>, and <code>.kittens</code> are good places to start!</small></p>
               <p class="box--small pink copy--small"><strong>P.S. Don't Forget</strong><br/>The parent <code>&amp;</code> selector.</p>
-              <p class="copy--small blue"><strong>Oh!</strong> Totoally feel free to refactor!</p>
+              <p class="copy--small blue"><strong>Oh!</strong> Totoally feel free to refactor!<br/><small class="grey"><code>.news</code>, <code>.events</code>, &amp; <code>.location</code> are ripe for pattern abstraction!</small></p>
             </div>
 
             <div class="box--small right" style="width: 45%">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 // good
                 .navigation {
                   li {//...}
@@ -1336,7 +1336,7 @@
               <p><span class="yellow">Sass</span> modifies <code>@import</code> to instead include the resource <span class="green">during compilation</span>, rather than on the client side.</p>
             </div>
             <p class="pink">Organization OMGZZ!</p>
-            <pre><code class="scss">
+            <pre><code contenteditable class="scss">
               @import "vars";
 
               @import "compass";
@@ -1365,7 +1365,7 @@
               <p class="box">These <code>@import</code>s look for resources within the <span class="green">main Sass file's</span> parent directory.</p>
             </div>
             <div class="box--small right" style="width: 48%">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @import "vars";
 
                 @import "compass";
@@ -1390,7 +1390,7 @@
             <h3><span class="blue">Imports</span> File Structure</h3>
             <div class="box--small left" style="width: 50%">
               <h4 class="green">application.scss</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @import "vars";
                 @import "lib/compass";
                 @import "lib/fontawesome";
@@ -1558,7 +1558,7 @@
             </div>
             <div class="right box" style="width: 48%">
               <h4 class="green">application.scss</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 // Variables
                 @import "vars";
 
@@ -1589,7 +1589,7 @@
             </div>
             <div class="right box" style="width: 48%">
               <h4 class="green">application.scss</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 // Variables
                 @import "vars";
 
@@ -1708,7 +1708,7 @@
 
             <div class="box--small left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $grey: rgba(0,0,0,.5);
                 $teal: #095169;
                 $default-padding: 1em;
@@ -1728,7 +1728,7 @@
 
             <div class="box--small right" style="width: 49%">
               <h4>CSS Output</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="css">
                 a {
                   color: #095169;
                   padding: 1em;
@@ -1768,7 +1768,7 @@
 
             <div class="box--small right" style="width:62%;">
               <h4 class="green">Uses</h4>
-              <pre><code class="scss" style="max-height: 430px;">
+              <pre><code contenteditable class="scss" style="max-height: 430px;">
                 $base-padding: 10px;
                 $line-height: 1.5;
 
@@ -1804,7 +1804,7 @@
             <p class="box">You can <span class="green">redeclare</span> variables to <span class="green">override</span> previous values</p>
             <div class=" left" style="width:48%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 $border-width: 2px;
                 $border-width: 4px;
 
@@ -1815,7 +1815,7 @@
             </div>
             <div class=" right" style="width:48%;">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 a {
                   border: 4px solid #095169;
                 }
@@ -1840,7 +1840,7 @@
 
             <div class="right box--small" style="width: 54%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $border-width: 4px; // Global
 
                 a {
@@ -1867,7 +1867,7 @@
               <p class='box copy--small'>Variables can be injected into <span class="green">selectors,<br />property names and values, and strings</span> via <code>#{$variable}</code></p>
             <div class=" left align-left" style="width: 52%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $side: left;
 
                 .box-#{$side} {
@@ -1881,7 +1881,7 @@
             </div>
             <div class=" right" style="width: 48%">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .box-left {
                   border-left: 1px solid #ccc;
                 }
@@ -1902,7 +1902,7 @@
             <h3><span class="blue">PROTIP</span> Modular Naming</h3>
             <div class="box left" style="width: 49%">
               <h4 class="green">OK Variables</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $white: #ffffff;
                 $black: #222222;
                 $eggplant: #531946;
@@ -1947,7 +1947,7 @@
             </div>
             <div class="fragment box right" style="width: 49%">
               <h4 class="yellow">Better Variables</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 // Descriptive Colors
                 $white:        #ffffff;
                 $grey:         #222222;
@@ -2018,9 +2018,9 @@
           <section>
             <h3>Variables <span class="yellow">Exercise</span></h3>
             <div class="box--small left" style="width: 54%">
-              <p class="copy--small left-align"><span class="green">Create a vars partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</p>
-              <p class="box--small green"><strong>DRY Up Your Styles</strong></p>
-              <p class="box--small yellow">Add Variables</p>
+              <p class="copy--small left-align"><span class="green">Create a <code>vars</code> partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</p>
+              <p class="box--small blue"><strong>DRY Up Your Styles</strong></p>
+              <p class="yellow">Add variables for things like:</p>
               <ul class="copy--small">
                 <li>colors values</li>
                 <li>font family</li>
@@ -2066,7 +2066,7 @@
               </ul>
             </div>
             <div class="box--small right" style="width: 48%">
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 $title: "SassShop";
                 $base-font-size: 16px;
                 $padding-default: 2em;
@@ -2124,7 +2124,7 @@
             <p class="copy--small box">We can also use <span class="green">math to manipulate colors</span>.</p>
             <p class="copy--small">Math operations on colors <span class="green">work on pieces</span> (r, g, b).</p>
             <div class="box">
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 .addition {
                   color: #555555 + #112233; // => #667788
                 }
@@ -2288,7 +2288,7 @@
             <h3><span class="blue">Mixins</span> Use</h3>
             <div class="box left" style="width: 49%">
               <h4>CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2312,7 +2312,7 @@
             </div>
             <div class="box fragment right" style="width: 49%">
               <h4 class="green">Sass <span class="yellow">Mixins</span></h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2347,7 +2347,7 @@
           <section>
             <h3><span class="blue">Mixins</span> Setup</h3>
             <div class="box left" style="width: 49%">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2397,7 +2397,7 @@
             <h3><span class="blue">Mixins</span> Output</h3>
             <div class="box left" style="width: 49%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2423,7 +2423,7 @@
             </div>
             <div class="box right" style="width: 49%">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2457,7 +2457,7 @@
             <p class="box copy--small" data-fragment-index="2">Mixins are great for repeated <span class="green">blocks of styles</span><br />where the <span class="yellow">values differ</span> from case to case.</p>
             <div class="left" style="width: 48%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin rounded-corners($radius) {
                   -webkit-border-radius: $radius;
                      -moz-border-radius: $radius;
@@ -2477,19 +2477,19 @@
             </div>
             <div class="right" data-fragment-index="1" style="width: 48%;">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .header {
                   -webkit-border-radius: 5px;
                      -moz-border-radius: 5px;
                           border-radius: 5px;
-                  // ...
+                  /* ... */
                 }
 
                 .footer {
                   -webkit-border-radius: 10px;
                      -moz-border-radius: 10px;
                           border-radius: 10px;
-                  // ...
+                  /* ... */
                 }
               </code></pre>
             </div>
@@ -2505,7 +2505,7 @@
             <p class="box copy--small">You can also set an argument's <em>default value</em>,<br />making it <em>optional</em> to pass one in.</p>
             <div class="left" style="width: 48%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin rounded-corners($radius: 5px) {
                   -webkit-border-radius: $radius;
                      -moz-border-radius: $radius;
@@ -2525,19 +2525,19 @@
             </div>
             <div class="right" style="width: 48%;">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .header {
                   -webkit-border-radius: 5px;
                      -moz-border-radius: 5px;
                           border-radius: 5px;
-                  // ...
+                  /* ... */
                 }
 
                 .footer {
                   -webkit-border-radius: 10px;
                      -moz-border-radius: 10px;
                           border-radius: 10px;
-                  // ...
+                  /* ... */
                 }
               </code></pre>
             </div>
@@ -2553,7 +2553,7 @@
             <p class="box copy--small"><em>Comma</em> separated, <em>order</em> matters.</p>
             <div class="left" style="width: 49%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box($radius, $padding) {
                   border-radius: $radius;
                   padding: $padding;
@@ -2573,17 +2573,17 @@
             </div>
             <div class="right" style="width: 49%;">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 20px;
-                  // ...
+                  /* ... */
                 }
 
                 .footer {
                   border-radius: 20px;
                   padding: 40px;
-                  // ...
+                  /* ... */
                 }
               </code></pre>
             </div>
@@ -2598,7 +2598,7 @@
             <p class="box copy--small"><em>Optional</em> arguments (ones with defaults) must be <em>last</em> in the set.</p>
             <div class="left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box($radius: 5px, $padding: 20px) {
                   border-radius: $radius;
                   padding: $padding;
@@ -2624,13 +2624,13 @@
             </div>
             <div class="right" style="width: 36%;">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 20px;
                   color: #aaa;
                   font-size: 24px;
-                  // ...
+                  /* ... */
                 }
 
                 .footer {
@@ -2638,7 +2638,7 @@
                   padding: 40px;
                   color: #ccc;
                   font-size: 12px;
-                  // ...
+                  /* ... */
                 }
               </code></pre>
             </div>
@@ -2652,7 +2652,7 @@
             <h3><span class="blue">Mixins</span> Keyword Arguments</h3>
             <p class="box">Order doesn't matter!</p>
             <div class="left" style="width: 100%;">
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box($radius: 5px, $padding: 20px) {
                   border-radius: $radius;
                   padding: $padding;
@@ -2680,7 +2680,7 @@
             <div class="box left" style="width: 54%">
               <h4 class="yellow">Sass</h4>
               <div class="copy--small">
-                <pre><code>
+                <pre><code contenteditable class="scss">
                   @mixin toolbar-border($side, $width: 2px) {
                     border-#{$side}: $width solid $toolbar-border;
                   }
@@ -2698,7 +2698,7 @@
 
             <div class="box left" style="width: 45%">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .sidebar--left {
                   border-right: 2px solid #213213;
                 }
@@ -2719,7 +2719,7 @@
           <section>
             <h3><span class="blue">Mixins</span> Margin &amp; Padding</h3>
             <div>
-              <pre class="scss"><code>
+              <pre><code contenteditable class="scss">
                 @mixin margin--horz($left, $right: $left) {
                   margin-left: $left;
                   margin-right: $right;
@@ -2742,10 +2742,10 @@
           <section>
             <h3><span class="blue">Mixins</span> Icon Content</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 $icon-plus:  "\e600";
                 $icon-minus: "\e601";
-                # ...
+                // ...
 
                 @mixin icon($name) {
                   @extend %font--icon;
@@ -2765,7 +2765,7 @@
           <section>
             <h3><span class="blue">Mixins</span> Complex Shapes</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 @mixin triangle($dir, $border-color, $width: $triangle--width, $height: $triangle--width/2) {
                   $vert: 0;
                   $horz: 0;
@@ -2829,7 +2829,7 @@
             <h3>Mixins <span class="yellow">Exercise</span></h3>
             <div class="box--small left copy--small" style="width: 64%">
               <ul class="list--tall">
-                <li><span class="green">Create a mixins partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
+                <li><span class="green">Create a <code>mixins</code> partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
                 <li><span class="green">Create a <code>@mixin</code></span> for scaled transformations with a required scale amount argument. Include common vendor prefixes.<br />
                   <small>ie. <code>transform: scale(1.1);</code></small></li>
                 <li>Look for other combinations of <span class="green">repeated styles or complexities</span> that could be abstracted.</li>
@@ -2855,7 +2855,7 @@
             <h3><span class="blue">Mixin</span> Efficiency</h3>
             <div class="box--small left" style="width: 49%">
               <h4>Mixin Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -2883,7 +2883,7 @@
             </div>
             <div class="box--small right fragment" style="width: 49%">
               <h4 class="yellow">Grouping Optimiztion</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="css">
                 .header,
                 .footer,
                 .feature a,
@@ -2906,7 +2906,7 @@
             <p class="box copy--small"><code>@extend</code> let's us group selectors together!</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 .message {
                   border: 2px solid;
                   margin-bottom: 1em;
@@ -2932,7 +2932,7 @@
             </div>
             <div class="right" style="width: 48%">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .message,
                 .message-alert,
                 .message-error,
@@ -2977,7 +2977,7 @@
           <section>
             <h3><span class="blue">Inheritance</span> Setup</h3>
             <div class="box left" style="width: 49%">
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 .message {
                   border: 2px solid;
                   margin-bottom: 1em;
@@ -3022,7 +3022,7 @@
             <p class="box copy--small">If we don't need to apply both <code>.message</code> AND <code>.message-alert</code> to an element, then why do we even need <code>.message</code> anymore?!</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 .message {
                   border: 2px solid;
                   margin-bottom: 1em;
@@ -3048,7 +3048,7 @@
             </div>
             <div class="right" style="width: 48%">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .message,
                 .message-alert,
                 .message-error,
@@ -3085,7 +3085,7 @@
             <p class="box copy--small"><strong>Placeholders</strong> are a special type of selector denoted by a <code>%</code>. They can be <code>@extend</code>ed but will never compile to the CSS on their own.</p>
             <div class="left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 %message {
                   border: 2px solid;
                   margin-bottom: 1em;
@@ -3111,7 +3111,7 @@
             </div>
             <div class="right" style="width: 48%">
               <h4>CSS Output</h4>
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .message-alert,
                 .message-error,
                 .message-notice, {
@@ -3147,7 +3147,7 @@
           <section>
             <h3><span class="blue">@extend</span> Cross-Module Patterns</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 %hoverTransition {
                   transition-property: background, color, font-size, line-height, opacity, border, padding, margin;
                   transition-duration: .1s;
@@ -3173,7 +3173,7 @@
           <section>
             <h3><span class="blue">@extend</span> Font Families</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 %font--main--family { font-family: $focus-font-family; letter-spacing: .015em; }
 
                 %font--main         { @extend %font--focus--family; font-weight: 500; }
@@ -3193,7 +3193,7 @@
           <section>
             <h3><span class="blue">@extend</span> Font Sizes</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 %copy--small {
                   font-size: $font-size-small;
                   line-height: $line-height-small;
@@ -3218,13 +3218,13 @@
           <section>
             <h3><span class="blue">@extend</span> Module Setup</h3>
             <div>
-              <pre><code>
+              <pre><code contenteditable class="scss">
                 %btn--primary {
                   background: $btn--primary--bg;
                   border-color: $btn--primary--border;
                   color: $btn--primary--color;
                 }
-                # ...
+                // ...
 
                 @mixin button-setup($type) {
                   @extend %btn;
@@ -3243,7 +3243,7 @@
                 .btn--secondary { @include button-setup("secondary"); }
                 .btn--tertiary { @include button-setup("tertiary"); }
 
-                # background: $btn--#{$type}--bg; => Undefined variable: "$btn--"
+                // background: $btn--#{$type}--bg; => Undefined variable: "$btn--"
               </code></pre>
             </div>
             <aside class="notes">
@@ -3271,7 +3271,7 @@
 
             <div class=" left" style="width: 49%">
               <h4>Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @mixin rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -3296,7 +3296,7 @@
             </div>
             <div class=" right" style="width: 49%">
               <h4 class="yellow">CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -3332,7 +3332,7 @@
 
             <div class=" left" style="width: 49%">
               <h4>Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 %rounded-box {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -3357,7 +3357,7 @@
             </div>
             <div class=" right" style="width: 49%">
               <h4 class="yellow">CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header,
                 .footer,
                 .feature a,
@@ -3382,7 +3382,7 @@
 
             <div>
               <h4 class="yellow">@extend Vomit</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="css">
                 .header, .footer, .feature header a, .content, #taco ul a, .hipster dl,
                 [class="btn--"], .comment .comment__body .comment__quote, .card__header,
                 .card--standard, .card--transFooter, .card--featured, .card--scroller,
@@ -3413,7 +3413,7 @@
 
             <div >
               <h4 class="yellow">@include Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .header {
                   border-radius: 5px;
                   padding: 5px 20px;
@@ -3460,7 +3460,7 @@
             <h3>@extend <span class="yellow">Exercise</span></h3>
             <div class="box--small left copy--small" style="width: 50%;">
               <ul class="list--tall">
-                <li><span class="green">Create a placeholder partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
+                <li><span class="green">Create a <code>placeholders</code> partial</span> in your base directory and <code>@import</code> it in your main <code>.scss</code> file.</li>
                 <li><span class="green">Create a placeholder for <code>%clearfix</code></span> and <code>@extend</code> it on the appropriate selectors.<br/>
                   <small>Also remove the <code>.clearfix</code> class from the markup.</small></li>
                 <li><span class="green">Create a <code>.navlist--inline</code> class</span> like the one on the right.</li>
@@ -3470,7 +3470,7 @@
             </div>
             <div class="box right" style="width: 46%;">
               <span class="blue">Let's get modular!</span>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .navlist--inline {
                   list-style-type: none;
 
@@ -3514,7 +3514,7 @@
             <h3><span class="blue">Directives</span> Functions</h3>
             <div class="left" style="width: 50%">
               <p class="box">Sass let's us define<br /><span class="yellow">custom functions</span>.</p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 @function fluidize($target, $context) {
                   @return ($target / $context) * 100%;
                 }
@@ -3543,7 +3543,7 @@
             <h3><span class="blue">Directives</span> Conditionals</h3>
             <div class="left" style="width: 48%">
               <p class="box--small">Sass let's us set<br /><span class="yellow">conditions</span>.</p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $theme: light;
 
                 body {
@@ -3591,7 +3591,7 @@
             <h3><span class="blue">Directives</span> Each Loops</h3>
             <div class="left" style="width: 48%">
               <p class="box--small">Sass let's us <br /><span class="yellow">loop through lists</span>.</p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
               $themes: dark dark-mid light-mid light;
 
               @each $theme in $themes {
@@ -3629,7 +3629,7 @@
             <h3><span class="blue">Directives</span> For Loops</h3>
             <div class="left" style="width: 43%">
               <p class="box--small">Sass lets us <span class="yellow">loop<br /> through # ranges</span>.</p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
               @for $i from 1 through 12 {
                 .grid-col-#{$i} {
                   width: $grid-col-width * $i;
@@ -3642,7 +3642,6 @@
               // .grid-col-2 {
               //   width: 120px;
               // }
-              // ...
               </code></pre>
             </div>
             <div class="box right copy--small" style="width: 54%">
@@ -3666,7 +3665,7 @@
             <h3><span class="blue">Directives</span> While Loops</h3>
             <div class="left" style="width: 43%">
               <p class="box--small">Sass lets us <br /><span class="yellow">loop conditionally</span>.</p>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
               $i: 1;
 
               @while $i &lt;= 12 {
@@ -3716,7 +3715,7 @@
             <h3><span class="blue">Advanced Sass</span> Maps</h3>
             <p class="box">Maps give us <span class="yellow">key-value</span> pairings.</p>
             <div class="left" style="width: 43%">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
               $mymap: (
                 key1: value1,
                 key2: value2,
@@ -3741,7 +3740,7 @@
             <h3><span class="blue">Advanced Sass</span> Maps</h3>
             <div class="box left" style="width: 48%">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $eye_color: (
                   jeremy: #0989cb,
                   beth: #8666ae,
@@ -3764,7 +3763,7 @@
             </div>
             <div class="box right" style="width: 48%">
               <h4 class="pink">CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .jeremy {
                   background: #0989cb;
                   font-family: Helvetica;
@@ -3814,7 +3813,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Icons</h3>
             <div class="box--small">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $icons: (
                   checkmark: "\e600",
                   plus:      "\e601",
@@ -3837,7 +3836,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Module Skins</h3>
             <div class="box--small">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $messages: (
                   error:   (#d82d2d, #666),
                   success: (#52bf4a, #fff),
@@ -3866,7 +3865,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Z-Indexes</h3>
             <div class="box--small">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $layers: (
                   bottom: 1,
                   middle: 5,
@@ -3897,7 +3896,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Font Sizes</h3>
             <div class="box--small">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $font--sizes: (
                   ( base,  $base-font-size,     $base-line-height ),
                   ( small, $base-font-size*.75, $base-line-height*.75 ),
@@ -3933,7 +3932,7 @@
           <section>
             <h3><span class="blue">Advanced Sass</span> Theming</h3>
             <div class="box--small">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $themes: (
                   gray: (
                     button-bg: #ccc,
@@ -4039,7 +4038,7 @@
           <section>
             <h3><span class="blue">Media Queries</span> CSS3</h3>
             <div class="box left" style="width: 50%;">
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 @media screen and (max-width: 500px) {
                   .sidebar {
                     float: none;
@@ -4063,7 +4062,7 @@
           <section>
             <h3><span class="blue">Media Queries</span> Sass</h3>
             <div class="box left" style="width: 52%;">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .sidebar {
                   float: left;
                   width: 35%;
@@ -4081,7 +4080,7 @@
                 }
               </code></pre>
             </div>
-            <div class="box right copy--small left-align" style="width: 46%;">
+            <div class="box--small right copy--small left-align" style="width: 46%;">
               <p class="box">In <span class="yellow">Sass</span>, you can <span class="green">nest your media queries</span> under any declaration.</p>
               <p class="blue">OMG THIS IS SO AWESOME.</p>
               <p class="box">It becomes easy to see exactly how the module is morphing through breakpoints.</p>
@@ -4097,7 +4096,7 @@
             <p class="box copy--small">Media Queries <span class="yellow">"bubble up"</span> beyond their containing declarations.</p>
             <div class="left" style="width: 52%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 .sidebar {
                   float: left;
                   width: 35%;
@@ -4117,7 +4116,7 @@
             </div>
             <div class="right" style="width: 48%;">
               <h4>CSS Output</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 .sidebar {
                   float: left;
                   width: 35%;
@@ -4146,7 +4145,7 @@
             <h3><span class="blue">Media Queries</span> Variables</h3>
             <div class="box--small left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $break-large: 800px;
                 $break-small: 500px;
 
@@ -4181,7 +4180,7 @@
             <h3><span class="blue">Media Queries</span> Variables II</h3>
             <div class="box--small left" style="width: 62%;">
               <h4 class="yellow">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
                 $mobile-med: "screen and (min-width: 480px)";
                 $tablet-port: "screen and (min-width: 768px)";
 
@@ -4216,7 +4215,7 @@
           <section>
             <h3><span class="blue">Media Queries</span> @content</h3>
             <div class="box--small left" style="width: 55%;">
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
               @mixin respond-to($breakpoint) {
                 @if $breakpoint == tablet-large {
                   @media only screen and (max-width: $width-large) {
@@ -4262,7 +4261,7 @@
           <section>
             <h3><span class="blue">Media Query</span> Output</h3>
             <div class="box left" style="width: 56%">
-              <pre><code>
+              <pre><code contenteditable class="css">
                 .sidebar {
                   float: left;
                   width: 35%;
@@ -4318,7 +4317,7 @@
               <small>You get to decide the best way to organize and nest things.</small></p>
             <div class="left" style="width: 49%;">
               <h4 class="yellow">CSS</h4>
-              <pre><code class="css">
+              <pre><code contenteditable class="css">
                 @media screen and (max-width: 480px) {
                   body     { text-align: center; }
                   .wrapper { width: 100%; }
@@ -4340,15 +4339,18 @@
             </div>
             <div class="right" style="width: 49%;">
               <h4 class="green">Sass</h4>
-              <pre><code class="scss">
+              <pre><code contenteditable class="scss">
+                // Option 1 - dimension variable
                 @media screen and (max-width: $mobile-large) {
                   // ...
                 }
 
+                // Option 2 - media query variable
                 @media #{$tablet-small} {
                   // ...
                 }
 
+                // Option 3 - mixin with @content
                 @mixin respond-to($breakpoint) {
                   @if $breakpoint == desktop-large {
                     @media only screen and (max-width: $width-large) {
